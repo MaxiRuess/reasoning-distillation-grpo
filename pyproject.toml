@@ -1,0 +1,35 @@
+[project]
+name = "reasoning-distillation-grpo"
+version = "0.1.0"
+description = "Reasoning trace distillation: Can small models learn to think?"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.4.0",
+    "transformers>=4.51.0",
+    "trl>=0.28.0",
+    "peft>=0.14.0",
+    "bitsandbytes>=0.45.0",
+    "datasets>=3.5.0",
+    "accelerate>=1.5.0",
+    "wandb>=0.17.0",
+    "modal>=0.73.0",
+    "pyyaml",
+    "liger-kernel",
+    "sympy",
+    "scipy",
+    "pandas",
+    "matplotlib",
+]
+
+[project.optional-dependencies]
+dev = ["ruff", "pytest"]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 120
+
+[tool.setuptools.packages.find]
+include = ["src*"]

@@ -1,0 +1,140 @@
+model:
+  name: "Qwen/Qwen3-1.7B"
+  tokenizer: "Qwen/Qwen3-1.7B"
+  eos_token: "<|im_end|>"  # Qwen3 base uses <|endoftext|> by default, but chat template needs <|im_end|>
+
+# Full bf16 precision — no quantization.
+# Rationale: Qwen3-1.7B is only ~3.4 GB in bf16 (vs ~1.2 GB in 4-bit NF4).
+# The QuAILoRA paper (arXiv:2410.14713) measured a real accuracy gap between
+# 4-bit and full precision fine-tuning, and for a 1.7B model the extra ~2 GB
+# VRAM cost is negligible on an L40S (48 GB). Quantization noise is
+# proportionally larger for small models.
+quantization:
+  enabled: false
+
+lora:
+  # r=64 with rsLoRA — the sweet spot for math/reasoning tasks.
+  # A Dec 2025 ablation (arXiv:2512.15634) tested ranks on GSM8K: Qwen peaked
+  # at r=64 (74.98%) with no improvement at r=128. Standard LoRA scaling
+  # (alpha/r) causes gradient collapse at high ranks; rsLoRA fixes this by
+  # scaling alpha/sqrt(r) instead (arXiv:2312.03732).
+  r: 64
+  lora_alpha: 64
+  lora_dropout: 0.05
+  bias: "none"
+  task_type: "CAUSAL_LM"
+  use_rslora: true
+  target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+
+datasets:
+  s1k:
+    name: "simplescaling/s1K-1.1"
+    split: "train"
+  numinamath_cot:
+    name: "AI-MO/NuminaMath-CoT"
+    split: "train"
+  numinamath_rl:
+    name: "nlile/NuminaMath-1.5-RL-Verifiable"
+    split: "train"
+  orca_math:
+    name: "microsoft/orca-math-word-problems-200k"
+    split: "train"
+  gsm8k:
+    name: "openai/gsm8k"
+    subset: "main"
+    split: "test"
+
+conditions:
+  baseline:
+    type: "sft"
+    dataset: "orca_math"
+    sft:
+      learning_rate: 2.0e-4
+      num_train_epochs: 3
+      max_seq_length: 16384
+      per_device_train_batch_size: 4
+      gradient_accumulation_steps: 4
+      warmup_ratio: 0.03
+      optim: "paged_adamw_8bit"
+      use_liger_kernel: true
+      packing: true
+      output_dir: "outputs/baseline"
+
+  sft_traces:
+    type: "sft"
+    dataset: "s1k"
+    sft:
+      learning_rate: 2.0e-4
+      num_train_epochs: 3
+      max_seq_length: 16384
+      per_device_train_batch_size: 4
+      gradient_accumulation_steps: 4
+      warmup_ratio: 0.03
+      optim: "paged_adamw_8bit"
+      use_liger_kernel: true
+      packing: true
+      output_dir: "outputs/sft_traces"
+
+  grpo_only:
+    type: "grpo"
+    dataset: "numinamath_rl"
+    grpo:
+      learning_rate: 5.0e-7
+      num_train_epochs: 1
+      per_device_train_batch_size: 2
+      gradient_accumulation_steps: 8
+      num_generations: 8
+      max_completion_length: 2048
+      max_prompt_length: 1024
+      kl_coef: 0.1
+      optim: "paged_adamw_8bit"
+      use_liger_kernel: true
+      output_dir: "outputs/grpo_only"
+
+  sft_then_grpo:
+    type: "sft_then_grpo"
+    sft_dataset: "s1k"
+    grpo_dataset: "numinamath_rl"
+    sft:
+      learning_rate: 2.0e-4
+      num_train_epochs: 3
+      max_seq_length: 16384
+      per_device_train_batch_size: 4
+      gradient_accumulation_steps: 4
+      warmup_ratio: 0.03
+      optim: "paged_adamw_8bit"
+      use_liger_kernel: true
+      packing: true
+      output_dir: "outputs/sft_then_grpo/sft_phase"
+    grpo:
+      learning_rate: 5.0e-7
+      num_train_epochs: 1
+      per_device_train_batch_size: 2
+      gradient_accumulation_steps: 8
+      num_generations: 8
+      max_completion_length: 2048
+      max_prompt_length: 1024
+      kl_coef: 0.1
+      optim: "paged_adamw_8bit"
+      use_liger_kernel: true
+      output_dir: "outputs/sft_then_grpo/grpo_phase"
+
+evaluation:
+  benchmarks:
+    - gsm8k
+    - math
+  max_new_tokens: 2048
+  temperature: 0.0
+  num_samples_per_problem: 1
+  batch_size: 8
+
+wandb:
+  project: "reasoning-distillation"
+  entity: null
