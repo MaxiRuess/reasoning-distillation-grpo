@@ -4,10 +4,18 @@ import modal
 
 app = modal.App("reasoning-distillation-grpo")
 
+# Pre-built flash-attn wheel — must match Python version, PyTorch version, and CUDA version.
+# flash-attn 2.8.3 only has wheels up to torch 2.8, so we pin torch to 2.8.0.
+# See: https://github.com/Dao-AILab/flash-attention/releases/tag/v2.8.3
+FLASH_ATTN_WHEEL = (
+    "https://github.com/Dao-AILab/flash-attention/releases/download/v2.8.3/"
+    "flash_attn-2.8.3+cu12torch2.8cxx11abiFALSE-cp311-cp311-linux_x86_64.whl"
+)
+
 image = (
     modal.Image.debian_slim(python_version="3.11")
     .pip_install(
-        "torch>=2.4.0",
+        "torch==2.8.0",
         "transformers>=4.51.0",
         "trl>=0.28.0",
         "peft>=0.14.0",
@@ -18,7 +26,7 @@ image = (
         "pyyaml",
         "liger-kernel",
         "sympy",
-        "flash-attn",
+        FLASH_ATTN_WHEEL,
     )
     .add_local_dir("src", remote_path="/root/src")
     .add_local_file("configs/config.yaml", remote_path="/root/configs/config.yaml")
@@ -44,6 +52,9 @@ def train_sft(condition: str = "sft_traces"):
     """Run SFT training on a cloud GPU."""
     import sys
     sys.path.insert(0, "/root")
+
+    import os
+    os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 
     from src.data import get_dataset_for_condition, load_config
     from src.training import build_sft_trainer, get_lora_config, load_model
@@ -162,6 +173,164 @@ def run_evaluation(model_path: str, condition: str):
     volume.commit()
 
     return results
+
+
+@app.function(
+    image=image,
+    gpu="L40S",
+    timeout=1800,
+    secrets=SECRETS,
+    volumes={VOLUME_PATH: volume},
+)
+def quick_test(model_path: str = "/vol/outputs/sft_traces"):
+    """Generate a few sample solutions to sanity-check a trained model."""
+    import sys
+    sys.path.insert(0, "/root")
+
+    import torch
+    from peft import PeftModel
+    from transformers import AutoModelForCausalLM, AutoTokenizer
+
+    from src.data import load_config
+
+    config = load_config("/root/configs/config.yaml")
+
+    print(f"Loading model from {model_path}...")
+    base_model = AutoModelForCausalLM.from_pretrained(
+        config["model"]["name"],
+        device_map="auto",
+        torch_dtype=torch.bfloat16,
+        attn_implementation="flash_attention_2",
+    )
+    model = PeftModel.from_pretrained(base_model, model_path)
+    model.eval()
+
+    tokenizer = AutoTokenizer.from_pretrained(model_path)
+    eos_token = config["model"].get("eos_token")
+    if eos_token:
+        tokenizer.eos_token = eos_token
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+    tokenizer.padding_side = "left"
+
+    test_questions = [
+        "What is 15% of 200?",
+        "A train travels 120 miles in 2 hours. What is its average speed in miles per hour?",
+        "If a rectangle has a length of 8 cm and a width of 5 cm, what is its area?",
+        "Sally has 3 red marbles and 5 blue marbles. What fraction of her marbles are red?",
+        "A store sells apples for $2 each. If John buys 7 apples and pays with a $20 bill, how much change does he get?",
+    ]
+
+    print("\n" + "=" * 80)
+    print("SAMPLE GENERATIONS FROM TRAINED MODEL")
+    print("=" * 80)
+
+    for i, question in enumerate(test_questions):
+        messages = [{"role": "user", "content": question}]
+        prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+
+        with torch.no_grad():
+            output = model.generate(
+                **inputs,
+                max_new_tokens=1024,
+                temperature=0.7,
+                do_sample=True,
+                pad_token_id=tokenizer.pad_token_id,
+            )
+
+        response = tokenizer.decode(output[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True)
+
+        print(f"\n--- Question {i + 1}: {question}")
+        print(f"--- Response:\n{response[:1500]}")
+        if len(response) > 1500:
+            print(f"... [truncated, {len(response)} chars total]")
+        print()
+
+    return "Quick test complete"
+
+
+@app.function(
+    image=image,
+    gpu="L40S",
+    timeout=1800,
+    secrets=SECRETS,
+    volumes={VOLUME_PATH: volume},
+)
+def spot_check_gsm8k(model_path: str = "/vol/outputs/sft_traces", num_problems: int = 20):
+    """Run a quick GSM8K spot-check: solve N problems and report accuracy."""
+    import sys
+    sys.path.insert(0, "/root")
+
+    import torch
+    from datasets import load_dataset
+    from peft import PeftModel
+    from transformers import AutoModelForCausalLM, AutoTokenizer
+
+    from src.data import load_config
+    from src.reward import answers_match, extract_answer_auto, extract_gsm8k_answer
+
+    config = load_config("/root/configs/config.yaml")
+
+    print(f"Loading model from {model_path}...")
+    base_model = AutoModelForCausalLM.from_pretrained(
+        config["model"]["name"],
+        device_map="auto",
+        torch_dtype=torch.bfloat16,
+        attn_implementation="flash_attention_2",
+    )
+    model = PeftModel.from_pretrained(base_model, model_path)
+    model.eval()
+
+    tokenizer = AutoTokenizer.from_pretrained(model_path)
+    eos_token = config["model"].get("eos_token")
+    if eos_token:
+        tokenizer.eos_token = eos_token
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+    tokenizer.padding_side = "left"
+
+    # Load GSM8K test set
+    ds = load_dataset("openai/gsm8k", "main", split="test")
+    ds = ds.select(range(min(num_problems, len(ds))))
+
+    correct = 0
+    total = 0
+
+    for i, example in enumerate(ds):
+        question = example["question"]
+        gt_answer = extract_gsm8k_answer(example["answer"])
+
+        messages = [{"role": "user", "content": question}]
+        prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+
+        with torch.no_grad():
+            output = model.generate(
+                **inputs,
+                max_new_tokens=2048,
+                temperature=0.0,
+                do_sample=False,
+                pad_token_id=tokenizer.pad_token_id,
+            )
+
+        response = tokenizer.decode(output[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True)
+        pred_answer = extract_answer_auto(response)
+
+        is_correct = pred_answer is not None and gt_answer is not None and answers_match(pred_answer, gt_answer)
+        if is_correct:
+            correct += 1
+        total += 1
+
+        status = "✓" if is_correct else "✗"
+        print(f"  [{status}] Q{i+1}: pred={pred_answer}, gt={gt_answer}")
+
+    accuracy = correct / total if total > 0 else 0
+    print(f"\n{'=' * 50}")
+    print(f"GSM8K Spot Check: {correct}/{total} = {accuracy:.1%}")
+    print(f"{'=' * 50}")
+
+    return {"correct": correct, "total": total, "accuracy": accuracy}
 
 
 @app.local_entrypoint()

@@ -58,10 +58,10 @@ conditions:
     sft:
       learning_rate: 2.0e-4
       num_train_epochs: 3
-      max_seq_length: 16384
+      max_seq_length: 4096  # Orca Math examples are short (~275 tokens avg), no need for 16K
       per_device_train_batch_size: 4
       gradient_accumulation_steps: 4
-      warmup_ratio: 0.03
+      warmup_steps: 10
       optim: "paged_adamw_8bit"
       use_liger_kernel: true
       packing: true
@@ -76,7 +76,7 @@ conditions:
       max_seq_length: 16384
       per_device_train_batch_size: 4
       gradient_accumulation_steps: 4
-      warmup_ratio: 0.03
+      warmup_steps: 10
       optim: "paged_adamw_8bit"
       use_liger_kernel: true
       packing: true
@@ -108,7 +108,7 @@ conditions:
       max_seq_length: 16384
       per_device_train_batch_size: 4
       gradient_accumulation_steps: 4
-      warmup_ratio: 0.03
+      warmup_steps: 10
       optim: "paged_adamw_8bit"
       use_liger_kernel: true
       packing: true
