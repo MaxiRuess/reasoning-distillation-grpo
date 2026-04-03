@@ -6,6 +6,8 @@ from pathlib import Path
 
 import torch
 from peft import PeftModel
+
+from src.training import _get_attn_implementation
 from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
@@ -14,38 +16,54 @@ from src.reward import answers_match, extract_answer_auto, extract_boxed_answer,
 
 
 def load_model_for_eval(model_path: str, config: dict) -> tuple:
-    """Load a trained model (base + adapter) for inference.
+    """Load a trained model for inference.
 
-    Sets left-padding for batch generation. Supports both quantized
-    and full bf16 model loading based on config.
+    Supports both LoRA adapters (base + adapter) and full fine-tuned checkpoints.
+    Detects which type by checking for adapter_config.json in the model path.
+    Sets left-padding for batch generation.
     """
-    quant_cfg = config["quantization"]
-    use_quantization = quant_cfg.get("enabled", quant_cfg.get("load_in_4bit", False))
+    from pathlib import Path
 
-    if use_quantization:
-        compute_dtype = getattr(torch, quant_cfg["bnb_4bit_compute_dtype"])
-        bnb_config = BitsAndBytesConfig(
-            load_in_4bit=True,
-            bnb_4bit_quant_type=quant_cfg["bnb_4bit_quant_type"],
-            bnb_4bit_compute_dtype=compute_dtype,
-            bnb_4bit_use_double_quant=quant_cfg["bnb_4bit_use_double_quant"],
-        )
-        base_model = AutoModelForCausalLM.from_pretrained(
-            config["model"]["name"],
-            quantization_config=bnb_config,
-            device_map="auto",
-            torch_dtype=compute_dtype,
-            attn_implementation="flash_attention_2",
-        )
+    is_lora = (Path(model_path) / "adapter_config.json").exists()
+
+    if is_lora:
+        # LoRA adapter — load base model then apply adapter
+        quant_cfg = config["quantization"]
+        use_quantization = quant_cfg.get("enabled", quant_cfg.get("load_in_4bit", False))
+
+        if use_quantization:
+            compute_dtype = getattr(torch, quant_cfg["bnb_4bit_compute_dtype"])
+            bnb_config = BitsAndBytesConfig(
+                load_in_4bit=True,
+                bnb_4bit_quant_type=quant_cfg["bnb_4bit_quant_type"],
+                bnb_4bit_compute_dtype=compute_dtype,
+                bnb_4bit_use_double_quant=quant_cfg["bnb_4bit_use_double_quant"],
+            )
+            base_model = AutoModelForCausalLM.from_pretrained(
+                config["model"]["name"],
+                quantization_config=bnb_config,
+                device_map="auto",
+                torch_dtype=compute_dtype,
+                attn_implementation=_get_attn_implementation(),
+            )
+        else:
+            base_model = AutoModelForCausalLM.from_pretrained(
+                config["model"]["name"],
+                device_map="auto",
+                torch_dtype=torch.bfloat16,
+                attn_implementation=_get_attn_implementation(),
+            )
+
+        model = PeftModel.from_pretrained(base_model, model_path)
     else:
-        base_model = AutoModelForCausalLM.from_pretrained(
-            config["model"]["name"],
+        # Full fine-tuned checkpoint — load directly
+        model = AutoModelForCausalLM.from_pretrained(
+            model_path,
             device_map="auto",
             torch_dtype=torch.bfloat16,
-            attn_implementation="flash_attention_2",
+            attn_implementation=_get_attn_implementation(),
         )
 
-    model = PeftModel.from_pretrained(base_model, model_path)
     model.eval()
 
     tokenizer = AutoTokenizer.from_pretrained(model_path)

@@ -6,6 +6,15 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 from trl import GRPOConfig, GRPOTrainer, SFTConfig, SFTTrainer
 
 
+def _get_attn_implementation() -> str:
+    """Return best available attention implementation."""
+    try:
+        import flash_attn  # noqa: F401
+        return "flash_attention_2"
+    except ImportError:
+        return "sdpa"
+
+
 def load_model(config: dict) -> tuple[AutoModelForCausalLM, AutoTokenizer]:
     """Load the base model, optionally with 4-bit quantization.
 
@@ -31,14 +40,14 @@ def load_model(config: dict) -> tuple[AutoModelForCausalLM, AutoTokenizer]:
             quantization_config=bnb_config,
             device_map="auto",
             torch_dtype=compute_dtype,
-            attn_implementation="flash_attention_2",
+            attn_implementation=_get_attn_implementation(),
         )
     else:
         model = AutoModelForCausalLM.from_pretrained(
             config["model"]["name"],
             device_map="auto",
             torch_dtype=torch.bfloat16,
-            attn_implementation="flash_attention_2",
+            attn_implementation=_get_attn_implementation(),
         )
 
     tokenizer = AutoTokenizer.from_pretrained(config["model"]["tokenizer"])
@@ -121,32 +130,46 @@ def build_grpo_trainer(
     tokenizer,
     dataset,
     condition_config: dict,
-    lora_config: LoraConfig,
     reward_fns: list,
+    lora_config: LoraConfig | None = None,
 ) -> GRPOTrainer:
     """Construct a GRPOTrainer from condition-specific config.
 
+    When lora_config is None, does full fine-tuning (no LoRA). This matches
+    the literature — Open-RS, SimpleRL, DeepScaleR all use full FT for GRPO.
+
     The reward_fns list should contain callable reward functions that
-    accept (completions, answer, **kwargs) and return list[float].
+    accept (prompts, completions, answer, **kwargs) and return list[float].
     """
     grpo_cfg = condition_config["grpo"]
+
+    reward_weights = grpo_cfg.get("reward_weights")
 
     training_args = GRPOConfig(
         output_dir=grpo_cfg["output_dir"],
         learning_rate=grpo_cfg["learning_rate"],
-        num_train_epochs=grpo_cfg["num_train_epochs"],
+        max_steps=grpo_cfg.get("max_steps", 500),
+        reward_weights=reward_weights,
         per_device_train_batch_size=grpo_cfg["per_device_train_batch_size"],
         gradient_accumulation_steps=grpo_cfg["gradient_accumulation_steps"],
         num_generations=grpo_cfg["num_generations"],
         max_completion_length=grpo_cfg["max_completion_length"],
+        temperature=grpo_cfg.get("temperature", 0.7),
         optim=grpo_cfg["optim"],
         use_liger_kernel=grpo_cfg.get("use_liger_kernel", False),
         bf16=True,
-        logging_steps=10,
+        logging_steps=1,
         save_strategy="steps",
         save_steps=100,
         report_to="wandb",
         gradient_checkpointing=True,
+        gradient_checkpointing_kwargs={"use_reentrant": False},  # Required for PEFT+GRPO (TRL #3089)
+        warmup_steps=10,
+        # vLLM colocate mode — runs generation engine on same GPU as training
+        use_vllm=True,
+        vllm_mode="colocate",
+        vllm_gpu_memory_utilization=0.3,  # Conservative for colocate; sleep mode frees memory during training
+        vllm_enable_sleep_mode=True,
     )
 
     return GRPOTrainer(
@@ -154,7 +177,7 @@ def build_grpo_trainer(
         reward_funcs=reward_fns,
         args=training_args,
         train_dataset=dataset,
-        peft_config=lora_config,
+        peft_config=lora_config,  # None = full fine-tuning
     )
 
 
@@ -183,14 +206,14 @@ def load_sft_checkpoint(
             quantization_config=bnb_config,
             device_map="auto",
             torch_dtype=compute_dtype,
-            attn_implementation="flash_attention_2",
+            attn_implementation=_get_attn_implementation(),
         )
     else:
         base_model = AutoModelForCausalLM.from_pretrained(
             config["model"]["name"],
             device_map="auto",
             torch_dtype=torch.bfloat16,
-            attn_implementation="flash_attention_2",
+            attn_implementation=_get_attn_implementation(),
         )
 
     # Load the LoRA adapter from the SFT checkpoint
@@ -198,7 +221,8 @@ def load_sft_checkpoint(
     # Merge and unload so GRPO can apply a fresh adapter
     model = model.merge_and_unload()
 
-    tokenizer = AutoTokenizer.from_pretrained(checkpoint_path)
+    # Load tokenizer from base model (checkpoint tokenizer may have version-incompatible metadata)
+    tokenizer = AutoTokenizer.from_pretrained(config["model"]["tokenizer"])
 
     # Align EOS token with chat template (same as load_model)
     eos_token = config["model"].get("eos_token")

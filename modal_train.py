@@ -4,15 +4,15 @@ import modal
 
 app = modal.App("reasoning-distillation-grpo")
 
-# Pre-built flash-attn wheel — must match Python version, PyTorch version, and CUDA version.
-# flash-attn 2.8.3 only has wheels up to torch 2.8, so we pin torch to 2.8.0.
-# See: https://github.com/Dao-AILab/flash-attention/releases/tag/v2.8.3
+# Two separate images: SFT (pinned torch for flash-attn) and GRPO (vLLM needs its own torch)
+# vLLM bundles flash-attn internally, so no separate install needed for GRPO.
+
 FLASH_ATTN_WHEEL = (
     "https://github.com/Dao-AILab/flash-attention/releases/download/v2.8.3/"
     "flash_attn-2.8.3+cu12torch2.8cxx11abiFALSE-cp311-cp311-linux_x86_64.whl"
 )
 
-image = (
+sft_image = (
     modal.Image.debian_slim(python_version="3.11")
     .pip_install(
         "torch==2.8.0",
@@ -32,6 +32,23 @@ image = (
     .add_local_file("configs/config.yaml", remote_path="/root/configs/config.yaml")
 )
 
+grpo_image = (
+    modal.Image.debian_slim(python_version="3.11")
+    .pip_install(
+        "trl[vllm]>=0.28.0",  # Pulls compatible torch + vLLM versions
+        "peft>=0.14.0",
+        "bitsandbytes>=0.45.0",
+        "datasets>=3.5.0",
+        "accelerate>=1.5.0",
+        "wandb>=0.17.0",
+        "pyyaml",
+        "liger-kernel",
+        "sympy",
+    )
+    .add_local_dir("src", remote_path="/root/src")
+    .add_local_file("configs/config.yaml", remote_path="/root/configs/config.yaml")
+)
+
 volume = modal.Volume.from_name("reasoning-distillation-vol", create_if_missing=True)
 
 VOLUME_PATH = "/vol"
@@ -42,7 +59,7 @@ SECRETS = [
 
 
 @app.function(
-    image=image,
+    image=sft_image,
     gpu="L40S",
     timeout=6 * 3600,
     secrets=SECRETS,
@@ -94,19 +111,27 @@ def train_sft(condition: str = "sft_traces"):
 
 
 @app.function(
-    image=image,
+    image=grpo_image,
     gpu="H100",
     timeout=12 * 3600,
     secrets=SECRETS,
     volumes={VOLUME_PATH: volume},
 )
 def train_grpo(condition: str = "grpo_only", sft_checkpoint: str | None = None):
-    """Run GRPO training on a cloud GPU."""
+    """Run GRPO training on a cloud GPU with vLLM colocate mode."""
+    import os
     import sys
     sys.path.insert(0, "/root")
 
-    from src.data import format_numinamath_for_grpo, load_config
-    from src.reward import binary_reward_fn
+    # Required for vLLM colocate mode on single GPU (from Modal's official example)
+    os.environ["RANK"] = "0"
+    os.environ["LOCAL_RANK"] = "0"
+    os.environ["WORLD_SIZE"] = "1"
+    os.environ["MASTER_ADDR"] = "localhost"
+    os.environ["MASTER_PORT"] = "12355"
+
+    from src.data import format_gsm8k_for_grpo, load_config
+    from src.reward import binary_reward_fn, format_reward_fn
     from src.training import (
         build_grpo_trainer,
         get_lora_config,
@@ -135,12 +160,13 @@ def train_grpo(condition: str = "grpo_only", sft_checkpoint: str | None = None):
         model, tokenizer = load_model(config)
 
     lora_config = get_lora_config(config)
-    dataset = format_numinamath_for_grpo(tokenizer)
-    print(f"[{condition}] Training on {len(dataset)} examples")
+    dataset = format_gsm8k_for_grpo(tokenizer)
+    print(f"[{condition}] Training on {len(dataset)} GSM8K examples (LoRA r={lora_config.r})")
 
     trainer = build_grpo_trainer(
-        model, tokenizer, dataset, condition_config, lora_config,
-        reward_fns=[binary_reward_fn],
+        model, tokenizer, dataset, condition_config,
+        reward_fns=[binary_reward_fn, format_reward_fn],
+        lora_config=lora_config,
     )
     trainer.train()
 
@@ -154,7 +180,7 @@ def train_grpo(condition: str = "grpo_only", sft_checkpoint: str | None = None):
 
 
 @app.function(
-    image=image,
+    image=sft_image,
     gpu="L40S",
     timeout=3 * 3600,
     secrets=SECRETS,
@@ -176,7 +202,7 @@ def run_evaluation(model_path: str, condition: str):
 
 
 @app.function(
-    image=image,
+    image=sft_image,
     gpu="L40S",
     timeout=1800,
     secrets=SECRETS,
@@ -251,7 +277,7 @@ def quick_test(model_path: str = "/vol/outputs/sft_traces"):
 
 
 @app.function(
-    image=image,
+    image=sft_image,
     gpu="L40S",
     timeout=1800,
     secrets=SECRETS,
