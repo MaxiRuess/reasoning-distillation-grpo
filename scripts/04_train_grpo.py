@@ -4,8 +4,8 @@ import argparse
 
 import wandb
 
-from src.data import format_numinamath_for_grpo, load_config
-from src.reward import binary_reward_fn
+from src.data import format_gsm8k_for_grpo, load_config
+from src.reward import binary_reward_fn, format_reward_fn
 from src.training import (
     build_grpo_trainer,
     get_lora_config,
@@ -58,13 +58,14 @@ def main():
     lora_config = get_lora_config(config)
 
     # Load GRPO dataset
-    dataset = format_numinamath_for_grpo(tokenizer, max_samples=args.max_samples)
-    print(f"Training on {len(dataset)} examples")
+    dataset = format_gsm8k_for_grpo(tokenizer, max_samples=args.max_samples)
+    print(f"Training on {len(dataset)} GSM8K examples (LoRA r={lora_config.r})")
 
     # Build trainer and train
     trainer = build_grpo_trainer(
-        model, tokenizer, dataset, condition_config, lora_config,
-        reward_fns=[binary_reward_fn],
+        model, tokenizer, dataset, condition_config,
+        reward_fns=[binary_reward_fn, format_reward_fn],
+        lora_config=lora_config,
     )
     trainer.train()
 

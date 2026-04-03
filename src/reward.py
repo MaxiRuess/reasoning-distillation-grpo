@@ -132,20 +132,70 @@ def extract_answer_auto(text: str) -> str | None:
     return None
 
 
+def _extract_completion_text(completion) -> str:
+    """Extract plain text from a completion, handling both string and message dict formats."""
+    if isinstance(completion, list):
+        return " ".join(
+            msg["content"] for msg in completion if isinstance(msg, dict) and "content" in msg
+        )
+    elif not isinstance(completion, str):
+        return str(completion)
+    return completion
+
+
+def format_reward_fn(prompts, completions, **kwargs) -> list[float]:
+    """Reward for producing structured reasoning output.
+
+    Gives partial credit for format compliance, providing gradient signal
+    even when the answer is wrong. This bootstraps the base model into
+    learning the <think>...</think> + answer structure before correctness
+    reward can kick in.
+
+    Scoring (0.0 to 1.0):
+    - 0.5 for <think>...</think> block
+    - 0.25 for \boxed{...} answer
+    - 0.25 for any number appearing after </think>
+    """
+    rewards = []
+    for completion in completions:
+        text = _extract_completion_text(completion)
+        score = 0.0
+
+        # Check for <think>...</think> block
+        if re.search(r"<think>.*?</think>", text, re.DOTALL):
+            score += 0.5
+
+        # Check for \boxed{} answer
+        if "\\boxed{" in text:
+            score += 0.25
+
+        # Check for a number after </think> (or anywhere if no think block)
+        after_think = text.split("</think>")[-1] if "</think>" in text else text
+        if re.search(r"\d+", after_think):
+            score += 0.25
+
+        rewards.append(score)
+    return rewards
+
+
 def binary_reward_fn(prompts, completions, answer, **kwargs) -> list[float]:
     """Binary reward function for GRPOTrainer.
 
     Returns 1.0 if the extracted answer matches ground truth, 0.0 otherwise.
 
     TRL passes these arguments to reward functions:
-    - prompts: list of prompt strings
-    - completions: list of generated completion strings
+    - prompts: list of prompt strings or message dicts
+    - completions: list of completion strings or message dicts
     - answer: list of ground truth strings (from dataset's `answer` column)
     - **kwargs: completion_ids, trainer_state, log_extra, log_metric, etc.
+
+    In TRL 1.0, completions may be passed as lists of message dicts
+    (e.g. [{"role": "assistant", "content": "..."}]) rather than plain strings.
     """
     rewards = []
     for completion, ground_truth in zip(completions, answer):
-        predicted = extract_answer_auto(completion)
+        text = _extract_completion_text(completion)
+        predicted = extract_answer_auto(text)
         if predicted is not None and answers_match(predicted, ground_truth):
             rewards.append(1.0)
         else:

@@ -84,16 +84,16 @@ conditions:
 
   grpo_only:
     type: "grpo"
-    dataset: "numinamath_rl"
+    dataset: "gsm8k"  # Grade school math — model can solve ~80%, creating reward variance
     grpo:
-      learning_rate: 5.0e-7
-      num_train_epochs: 1
-      per_device_train_batch_size: 2
-      gradient_accumulation_steps: 8
-      num_generations: 8
-      max_completion_length: 2048
-      max_prompt_length: 1024
-      kl_coef: 0.1
+      learning_rate: 1.0e-6
+      max_steps: 500
+      per_device_train_batch_size: 1
+      gradient_accumulation_steps: 8  # Must be divisible by num_generations
+      num_generations: 8  # More generations = better within-group variance
+      max_completion_length: 4096  # Room for full <think>...</think> + answer
+      temperature: 0.7  # Diverse but coherent completions
+      reward_weights: [0.5, 0.5]  # [correctness, format] — format bootstraps the base model
       optim: "paged_adamw_8bit"
       use_liger_kernel: true
       output_dir: "outputs/grpo_only"
@@ -101,7 +101,7 @@ conditions:
   sft_then_grpo:
     type: "sft_then_grpo"
     sft_dataset: "s1k"
-    grpo_dataset: "numinamath_rl"
+    grpo_dataset: "gsm8k"
     sft:
       learning_rate: 2.0e-4
       num_train_epochs: 3
@@ -114,14 +114,14 @@ conditions:
       packing: true
       output_dir: "outputs/sft_then_grpo/sft_phase"
     grpo:
-      learning_rate: 5.0e-7
-      num_train_epochs: 1
-      per_device_train_batch_size: 2
-      gradient_accumulation_steps: 8
+      learning_rate: 1.0e-6
+      max_steps: 500
+      per_device_train_batch_size: 1
+      gradient_accumulation_steps: 8  # Must be divisible by num_generations
       num_generations: 8
-      max_completion_length: 2048
-      max_prompt_length: 1024
-      kl_coef: 0.1
+      max_completion_length: 4096
+      temperature: 0.7
+      reward_weights: [1.0, 0.0]  # Model already formats correctly, focus on correctness only
       optim: "paged_adamw_8bit"
       use_liger_kernel: true
       output_dir: "outputs/sft_then_grpo/grpo_phase"

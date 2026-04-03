@@ -87,6 +87,33 @@ def format_numinamath_for_grpo(tokenizer, max_samples: int | None = None) -> Dat
     return ds
 
 
+def format_gsm8k_for_grpo(tokenizer, max_samples: int | None = None) -> Dataset:
+    """Format GSM8K train set for GRPO training.
+
+    GSM8K answers contain reasoning + #### final_number. We extract the
+    final number as ground truth for the binary reward function.
+    """
+    ds = load_dataset("openai/gsm8k", "main", split="train")
+
+    if max_samples is not None:
+        ds = ds.select(range(min(max_samples, len(ds))))
+
+    def format_example(example):
+        question = example["question"]
+        # Extract final numerical answer after ####
+        full_answer = example["answer"]
+        final_answer = full_answer.split("####")[-1].strip() if "####" in full_answer else full_answer
+
+        return {
+            "prompt": [{"role": "user", "content": question}],
+            "answer": final_answer,
+        }
+
+    ds = ds.map(format_example, remove_columns=ds.column_names)
+    ds = ds.filter(lambda x: len(x["answer"].strip()) > 0)
+    return ds
+
+
 def format_gsm8k_for_eval() -> Dataset:
     """Load GSM8K test set for evaluation.
 
