@@ -53,12 +53,18 @@ For reference, Qwen3-1.7B base achieves 75.4% on GSM8K with 4-shot chain-of-thou
 
 - **Trace quality follows a clear hierarchy.** Answer-only (67%) < base 4-shot (75%) < RL-redistributed (78%) < raw teacher traces (81%) < RL-verified traces (86%). The largest single jump (5.2 points) comes from correctness verification — **data quality filtering is the highest-leverage intervention** for reasoning distillation.
 
-**Example: Distilled reasoning in action.** The `sft_traces` model on a GSM8K problem:
+**Example: Distillation teaches reasoning, not just formatting.** The same question answered by `baseline` (answer-only SFT) and `sft_traces` (reasoning trace distillation):
 
 > **"A store sells apples for $2 each. If John buys 7 apples and pays with a $20 bill, how much change does he get?"**
-> *sft_traces response:* `<think>` Okay, let me try to figure out this problem. So, John buys 7 apples, each costing $2, and he pays with a $20 bill. We need to find out how much change he gets. First, I know that the price per apple is $2. If he buys 7 apples, the total cost should be 7 multiplied by $2. Let me write that out: 7 * $2 = $14. John paid with a $20 bill. The change he should get back is $20 minus $14 = $6. Let me double-check: 7 apples at $2 each is $14. $20 minus $14 is $6. `</think>` John gets \boxed{6} dollars in change.
 
-The model shows genuine step-by-step reasoning with self-verification — not template matching.
+> *baseline response:*
+> `<think>` `</think>`
+> John buys 7 apples at $2 each, so the total cost of the apples is: 7 apples * $2/apple = $14. John pays with a $20 bill, so the change he gets back is: $20 - $14 = $6. John gets $6 in change.
+
+> *sft_traces response:*
+> `<think>` Okay, let me try to figure out this problem. So, John buys 7 apples, each costing $2, and he pays with a $20 bill. We need to find out how much change he gets. First, I know that the price per apple is $2. If he buys 7 apples, the total cost should be 7 multiplied by $2. Let me write that out: 7 * $2 = $14. John paid with a $20 bill. The change he should get back is $20 minus $14 = $6. Let me double-check: 7 apples at $2 each is $14. $20 minus $14 is $6. `</think>` John gets \boxed{6} dollars in change.
+
+Both models get this easy problem right, but the reasoning process is qualitatively different. The baseline produces an empty `<think>` block and jumps to the computation — it learned to format answers, not to reason. The distilled model restates the problem, identifies the relevant quantities, performs the calculation, and *self-verifies* ("Let me double-check"). On harder problems where the first attempt might be wrong, this self-verification is the difference between 67% and 81% accuracy.
 
 ## Setup
 
