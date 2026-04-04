@@ -1,0 +1,81 @@
+{
+  "benchmark": "GSM8K",
+  "evaluation_split": "test",
+  "evaluation_range": "Q1-Q100",
+  "generation_config": {
+    "max_new_tokens": 2048,
+    "temperature": 0.0,
+    "do_sample": false
+  },
+  "model": {
+    "base": "Qwen/Qwen3-1.7B",
+    "lora_rank": 64,
+    "use_rslora": true,
+    "precision": "bfloat16"
+  },
+  "conditions": {
+    "baseline": {
+      "description": "SFT on 50K Orca Math examples (answer-only, no reasoning traces)",
+      "training_method": "SFT with LoRA",
+      "training_data": "microsoft/orca-math-word-problems-200k (50K subset)",
+      "training_data_size": 50000,
+      "num_evaluated": 100,
+      "num_correct": 67,
+      "accuracy": 0.670,
+      "training_loss": 0.105,
+      "training_token_accuracy": 0.962,
+      "training_time_minutes": 108
+    },
+    "sft_traces": {
+      "description": "SFT on 1K DeepSeek-R1 reasoning traces with <think> tags",
+      "training_method": "SFT with LoRA",
+      "training_data": "simplescaling/s1K-1.1",
+      "training_data_size": 1000,
+      "num_evaluated": 99,
+      "num_correct": 80,
+      "accuracy": 0.808,
+      "training_loss": 0.842,
+      "training_token_accuracy": 0.754,
+      "training_time_minutes": 101
+    },
+    "grpo_only": {
+      "description": "GRPO from base model with binary correctness + format rewards",
+      "training_method": "GRPO with LoRA (vLLM colocate)",
+      "training_data": "NuminaMath-1.5-RL-Verifiable (10K) then GSM8K train (7.5K)",
+      "training_data_size": 10000,
+      "grpo_max_steps": 500,
+      "grpo_num_generations": 8,
+      "grpo_learning_signal": "Near-zero (frac_reward_zero_std ~0.75-0.85)",
+      "num_evaluated": 99,
+      "num_correct": 77,
+      "accuracy": 0.778,
+      "training_time_minutes": 70
+    },
+    "sft_then_grpo": {
+      "description": "SFT on reasoning traces, then GRPO refinement on GSM8K",
+      "training_method": "SFT with LoRA → merge → GRPO with LoRA (vLLM colocate)",
+      "sft_data": "simplescaling/s1K-1.1",
+      "grpo_data": "openai/gsm8k (train split, 7.5K)",
+      "grpo_max_steps": 500,
+      "grpo_num_generations": 8,
+      "grpo_learning_signal": "Weak (frac_reward_zero_std ~0.77, reward_mean ~0.81)",
+      "num_evaluated": 99,
+      "num_correct": 66,
+      "accuracy": 0.667,
+      "sft_training_loss": 0.841,
+      "training_time_minutes": 203
+    },
+    "re_distill": {
+      "description": "SFT on 1K RL-verified Open-R1 reasoning traces (math-verified correct solutions)",
+      "training_method": "SFT with LoRA",
+      "training_data": "open-r1/OpenR1-Math-220k (1K subset, filtered for correctness_math_verify=True)",
+      "training_data_size": 1000,
+      "num_evaluated": 93,
+      "num_correct": 80,
+      "accuracy": 0.860,
+      "training_loss": 0.370,
+      "training_token_accuracy": 0.867,
+      "training_time_minutes": 61
+    }
+  }
+}
