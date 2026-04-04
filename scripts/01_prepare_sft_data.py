@@ -13,7 +13,7 @@ def main():
     parser.add_argument(
         "--condition",
         required=True,
-        choices=["baseline", "sft_traces", "sft_then_grpo"],
+        choices=["baseline", "sft_traces", "sft_then_grpo", "re_distill"],
         help="Training condition to prepare data for",
     )
     args = parser.parse_args()

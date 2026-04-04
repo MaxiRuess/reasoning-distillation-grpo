@@ -82,6 +82,22 @@ conditions:
       packing: true
       output_dir: "outputs/sft_traces"
 
+  re_distill:
+    type: "sft"
+    dataset: "openr1"
+    sft:
+      # Same hyperparameters as sft_traces for fair comparison (1K examples, same training config)
+      learning_rate: 2.0e-4
+      num_train_epochs: 3
+      max_seq_length: 16384
+      per_device_train_batch_size: 4
+      gradient_accumulation_steps: 4
+      warmup_steps: 10
+      optim: "paged_adamw_8bit"
+      use_liger_kernel: true
+      packing: true
+      output_dir: "outputs/re_distill"
+
   grpo_only:
     type: "grpo"
     dataset: "gsm8k"  # Grade school math — model can solve ~80%, creating reward variance

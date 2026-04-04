@@ -39,6 +39,47 @@ def format_s1k_for_sft(tokenizer) -> Dataset:
     return ds
 
 
+def format_openr1_for_sft(tokenizer, max_samples: int = 1000) -> Dataset:
+    """Format Open-R1 dataset for re-distillation SFT.
+
+    Uses reasoning traces from RL-trained models (verified correct by math
+    verification). This tests whether RL-improved traces transfer better
+    than raw DeepSeek-R1 traces (used in sft_traces condition).
+
+    Selects the first verified-correct generation per problem.
+    """
+    ds = load_dataset("open-r1/OpenR1-Math-220k", split="train")
+
+    # Filter for examples with at least one math-verified correct generation
+    ds = ds.filter(lambda x: x["correctness_math_verify"] is not None and any(x["correctness_math_verify"]))
+
+    # Subsample to match sft_traces data size
+    ds = ds.select(range(min(max_samples, len(ds))))
+
+    def format_example(example):
+        problem = example["problem"]
+
+        # Pick the first verified-correct generation
+        generations = example["generations"]
+        correctness = example["correctness_math_verify"]
+        correct_trace = None
+        for gen, is_correct in zip(generations, correctness):
+            if is_correct:
+                correct_trace = gen
+                break
+
+        if correct_trace is None:
+            correct_trace = generations[0]  # Fallback (shouldn't happen after filter)
+
+        return {
+            "prompt": [{"role": "user", "content": problem}],
+            "completion": [{"role": "assistant", "content": correct_trace}],
+        }
+
+    ds = ds.map(format_example, remove_columns=ds.column_names)
+    return ds
+
+
 def format_orca_math_for_sft(tokenizer, max_samples: int | None = None) -> Dataset:
     """Format Orca Math dataset for baseline SFT (answer-only, no reasoning traces)."""
     ds = load_dataset("microsoft/orca-math-word-problems-200k", split="train")
@@ -168,6 +209,9 @@ def get_dataset_for_condition(
 
     elif condition_name == "grpo_only":
         return format_numinamath_for_grpo(tokenizer)
+
+    elif condition_name == "re_distill":
+        return format_openr1_for_sft(tokenizer, max_samples=1000)
 
     elif condition_name == "sft_then_grpo":
         sft_ds = format_s1k_for_sft(tokenizer)

@@ -204,7 +204,7 @@ def run_evaluation(model_path: str, condition: str):
 @app.function(
     image=sft_image,
     gpu="L40S",
-    timeout=1800,
+    timeout=3600,
     secrets=SECRETS,
     volumes={VOLUME_PATH: volume},
 )
@@ -279,11 +279,11 @@ def quick_test(model_path: str = "/vol/outputs/sft_traces"):
 @app.function(
     image=sft_image,
     gpu="L40S",
-    timeout=1800,
+    timeout=3600,
     secrets=SECRETS,
     volumes={VOLUME_PATH: volume},
 )
-def spot_check_gsm8k(model_path: str = "/vol/outputs/sft_traces", num_problems: int = 20):
+def spot_check_gsm8k(model_path: str = "/vol/outputs/sft_traces", num_problems: int = 20, start_from: int = 0):
     """Run a quick GSM8K spot-check: solve N problems and report accuracy."""
     import sys
     sys.path.insert(0, "/root")
@@ -318,7 +318,9 @@ def spot_check_gsm8k(model_path: str = "/vol/outputs/sft_traces", num_problems: 
 
     # Load GSM8K test set
     ds = load_dataset("openai/gsm8k", "main", split="test")
-    ds = ds.select(range(min(num_problems, len(ds))))
+    end_idx = min(num_problems, len(ds))
+    ds = ds.select(range(start_from, end_idx))
+    print(f"Evaluating Q{start_from+1} to Q{end_idx} ({len(ds)} problems)")
 
     correct = 0
     total = 0
@@ -349,7 +351,7 @@ def spot_check_gsm8k(model_path: str = "/vol/outputs/sft_traces", num_problems: 
         total += 1
 
         status = "✓" if is_correct else "✗"
-        print(f"  [{status}] Q{i+1}: pred={pred_answer}, gt={gt_answer}")
+        print(f"  [{status}] Q{start_from+i+1}: pred={pred_answer}, gt={gt_answer}")
 
     accuracy = correct / total if total > 0 else 0
     print(f"\n{'=' * 50}")
