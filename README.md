@@ -1,5 +1,7 @@
 # Reasoning Trace Distillation: Can Small Models Learn to Think?
 
+**[Read the full paper (PDF)](https://maxiruess.github.io/reasoning-distillation-grpo/assets/paper.pdf)**
+
 ## Research Questions
 
 1. **Can reasoning be transferred through imitation alone?** When a 1.7B model is fine-tuned on reasoning traces from a much larger "thinking" model (DeepSeek-R1, 671B), does it learn genuine multi-step reasoning — or just surface-level pattern mimicry?
