@@ -1,7 +1,7 @@
 {
   "benchmark": "GSM8K",
   "evaluation_split": "test",
-  "evaluation_range": "Q1-Q100",
+  "evaluation_range": "full (1,319 problems)",
   "generation_config": {
     "max_new_tokens": 2048,
     "temperature": 0.0,
@@ -14,14 +14,24 @@
     "precision": "bfloat16"
   },
   "conditions": {
+    "base_model": {
+      "description": "Unmodified Qwen3-1.7B base model (no adapter, no fine-tuning)",
+      "training_method": "None (zero-shot greedy evaluation)",
+      "training_data": "N/A",
+      "training_data_size": 0,
+      "num_evaluated": 1319,
+      "num_correct": 952,
+      "accuracy": 0.722,
+      "notes": "Apples-to-apples baseline using identical evaluation protocol (zero-shot, greedy, full test set). Qwen reports 75.4% with 4-shot CoT prompting."
+    },
     "baseline": {
       "description": "SFT on 50K Orca Math examples (answer-only, no reasoning traces)",
       "training_method": "SFT with LoRA",
       "training_data": "microsoft/orca-math-word-problems-200k (50K subset)",
       "training_data_size": 50000,
-      "num_evaluated": 100,
-      "num_correct": 67,
-      "accuracy": 0.670,
+      "num_evaluated": 1319,
+      "num_correct": 913,
+      "accuracy": 0.692,
       "training_loss": 0.105,
       "training_token_accuracy": 0.962,
       "training_time_minutes": 108
@@ -31,9 +41,9 @@
       "training_method": "SFT with LoRA",
       "training_data": "simplescaling/s1K-1.1",
       "training_data_size": 1000,
-      "num_evaluated": 99,
-      "num_correct": 80,
-      "accuracy": 0.808,
+      "num_evaluated": 1319,
+      "num_correct": 974,
+      "accuracy": 0.738,
       "training_loss": 0.842,
       "training_token_accuracy": 0.754,
       "training_time_minutes": 101
@@ -41,14 +51,14 @@
     "grpo_only": {
       "description": "GRPO from base model with binary correctness + format rewards",
       "training_method": "GRPO with LoRA (vLLM colocate)",
-      "training_data": "NuminaMath-1.5-RL-Verifiable (10K) then GSM8K train (7.5K)",
-      "training_data_size": 10000,
+      "training_data": "openai/gsm8k (train split, 7,473 examples)",
+      "training_data_size": 7473,
       "grpo_max_steps": 500,
       "grpo_num_generations": 8,
       "grpo_learning_signal": "Near-zero (frac_reward_zero_std ~0.75-0.85)",
-      "num_evaluated": 99,
-      "num_correct": 77,
-      "accuracy": 0.778,
+      "num_evaluated": 1319,
+      "num_correct": 999,
+      "accuracy": 0.757,
       "training_time_minutes": 70
     },
     "sft_then_grpo": {
@@ -59,9 +69,9 @@
       "grpo_max_steps": 500,
       "grpo_num_generations": 8,
       "grpo_learning_signal": "Weak (frac_reward_zero_std ~0.77, reward_mean ~0.81)",
-      "num_evaluated": 99,
-      "num_correct": 66,
-      "accuracy": 0.667,
+      "num_evaluated": 1319,
+      "num_correct": 919,
+      "accuracy": 0.697,
       "sft_training_loss": 0.841,
       "training_time_minutes": 203
     },
@@ -70,9 +80,9 @@
       "training_method": "SFT with LoRA",
       "training_data": "open-r1/OpenR1-Math-220k (1K subset, filtered for correctness_math_verify=True)",
       "training_data_size": 1000,
-      "num_evaluated": 93,
-      "num_correct": 80,
-      "accuracy": 0.860,
+      "num_evaluated": 1319,
+      "num_correct": 1036,
+      "accuracy": 0.785,
       "training_loss": 0.370,
       "training_token_accuracy": 0.867,
       "training_time_minutes": 61
