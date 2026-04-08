@@ -283,7 +283,7 @@ def quick_test(model_path: str = "/vol/outputs/sft_traces"):
     secrets=SECRETS,
     volumes={VOLUME_PATH: volume},
 )
-def spot_check_gsm8k(model_path: str = "/vol/outputs/sft_traces", num_problems: int = 20, start_from: int = 0):
+def spot_check_gsm8k(model_path: str = "/vol/outputs/sft_traces", num_problems: int = 20, start_from: int = 0, base_model_only: bool = False):
     """Run a quick GSM8K spot-check: solve N problems and report accuracy."""
     import sys
     sys.path.insert(0, "/root")
@@ -298,17 +298,22 @@ def spot_check_gsm8k(model_path: str = "/vol/outputs/sft_traces", num_problems: 
 
     config = load_config("/root/configs/config.yaml")
 
-    print(f"Loading model from {model_path}...")
+    label = "BASE MODEL (no adapter)" if base_model_only else model_path
+    print(f"Loading model: {label}...")
     base_model = AutoModelForCausalLM.from_pretrained(
         config["model"]["name"],
         device_map="auto",
         torch_dtype=torch.bfloat16,
         attn_implementation="flash_attention_2",
     )
-    model = PeftModel.from_pretrained(base_model, model_path)
+    if base_model_only:
+        model = base_model
+        tokenizer = AutoTokenizer.from_pretrained(config["model"]["tokenizer"])
+    else:
+        model = PeftModel.from_pretrained(base_model, model_path)
+        tokenizer = AutoTokenizer.from_pretrained(model_path)
     model.eval()
 
-    tokenizer = AutoTokenizer.from_pretrained(model_path)
     eos_token = config["model"].get("eos_token")
     if eos_token:
         tokenizer.eos_token = eos_token
@@ -359,6 +364,172 @@ def spot_check_gsm8k(model_path: str = "/vol/outputs/sft_traces", num_problems: 
     print(f"{'=' * 50}")
 
     return {"correct": correct, "total": total, "accuracy": accuracy}
+
+
+@app.function(
+    image=sft_image,
+    gpu="L40S",
+    timeout=4 * 3600,
+    secrets=SECRETS,
+    volumes={VOLUME_PATH: volume},
+)
+def full_eval_gsm8k(model_path: str = "/vol/outputs/sft_traces", condition: str = "sft_traces", base_model_only: bool = False):
+    """Run full GSM8K evaluation (all 1,319 problems) with batched generation and checkpointing."""
+    import json
+    import sys
+    sys.path.insert(0, "/root")
+
+    import torch
+    from transformers import AutoModelForCausalLM, AutoTokenizer
+
+    from src.data import format_gsm8k_for_eval, load_config
+    from src.reward import answers_match, extract_answer_auto, extract_gsm8k_answer
+
+    config = load_config("/root/configs/config.yaml")
+    eval_cfg = config["evaluation"]
+    batch_size = eval_cfg["batch_size"]
+    max_new_tokens = eval_cfg["max_new_tokens"]
+    checkpoint_every = 20  # Save every 20 batches (~160 problems)
+
+    # Checkpoint path on Modal volume
+    checkpoint_dir = f"{VOLUME_PATH}/eval_checkpoints"
+    import os
+    os.makedirs(checkpoint_dir, exist_ok=True)
+    checkpoint_path = f"{checkpoint_dir}/{condition}_gsm8k.json"
+
+    # Resume from checkpoint if it exists
+    completed_results = []
+    start_idx = 0
+    if os.path.exists(checkpoint_path):
+        with open(checkpoint_path) as f:
+            checkpoint = json.load(f)
+        completed_results = checkpoint["results"]
+        start_idx = checkpoint["next_idx"]
+        print(f"[{condition}] Resuming from checkpoint: {len(completed_results)} problems done, starting at idx {start_idx}")
+
+    # Load model
+    label = "BASE MODEL (no adapter)" if base_model_only else model_path
+    print(f"[{condition}] Loading model: {label}...")
+
+    if base_model_only:
+        model = AutoModelForCausalLM.from_pretrained(
+            config["model"]["name"],
+            device_map="auto",
+            torch_dtype=torch.bfloat16,
+            attn_implementation="flash_attention_2",
+        )
+        tokenizer = AutoTokenizer.from_pretrained(config["model"]["tokenizer"])
+    else:
+        from peft import PeftModel
+        base_model = AutoModelForCausalLM.from_pretrained(
+            config["model"]["name"],
+            device_map="auto",
+            torch_dtype=torch.bfloat16,
+            attn_implementation="flash_attention_2",
+        )
+        model = PeftModel.from_pretrained(base_model, model_path)
+        tokenizer = AutoTokenizer.from_pretrained(model_path)
+    model.eval()
+
+    eos_token = config["model"].get("eos_token")
+    if eos_token:
+        tokenizer.eos_token = eos_token
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+    tokenizer.padding_side = "left"
+
+    # Load dataset
+    ds = format_gsm8k_for_eval()
+    questions = ds["question"]
+    ground_truths = ds["answer"]
+    total_problems = len(questions)
+    total_batches = (total_problems - start_idx + batch_size - 1) // batch_size
+
+    print(f"[{condition}] Evaluating GSM8K: {total_problems} problems, batch_size={batch_size}, "
+          f"starting at idx {start_idx} ({total_batches} batches remaining)")
+
+    # Generate and evaluate in batches with checkpointing
+    batches_since_save = 0
+    for i in range(start_idx, total_problems, batch_size):
+        batch_questions = questions[i : i + batch_size]
+        batch_gts = ground_truths[i : i + batch_size]
+
+        # Format and generate
+        messages_batch = [[{"role": "user", "content": q}] for q in batch_questions]
+        prompts = [
+            tokenizer.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True)
+            for msgs in messages_batch
+        ]
+        inputs = tokenizer(prompts, return_tensors="pt", padding=True, truncation=True).to(model.device)
+
+        with torch.no_grad():
+            outputs = model.generate(
+                **inputs,
+                max_new_tokens=max_new_tokens,
+                temperature=0.0,
+                do_sample=False,
+                pad_token_id=tokenizer.pad_token_id,
+            )
+
+        # Score each problem in the batch
+        for j, output in enumerate(outputs):
+            prompt_len = inputs["input_ids"][j].shape[0]
+            response = tokenizer.decode(output[prompt_len:], skip_special_tokens=True)
+
+            gt_answer = extract_gsm8k_answer(batch_gts[j])
+            pred_answer = extract_answer_auto(response)
+            is_correct = pred_answer is not None and gt_answer is not None and answers_match(pred_answer, gt_answer)
+
+            completed_results.append({
+                "idx": i + j,
+                "correct": is_correct,
+                "pred": pred_answer,
+                "gt": gt_answer,
+                "trace_length": len(response),
+            })
+
+        batches_since_save += 1
+        done = len(completed_results)
+        correct_so_far = sum(1 for r in completed_results if r["correct"])
+        batch_num = (i - start_idx) // batch_size + 1
+        print(f"  [{condition}] Batch {batch_num}/{total_batches} | {done}/{total_problems} problems | "
+              f"accuracy so far: {correct_so_far}/{done} = {correct_so_far/done:.1%}")
+
+        # Checkpoint periodically
+        if batches_since_save >= checkpoint_every:
+            next_idx = i + len(batch_questions)
+            with open(checkpoint_path, "w") as f:
+                json.dump({"condition": condition, "next_idx": next_idx, "results": completed_results}, f)
+            volume.commit()
+            print(f"  [{condition}] Checkpoint saved ({done} problems)")
+            batches_since_save = 0
+
+    # Final results
+    num_correct = sum(1 for r in completed_results if r["correct"])
+    num_total = len(completed_results)
+    accuracy = num_correct / num_total if num_total > 0 else 0.0
+    avg_trace_length = sum(r["trace_length"] for r in completed_results) / num_total if num_total > 0 else 0.0
+
+    # Save final results and clean up checkpoint
+    final_result = {
+        "condition": condition, "accuracy": accuracy,
+        "num_correct": num_correct, "num_total": num_total,
+        "avg_trace_length": avg_trace_length, "results": completed_results,
+    }
+    final_path = f"{VOLUME_PATH}/eval_checkpoints/{condition}_gsm8k_final.json"
+    with open(final_path, "w") as f:
+        json.dump(final_result, f, indent=2)
+    if os.path.exists(checkpoint_path):
+        os.remove(checkpoint_path)
+    volume.commit()
+
+    print(f"\n{'=' * 50}")
+    print(f"[{condition}] GSM8K Full Eval: {num_correct}/{num_total} = {accuracy:.1%}")
+    print(f"[{condition}] Avg trace length: {avg_trace_length:.0f} chars")
+    print(f"[{condition}] Results saved to {final_path}")
+    print(f"{'=' * 50}")
+
+    return {"condition": condition, "accuracy": accuracy, "num_correct": num_correct, "num_total": num_total}
 
 
 @app.local_entrypoint()

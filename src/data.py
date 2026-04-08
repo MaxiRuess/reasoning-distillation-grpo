@@ -162,9 +162,7 @@ def format_gsm8k_for_eval() -> Dataset:
     The answer column contains the full solution with #### delimiter.
     """
     ds = load_dataset("openai/gsm8k", "main", split="test")
-
-    ds = ds.rename_column("question", "question")
-    # GSM8K has 'answer' column with reasoning + #### final_answer
+    # GSM8K already has 'question' and 'answer' columns in the expected format
     return ds
 
 
@@ -208,14 +206,14 @@ def get_dataset_for_condition(
         return format_s1k_for_sft(tokenizer)
 
     elif condition_name == "grpo_only":
-        return format_numinamath_for_grpo(tokenizer)
+        return format_gsm8k_for_grpo(tokenizer)
 
     elif condition_name == "re_distill":
         return format_openr1_for_sft(tokenizer, max_samples=1000)
 
     elif condition_name == "sft_then_grpo":
         sft_ds = format_s1k_for_sft(tokenizer)
-        grpo_ds = format_numinamath_for_grpo(tokenizer)
+        grpo_ds = format_gsm8k_for_grpo(tokenizer)
         return sft_ds, grpo_ds
 
     else:
