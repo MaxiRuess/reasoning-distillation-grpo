@@ -35,25 +35,26 @@ We fine-tune `Qwen3-1.7B` (base) under five controlled conditions using the same
 
 | Condition | GSM8K Accuracy | Training Data | Method |
 |---|---|---|---|
-| `baseline` | 67.0% | 50K answers | SFT |
-| `sft_then_grpo` | 66.7% | 1K traces → 7.5K GSM8K | SFT → GRPO |
-| `grpo_only` | 77.8% | 7.5K GSM8K | GRPO |
-| `sft_traces` | 80.8% | 1K DeepSeek-R1 traces | SFT |
-| **`re_distill`** | **86.0%** | 1K RL-verified traces | SFT |
+| `baseline` | 69.2% | 50K answers | SFT |
+| `sft_then_grpo` | 69.7% | 1K traces → 7.5K GSM8K | SFT → GRPO |
+| Base model | 72.2% | --- | None (zero-shot greedy) |
+| `sft_traces` | 73.8% | 1K DeepSeek-R1 traces | SFT |
+| `grpo_only` | 75.7% | 7.5K GSM8K | GRPO |
+| **`re_distill`** | **78.5%** | 1K RL-verified traces | SFT |
 
-For reference, Qwen3-1.7B base achieves 75.4% on GSM8K with 4-shot chain-of-thought prompting.
+Evaluated on the full GSM8K test set (1,319 problems, greedy decoding). For reference, Qwen reports 75.4% with 4-shot chain-of-thought prompting.
 
 **What we found:**
 
-- **Distillation works remarkably well.** 1,000 reasoning traces from DeepSeek-R1 (80.8%) outperform 50,000 answer-only examples (67.0%) by 13.8 percentage points. The model produces genuine `<think>` reasoning blocks with self-correction, backtracking, and verification — not just pattern mimicry. Quality of training signal dominates quantity.
+- **Re-distillation is the best approach.** `re_distill` (78.5%) outperforms all other conditions — beating `sft_traces` (73.8%) by 4.7 points and `grpo_only` (75.7%) by 2.8 points, using the same 1K examples, same model, same hyperparameters. The only difference is trace source: RL-verified traces from Open-R1 are higher quality because they've been filtered for mathematical correctness. This captures RL's benefits (better reasoning paths) without RL's risks (forgetting, instability, engineering complexity).
 
-- **Direct RL after distillation is destructive at 1.7B scale.** `sft_then_grpo` (66.7%) performs 14.1 points *worse* than `sft_traces` alone (80.8%). GRPO causes catastrophic forgetting of the distilled reasoning patterns. This is consistent with Niu et al.'s proof (arXiv:2601.07389) that SFT and RL objectives are mathematically non-decouplable, compounded by entropy collapse (arXiv:2602.02244), distribution mismatch (arXiv:2602.01058), and LoRA merge artifacts (arXiv:2410.21228).
+- **Direct GRPO marginally outperforms raw distillation.** `grpo_only` (75.7%) edges out `sft_traces` (73.8%) by 1.9 points, challenging the assumption that distillation dominates RL at small scale. Both exceed the base model (72.2%), confirming that both training signals provide genuine improvement.
 
-- **Pure GRPO from base provides minimal benefit.** `grpo_only` (77.8%) gains only 2.4 points over the base model's 4-shot capability (75.4%). During training, 75-85% of steps had zero within-group reward variance (zero gradient). This confirms Yue et al.'s finding (arXiv:2504.13837) that RL redistributes sampling probability but does not create new reasoning capabilities, while "distillation can genuinely introduce new knowledge."
+- **RL after distillation degrades performance.** `sft_then_grpo` (69.7%) performs 4.1 points *worse* than `sft_traces` alone (73.8%), falling below the base model. This is consistent with Niu et al.'s proof (arXiv:2601.07389) that SFT and RL objectives are mathematically non-decouplable, compounded by entropy collapse (arXiv:2602.02244), distribution mismatch (arXiv:2602.01058), and LoRA merge artifacts (arXiv:2410.21228).
 
-- **Re-distillation is the right approach.** `re_distill` (86.0%) outperforms direct distillation (80.8%) by 5.2 points using the same 1K examples, same model, same hyperparameters — the only difference is trace source. RL-verified traces from Open-R1 are higher quality because they've been filtered for mathematical correctness. This captures RL's benefits (better reasoning paths) without RL's risks (forgetting, instability, engineering complexity).
+- **Distillation is data-efficient but not dominant.** 1,000 reasoning traces from DeepSeek-R1 (73.8%) outperform 50,000 answer-only examples (69.2%) by 4.6 points. The model produces genuine `<think>` reasoning blocks with self-correction and verification. However, GRPO achieves comparable results without any reasoning traces.
 
-- **Trace quality follows a clear hierarchy.** Answer-only (67%) < base 4-shot (75%) < RL-redistributed (78%) < raw teacher traces (81%) < RL-verified traces (86%). The largest single jump (5.2 points) comes from correctness verification — **data quality filtering is the highest-leverage intervention** for reasoning distillation.
+- **Trace quality follows a clear hierarchy.** Baseline (69.2%) < base model (72.2%) < raw teacher traces (73.8%) < RL from base (75.7%) < RL-verified traces (78.5%). The largest single jump (4.7 points) comes from correctness verification — **data quality filtering is the highest-leverage intervention** for reasoning distillation.
 
 **Example: Distillation teaches reasoning, not just formatting.** The same question answered by `baseline` (answer-only SFT) and `sft_traces` (reasoning trace distillation):
 
@@ -66,7 +67,7 @@ For reference, Qwen3-1.7B base achieves 75.4% on GSM8K with 4-shot chain-of-thou
 > *sft_traces response:*
 > `<think>` Okay, let me try to figure out this problem. So, John buys 7 apples, each costing $2, and he pays with a $20 bill. We need to find out how much change he gets. First, I know that the price per apple is $2. If he buys 7 apples, the total cost should be 7 multiplied by $2. Let me write that out: 7 * $2 = $14. John paid with a $20 bill. The change he should get back is $20 minus $14 = $6. Let me double-check: 7 apples at $2 each is $14. $20 minus $14 is $6. `</think>` John gets \boxed{6} dollars in change.
 
-Both models get this easy problem right, but the reasoning process is qualitatively different. The baseline produces an empty `<think>` block and jumps to the computation — it learned to format answers, not to reason. The distilled model restates the problem, identifies the relevant quantities, performs the calculation, and *self-verifies* ("Let me double-check"). On harder problems where the first attempt might be wrong, this self-verification is the difference between 67% and 81% accuracy.
+Both models get this easy problem right, but the reasoning process is qualitatively different. The baseline produces an empty `<think>` block and jumps to the computation — it learned to format answers, not to reason. The distilled model restates the problem, identifies the relevant quantities, performs the calculation, and *self-verifies* ("Let me double-check"). On harder problems where the first attempt might be wrong, this self-verification is the difference between 69% and 74% accuracy.
 
 ## Setup
 
@@ -100,7 +101,13 @@ modal run modal_train.py::train_sft --condition re_distill
 modal run modal_train.py::train_grpo --condition grpo_only
 modal run modal_train.py::train_grpo --condition sft_then_grpo --sft-checkpoint /vol/outputs/sft_then_grpo
 
-# Step 4: Evaluate on GSM8K
+# Step 4: Evaluate on GSM8K (full test set, 1,319 problems)
+modal run modal_train.py::full_eval_gsm8k --model-path /vol/outputs/re_distill --condition re_distill
+
+# Evaluate base model (no adapter, apples-to-apples baseline)
+modal run modal_train.py::full_eval_gsm8k --base-model-only --condition base_model
+
+# Quick spot-check (subset of problems, faster)
 modal run modal_train.py::spot_check_gsm8k --model-path /vol/outputs/re_distill --num-problems 100
 
 # Step 5: Quick sanity check (5 sample problems, visual inspection)
@@ -132,15 +139,15 @@ modal run modal_train.py::quick_test --model-path /vol/outputs/sft_traces
 - **Training**: TRL (SFTTrainer, GRPOTrainer), PEFT (LoRA r=64, rsLoRA), Transformers
 - **Base model**: Qwen3-1.7B in full bfloat16 (no quantization)
 - **Data**: [s1K-1.1](https://huggingface.co/datasets/simplescaling/s1K-1.1) (DeepSeek-R1 traces), [Open-R1 Math](https://huggingface.co/datasets/open-r1/OpenR1-Math-220k) (RL-verified traces), [Orca Math](https://huggingface.co/datasets/microsoft/orca-math-word-problems-200k), [GSM8K](https://huggingface.co/datasets/openai/gsm8k)
-- **Evaluation**: GSM8K test set (~100 problems per condition, greedy decoding)
+- **Evaluation**: GSM8K test set (full 1,319 problems per condition, greedy decoding)
 - **Compute**: Modal cloud — L40S for SFT (~$2/run), H100 for GRPO with vLLM colocate (~$40/run)
 - **Tracking**: Weights & Biases
 
 ## Open Questions
 
-**Does the SFT→RL degradation persist with better RL implementation?** Our GRPO setup faced significant engineering challenges (vLLM compatibility, dataset difficulty calibration, LoRA merge artifacts). The 14-point degradation may partly reflect suboptimal implementation rather than fundamental limitations. Entropy-preserving SFT (CurioSFT, arXiv:2602.02244), importance-weighted RL (PEAR, arXiv:2602.01058), or adapter composition methods could potentially avoid the catastrophic forgetting we observed. Whether any implementation can overcome the proven non-decouplability of SFT and RL objectives (arXiv:2601.07389) at sub-2B scale remains an open question.
+**Does the SFT→RL degradation persist with better RL implementation?** Our GRPO setup faced significant engineering challenges (vLLM compatibility, dataset difficulty calibration, LoRA merge artifacts). The 4.1-point degradation may partly reflect suboptimal implementation rather than fundamental limitations. Entropy-preserving SFT (CurioSFT, arXiv:2602.02244), importance-weighted RL (PEAR, arXiv:2602.01058), or adapter composition methods could potentially avoid the degradation we observed. Whether any implementation can overcome the proven non-decouplability of SFT and RL objectives (arXiv:2601.07389) at sub-2B scale remains an open question.
 
-**What is the optimal trace selection strategy for re-distillation?** Our `re_distill` condition uses the first math-verified correct solution from Open-R1. Alternative strategies — selecting the shortest correct trace, the most diverse trace set, or including negative examples (REDI, arXiv:2505.24850) — might further improve results. The 5.2-point gap between raw and verified traces suggests significant headroom from better data curation.
+**What is the optimal trace selection strategy for re-distillation?** Our `re_distill` condition uses the first math-verified correct solution from Open-R1. Alternative strategies — selecting the shortest correct trace, the most diverse trace set, or including negative examples (REDI, arXiv:2505.24850) — might further improve results. The 4.7-point gap between raw and verified traces suggests significant headroom from better data curation.
 
 ## References
 
