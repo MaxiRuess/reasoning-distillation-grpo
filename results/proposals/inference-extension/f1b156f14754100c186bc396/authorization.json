@@ -1,0 +1,7 @@
+{
+  "authority": "User: Let's implement this please, accepting the 128-question inference package and new $30 cap",
+  "cap_usd": 30.0,
+  "protocol_id": "f1b156f14754100c186bc396cae39df255c6e2213e20e566e7e63f12fe499f4f",
+  "quote_sha256": "91c01cfcb24bb4dc722a2bd82098d682b40654821bc420a2d2c189be2762c452",
+  "scope": "Existing student and three trace seeds; sampled 2K/4K/8K; no-thinking sampled and original-greedy diagnostics; no training"
+}

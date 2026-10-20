@@ -1,0 +1,20 @@
+{
+  "accuracy": 0.71875,
+  "accuracy_definition": "explicit_final_answer_accuracy",
+  "benchmark": "gsm8k",
+  "condition": "checkpoint_ablation_reconstructed",
+  "extraction_failure_rate": 0.23046875,
+  "format_failure_rate": 0.01171875,
+  "mean_generated_tokens": 1174.1953125,
+  "model_identity": "46257daf019bf91c1ed25371a6a087738c9f5d71813d42488a1c5278dfa71563",
+  "num_correct": 184,
+  "num_samples_per_problem": 1,
+  "num_total": 256,
+  "pass@1": 0.71875,
+  "pilot_or_subset": true,
+  "results_path": "/vol/evaluations-v2/checkpoint_ablation_reconstructed/gsm8k/4f8856f57f2849dcf60c966e",
+  "run_id": "4f8856f57f2849dcf60c966e50d514d273abc6d7511f06d4e7bfd7abc17d1300",
+  "scorer_version": "boxed-final-v1",
+  "truncation_rate": 0.23046875,
+  "unfinished_thinking_rate": 0.21875
+}

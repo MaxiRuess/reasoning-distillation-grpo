@@ -1,0 +1,62 @@
+{
+  "endpoint": "boxed-final-v1",
+  "protocol_id": "f1b156f14754100c186bc396cae39df255c6e2213e20e566e7e63f12fe499f4f",
+  "raw_sha256": {
+    "base": "0547530d9f4a1755a6ef22451c802137de7b52517a942a38898649f97864a105",
+    "trace_42": "a4b499b330d5bd97cde8bf15dcc7561ca02d36febc2aec2d3b7ee31e60747a2e",
+    "trace_43": "503dd048b8ad8b885c9fed560057d248509f8d970c0362c627161f71ec13ca53",
+    "trace_44": "42fcbbda4bc2f0d054b8d0e585cb10c968e830d283ed6f0da6c677fdb3e471bc"
+  },
+  "status": "saved-output secondary analysis; numerical primary unchanged",
+  "strict_8192": {
+    "mean_delta": 0.026041666666666668,
+    "num_distinct_questions": 128,
+    "paired_item_bootstrap_95": [
+      -0.026041666666666664,
+      0.08072916666666666
+    ],
+    "per_seed": [
+      {
+        "delta": 0.03125,
+        "left_correct": 111,
+        "left_only_correct": 9,
+        "mcnemar_exact_p": 0.4239501953125,
+        "num_paired": 128,
+        "paired_bootstrap_95": [
+          -0.0234375,
+          0.0859375
+        ],
+        "right_correct": 107,
+        "right_only_correct": 5
+      },
+      {
+        "delta": 0.0234375,
+        "left_correct": 110,
+        "left_only_correct": 9,
+        "mcnemar_exact_p": 0.6072387695312499,
+        "num_paired": 128,
+        "paired_bootstrap_95": [
+          -0.03125,
+          0.0859375
+        ],
+        "right_correct": 107,
+        "right_only_correct": 6
+      },
+      {
+        "delta": 0.0234375,
+        "left_correct": 110,
+        "left_only_correct": 12,
+        "mcnemar_exact_p": 0.6636238098144531,
+        "num_paired": 128,
+        "paired_bootstrap_95": [
+          -0.046875,
+          0.09375
+        ],
+        "right_correct": 107,
+        "right_only_correct": 9
+      }
+    ],
+    "training_seed_delta_std": 0.004510548978043952,
+    "uncertainty": "Item interval conditional on observed trained models and decoding seed; shared items are not independent replications"
+  }
+}

@@ -1,590 +1,383 @@
-"""Modal cloud training orchestration for all experimental conditions."""
+"""Modal entry points share exactly the same training/evaluation paths as local CLIs.
+
+Importing this module or running the pipeline dry-run never starts a GPU Function.
+"""
+
+import json
+from pathlib import Path
 
 import modal
 
+from src.artifacts import file_hash, fingerprint
+
 app = modal.App("reasoning-distillation-grpo")
-
-# Two separate images: SFT (pinned torch for flash-attn) and GRPO (vLLM needs its own torch)
-# vLLM bundles flash-attn internally, so no separate install needed for GRPO.
-
+SOURCE_DIGEST = fingerprint(
+    {
+        str(path): file_hash(path)
+        for path in [*sorted(Path("src").glob("*.py")), Path("modal_train.py"), Path("configs/config.yaml")]
+    }
+)
 FLASH_ATTN_WHEEL = (
     "https://github.com/Dao-AILab/flash-attention/releases/download/v2.8.3/"
     "flash_attn-2.8.3+cu12torch2.8cxx11abiFALSE-cp311-cp311-linux_x86_64.whl"
 )
 
-sft_image = (
-    modal.Image.debian_slim(python_version="3.11")
-    .pip_install(
-        "torch==2.8.0",
-        "transformers>=4.51.0",
-        "trl>=0.28.0",
-        "peft>=0.14.0",
-        "bitsandbytes>=0.45.0",
-        "datasets>=3.5.0",
-        "accelerate>=1.5.0",
-        "wandb>=0.17.0",
-        "pyyaml",
-        "liger-kernel",
-        "sympy",
-        FLASH_ATTN_WHEEL,
+
+def image_for(lock, flash=False, offline=False):
+    image = modal.Image.debian_slim(python_version="3.11").pip_install_from_requirements(lock)
+    if flash:
+        image = image.run_commands(
+            "python -c "
+            + __import__("shlex").quote(
+                "import subprocess,sys,torch; abi=str(torch.compiled_with_cxx11_abi()).upper(); "
+                "url=" + repr(FLASH_ATTN_WHEEL) + ".replace('abiFALSE','abi'+abi); "
+                "subprocess.check_call([sys.executable,'-m','pip','install',url])"
+            )
+        )
+    environment = {"PYTHONPATH": "/root", "SOURCE_DIGEST": SOURCE_DIGEST, "HF_HOME": "/vol/hf-cache-v2"}
+    if offline:
+        environment.update(HF_HUB_OFFLINE="1", HF_DATASETS_OFFLINE="1")
+    return (
+        image.env(environment)
+        .add_local_dir("src", remote_path="/root/src")
+        .add_local_file("configs/config.yaml", remote_path="/root/configs/config.yaml")
     )
-    .add_local_dir("src", remote_path="/root/src")
-    .add_local_file("configs/config.yaml", remote_path="/root/configs/config.yaml")
-)
 
-grpo_image = (
-    modal.Image.debian_slim(python_version="3.11")
-    .pip_install(
-        "trl[vllm]>=0.28.0",  # Pulls compatible torch + vLLM versions
-        "peft>=0.14.0",
-        "bitsandbytes>=0.45.0",
-        "datasets>=3.5.0",
-        "accelerate>=1.5.0",
-        "wandb>=0.17.0",
-        "pyyaml",
-        "liger-kernel",
-        "sympy",
-    )
-    .add_local_dir("src", remote_path="/root/src")
-    .add_local_file("configs/config.yaml", remote_path="/root/configs/config.yaml")
-)
 
-volume = modal.Volume.from_name("reasoning-distillation-vol", create_if_missing=True)
-
+sft_image = image_for("requirements/sft.lock", flash=True)
+grpo_image = image_for("requirements/grpo.lock")
+sft_gpu_image = image_for("requirements/sft.lock", flash=True, offline=True)
+grpo_gpu_image = image_for("requirements/grpo.lock", offline=True)
+volume = modal.Volume.from_name("reasoning-distillation-vol", create_if_missing=False)
 VOLUME_PATH = "/vol"
-SECRETS = [
-    modal.Secret.from_name("wandb-secret"),
-    modal.Secret.from_name("huggingface-secret"),
-]
+SECRETS = [modal.Secret.from_name("wandb-secret"), modal.Secret.from_name("huggingface-secret")]
 
 
-@app.function(
-    image=sft_image,
-    gpu="L40S",
-    timeout=6 * 3600,
-    secrets=SECRETS,
-    volumes={VOLUME_PATH: volume},
-)
-def train_sft(condition: str = "sft_traces"):
-    """Run SFT training on a cloud GPU."""
-    import sys
-    sys.path.insert(0, "/root")
+@app.function(image=sft_image, timeout=3600, secrets=SECRETS, volumes={VOLUME_PATH: volume})
+def prepare_runtime():
+    from src.data import load_config
+    from src.runtime_cache import prepare_runtime_cache
 
-    import os
-    os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
-
-    from src.data import get_dataset_for_condition, load_config
-    from src.training import build_sft_trainer, get_lora_config, load_model
-
-    import wandb
-
-    config = load_config("/root/configs/config.yaml")
-    condition_config = config["conditions"][condition]
-
-    # Override output dir to write to volume
-    output_dir = f"{VOLUME_PATH}/outputs/{condition}"
-    condition_config["sft"]["output_dir"] = output_dir
-
-    wandb.init(
-        project=config.get("wandb", {}).get("project", "reasoning-distillation"),
-        name=f"sft-{condition}",
-        config=condition_config,
-    )
-
-    model, tokenizer = load_model(config)
-    lora_config = get_lora_config(config)
-
-    result = get_dataset_for_condition(condition, config, tokenizer)
-    dataset = result[0] if isinstance(result, tuple) else result
-    print(f"[{condition}] Training on {len(dataset)} examples")
-
-    trainer = build_sft_trainer(model, tokenizer, dataset, condition_config, lora_config)
-    trainer.train()
-
-    trainer.save_model(output_dir)
-    tokenizer.save_pretrained(output_dir)
+    volume.reload()
+    result = prepare_runtime_cache(load_config("/root/configs/config.yaml"))
     volume.commit()
-
-    wandb.finish()
-    print(f"[{condition}] SFT training complete. Saved to {output_dir}")
-    return output_dir
+    return result
 
 
-@app.function(
-    image=grpo_image,
-    gpu="H100",
-    timeout=12 * 3600,
-    secrets=SECRETS,
-    volumes={VOLUME_PATH: volume},
-)
-def train_grpo(condition: str = "grpo_only", sft_checkpoint: str | None = None):
-    """Run GRPO training on a cloud GPU with vLLM colocate mode."""
-    import os
-    import sys
-    sys.path.insert(0, "/root")
+@app.function(image=sft_image, timeout=6 * 3600, secrets=SECRETS, volumes={VOLUME_PATH: volume})
+def prepare_data(condition: str, phase: str = "sft"):
+    from src.data import load_config
+    from src.pipeline import prepare_phase
 
-    # Required for vLLM colocate mode on single GPU (from Modal's official example)
-    os.environ["RANK"] = "0"
-    os.environ["LOCAL_RANK"] = "0"
-    os.environ["WORLD_SIZE"] = "1"
-    os.environ["MASTER_ADDR"] = "localhost"
-    os.environ["MASTER_PORT"] = "12355"
-
-    from src.data import format_gsm8k_for_grpo, load_config
-    from src.reward import binary_reward_fn, format_reward_fn
-    from src.training import (
-        build_grpo_trainer,
-        get_lora_config,
-        load_model,
-        load_sft_checkpoint,
-    )
-
-    import wandb
-
-    config = load_config("/root/configs/config.yaml")
-    condition_config = config["conditions"][condition]
-
-    output_dir = f"{VOLUME_PATH}/outputs/{condition}"
-    condition_config["grpo"]["output_dir"] = output_dir
-
-    wandb.init(
-        project=config.get("wandb", {}).get("project", "reasoning-distillation"),
-        name=f"grpo-{condition}",
-        config=condition_config,
-    )
-
-    if sft_checkpoint:
-        print(f"[{condition}] Loading SFT checkpoint from {sft_checkpoint}")
-        model, tokenizer = load_sft_checkpoint(sft_checkpoint, config)
-    else:
-        model, tokenizer = load_model(config)
-
-    lora_config = get_lora_config(config)
-    dataset = format_gsm8k_for_grpo(tokenizer)
-    print(f"[{condition}] Training on {len(dataset)} GSM8K examples (LoRA r={lora_config.r})")
-
-    trainer = build_grpo_trainer(
-        model, tokenizer, dataset, condition_config,
-        reward_fns=[binary_reward_fn, format_reward_fn],
-        lora_config=lora_config,
-    )
-    trainer.train()
-
-    trainer.save_model(output_dir)
-    tokenizer.save_pretrained(output_dir)
+    volume.reload()
+    result = prepare_phase(load_config("/root/configs/config.yaml"), condition, phase, "/vol/prepared-v2")
     volume.commit()
-
-    wandb.finish()
-    print(f"[{condition}] GRPO training complete. Saved to {output_dir}")
-    return output_dir
+    return {"rows": result["rows"], "path": result["manifest"]["path"]}
 
 
-@app.function(
-    image=sft_image,
-    gpu="L40S",
-    timeout=3 * 3600,
-    secrets=SECRETS,
-    volumes={VOLUME_PATH: volume},
-)
-def run_evaluation(model_path: str, condition: str):
-    """Run evaluation benchmarks on a trained model."""
-    import sys
-    sys.path.insert(0, "/root")
+def _distillation_config(protocol):
+    import os
 
+    if fingerprint({k: v for k, v in protocol.items() if k != "protocol_id"}) != protocol["protocol_id"]:
+        raise ValueError("Distillation protocol was modified")
+    bundled = {
+        k: v
+        for k, v in protocol["implementation"].items()
+        if k.startswith("src/") or k in {"modal_train.py", "configs/config.yaml"}
+    }
+    if os.environ["SOURCE_DIGEST"] != fingerprint(bundled):
+        raise ValueError("Bundled source differs from the frozen distillation protocol")
+    return protocol["config"]
+
+
+@app.function(image=sft_image, timeout=900, secrets=SECRETS, volumes={VOLUME_PATH: volume})
+def prepare_distillation_data(condition: str, protocol: dict, phase: str = "sft"):
+    from src.pipeline import prepare_phase
+
+    volume.reload()
+    config = _distillation_config(protocol)
+    try:
+        result = prepare_phase(config, condition, phase, "/vol/distillation-prepared")
+        expected = protocol["prepared"][condition]
+        if (
+            result["manifest"]["content_hash"] != expected["content_hash"]
+            or result["manifest"]["source_ids"] != expected["source_ids"]
+        ):
+            raise ValueError("Remote training data differs from the frozen local preparation")
+        for key in ("rows", "processed_tokens", "supervised_tokens"):
+            if result["tokenized_manifest"][key] != expected["tokens"][key]:
+                raise ValueError("Remote tokenized data differs from frozen exposure counts")
+        return {"rows": result["rows"], "content_hash": result["manifest"]["content_hash"]}
+    finally:
+        volume.commit()
+
+
+@app.function(image=sft_gpu_image, gpu="L40S", timeout=2400, secrets=SECRETS, volumes={VOLUME_PATH: volume})
+def train_distillation(condition: str, seed: int, protocol: dict, pilot: bool = False):
+    from copy import deepcopy
+
+    from src.pipeline import train_phase
+
+    volume.reload()
+    config = deepcopy(_distillation_config(protocol))
+    if pilot or seed not in (42, 43, 44) or condition not in config["conditions"]:
+        raise ValueError("Training request is outside the frozen study")
+    config["seed"] = seed
+    try:
+        return train_phase(
+            config, condition, "sft", output_root="/vol/distillation-training", data_root="/vol/distillation-prepared"
+        )
+    finally:
+        volume.commit()
+
+
+@app.function(image=sft_gpu_image, gpu="L40S", timeout=6 * 3600, secrets=SECRETS, volumes={VOLUME_PATH: volume})
+def _train_sft_job(condition: str = "sft_traces", seed: int = 42, pilot: bool = False):
+    from src.data import load_config
+    from src.pipeline import train_phase
+
+    volume.reload()
+    config = load_config("/root/configs/config.yaml")
+    config["seed"] = seed
+    if pilot:
+        phase = "sft"
+        config["conditions"][condition][phase].update(
+            max_steps=config["performance"]["pilot_" + phase + "_steps"], logging_steps=1, save_strategy="no"
+        )
+        config["pilot"] = True
+    try:
+        return train_phase(config, condition, "sft", output_root="/vol/training-v2", data_root="/vol/prepared-v2")
+    finally:
+        volume.commit()
+
+
+@app.function(image=grpo_gpu_image, gpu="H100", timeout=12 * 3600, secrets=SECRETS, volumes={VOLUME_PATH: volume})
+def _train_grpo_job(
+    condition: str = "grpo_only", sft_checkpoint: str | None = None, seed: int = 42, pilot: bool = False
+):
+    import os
+
+    os.environ.update(RANK="0", LOCAL_RANK="0", WORLD_SIZE="1", MASTER_ADDR="localhost", MASTER_PORT="12355")
+    from src.data import load_config
+    from src.pipeline import train_phase
+
+    volume.reload()
+    config = load_config("/root/configs/config.yaml")
+    config["seed"] = seed
+    if pilot:
+        phase = "grpo"
+        config["conditions"][condition][phase].update(
+            max_steps=config["performance"]["pilot_" + phase + "_steps"], logging_steps=1, save_strategy="no"
+        )
+        config["pilot"] = True
+    try:
+        return train_phase(config, condition, "grpo", sft_checkpoint, "/vol/training-v2", "/vol/prepared-v2")
+    finally:
+        try:
+            volume.commit()
+        finally:
+            from torch import distributed
+
+            if distributed.is_initialized():
+                distributed.destroy_process_group()
+
+
+@app.function(image=sft_gpu_image, gpu="L40S", timeout=12 * 3600, secrets=SECRETS, volumes={VOLUME_PATH: volume})
+def run_evaluation(
+    model_path: str,
+    condition: str,
+    benchmark: str = "gsm8k",
+    max_new_tokens: int = 2048,
+    num_samples: int = 1,
+    temperature: float = 0.0,
+    seed: int = 42,
+    pilot: bool = False,
+    problem_indices: list[int] | None = None,
+    expected_rows_digest: str | None = None,
+):
     from src.data import load_config
     from src.evaluation import run_all_evaluations
 
+    volume.reload()
     config = load_config("/root/configs/config.yaml")
-    results = run_all_evaluations(model_path, config, condition)
-    volume.commit()
-
-    return results
-
-
-@app.function(
-    image=sft_image,
-    gpu="L40S",
-    timeout=3600,
-    secrets=SECRETS,
-    volumes={VOLUME_PATH: volume},
-)
-def quick_test(model_path: str = "/vol/outputs/sft_traces"):
-    """Generate a few sample solutions to sanity-check a trained model."""
-    import sys
-    sys.path.insert(0, "/root")
-
-    import torch
-    from peft import PeftModel
-    from transformers import AutoModelForCausalLM, AutoTokenizer
-
-    from src.data import load_config
-
-    config = load_config("/root/configs/config.yaml")
-
-    print(f"Loading model from {model_path}...")
-    base_model = AutoModelForCausalLM.from_pretrained(
-        config["model"]["name"],
-        device_map="auto",
-        torch_dtype=torch.bfloat16,
-        attn_implementation="flash_attention_2",
+    config["evaluation"].update(
+        benchmarks=[benchmark],
+        max_new_tokens=max_new_tokens,
+        num_samples_per_problem=num_samples,
+        temperature=temperature,
+        seed=seed,
+        output_root="/vol/evaluations-v2",
     )
-    model = PeftModel.from_pretrained(base_model, model_path)
-    model.eval()
-
-    tokenizer = AutoTokenizer.from_pretrained(model_path)
-    eos_token = config["model"].get("eos_token")
-    if eos_token:
-        tokenizer.eos_token = eos_token
-    if tokenizer.pad_token is None:
-        tokenizer.pad_token = tokenizer.eos_token
-    tokenizer.padding_side = "left"
-
-    test_questions = [
-        "What is 15% of 200?",
-        "A train travels 120 miles in 2 hours. What is its average speed in miles per hour?",
-        "If a rectangle has a length of 8 cm and a width of 5 cm, what is its area?",
-        "Sally has 3 red marbles and 5 blue marbles. What fraction of her marbles are red?",
-        "A store sells apples for $2 each. If John buys 7 apples and pays with a $20 bill, how much change does he get?",
-    ]
-
-    print("\n" + "=" * 80)
-    print("SAMPLE GENERATIONS FROM TRAINED MODEL")
-    print("=" * 80)
-
-    for i, question in enumerate(test_questions):
-        messages = [{"role": "user", "content": question}]
-        prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
-
-        with torch.no_grad():
-            output = model.generate(
-                **inputs,
-                max_new_tokens=1024,
-                temperature=0.7,
-                do_sample=True,
-                pad_token_id=tokenizer.pad_token_id,
-            )
-
-        response = tokenizer.decode(output[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True)
-
-        print(f"\n--- Question {i + 1}: {question}")
-        print(f"--- Response:\n{response[:1500]}")
-        if len(response) > 1500:
-            print(f"... [truncated, {len(response)} chars total]")
-        print()
-
-    return "Quick test complete"
+    if pilot:
+        config["evaluation"]["max_problems"] = config["performance"]["pilot_eval_problems"]
+        config["evaluation"]["telemetry_interval_seconds"] = 1
+    if problem_indices is not None:
+        config["evaluation"].update(problem_indices=problem_indices, expected_rows_digest=expected_rows_digest)
+    return run_all_evaluations(model_path, config, condition, on_batch=volume.commit)
 
 
-@app.function(
-    image=sft_image,
-    gpu="L40S",
-    timeout=3600,
-    secrets=SECRETS,
-    volumes={VOLUME_PATH: volume},
-)
-def spot_check_gsm8k(model_path: str = "/vol/outputs/sft_traces", num_problems: int = 20, start_from: int = 0, base_model_only: bool = False):
-    """Run a quick GSM8K spot-check: solve N problems and report accuracy."""
-    import sys
-    sys.path.insert(0, "/root")
-
-    import torch
-    from datasets import load_dataset
-    from peft import PeftModel
-    from transformers import AutoModelForCausalLM, AutoTokenizer
-
-    from src.data import load_config
-    from src.reward import answers_match, extract_answer_auto, extract_gsm8k_answer
-
-    config = load_config("/root/configs/config.yaml")
-
-    label = "BASE MODEL (no adapter)" if base_model_only else model_path
-    print(f"Loading model: {label}...")
-    base_model = AutoModelForCausalLM.from_pretrained(
-        config["model"]["name"],
-        device_map="auto",
-        torch_dtype=torch.bfloat16,
-        attn_implementation="flash_attention_2",
-    )
-    if base_model_only:
-        model = base_model
-        tokenizer = AutoTokenizer.from_pretrained(config["model"]["tokenizer"])
-    else:
-        model = PeftModel.from_pretrained(base_model, model_path)
-        tokenizer = AutoTokenizer.from_pretrained(model_path)
-    model.eval()
-
-    eos_token = config["model"].get("eos_token")
-    if eos_token:
-        tokenizer.eos_token = eos_token
-    if tokenizer.pad_token is None:
-        tokenizer.pad_token = tokenizer.eos_token
-    tokenizer.padding_side = "left"
-
-    # Load GSM8K test set
-    ds = load_dataset("openai/gsm8k", "main", split="test")
-    end_idx = min(num_problems, len(ds))
-    ds = ds.select(range(start_from, end_idx))
-    print(f"Evaluating Q{start_from+1} to Q{end_idx} ({len(ds)} problems)")
-
-    correct = 0
-    total = 0
-
-    for i, example in enumerate(ds):
-        question = example["question"]
-        gt_answer = extract_gsm8k_answer(example["answer"])
-
-        messages = [{"role": "user", "content": question}]
-        prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
-
-        with torch.no_grad():
-            output = model.generate(
-                **inputs,
-                max_new_tokens=2048,
-                temperature=0.0,
-                do_sample=False,
-                pad_token_id=tokenizer.pad_token_id,
-            )
-
-        response = tokenizer.decode(output[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True)
-        pred_answer = extract_answer_auto(response)
-
-        is_correct = pred_answer is not None and gt_answer is not None and answers_match(pred_answer, gt_answer)
-        if is_correct:
-            correct += 1
-        total += 1
-
-        status = "✓" if is_correct else "✗"
-        print(f"  [{status}] Q{start_from+i+1}: pred={pred_answer}, gt={gt_answer}")
-
-    accuracy = correct / total if total > 0 else 0
-    print(f"\n{'=' * 50}")
-    print(f"GSM8K Spot Check: {correct}/{total} = {accuracy:.1%}")
-    print(f"{'=' * 50}")
-
-    return {"correct": correct, "total": total, "accuracy": accuracy}
-
-
-@app.function(
-    image=sft_image,
-    gpu="L40S",
-    timeout=4 * 3600,
-    secrets=SECRETS,
-    volumes={VOLUME_PATH: volume},
-)
-def full_eval_gsm8k(model_path: str = "/vol/outputs/sft_traces", condition: str = "sft_traces", base_model_only: bool = False):
-    """Run full GSM8K evaluation (all 1,319 problems) with batched generation and checkpointing."""
-    import json
-    import sys
-    sys.path.insert(0, "/root")
-
-    import torch
-    from transformers import AutoModelForCausalLM, AutoTokenizer
-
-    from src.data import format_gsm8k_for_eval, load_config
-    from src.reward import answers_match, extract_answer_auto, extract_gsm8k_answer
-
-    config = load_config("/root/configs/config.yaml")
-    eval_cfg = config["evaluation"]
-    batch_size = eval_cfg["batch_size"]
-    max_new_tokens = eval_cfg["max_new_tokens"]
-    checkpoint_every = 20  # Save every 20 batches (~160 problems)
-
-    # Checkpoint path on Modal volume
-    checkpoint_dir = f"{VOLUME_PATH}/eval_checkpoints"
+@app.function(image=sft_gpu_image, timeout=1800, secrets=SECRETS, volumes={VOLUME_PATH: volume})
+def reconstruct_checkpoint(condition: str, protocol: dict, parent_path: str | None = None):
     import os
-    os.makedirs(checkpoint_dir, exist_ok=True)
-    checkpoint_path = f"{checkpoint_dir}/{condition}_gsm8k.json"
 
-    # Resume from checkpoint if it exists
-    completed_results = []
-    start_idx = 0
-    if os.path.exists(checkpoint_path):
-        with open(checkpoint_path) as f:
-            checkpoint = json.load(f)
-        completed_results = checkpoint["results"]
-        start_idx = checkpoint["next_idx"]
-        print(f"[{condition}] Resuming from checkpoint: {len(completed_results)} problems done, starting at idx {start_idx}")
+    from src.checkpoint_experiment import immutable_json, reconstruct_arm
+    from src.data import load_config
 
-    # Load model
-    label = "BASE MODEL (no adapter)" if base_model_only else model_path
-    print(f"[{condition}] Loading model: {label}...")
-
-    if base_model_only:
-        model = AutoModelForCausalLM.from_pretrained(
-            config["model"]["name"],
-            device_map="auto",
-            torch_dtype=torch.bfloat16,
-            attn_implementation="flash_attention_2",
+    expected = fingerprint({k: v for k, v in protocol["implementation"].items() if not k.startswith("scripts/")})
+    if os.environ["SOURCE_DIGEST"] != expected:
+        raise ValueError("Bundled reconstruction code differs from the frozen protocol")
+    volume.reload()
+    root = Path("/vol/checkpoint-ablation") / protocol["protocol_id"][:24]
+    immutable_json(root / "protocol.json", protocol)
+    try:
+        return reconstruct_arm(
+            condition, protocol, load_config("/root/configs/config.yaml"), root / "models", parent_path=parent_path
         )
-        tokenizer = AutoTokenizer.from_pretrained(config["model"]["tokenizer"])
-    else:
-        from peft import PeftModel
-        base_model = AutoModelForCausalLM.from_pretrained(
-            config["model"]["name"],
-            device_map="auto",
-            torch_dtype=torch.bfloat16,
-            attn_implementation="flash_attention_2",
-        )
-        model = PeftModel.from_pretrained(base_model, model_path)
-        tokenizer = AutoTokenizer.from_pretrained(model_path)
-    model.eval()
+    finally:
+        volume.commit()
 
-    eos_token = config["model"].get("eos_token")
-    if eos_token:
-        tokenizer.eos_token = eos_token
-    if tokenizer.pad_token is None:
-        tokenizer.pad_token = tokenizer.eos_token
-    tokenizer.padding_side = "left"
 
-    # Load dataset
-    ds = format_gsm8k_for_eval()
-    questions = ds["question"]
-    ground_truths = ds["answer"]
-    total_problems = len(questions)
-    total_batches = (total_problems - start_idx + batch_size - 1) // batch_size
+@app.function(image=sft_gpu_image, gpu="L40S", timeout=12 * 3600, secrets=SECRETS, volumes={VOLUME_PATH: volume})
+def full_eval_gsm8k(
+    model_path: str = "/vol/outputs/sft_traces", condition: str = "sft_traces", base_model_only: bool = False
+):
+    from src.data import load_config
+    from src.evaluation import run_all_evaluations
 
-    print(f"[{condition}] Evaluating GSM8K: {total_problems} problems, batch_size={batch_size}, "
-          f"starting at idx {start_idx} ({total_batches} batches remaining)")
+    volume.reload()
+    config = load_config("/root/configs/config.yaml")
+    config["evaluation"].update(benchmarks=["gsm8k"], output_root="/vol/evaluations-v2")
+    path = config["model"]["name"] if base_model_only else model_path
+    return run_all_evaluations(path, config, condition, on_batch=volume.commit)
 
-    # Generate and evaluate in batches with checkpointing
-    batches_since_save = 0
-    for i in range(start_idx, total_problems, batch_size):
-        batch_questions = questions[i : i + batch_size]
-        batch_gts = ground_truths[i : i + batch_size]
 
-        # Format and generate
-        messages_batch = [[{"role": "user", "content": q}] for q in batch_questions]
-        prompts = [
-            tokenizer.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True)
-            for msgs in messages_batch
-        ]
-        inputs = tokenizer(prompts, return_tensors="pt", padding=True, truncation=True).to(model.device)
+@app.function(image=sft_image, timeout=300, secrets=SECRETS, volumes={VOLUME_PATH: volume})
+def verify_volume_result(result_path: str):
+    """Separate-container read verifies a committed result outlives its producer."""
+    from src.artifacts import file_hash
 
-        with torch.no_grad():
-            outputs = model.generate(
-                **inputs,
-                max_new_tokens=max_new_tokens,
-                temperature=0.0,
-                do_sample=False,
-                pad_token_id=tokenizer.pad_token_id,
-            )
-
-        # Score each problem in the batch
-        for j, output in enumerate(outputs):
-            prompt_len = inputs["input_ids"][j].shape[0]
-            response = tokenizer.decode(output[prompt_len:], skip_special_tokens=True)
-
-            gt_answer = extract_gsm8k_answer(batch_gts[j])
-            pred_answer = extract_answer_auto(response)
-            is_correct = pred_answer is not None and gt_answer is not None and answers_match(pred_answer, gt_answer)
-
-            completed_results.append({
-                "idx": i + j,
-                "correct": is_correct,
-                "pred": pred_answer,
-                "gt": gt_answer,
-                "trace_length": len(response),
-            })
-
-        batches_since_save += 1
-        done = len(completed_results)
-        correct_so_far = sum(1 for r in completed_results if r["correct"])
-        batch_num = (i - start_idx) // batch_size + 1
-        print(f"  [{condition}] Batch {batch_num}/{total_batches} | {done}/{total_problems} problems | "
-              f"accuracy so far: {correct_so_far}/{done} = {correct_so_far/done:.1%}")
-
-        # Checkpoint periodically
-        if batches_since_save >= checkpoint_every:
-            next_idx = i + len(batch_questions)
-            with open(checkpoint_path, "w") as f:
-                json.dump({"condition": condition, "next_idx": next_idx, "results": completed_results}, f)
-            volume.commit()
-            print(f"  [{condition}] Checkpoint saved ({done} problems)")
-            batches_since_save = 0
-
-    # Final results
-    num_correct = sum(1 for r in completed_results if r["correct"])
-    num_total = len(completed_results)
-    accuracy = num_correct / num_total if num_total > 0 else 0.0
-    avg_trace_length = sum(r["trace_length"] for r in completed_results) / num_total if num_total > 0 else 0.0
-
-    # Save final results and clean up checkpoint
-    final_result = {
-        "condition": condition, "accuracy": accuracy,
-        "num_correct": num_correct, "num_total": num_total,
-        "avg_trace_length": avg_trace_length, "results": completed_results,
+    volume.reload()
+    path = Path(result_path)
+    if not path.is_relative_to("/vol/evaluations-v2"):
+        raise ValueError("Expected a v2 result on the mounted volume")
+    return {
+        "summary": json.loads((path / "summary.json").read_text()),
+        "predictions_sha256": file_hash(path / "predictions.jsonl"),
     }
-    final_path = f"{VOLUME_PATH}/eval_checkpoints/{condition}_gsm8k_final.json"
-    with open(final_path, "w") as f:
-        json.dump(final_result, f, indent=2)
-    if os.path.exists(checkpoint_path):
-        os.remove(checkpoint_path)
-    volume.commit()
-
-    print(f"\n{'=' * 50}")
-    print(f"[{condition}] GSM8K Full Eval: {num_correct}/{num_total} = {accuracy:.1%}")
-    print(f"[{condition}] Avg trace length: {avg_trace_length:.0f} chars")
-    print(f"[{condition}] Results saved to {final_path}")
-    print(f"{'=' * 50}")
-
-    return {"condition": condition, "accuracy": accuracy, "num_correct": num_correct, "num_total": num_total}
 
 
 @app.local_entrypoint()
-def run_full_pipeline():
-    """Orchestrate the full experiment across all conditions.
+def run_full_pipeline(experiment: str = "controlled", dry_run: bool = True, quote: str = "", budget_usd: float = 0):
+    from src.data import load_config
+    from src.study import build_pilot_plan, build_study_plan, execute_study
 
-    Execution order:
-    1. SFT jobs (baseline, sft_traces, sft_then_grpo phase 1) — run in parallel
-    2. GRPO jobs (grpo_only, sft_then_grpo phase 2) — grpo_only in parallel, sft_then_grpo waits for SFT
-    3. Evaluation — all conditions in parallel
-    """
-    print("=" * 60)
-    print("Starting full experimental pipeline")
-    print("=" * 60)
+    config = load_config()
+    plan = build_pilot_plan(config) if experiment == "pilot" else build_study_plan(config, experiment)
+    if dry_run:
+        print(json.dumps(plan, indent=2))
+        return
 
-    # Phase 1: SFT training (3 conditions can run in parallel)
-    print("\n--- Phase 1: SFT Training ---")
-    baseline_handle = train_sft.spawn("baseline")
-    sft_traces_handle = train_sft.spawn("sft_traces")
-    sft_then_grpo_sft_handle = train_sft.spawn("sft_then_grpo")
+    def limited(function):
+        def call(_timeout, **kwargs):
+            return function.with_options(
+                timeout=_timeout, scaledown_window=2, max_containers=1, retries=0, cpu=(2, 2), memory=(16384, 16384)
+            ).remote(**kwargs)
 
-    # Also start grpo_only in parallel (it doesn't need SFT)
-    grpo_only_handle = train_grpo.spawn("grpo_only")
+        return call
 
-    # Wait for SFT results
-    baseline_path = baseline_handle.get()
-    sft_traces_path = sft_traces_handle.get()
-    sft_then_grpo_sft_path = sft_then_grpo_sft_handle.get()
-    grpo_only_path = grpo_only_handle.get()
+    execute_study(
+        plan,
+        config,
+        quote,
+        budget_usd,
+        prepare=limited(prepare_data),
+        sft=limited(_train_sft_job),
+        grpo=limited(_train_grpo_job),
+        evaluate=limited(run_evaluation),
+        verify=limited(verify_volume_result),
+        prepare_runtime=limited(prepare_runtime),
+    )
 
-    print(f"Baseline SFT done: {baseline_path}")
-    print(f"SFT traces done: {sft_traces_path}")
-    print(f"SFT+GRPO SFT phase done: {sft_then_grpo_sft_path}")
-    print(f"GRPO only done: {grpo_only_path}")
 
-    # Phase 2: GRPO for sft_then_grpo (needs SFT checkpoint)
-    print("\n--- Phase 2: GRPO Training (sft_then_grpo) ---")
-    sft_then_grpo_path = train_grpo.remote("sft_then_grpo", sft_checkpoint=sft_then_grpo_sft_path)
-    print(f"SFT+GRPO complete: {sft_then_grpo_path}")
+@app.local_entrypoint()
+def train_sft(condition: str = "sft_traces", seed: int = 42, pilot: bool = False):
+    from src.data import load_config
+    from src.pipeline import validate_training_request
 
-    # Phase 3: Evaluation (all conditions in parallel)
-    print("\n--- Phase 3: Evaluation ---")
-    eval_handles = [
-        run_evaluation.spawn(baseline_path, "baseline"),
-        run_evaluation.spawn(sft_traces_path, "sft_traces"),
-        run_evaluation.spawn(grpo_only_path, "grpo_only"),
-        run_evaluation.spawn(sft_then_grpo_path, "sft_then_grpo"),
-    ]
+    config = load_config()
+    config["seed"] = seed
+    validate_training_request(config, condition, "sft")
+    print(_train_sft_job.remote(condition=condition, seed=seed, pilot=pilot))
 
-    for handle in eval_handles:
-        result = handle.get()
-        condition = result["condition"]
-        for bench_name, bench_data in result["benchmarks"].items():
-            print(f"  [{condition}] {bench_name}: {bench_data['accuracy']:.4f}")
 
-    print("\n" + "=" * 60)
-    print("Pipeline complete! Results saved to volume.")
-    print("=" * 60)
+@app.local_entrypoint()
+def train_grpo(condition: str = "grpo_only", sft_checkpoint: str | None = None, seed: int = 42, pilot: bool = False):
+    from src.data import load_config
+    from src.pipeline import validate_training_request
+
+    config = load_config()
+    config["seed"] = seed
+    validate_training_request(config, condition, "grpo", sft_checkpoint, check_artifact=False)
+    print(_train_grpo_job.remote(condition=condition, sft_checkpoint=sft_checkpoint, seed=seed, pilot=pilot))
+
+
+@app.function(image=sft_image, timeout=600, secrets=SECRETS, volumes={VOLUME_PATH: volume})
+def prepare_inference_extension(protocol: dict):
+    from copy import deepcopy
+
+    from transformers import AutoConfig, AutoTokenizer
+
+    from src.artifacts import read_model_manifest
+    from src.evaluation import benchmark_rows
+    from src.prompting import answer_prompt
+    from src.runtime_cache import prepare_runtime_cache
+
+    volume.reload()
+    config = deepcopy(_distillation_config(protocol))
+    config["evaluation"].update(benchmarks=["gsm8k"], problem_indices=protocol["subset"]["problem_indices"],
+                                expected_rows_digest=protocol["subset"]["rows_digest"])
+    runtime = prepare_runtime_cache(config)
+    if runtime["weights_sha256"] != protocol["models"]["base"]["weights_sha256"]:
+        raise ValueError("Original-student weight hashes changed")
+    identities = {}
+    for name, model in protocol["models"].items():
+        if name != "base":
+            manifest = read_model_manifest(model["path"])
+            if manifest["artifact_id"] != model["artifact_id"] or manifest["format"] != "full":
+                raise ValueError("Trace checkpoint does not match frozen lineage")
+            identities[name] = manifest["artifact_id"]
+    rows = benchmark_rows("gsm8k", config)
+    if rows != protocol["subset"]["rows"]:
+        raise ValueError("Remote question texts differ from the frozen subset")
+    tokenizer = AutoTokenizer.from_pretrained(runtime["snapshot"], local_files_only=True)
+    max_prompt = max(len(tokenizer.apply_chat_template(
+        [{"role": "user", "content": answer_prompt(r["question"])}], tokenize=True,
+        add_generation_prompt=True, enable_thinking=True)) for r in rows)
+    context = AutoConfig.from_pretrained(runtime["snapshot"], local_files_only=True).max_position_embeddings
+    if max_prompt + 8192 > context:
+        raise ValueError("Follow-up context would truncate a prompt")
+    volume.commit()
+    return {"runtime": runtime, "trace_artifact_ids": identities, "rows_digest": fingerprint(rows),
+            "num_questions": len(rows), "max_prompt_tokens": max_prompt, "model_context": context}
+
+
+@app.function(image=sft_gpu_image, gpu="L40S", timeout=7200, secrets=SECRETS, volumes={VOLUME_PATH: volume})
+def evaluate_inference_extension(protocol: dict, job_id: str):
+    from copy import deepcopy
+
+    from src.artifacts import read_model_manifest
+    from src.evaluation import run_all_evaluations
+
+    volume.reload()
+    config = deepcopy(_distillation_config(protocol))
+    job = protocol["jobs"][job_id]
+    if job["model_key"] != "base":
+        manifest = read_model_manifest(job["model_path"], verify_files=False)
+        if manifest["artifact_id"] != protocol["models"][job["model_key"]]["artifact_id"]:
+            raise ValueError("Unexpected evaluation checkpoint")
+    config["evaluation"].update(**job["generation"], benchmarks=["gsm8k"],
+                                problem_indices=protocol["subset"]["problem_indices"],
+                                expected_rows_digest=protocol["subset"]["rows_digest"],
+                                output_root="/vol/evaluations-v2")
+    condition = "followup_" + protocol["protocol_id"][:12] + "_" + job_id.replace(":", "_")
+    return run_all_evaluations(job["model_path"], config, condition, on_batch=volume.commit)

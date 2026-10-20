@@ -1,0 +1,68 @@
+{
+  "pilot_evidence": [
+    {
+      "note": "V4 completed; raw review found one clear English-cardinal answer missed. V5 normalizes cardinal words. Frozen v4 and original records preserved.",
+      "path": "outputs/studies/988d96fc9d984daf13206d83/ledger.json",
+      "sha256": "46fa04e16f717d7fc62cb8b16be4ab785740f5073485def82ce1c5c06b88e7bf"
+    }
+  ],
+  "plan_digest": "a7a500bdc685a4ca2b4b6b85c2eebd3ac080c12f85b300a6655a5f1503a17125",
+  "pricing_source": {
+    "as_of": "2026-10-19",
+    "caution": "Reservations include a startup/idle allowance, not a provider billing guarantee. Image builds, storage and egress are additional; configure a workspace spending limit before paid work. Recheck rates before launch.",
+    "cpu_core_per_second": 1.31e-05,
+    "gpu_per_second": {
+      "H100": 0.001097,
+      "L40S": 0.000542
+    },
+    "memory_gib_limit": 16,
+    "memory_gib_per_second": 2.22e-06,
+    "overhead_seconds_per_task": 120,
+    "physical_cores_limit": 2,
+    "source": "https://modal.com/pricing"
+  },
+  "runtime_reservations_usd": 2.5474799999999997,
+  "status": "authorized_cardinal_number_defect_validation",
+  "suggested_cap_usd": 10,
+  "tasks": {
+    "pilot:eval": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 600
+    },
+    "pilot:grpo": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00115872,
+      "timeout_seconds": 900
+    },
+    "pilot:prepare:grpo": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "reused_complete": true,
+      "timeout_seconds": 1
+    },
+    "pilot:prepare:sft": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "reused_complete": true,
+      "timeout_seconds": 1
+    },
+    "pilot:sft": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "reused_complete": true,
+      "timeout_seconds": 1
+    },
+    "pilot:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 60
+    },
+    "prepare:runtime": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "reused_complete": true,
+      "timeout_seconds": 1
+    }
+  }
+}

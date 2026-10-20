@@ -185,10 +185,24 @@ cython_debug/
 .cursorignore
 .cursorindexingignore
 
-/docs
+/docs/*
+!/docs/reviews/
+!/docs/remediation/
+!/docs/experiments/
 
 .claude
 
-/paper
+/paper/*
+!/paper/paper.tex
+!/paper/historical_counts.tex
+!/paper/historical_pairs.tex
+!/paper/distillation_methods.tex
+!/paper/inference_extension_*.tex
+!/paper/inference-extension-*.json
+!/paper/original_results_summary.tex
+!/paper/original_completion_diagnostic.tex
+!/paper/original-completion-diagnostic.json
 
 .DS_Store
+# Reproducible paper build and development artifacts
+output/

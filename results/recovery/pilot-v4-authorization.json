@@ -1,0 +1,21 @@
+{
+  "image_allowance_usd": 1,
+  "ledger": "outputs/studies/988d96fc9d984daf13206d83/ledger.json",
+  "new_plan_reservation_usd": 2.5474799999999997,
+  "note": "Unused reservations released only for tasks never launched; all launched attempts remain fully reserved. No main study or hardware comparison authorized.",
+  "original_cap_usd": 10,
+  "prior_launched_task_reservations_usd": 5.3570568,
+  "prior_ledgers": [
+    "outputs/studies/855e33aa554617b8489e4e56/ledger.json",
+    "outputs/studies/e0d016d28610bfdc294d97b0/ledger.json",
+    "outputs/studies/5f5e387226f223d5e47ad32b/ledger.json"
+  ],
+  "quote_sha256": "8ae6f904cab4fcacc18b1b614eb50d248449d289dc5b16762704ecbdb0d7b99e",
+  "remaining_runner_cap_usd": 3.6429432,
+  "reused_nodes": [
+    "prepare:runtime",
+    "pilot:prepare:sft",
+    "pilot:prepare:grpo",
+    "pilot:sft"
+  ]
+}

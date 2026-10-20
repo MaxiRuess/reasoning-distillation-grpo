@@ -1,0 +1,205 @@
+{
+  "all_37_nodes_complete": true,
+  "all_primary_numeric_scores_retained": true,
+  "all_raw_hashes_independently_verified": true,
+  "all_strict_scores_cpu_reproduced": true,
+  "answer_only_behavior_audit": "results/proposals/distillation/d8a9671022f294b1fae97e82/collected/answer-only-behavior-audit.json",
+  "app_id": "ap-aZd7ZnQUdqEZTp3NSR75oy",
+  "app_url": "https://modal.com/apps/maxiruess/main/ap-aZd7ZnQUdqEZTp3NSR75oy",
+  "billing_is_estimated_not_reconciled": true,
+  "cost": {
+    "additional_startup_allowance_usd": 1.5748368,
+    "billing_refresh_limit": "Automatic approval review rejected the optional browser GitHub OAuth sign-in. Existing authenticated CLI was used for authorized work; no billing sign-in workaround was attempted.",
+    "billing_refreshed": false,
+    "client_elapsed_plus_startup_allowance_usd": 8.582812024294018,
+    "earlier_ablation_reported_metered_usd": 1.8600004,
+    "earlier_ablation_reserved_usd": 2.14,
+    "envelope_usd": 20,
+    "method": "Sum each job client elapsed time times its own bounded GPU/CPU/memory rate. Startup allowance is shown separately and can overlap observed elapsed time; neither is an invoice. Credits are not used to justify the cap.",
+    "new_cap_usd": 17.65,
+    "new_client_elapsed_at_resource_caps_usd": 7.007975224294018,
+    "new_nonruntime_allowance_usd": 0.2,
+    "new_plus_prior_reserves_and_all_allowances_usd": 11.102812024294018,
+    "new_runtime_reservation_usd": 17.4413436,
+    "stopped_cpu_preparation_reserved_usd": 0.18,
+    "total_prelaunch_reservations_usd": 19.9613436
+  },
+  "descriptive_secondary": "results/proposals/distillation/d8a9671022f294b1fae97e82/collected/descriptive-secondary-analysis.json",
+  "evaluation_files": {
+    "eval:2048:answer_42": {
+      "primary_scores_sha256": "2fcf6ad6eb5125806563d47717808f89ed3203f0d4e286f4f6c26c3b30af8a72",
+      "raw_sha256": "f860c3fd0bf8d0df679e4ca994c12c94cbc582896f8a8fc3db5986b7dadbf381",
+      "rows": 256
+    },
+    "eval:2048:answer_43": {
+      "primary_scores_sha256": "e87e800c30a6a57861140c7a3ed1565cb7fb4423f9b272c024937bd4ba9f5e4d",
+      "raw_sha256": "d34816238e04d6054fa5aae9d7823a2093e4b66e9185c23d2f393819e1325b80",
+      "rows": 256
+    },
+    "eval:2048:answer_44": {
+      "primary_scores_sha256": "ea6bd9a869e6ad077f3ee0f0909469f04993fbbdf5258290406e6506e07bf2db",
+      "raw_sha256": "56c7807ef0e34f3926d7677ccc266c1103326ac375b6355a7b522b51cf881346",
+      "rows": 256
+    },
+    "eval:2048:base": {
+      "primary_scores_sha256": "fc7361bd1f9bfadb1454f95daae138a27546900950ff5c7abfab511a385473d1",
+      "raw_sha256": "c9e008667d5503004f1911e2db033f1fb38ec12d3308af48ae5ff8405433c38a",
+      "rows": 256
+    },
+    "eval:2048:trace_42": {
+      "primary_scores_sha256": "f4339c57528635a8d6aac5c88b785adcceeabb1e664dac95f63685fcdaa1fb10",
+      "raw_sha256": "53f21f4fba97c2c9c0f5916009ddc81a5ce07d7c407fdd216bce309896a20b45",
+      "rows": 256
+    },
+    "eval:2048:trace_43": {
+      "primary_scores_sha256": "8101b420811f27fbdddea2df6b2d9bd46853e4ff729145cf46942eb91f3c005a",
+      "raw_sha256": "815e05bd7c9a551d16e44c8ce4dd4c32ae29aae5c7706d5e544fe2ee1e54215b",
+      "rows": 256
+    },
+    "eval:2048:trace_44": {
+      "primary_scores_sha256": "8b7e67ece9fe1f5f2e82937c8d35eef4b988668ce54f7bc4f6e673fa4562ad39",
+      "raw_sha256": "e065c717f1352007f1bb2b026b5520ac465d54440442f99e5e9437d51f14ffce",
+      "rows": 256
+    },
+    "eval:4096:answer_42": {
+      "primary_scores_sha256": "9bafbf647f96a3dc0b4c7b18cd9426c884039b9a14ea42050ab2b54967b2ea9d",
+      "raw_sha256": "27726a9aa7fbdebb797707f93749fcf3cd9980e7453cb688dceff6a984664393",
+      "rows": 64
+    },
+    "eval:4096:answer_43": {
+      "primary_scores_sha256": "c04b062f619f7ca5cde4bc2046985ff081cf3b86bc565639429de0b44bc32289",
+      "raw_sha256": "997caf890cfa4c8c7727a198e69f19233117f128a2d378ad1351b26734abfc48",
+      "rows": 64
+    },
+    "eval:4096:answer_44": {
+      "primary_scores_sha256": "faef5409b1a19e4385e2ffc081b8db269008a6dd128a4c2300e60d376216ebac",
+      "raw_sha256": "d41b79ed7913046a8d71815be93538151e3b3f459c96c2e9da6266550b48ba44",
+      "rows": 64
+    },
+    "eval:4096:base": {
+      "primary_scores_sha256": "2c244c2950f26fe2feb0019be5c91822309675dfeffdd2531a8161db8c403822",
+      "raw_sha256": "f24488a6c41cc93bdaacf41ca3ee3418d92f3cb0682fbab837bf20aa5e0cdab3",
+      "rows": 64
+    },
+    "eval:4096:trace_42": {
+      "primary_scores_sha256": "8746fab11d2270a2830634fb5b7e7694f7e6169b8bfe19b8b6fae52da132f86a",
+      "raw_sha256": "03c7397ebffea3be45790593b8bf91daabcf3aee609c74154fbede2e8d630a49",
+      "rows": 64
+    },
+    "eval:4096:trace_43": {
+      "primary_scores_sha256": "dd2bf457b1511c6ed3d07da31c510acc5d07f5d1efe9bbac51fa43793dbce3d5",
+      "raw_sha256": "677c7c9556281db43e51a6ba88797c5cf711a9db844d5c972206458adc472912",
+      "rows": 64
+    },
+    "eval:4096:trace_44": {
+      "primary_scores_sha256": "077bd3fe8a35b72eb209d339ceb710d5231fa7e85e398e36fa45c5b200fd5051",
+      "raw_sha256": "21c313a36a48ba7d130a8e07f667bf2658c2caaf11687977853d5f2e78299ee1",
+      "rows": 64
+    }
+  },
+  "final_shutdown_verification": {
+    "apps": "results/recovery/distillation-apps-final-cost-check.json",
+    "apps_sha256": "49227eccef8a16494204cf1637e7e084d1ff3a644dad2bada023fffde52d566a",
+    "containers": "results/recovery/distillation-containers-final-cost-check.json",
+    "containers_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "experiment_apps_stopped": 4,
+    "experiment_tasks": 0,
+    "running_containers": 0
+  },
+  "ledger": "outputs/distillation/f1f80a202340d80f68faadfc/ledger.json",
+  "ledger_sha256": "7c1addc4c7888e6da967ba53771d9df08ca1a2977404eeb2f68699056dff2e57",
+  "no_extra_experiments_launched": true,
+  "no_outcome_dependent_model_reruns": true,
+  "nodes_by_kind": {
+    "evaluate": 14,
+    "prepare": 2,
+    "prepare_runtime": 1,
+    "sft": 6,
+    "verify": 14
+  },
+  "paper_verification": {
+    "all_pages_rendered_and_visually_inspected": true,
+    "bytes": 398786,
+    "figure_sha256": "454a7d82ee5338f5b16d22460d458748dd29094468a17e830a88bb26a73854e6",
+    "generated_abstract_sha256": "53f49f5da54de206c89d53b557128183046c4e8722a9317ac3308c33f025ec35",
+    "generated_results_sha256": "b615b12e57ad934c0f2f1ef1ddaf4c3c77c0e14e9bbba61296d6a078728aeb50",
+    "manuscript_revision_record": "results/recovery/distillation-manuscript-polish.json",
+    "methods_sha256": "9af9486901d38471e0bcc008040bb4ea8fc395f1b42fa07ea43599f134731b74",
+    "overfull_boxes": false,
+    "pages": 8,
+    "pdf": "assets/paper.pdf",
+    "render_prefix": "output/paper/polished-final-page",
+    "sha256": "665c75e4188f275c2e8219c8fa4d4e2514f1b83e6af94c5050dfd34b66cf9046",
+    "source": "paper/paper.tex",
+    "source_sha256": "15119155f2ea15df3a688969ae16bedd9fc15ceb7a35954c5dd1f7c842d53fe7",
+    "unresolved_references": false
+  },
+  "parent_comparison_4096": "results/proposals/distillation/d8a9671022f294b1fae97e82/collected/parent-comparisons-4096.json",
+  "postrun_bookkeeping_fixes": "results/recovery/distillation-postrun-code-fixes.json",
+  "primary_2048": {
+    "mean_delta": 0.71875,
+    "paired_item_bootstrap_95": [
+      0.6705729166666666,
+      0.765625
+    ],
+    "per_seed": {
+      "42": {
+        "delta": 0.7109375,
+        "left_correct": 197,
+        "left_only_correct": 183,
+        "mcnemar_exact_p": 1.5089766582246588e-53,
+        "num_paired": 256,
+        "paired_bootstrap_95": [
+          0.65234375,
+          0.765625
+        ],
+        "right_correct": 15,
+        "right_only_correct": 1
+      },
+      "43": {
+        "delta": 0.74609375,
+        "left_correct": 207,
+        "left_only_correct": 192,
+        "mcnemar_exact_p": 3.0905983075969574e-56,
+        "num_paired": 256,
+        "paired_bootstrap_95": [
+          0.6875,
+          0.80078125
+        ],
+        "right_correct": 16,
+        "right_only_correct": 1
+      },
+      "44": {
+        "delta": 0.69921875,
+        "left_correct": 196,
+        "left_only_correct": 180,
+        "mcnemar_exact_p": 1.1876054131757315e-52,
+        "num_paired": 256,
+        "paired_bootstrap_95": [
+          0.640625,
+          0.75390625
+        ],
+        "right_correct": 17,
+        "right_only_correct": 1
+      }
+    },
+    "training_seed_delta_std": 0.024394523431243743,
+    "uncertainty": "Item interval conditional on three trained seeds; seed SD separate; not 768 independent items"
+  },
+  "primary_analysis_sha256": "3206e501f407d277ea36d5d0f24f22eba69bdee94a84b7bb11d335b8025fcb73",
+  "proposal": "results/proposals/distillation/d8a9671022f294b1fae97e82",
+  "protocol_id": "d8a9671022f294b1fae97e829d3c651d9a79a2bc62c1544115952f3f7edf04fd",
+  "responses_verified": 2240,
+  "results_report": "docs/experiments/distillation-results-2026-10-20.md",
+  "results_report_sha256": "de8e7e25a219efe09206000cef1e66e877898464797aad02397c0fdecf037b3a",
+  "status": "complete_all_experiment_apps_stopped",
+  "training_audit": "results/proposals/distillation/d8a9671022f294b1fae97e82/collected/training-audit.json",
+  "verification": {
+    "additional_subtests": 11,
+    "cpu_tests": 79,
+    "final_artifact_consistency_check": "passed: 2240 raw responses, 14 primary files, analysis/ledger/source hashes, local report links, stopped apps, empty containers, PDF",
+    "independent_model_review": false,
+    "review_mode": "Sequential main-context source and artifact review under AGENTS.md instructions",
+    "ruff_scoped_check": "passed"
+  }
+}

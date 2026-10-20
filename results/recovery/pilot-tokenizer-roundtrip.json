@@ -1,0 +1,8 @@
+{
+  "backend_fingerprint": "f6ae33c9551741658c705b911d7f96cd6182a9835f9e59fc56d3761b8decb324",
+  "backend_identical_excluding_transient_padding_truncation": true,
+  "chat_template_identical": true,
+  "interpretation": "Pinned Transformers local-model detection warns for saved Qwen config version 4.57.6; the Mistral patch was not applied and the tokenizer backend is unchanged.",
+  "probe_encodings_identical": true,
+  "saved_fix_mistral_regex": false
+}

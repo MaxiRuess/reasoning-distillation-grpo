@@ -1,0 +1,140 @@
+{
+  "head_sha": "2c7bd86",
+  "probe_scope": "CPU functions, AST test doubles, optional cached data",
+  "answer_extraction": [
+    {
+      "case": "comma",
+      "text": "The answer is 1,234.",
+      "truth": "1234",
+      "extracted": "234.",
+      "reward": 0.0
+    },
+    {
+      "case": "fraction",
+      "text": "The answer is 1/2.",
+      "truth": "0.5",
+      "extracted": "2.",
+      "reward": 0.0
+    },
+    {
+      "case": "rejected_thinking_answer",
+      "text": "<think>Candidate: \\boxed{10}. That is wrong.</think> Final answer: 12",
+      "truth": "12",
+      "extracted": "10",
+      "reward": 0.0
+    },
+    {
+      "case": "unfinished_thinking",
+      "text": "<think>Try 40 then 42",
+      "truth": "42",
+      "extracted": "42",
+      "reward": 1.0
+    }
+  ],
+  "empty_thinking_format_reward": 1.0,
+  "fraction_suffix_ignored": true,
+  "infinity_crash": "OverflowError",
+  "configured_tokenizer_forwarded_to_trainers": [
+    false,
+    false
+  ],
+  "multi_sample_accuracy": {
+    "accuracy": 1.0,
+    "pass@1": 0.25,
+    "pass@4": 1.0
+  },
+  "pass_at_4_from_one_sample": 1.0,
+  "per_example_results_returned_but_not_saved": true,
+  "reported_counts_and_wilson95": {
+    "base_model": {
+      "correct": 952,
+      "n": 1319,
+      "accuracy_pct": 72.17589082638362,
+      "wilson95_pct": [
+        69.69572503885674,
+        74.52726147999068
+      ]
+    },
+    "baseline": {
+      "correct": 913,
+      "n": 1319,
+      "accuracy_pct": 69.2191053828658,
+      "wilson95_pct": [
+        66.67525566428652,
+        71.6513326520479
+      ]
+    },
+    "sft_traces": {
+      "correct": 974,
+      "n": 1319,
+      "accuracy_pct": 73.84382107657316,
+      "wilson95_pct": [
+        71.40525865035762,
+        76.14390121349712
+      ]
+    },
+    "grpo_only": {
+      "correct": 999,
+      "n": 1319,
+      "accuracy_pct": 75.73919636087946,
+      "wilson95_pct": [
+        73.35326797590139,
+        77.97563432546168
+      ]
+    },
+    "sft_then_grpo": {
+      "correct": 919,
+      "n": 1319,
+      "accuracy_pct": 69.67399545109932,
+      "wilson95_pct": [
+        67.13914092962575,
+        72.09458557171065
+      ]
+    },
+    "re_distill": {
+      "correct": 1036,
+      "n": 1319,
+      "accuracy_pct": 78.54435178165276,
+      "wilson95_pct": [
+        76.24771778040814,
+        80.67520332846726
+      ]
+    }
+  },
+  "cached_datasets": {
+    "baseline": {
+      "rows": 50000,
+      "fingerprint": "476ca80737ba9ef3",
+      "normalized_exact_test_overlaps": 0,
+      "mean_completion_chars": 694.06552,
+      "missing_think_closures": 0
+    },
+    "sft_traces": {
+      "rows": 1000,
+      "fingerprint": "643a4d6d7f809619",
+      "normalized_exact_test_overlaps": 0,
+      "mean_completion_chars": 29182.699,
+      "missing_think_closures": 0,
+      "raw_chat_tokens": 10013506,
+      "raw_chat_tokens_mean": 10013.506,
+      "raw_chat_tokens_max": 26944,
+      "rows_over_16384": 101
+    },
+    "re_distill": {
+      "rows": 1000,
+      "fingerprint": "9a0ee6706a44fb85",
+      "normalized_exact_test_overlaps": 0,
+      "mean_completion_chars": 17072.211,
+      "missing_think_closures": 3,
+      "raw_chat_tokens": 6233574,
+      "raw_chat_tokens_mean": 6233.574,
+      "raw_chat_tokens_max": 19934,
+      "rows_over_16384": 26
+    },
+    "grpo": {
+      "rows": 131063,
+      "fingerprint": "c40454f92ad4140d"
+    }
+  },
+  "paper_apple_example_in_cached_gsm8k_test": false
+}

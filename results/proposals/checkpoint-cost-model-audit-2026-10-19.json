@@ -1,0 +1,144 @@
+{
+  "status": "audited_planning_only_no_new_jobs",
+  "as_of": "2026-10-19",
+  "pricing_source": "https://modal.com/pricing",
+  "evidence": {
+    "ledger": "outputs/checkpoint-ablation/00d4327ad01cc048cbc00739/ledger.json",
+    "ledger_sha256": "245f861c2164054d64745a4bfdf3a291db84c3dcba4b8d0ad05fc484f3b3fdf9",
+    "evaluation_profiles": {
+      "sft_parent": "4b1ef1a400c594e1742e2c38f1f373a69a20fc2c0b250c915a64988eb5e1087a",
+      "missing_sft": "1c06e1662f9c9c521782c755c1dde810b6a767c334dbbd96e5d4e46d2ae37603",
+      "reconstructed": "0b268c6c0d3b4a8c965659f692f534e80f3b476a0e102047c7494dc83eb81e03"
+    }
+  },
+  "cap_vs_estimate": {
+    "previous_expected_range_usd": [
+      6,
+      12
+    ],
+    "previous_runtime_reservations_usd": 10.4364324,
+    "previous_approved_cap_usd": 20,
+    "reported_metered_increment_usd": 1.8600004,
+    "client_walltime_plus_startup_estimate_usd": 2.1390247139252825,
+    "interpretation": "The cap was not an expected bill. The expected range was also too conservative. The gross metered figure is before credits; credits do not explain the gap."
+  },
+  "root_causes": [
+    "Ninety-minute GPU timeouts versus approximately sixteen-to-eighteen-minute observed calls inflated reservations.",
+    "Setup/recovery allowances and unallocated cap margin were presented too close to the expected cost.",
+    "Using useful generated-token throughput from one padded batch as a constant across response-length distributions overpredicts this workload. The decoder retains finished rows as padded slots until the batch is done."
+  ],
+  "calibration": {
+    "all_in_l40s_hourly_usd": 2.1733919999999998,
+    "all_in_h100_hourly_usd": 4.171392,
+    "pilot_useful_tokens_per_second": 119.13410697973217,
+    "observed_useful_tokens_per_second": 318.4312591316161,
+    "useful_token_model_overprediction_factor": 2.672880732515917,
+    "pilot_seconds_per_32_question_2k_batch": 131.80944062199998,
+    "observed_mean_seconds_per_matching_batch": 124.37221178599998,
+    "pilot_24_batch_forecast_seconds": 3163.4265749279994,
+    "observed_24_batch_seconds": 2984.9330828639995,
+    "batch_forecast_relative_error": 0.059798155304955136,
+    "observed_batches_per_arm": 8
+  },
+  "matching_protocol_evaluation_forecasts": [
+    {
+      "questions_per_arm": 256,
+      "arms": 3,
+      "output_tokens": 2048,
+      "batch_size": 32,
+      "expected_runtime_cost_usd": 1.858249392017894,
+      "25_percent_padded_timeouts_plus_startup_usd": 2.5416612,
+      "extra_cpu_setup_or_recovery_not_included": true
+    },
+    {
+      "questions_per_arm": 384,
+      "arms": 3,
+      "output_tokens": 2048,
+      "batch_size": 32,
+      "expected_runtime_cost_usd": 2.759281292411221,
+      "25_percent_padded_timeouts_plus_startup_usd": 3.66699528,
+      "extra_cpu_setup_or_recovery_not_included": true
+    },
+    {
+      "questions_per_arm": 512,
+      "arms": 3,
+      "output_tokens": 2048,
+      "batch_size": 32,
+      "expected_runtime_cost_usd": 3.660313192804548,
+      "25_percent_padded_timeouts_plus_startup_usd": 4.792933079999999,
+      "extra_cpu_setup_or_recovery_not_included": true
+    },
+    {
+      "questions_per_arm": 1319,
+      "arms": 3,
+      "output_tokens": 2048,
+      "batch_size": 32,
+      "expected_runtime_cost_usd": 9.517020545361174,
+      "25_percent_padded_timeouts_plus_startup_usd": 12.114245519999999,
+      "extra_cpu_setup_or_recovery_not_included": true
+    }
+  ],
+  "controlled_training_candidate": {
+    "question": "Does a short correctness-only GRPO continuation improve its own SFT parent under a fixed inference budget?",
+    "study_type": "new prospective three-seed paired pilot; not a replication of the historical 500-step recipe",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "sft_questions": 500,
+    "sft_epochs": 2,
+    "packed_sequence_estimate": 180,
+    "estimated_optimizer_steps": 24,
+    "grpo_steps_per_seed": 50,
+    "generations_per_prompt": 8,
+    "rollouts_per_seed": 400,
+    "arms_per_seed": [
+      "SFT parent",
+      "same parent plus GRPO"
+    ],
+    "evaluation_questions": 256,
+    "primary_endpoint": "Completed final numeric answer accuracy; repeated identical numeric boxes accepted prospectively; unfinished thinking fails; report strict original contract separately.",
+    "primary_comparison": "Mean paired child-minus-parent effect across three seeds; show each seed and training variability separately, never treat six evaluations as six independent question sets.",
+    "evaluation_subset": "Freeze a common random subset excluding the earlier development pilot and 256-question ablation before running.",
+    "scenarios": [
+      {
+        "grpo_seconds_per_step_multiplier": 1,
+        "sft_three_seeds_usd": 2.410645364509663,
+        "grpo_three_seeds_usd": 2.9328010473665502,
+        "six_256_question_evaluations_usd": 3.716498784035788,
+        "cpu_setup_allowance_usd": 0.75,
+        "total_usd": 9.809945195912
+      },
+      {
+        "grpo_seconds_per_step_multiplier": 2,
+        "sft_three_seeds_usd": 2.410645364509663,
+        "grpo_three_seeds_usd": 5.535271234275647,
+        "six_256_question_evaluations_usd": 3.716498784035788,
+        "cpu_setup_allowance_usd": 0.75,
+        "total_usd": 12.412415382821099
+      },
+      {
+        "grpo_seconds_per_step_multiplier": 3,
+        "sft_three_seeds_usd": 2.410645364509663,
+        "grpo_three_seeds_usd": 8.137741421184742,
+        "six_256_question_evaluations_usd": 3.716498784035788,
+        "cpu_setup_allowance_usd": 0.75,
+        "total_usd": 15.014885569730193
+      }
+    ],
+    "limits": [
+      "SFT packing and step counts are estimates until CPU preparation.",
+      "The training observations comprise only two SFT updates and six highly variable GRPO updates; scenarios are not a statistical prediction interval.",
+      "Use a timing-only calibration and freeze the final prospective protocol before outcome evaluation.",
+      "This tests a short continuation at a fixed generation budget; it cannot establish general RL efficacy or the full 500-step outcome.",
+      "Any executable quote must separately fit expected costs, per-job reservations, setup and contingency inside the newly agreed remaining cap."
+    ]
+  },
+  "budget_remainder": {
+    "original_total_envelope_usd": 20,
+    "remainder_using_reported_usage_usd": 18.1399996,
+    "remainder_using_measured_runtime_plus_startup_estimate_usd": 17.86097528607472
+  },
+  "original_full_matrix_estimate": "Requires a fresh workload-specific estimate. Do not divide the earlier full-study figure by ten: new training, 4K/8K and sampled protocols have distinct costs and remain incompletely measured."
+}

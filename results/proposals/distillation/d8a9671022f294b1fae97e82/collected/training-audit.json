@@ -1,0 +1,86 @@
+{
+  "all_six_exports_distinct": true,
+  "batch_check_scope": "Saved token totals agree with the seeded sampler at every update; source IDs are reconstructed, not independently logged by each GPU batch",
+  "protocol_id": "d8a9671022f294b1fae97e829d3c651d9a79a2bc62c1544115952f3f7edf04fd",
+  "training": {
+    "train_distill_answer_42": {
+      "all_64_step_token_totals_match": true,
+      "artifact_id": "10f2db17897a04a8826eeecb16b4e212dee10281ec563807acc6c94c92235cf8",
+      "epochs": 2,
+      "gpu_peak_memory_mib": 5009.0,
+      "gpu_utilization_full_call_mean_percent": 34.791666666666664,
+      "input_tokens": 127656,
+      "optimizer_steps": 64,
+      "question_batch_ids_digest": "c8ccf825ef9a866953baedc840ffa37b342d6795a981003f91b5278da049ab47",
+      "supervised_tokens_from_prepared_masks_and_completed_epochs": 14754,
+      "train_seconds": 93.498350233,
+      "weights_sha256": "0b83e1c552159dac6c2de098fba1cbd335121a3f9f424dd5ab55adaba0ac204d"
+    },
+    "train_distill_answer_43": {
+      "all_64_step_token_totals_match": true,
+      "artifact_id": "d6ceb0c401147d7681956c5768216adb3c1694c3ab74df4c0846ea303a644640",
+      "epochs": 2,
+      "gpu_peak_memory_mib": 5012.0,
+      "gpu_utilization_full_call_mean_percent": 25.741935483870968,
+      "input_tokens": 127656,
+      "optimizer_steps": 64,
+      "question_batch_ids_digest": "fe45c82b963580e1e30d40366cbce5deb73cd36a1c86d901e5d09f6f79635736",
+      "supervised_tokens_from_prepared_masks_and_completed_epochs": 14754,
+      "train_seconds": 130.122280822,
+      "weights_sha256": "67fc7817d7651980d246b4a84b306c6be32f42bad752dd0f219c1e2ae1ba486e"
+    },
+    "train_distill_answer_44": {
+      "all_64_step_token_totals_match": true,
+      "artifact_id": "5316351b0a1a3c471307e8b9aed97bbf7043f1e641113f5ec5a1687caee7d036",
+      "epochs": 2,
+      "gpu_peak_memory_mib": 5019.0,
+      "gpu_utilization_full_call_mean_percent": 28.70967741935484,
+      "input_tokens": 127656,
+      "optimizer_steps": 64,
+      "question_batch_ids_digest": "e28032ac73ca9632ac94e9800e57984d296cd5c38722e11dd38fdbe73282545f",
+      "supervised_tokens_from_prepared_masks_and_completed_epochs": 14754,
+      "train_seconds": 128.099815153,
+      "weights_sha256": "8ecec09361cf188df94424a5da606364f331bd959e043b255011b6ed60c2e948"
+    },
+    "train_distill_trace_42": {
+      "all_64_step_token_totals_match": true,
+      "artifact_id": "3178751000547af7896793095dc802de6913a069051a722666b83211dbb81381",
+      "epochs": 2,
+      "gpu_peak_memory_mib": 22612.0,
+      "gpu_utilization_full_call_mean_percent": 93.36666666666666,
+      "input_tokens": 5383134,
+      "optimizer_steps": 64,
+      "question_batch_ids_digest": "c8ccf825ef9a866953baedc840ffa37b342d6795a981003f91b5278da049ab47",
+      "supervised_tokens_from_prepared_masks_and_completed_epochs": 5270232,
+      "train_seconds": 1034.603924458,
+      "weights_sha256": "bd111b34e165e39ab8585c547ff7c49d216160196aa0e327b64326642e910692"
+    },
+    "train_distill_trace_43": {
+      "all_64_step_token_totals_match": true,
+      "artifact_id": "fcb7c6ba585b52b4c9e8c52fcfea0fa9998b720518785159a5ec6c7f07832288",
+      "epochs": 2,
+      "gpu_peak_memory_mib": 25762.0,
+      "gpu_utilization_full_call_mean_percent": 90.72037914691943,
+      "input_tokens": 5383134,
+      "optimizer_steps": 64,
+      "question_batch_ids_digest": "fe45c82b963580e1e30d40366cbce5deb73cd36a1c86d901e5d09f6f79635736",
+      "supervised_tokens_from_prepared_masks_and_completed_epochs": 5270232,
+      "train_seconds": 1041.997366283,
+      "weights_sha256": "daac1f77e89a05769b55ad1e1651b534153c5718bddf7f791b6bbe4bcdcfd682"
+    },
+    "train_distill_trace_44": {
+      "all_64_step_token_totals_match": true,
+      "artifact_id": "ffdb4ae0d6a978808d52f935f3153ada6a84e86831ce3179e16e844b65f78ad0",
+      "epochs": 2,
+      "gpu_peak_memory_mib": 23096.0,
+      "gpu_utilization_full_call_mean_percent": 95.41981132075472,
+      "input_tokens": 5383134,
+      "optimizer_steps": 64,
+      "question_batch_ids_digest": "e28032ac73ca9632ac94e9800e57984d296cd5c38722e11dd38fdbe73282545f",
+      "supervised_tokens_from_prepared_masks_and_completed_epochs": 5270232,
+      "train_seconds": 1045.047187503,
+      "weights_sha256": "2ed7538f976be5946206cd789b2fd75ac5319f39360fd39ebad83743532cd0eb"
+    }
+  },
+  "validator_sha256": "0fa47a33d47a2679031cdfb1432e6d1f320f911ac696baa2975f3dbe79354b37"
+}

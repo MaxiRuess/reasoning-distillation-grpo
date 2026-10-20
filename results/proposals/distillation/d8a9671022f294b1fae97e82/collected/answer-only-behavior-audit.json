@@ -1,0 +1,21 @@
+{
+  "answer_only_training_rows": 500,
+  "first_supervised_target": "<think>\n\n</think>\n\n\\boxed{29}<|im_end|>\n",
+  "interpretation_limit": "Visible deliberation is suppressed in this recipe. No no-thinking original-student control or learning-rate sweep was run, so this does not isolate knowledge forgetting or establish a general failure of answer-only distillation.",
+  "observed_2048_outputs": {
+    "answer_42": {
+      "empty_visible_thinking": 256,
+      "responses": 256
+    },
+    "answer_43": {
+      "empty_visible_thinking": 256,
+      "responses": 256
+    },
+    "answer_44": {
+      "empty_visible_thinking": 256,
+      "responses": 256
+    }
+  },
+  "protocol_id": "d8a9671022f294b1fae97e829d3c651d9a79a2bc62c1544115952f3f7edf04fd",
+  "supervised_targets_with_template_inserted_empty_think": 500
+}

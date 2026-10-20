@@ -1,0 +1,37 @@
+{
+  "condition": "controlled_verified",
+  "inference_dispatch_counts": [
+    {
+      "generate_calls_gsm8k": 42,
+      "max_new_tokens": 2048,
+      "questions_per_batch": 32,
+      "samples": 1
+    },
+    {
+      "generate_calls_gsm8k": 83,
+      "max_new_tokens": 4096,
+      "questions_per_batch": 16,
+      "samples": 1
+    },
+    {
+      "generate_calls_gsm8k": 165,
+      "max_new_tokens": 8192,
+      "questions_per_batch": 8,
+      "samples": 1
+    },
+    {
+      "generate_calls_gsm8k": 330,
+      "max_new_tokens": 2048,
+      "questions_per_batch": 4,
+      "samples": 8
+    }
+  ],
+  "packed_capacity_utilization": 0.9944410536024305,
+  "packed_rows": 360,
+  "processed_tokens": 5865452,
+  "raw_rows": 1000,
+  "scope": "CPU preparation and fresh-tokenizer reload; no GPU performance measured",
+  "supervised_tokens": 5769915,
+  "token_cache_bytes": 70401151,
+  "token_manifest": "data/prepared/controlled_verified/sft/370b807573d2de6c1a7e86d6/sft-tokens/36185a351d8d3c5ba192a4cf/tokens.json"
+}

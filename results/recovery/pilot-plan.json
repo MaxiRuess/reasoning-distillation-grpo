@@ -1,0 +1,86 @@
+{
+  "config_digest": "eff52b450512c3f1b39b6ec18f3f6139af70793eb11214b227cf50e7dd4099e9",
+  "experiment": "pilot",
+  "implementation_digest": "959777e6ea774e7870e240da540ec25114bcae00583ee8ba12bf876643905b4d",
+  "nodes": [
+    {
+      "condition": "runtime_cache",
+      "depends_on": [],
+      "gpu": null,
+      "id": "prepare:runtime",
+      "kind": "prepare_runtime"
+    },
+    {
+      "condition": "controlled_verified",
+      "depends_on": [
+        "prepare:runtime"
+      ],
+      "gpu": null,
+      "id": "pilot:prepare:sft",
+      "kind": "prepare",
+      "phase": "sft"
+    },
+    {
+      "condition": "controlled_verified_grpo",
+      "depends_on": [
+        "prepare:runtime"
+      ],
+      "gpu": null,
+      "id": "pilot:prepare:grpo",
+      "kind": "prepare",
+      "phase": "grpo"
+    },
+    {
+      "condition": "controlled_verified",
+      "depends_on": [
+        "pilot:prepare:sft"
+      ],
+      "gpu": "L40S",
+      "id": "pilot:sft",
+      "kind": "sft",
+      "parent": null,
+      "pilot": true,
+      "seed": 42
+    },
+    {
+      "condition": "controlled_verified_grpo",
+      "depends_on": [
+        "pilot:sft",
+        "pilot:prepare:grpo"
+      ],
+      "gpu": "H100",
+      "id": "pilot:grpo",
+      "kind": "grpo",
+      "parent": "pilot:sft",
+      "pilot": true,
+      "seed": 42
+    },
+    {
+      "benchmark": "gsm8k",
+      "condition": "pilot_verified_grpo",
+      "depends_on": [
+        "pilot:grpo"
+      ],
+      "gpu": "L40S",
+      "id": "pilot:eval",
+      "kind": "evaluate",
+      "max_new_tokens": 2048,
+      "num_samples": 1,
+      "parent": "pilot:grpo",
+      "pilot": true,
+      "seed": 42,
+      "temperature": 0
+    },
+    {
+      "condition": "pilot_verified_grpo",
+      "depends_on": [
+        "pilot:eval"
+      ],
+      "gpu": null,
+      "id": "pilot:verify",
+      "kind": "verify",
+      "parent": "pilot:eval"
+    }
+  ],
+  "schema_version": 1
+}

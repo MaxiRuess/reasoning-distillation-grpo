@@ -1,0 +1,7 @@
+{
+  "deliberate_change": "Add one token to the first saved update in an isolated copy",
+  "original_files_unchanged": true,
+  "reason": "Actual per-update token stream differs from the seeded question batches",
+  "rejected": true,
+  "validator_sha256": "0fa47a33d47a2679031cdfb1432e6d1f320f911ac696baa2975f3dbe79354b37"
+}

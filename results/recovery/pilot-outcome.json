@@ -1,0 +1,137 @@
+{
+  "all_pilot_apps_stopped": true,
+  "app_ids": [
+    "ap-VwKqFLPD3MjOYeJOpkC9yn",
+    "ap-UcmFGSWDF8ihB2D4yIbIc4",
+    "ap-em7rXmBlW52ANiqmiYZKh1"
+  ],
+  "approved_cap_usd": 10,
+  "billing": {
+    "after_snapshot": "results/recovery/pilot-billing-after.json",
+    "before_snapshot": "results/recovery/pilot-billing-before.json",
+    "billing_may_lag": true,
+    "credits_applied": true,
+    "reported_workspace_metered_increment_usd": 0.591560770000001,
+    "workspace_billed_cost_usd": 0.0
+  },
+  "evaluation": {
+    "cpu_scoring_reproduced": true,
+    "interpretation": "The recorded score is unsuitable for research interpretation: valid prose final answers are rejected. No post-hoc replacement accuracy is claimed. GRPO used this same scorer, so reward validity also requires repair.",
+    "predictions_sha256": "97fc085dee52696a1653ade52057f71a0fadc3b53ec3d5e65cf4ca2bc833eabd",
+    "recorded_v2_summary": {
+      "accuracy": 0.09375,
+      "benchmark": "gsm8k",
+      "condition": "pilot_verified_grpo",
+      "extraction_failure_rate": 0.90625,
+      "mean_generated_tokens": 877.9375,
+      "model_identity": "a1f907f9e03cd768af20fe2e2e0521befc0e7b6560d79dddd01aa9ad82dea54c",
+      "num_correct": 3,
+      "num_samples_per_problem": 1,
+      "num_total": 32,
+      "pass@1": 0.09375,
+      "pilot_or_subset": true,
+      "results_path": "/vol/evaluations-v2/pilot_verified_grpo/gsm8k/5c96b6dfcd2255b07b462c2d",
+      "run_id": "5c96b6dfcd2255b07b462c2d5946efbd73e548b345f2fbfd9af1dd330d020f24",
+      "scorer_version": "final-response-v2",
+      "truncation_rate": 0.25
+    },
+    "separate_container_verification": true,
+    "statuses": {
+      "ok": 3,
+      "unfinished_thinking": 8,
+      "unparseable": 21
+    }
+  },
+  "grpo_exposure": {
+    "completion_tokens": 50596,
+    "counter_erratum": "Generic _total_train_tokens is zero for this GRPOTrainer; use trainer.state.num_input_tokens_seen. Preserve original metadata unchanged.",
+    "optimizer_steps": 6,
+    "original_metadata_processed_train_tokens": 0,
+    "prompt_groups": 6,
+    "rollouts": 48,
+    "total_prompt_and_completion_tokens_from_trainer_state": 54492,
+    "unique_prompts": 6
+  },
+  "grpo_zero_reward_variance_steps": 3,
+  "ledger": "outputs/studies/e0d016d28610bfdc294d97b0/ledger.json",
+  "ledger_sha256": "96d73ab12f28d6a8fac74e143367fe7843c8db1fea0cb37f329d4abfe70cc356",
+  "lineage": {
+    "adapter_sha256_verified": true,
+    "effective_delta_frobenius": 0.0009696659981273115,
+    "grpo_artifact_id": "a1f907f9e03cd768af20fe2e2e0521befc0e7b6560d79dddd01aa9ad82dea54c",
+    "grpo_parent_verified": true,
+    "lora_scaling": 8.0,
+    "sample_delta_tensor": "base_model.model.model.layers.0.self_attn.q_proj.lora_B.weight",
+    "sft_artifact_id": "8d40e93bde59e6b596d7685060e5bbf8518a1a91428d584619832ba09513cb11",
+    "unscaled_ba_frobenius": 0.00012120824976591393
+  },
+  "next_gates": [
+    "Fix and validate numeric prose extraction without scoring thinking or ambiguous numbers; version the scorer and retain v2 results",
+    "Correct GRPO token-counter reporting using trainer state",
+    "Repeat a bounded pilot after scorer correction before any main-study quote or execution",
+    "Benchmark batch/cache and GPU alternatives separately; allocator reserved memory is not live tensor memory"
+  ],
+  "profiles": {
+    "evaluation": {
+      "function_profile_seconds": 153.232310124,
+      "generated_tokens_this_call": 28094,
+      "generation_seconds": 133.129092031,
+      "gpu_name": "NVIDIA L40S",
+      "model_load_seconds": 16.404739479999996,
+      "sampled_peak_device_memory_gib": 44.3564453125,
+      "sampled_utilization_mean_percent": 69.52702702702703,
+      "torch_peak_allocated_gib": 11.061413288116455,
+      "torch_peak_reserved_gib": 43.904296875
+    },
+    "grpo": {
+      "export_seconds": 12.327478109000026,
+      "function_profile_seconds": 186.751726219,
+      "gpu_name": "NVIDIA H100 80GB HBM3",
+      "model_load_seconds": 5.244605348999999,
+      "optimizer_steps": 6,
+      "sampled_peak_device_memory_gib": 36.7314453125,
+      "sampled_utilization_mean_percent": 38.2,
+      "torch_peak_allocated_gib": 32.49158000946045,
+      "torch_peak_reserved_gib": 35.287109375,
+      "train_seconds": 109.98377676700001,
+      "trainer_setup_seconds": 49.821946503999996
+    },
+    "sft": {
+      "export_seconds": 9.787166354000021,
+      "function_profile_seconds": 147.82294522400002,
+      "gpu_name": "NVIDIA L40S",
+      "model_load_seconds": 12.803737103,
+      "optimizer_steps": 2,
+      "sampled_peak_device_memory_gib": 27.734375,
+      "sampled_utilization_mean_percent": 70.54347826086956,
+      "torch_peak_allocated_gib": 22.2521014213562,
+      "torch_peak_reserved_gib": 27.083984375,
+      "train_seconds": 104.63583388500001,
+      "trainer_setup_seconds": 3.280332006000002
+    }
+  },
+  "reused_sft_from_original_attempt": true,
+  "scope": "Small pilot only; no full study or hardware comparison was launched",
+  "scorer_counterexamples": [
+    {
+      "ground_truth": "18",
+      "problem_id": "0",
+      "recorded_status": "unparseable",
+      "visible_final_answer_excerpt": "Janet makes $18 per day at the farmers' market."
+    },
+    {
+      "ground_truth": "3",
+      "problem_id": "1",
+      "recorded_status": "unparseable",
+      "visible_final_answer_excerpt": "This results in a total of 3 bolts."
+    },
+    {
+      "ground_truth": "20",
+      "problem_id": "4",
+      "recorded_status": "unparseable",
+      "visible_final_answer_excerpt": "Wendi needs to give her chickens 20 cups of feed in the final meal of the day."
+    }
+  ],
+  "sft_processed_tokens": 521338,
+  "status": "operational_pilot_complete_research_gate_failed"
+}

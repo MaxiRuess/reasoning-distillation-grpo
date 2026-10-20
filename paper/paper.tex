@@ -1,0 +1,93 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs,amsmath,amssymb,microtype}
+\usepackage{hyperref,graphicx,placeins}
+\hypersetup{hidelinks,pdftitle={Reasoning-Trace Distillation under Output Limits: A Qwen3-1.7B Case Study},pdfauthor={Maximilian Ruess}}
+\title{Reasoning-Trace Distillation under Output Limits:\\A Qwen3-1.7B Case Study}
+\author{Maximilian Ruess}
+\date{October 20, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+An accuracy gain under a short output limit can depend on whether a model reaches its final answer. We study this issue in reasoning-trace distillation into the already post-trained Qwen3-1.7B. An initial experiment fine-tunes three seeds per arm on 500 matched questions with teacher traces or final answers alone. After its 256-question greedy GSM8K evaluation, a separately frozen follow-up evaluates the unchanged student and three trace checkpoints on 128 shared questions at 2K, 4K and 8K with recommended thinking-mode sampling. \input{paper/inference_extension_abstract.tex} These results describe completion, response length and final-answer accuracy in one student; they do not establish a general improvement in reasoning ability.
+\end{abstract}
+
+\section{Introduction}
+Reasoning-trace distillation trains a student on a teacher's worked solutions, with the aim of transferring problem-solving behavior~\cite{stepwise,r1}. For a student that already supports explicit thinking, additional supervision can change how long it generates, whether it completes a response and what answer it produces. Accuracy measured at one output limit combines these effects. A trained model that finishes more often can outperform an unchanged checkpoint under that limit without demonstrating an advantage when more output is allowed.
+
+We examine this distinction in \texttt{Qwen/Qwen3-1.7B}, an already post-trained model with native thinking and no-thinking modes~\cite{qwen}. Both supervised fine-tuning (SFT) arms see the same 500 OpenR1 questions and final answers; one also receives the teacher's explicit thinking. Questions, training seeds and optimizer updates are matched. The answer-only recipe performs poorly, so we retain that result and separately evaluate the existing trace checkpoints against the unchanged student and its native no-thinking mode.
+
+\input{paper/inference_extension_overview.tex}
+
+The original greedy study and the sampled follow-up have distinct primary comparisons. The follow-up was designed after inspecting the original findings and uses previously evaluated questions. Its purpose is to test how the interpretation changes under larger output allowances and native inference controls. The contribution is an empirical case study of an existing distillation recipe, rather than a new training or length-control algorithm.
+
+\section{Related work}
+\paragraph{Learning from teacher reasoning.}
+Hsieh et al. use teacher rationales as an additional target in a multitask framework~\cite{stepwise}. DeepSeek-R1 reports reasoning distillation into smaller models~\cite{r1}, while s1 combines trace SFT with a test-time intervention that extends or terminates thinking~\cite{simple}. Our student already has a trained thinking mode, so the experiment measures additional adaptation of that checkpoint. Li et al. find that students with at most three billion parameters do not consistently benefit from longer or stronger-teacher reasoning and propose mixing supervision of different complexity~\cite{small}. We use one fixed teacher-trace selection; we do not compare short and long teacher traces.
+
+\paragraph{Reasoning length and inference policy.}
+Chen et al. study overthinking and use self-training to shorten reasoning while preserving accuracy~\cite{overthinking}. Aggarwal and Welleck introduce Length Controlled Policy Optimization (LCPO), which trains L1 to satisfy a requested length constraint while optimizing accuracy~\cite{l1}. These methods explicitly target the allocation of reasoning length. Our trace SFT has no length-control objective or inference-time budget forcing: generation stops at an end token or a fixed ceiling. We examine completion and final-answer accuracy under those ceilings, including the student's existing no-thinking policy.
+
+\input{paper/distillation_methods.tex}
+
+\input{paper/inference_extension_results.tex}
+\FloatBarrier
+
+\section{Original greedy results and completion diagnostic}
+\label{sec:original}
+\input{paper/original_results_summary.tex}
+\input{paper/original_completion_diagnostic.tex}
+\FloatBarrier
+
+\section{Discussion}
+\input{paper/inference_extension_interpretation.tex}
+
+\section{Limitations}
+\paragraph{Sample and generalization.}
+The study covers one student, one 500-question training sample and GSM8K. No second benchmark, model-size comparison or teacher-length ablation was run. GSM8K had already been used in this repository, and the follow-up reuses questions from the original evaluation. Training-data overlap screening and the exclusion of recent development questions do not establish a hidden or uncontaminated test. The 128-question follow-up and three trained seeds leave substantial uncertainty: the numerical primary interval at 8K permits effects from a 5.73-point loss to a 2.86-point gain.
+
+\paragraph{Training control.}
+The trace arm receives far more supervised tokens and compute despite matched questions and updates. The answer-only results concern one template, learning rate and update schedule. Native no-thinking shows that disabling the explicit thinking channel alone does not reproduce its failure, but it cannot identify the roles of output-style learning, knowledge forgetting or other training effects. No alternative answer-only template or hyperparameter sweep was evaluated.
+
+\paragraph{Inference and measurement.}
+The original greedy policy conflicts with Qwen's thinking-mode guidance; the follow-up uses its recommended sampling parameters. Even the 8K ceiling remains below the model card's recommended 32,768-token allowance~\cite{qwen}. One decoding seed does not estimate variability across sampled generations. Batch size and random-number streams also change across output limits, preventing an isolated causal estimate of the ceiling's effect. Bootstrap intervals condition on the observed checkpoints and decoding seed. Conditional completion rates select different questions for each model, and final-answer scoring does not measure the correctness or faithfulness of the intermediate reasoning.
+
+\section{Conclusion}
+\input{paper/inference_extension_conclusion.tex}
+
+\paragraph{Artifacts.}
+The repository retains the questions, protocols, code and model identities, raw generations and both scoring endpoints. Saved generations passed persistence checks and strict scores reproduce on CPU. Trained weights remain on the persistent experiment volume and have not been publicly released. Historical recipe rankings and checkpoint-repair records are documented separately from the experiments reported here.
+
+\begin{thebibliography}{12}
+\raggedright\small
+\bibitem{qwen} Qwen Team. Qwen3 Technical Report. \emph{arXiv:2505.09388}, 2025. Model and inference guidance: \url{https://huggingface.co/Qwen/Qwen3-1.7B}.
+\bibitem{stepwise} Cheng-Yu Hsieh et al. Distilling Step-by-Step! Outperforming Larger Language Models with Less Training Data and Smaller Model Sizes. \emph{Findings of ACL}, 2023, pp. 8003--8017. \url{https://aclanthology.org/2023.findings-acl.507/}.
+\bibitem{r1} DeepSeek-AI. DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning. \emph{arXiv:2501.12948}, 2025.
+\bibitem{small} Yuetai Li et al. Small Models Struggle to Learn from Strong Reasoners. \emph{arXiv:2502.12143}, 2025. \url{https://arxiv.org/abs/2502.12143}.
+\bibitem{overthinking} Xingyu Chen et al. Do NOT Think That Much for 2+3=? On the Overthinking of o1-Like LLMs. \emph{arXiv:2412.21187}, 2024. \url{https://arxiv.org/abs/2412.21187}.
+\bibitem{l1} Pranjal Aggarwal and Sean Welleck. L1: Controlling How Long A Reasoning Model Thinks With Reinforcement Learning. \emph{COLM}, 2025. \url{https://arxiv.org/abs/2503.04697}.
+\bibitem{simple} Niklas Muennighoff et al. s1: Simple test-time scaling. \emph{arXiv:2501.19393}, 2025. \url{https://arxiv.org/abs/2501.19393}.
+\bibitem{data} OpenR1-Math-220k. \url{https://huggingface.co/datasets/open-r1/OpenR1-Math-220k}.
+\bibitem{gsm} Cobbe et al. Training Verifiers to Solve Math Word Problems. \emph{arXiv:2110.14168}, 2021.
+\bibitem{math} MATH-500. \url{https://huggingface.co/datasets/HuggingFaceH4/MATH-500}.
+\bibitem{trl} Hugging Face. TRL v0.28.0. \url{https://github.com/huggingface/trl/tree/v0.28.0}.
+\end{thebibliography}
+\clearpage
+\appendix
+\section{Training and evaluation details}
+\label{app:details}
+The student revision is \texttt{70d244cc86ccca08cf5af4e1e306ecf908b1ad5e}. Training seeds are 42/43/44; question-selection seeds are 20261020 for the original 256, 20261021 for its 64-question check, and 20261022 for the follow-up 128. The follow-up's decoding seed is 20261023. The original study generated 2,240 responses; the inference-only follow-up generated 1,792. Original scores remain unchanged.
+
+The selected teacher answers comprise 313 numeric and 187 symbolic or other values. Fifty original teacher final fields contained multiple boxes; both training arms use the same normalized final box. The original GSM8K selection excludes 32 earlier development questions and 256 checkpoint-ablation questions. The original greedy evaluations use batches of 32 at 2K and 16 at 4K.
+
+Training uses four questions per microbatch and up to four accumulation microbatches per optimizer update. Packing is disabled; padding-free FlashAttention resets positions at example boundaries. Both arms use BF16 weights, rank-64 rsLoRA with alpha 64 and dropout 0.05, a learning rate of $2\times10^{-4}$, a linear schedule with 10\% proportional warmup, and eight-bit paged AdamW. Loss is restricted to completion tokens, including the end-of-turn token. The runtime uses TRL 0.28.0~\cite{trl}. Per trained model, two epochs consume 127,656 input and 14,754 supervised tokens in the answer arm, versus 5,383,134 input and 5,270,232 supervised tokens in the trace arm. Complete effective weights are exported after the final update.
+
+Scoring-policy identifiers are \texttt{completed-consistent-numeric-boxes-v1} for numerical results and \texttt{boxed-final-v1} for strict results. The sampled follow-up seeds every canonical batch under \texttt{canonical-batch-v3}. Full execution and checkpoint identities are retained with the raw outputs.
+
+GSM8K evaluation appends the same instruction to every question: ``After your reasoning, put only your final numerical value, with no units or explanation inside exactly one \texttt{\textbackslash boxed\{...\}}.'' Training uses the corresponding instruction requesting a mathematical expression. No-thinking mode is selected through the native chat-template switch; the final-answer instruction is unchanged. The pinned OpenR1 and GSM8K dataset revisions are \texttt{e4e141ec9dea9f8326f4d347be56105859b2bd68} and \texttt{740312add88f781978c0658806c59bc2815b9866}, respectively.
+
+\section{Student-run compute}
+\input{paper/inference_extension_cost.tex}
+\end{document}

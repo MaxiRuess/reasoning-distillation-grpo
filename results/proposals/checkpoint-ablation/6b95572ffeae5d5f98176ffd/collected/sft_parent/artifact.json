@@ -1,0 +1,63 @@
+{
+  "artifact_id": "e8799e1bdfa324fc598a4b01c775c57ed7e44dd8bdc1c9fa7932c8c6e2f31490",
+  "base": {
+    "eos_token": "<|im_end|>",
+    "name": "Qwen/Qwen3-1.7B",
+    "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+    "tokenizer": "Qwen/Qwen3-1.7B",
+    "training_stage": "pretraining_and_post_training"
+  },
+  "files": {
+    "added_tokens.json": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680",
+    "chat_template.jinja": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+    "config.json": "8765bfdb0d5e7fbc73263401e44a30f9be8f4889cda3536c27d4124c9b3b3d9b",
+    "generation_config.json": "64d86df2173901c58389974bde21f7d2ab9eb7d79f35a337753329d39cf265c0",
+    "model.safetensors": "61ec608f276d424912247c3e38d05face84f0c70475f6afc980bfbac79e6e427",
+    "special_tokens_map.json": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+    "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "tokenizer_config.json": "303fa783807484399a2799d88aba3a12f6b9db87a465061c3c2abe1f5744bd53",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "format": "full",
+  "metadata": {
+    "checkpoint_ablation": {
+      "arm": "sft_parent",
+      "protocol_id": "6b95572ffeae5d5f98176ffd6f755143f4bd68e347b8c76d5814a02f06e99ede",
+      "sources": {
+        "grpo": {
+          "files": {
+            "adapter_config.json": "5d49ed0c47e7ed2f056f92748446a24b659b466a1ce5195bb2fabbb8f09123b9",
+            "adapter_model.safetensors": "3b10d8de2b25379f0b7306cbd5cb0b4836b2c06f89e402fc2756d91bf5c9e120"
+          },
+          "path": "outputs/sft_then_grpo"
+        },
+        "sft": {
+          "files": {
+            "adapter_config.json": "e60dcfcfd003800e45dea4b563289ae71896d1092a432af3083d229a1acbb906",
+            "adapter_model.safetensors": "9b0947d6544f8f054ef49197f752f127f6960fe60c579f23a843844c2e2a7a1f"
+          },
+          "path": "outputs/sft_then_grpo/checkpoint-117"
+        }
+      }
+    },
+    "historical_base_revision_verified": false,
+    "intentional_missing_sft_control": false
+  },
+  "parent": null,
+  "runtime": {
+    "code_sha": null,
+    "dirty": null,
+    "packages": {
+      "accelerate": "1.15.0",
+      "datasets": "5.0.1",
+      "math-verify": "0.9.0",
+      "peft": "0.18.1",
+      "torch": "2.8.0",
+      "transformers": "4.57.6",
+      "trl": "0.28.0"
+    },
+    "python": "3.11.12",
+    "source_digest": "861f1d4ffa4eecf5a26a13470e848ff849395dece7f43af63e5f8d035edccb67"
+  },
+  "schema_version": 1
+}

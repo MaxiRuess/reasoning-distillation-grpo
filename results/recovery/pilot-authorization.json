@@ -1,0 +1,9 @@
+{
+  "authorization": "User: Let's run the small pilot",
+  "billing_baseline_path": "results/recovery/pilot-billing-before.json",
+  "cap_usd": 10,
+  "note": "Sequential quoted timeouts/resource limits; provider billing may lag and includes separate fixed costs.",
+  "quote_sha256": "4618f260be02240955bfcebd33f89ca78960bba10b66ea03cf2b0201059ff1ce",
+  "recorded_at_utc": "2026-10-19T12:43:01.464545+00:00",
+  "scope": "Small pilot only; no full-study or extra hardware comparison authorization"
+}

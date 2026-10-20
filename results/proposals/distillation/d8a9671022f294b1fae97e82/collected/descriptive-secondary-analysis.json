@@ -1,0 +1,171 @@
+{
+  "base_comparisons_2048": {
+    "answer": {
+      "descriptive_secondary": true,
+      "mean_delta": -0.640625,
+      "num_distinct_questions": 256,
+      "paired_item_bootstrap_95": [
+        -0.6979166666666667,
+        -0.578125
+      ],
+      "per_seed_delta": [
+        -0.64453125,
+        -0.640625,
+        -0.63671875
+      ],
+      "training_seed_delta_std": 0.00390625
+    },
+    "trace": {
+      "descriptive_secondary": true,
+      "mean_delta": 0.078125,
+      "num_distinct_questions": 256,
+      "paired_item_bootstrap_95": [
+        0.03385416666666667,
+        0.12499999999999999
+      ],
+      "per_seed_delta": [
+        0.06640625,
+        0.10546875,
+        0.0625
+      ],
+      "training_seed_delta_std": 0.02376079113397742
+    }
+  },
+  "caution": "Descriptive secondary analyses; item intervals conditional on observed training seeds; equal output ceilings are not equal consumed compute",
+  "length_comparisons_same_64_questions": {
+    "answer_42": {
+      "delta": 0.015625,
+      "left_correct": 8,
+      "left_only_correct": 1,
+      "mcnemar_exact_p": 1.0,
+      "num_paired": 64,
+      "paired_bootstrap_95": [
+        0.0,
+        0.046875
+      ],
+      "right_correct": 7,
+      "right_only_correct": 0
+    },
+    "answer_43": {
+      "delta": 0.0,
+      "left_correct": 6,
+      "left_only_correct": 0,
+      "mcnemar_exact_p": 1.0,
+      "num_paired": 64,
+      "paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "right_correct": 6,
+      "right_only_correct": 0
+    },
+    "answer_44": {
+      "delta": 0.0,
+      "left_correct": 5,
+      "left_only_correct": 0,
+      "mcnemar_exact_p": 1.0,
+      "num_paired": 64,
+      "paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "right_correct": 5,
+      "right_only_correct": 0
+    },
+    "base": {
+      "delta": 0.15625,
+      "left_correct": 56,
+      "left_only_correct": 11,
+      "mcnemar_exact_p": 0.00634765625,
+      "num_paired": 64,
+      "paired_bootstrap_95": [
+        0.0625,
+        0.265625
+      ],
+      "right_correct": 46,
+      "right_only_correct": 1
+    },
+    "trace_42": {
+      "delta": 0.046875,
+      "left_correct": 53,
+      "left_only_correct": 4,
+      "mcnemar_exact_p": 0.375,
+      "num_paired": 64,
+      "paired_bootstrap_95": [
+        -0.015625,
+        0.125
+      ],
+      "right_correct": 50,
+      "right_only_correct": 1
+    },
+    "trace_43": {
+      "delta": 0.0625,
+      "left_correct": 56,
+      "left_only_correct": 4,
+      "mcnemar_exact_p": 0.125,
+      "num_paired": 64,
+      "paired_bootstrap_95": [
+        0.015625,
+        0.125
+      ],
+      "right_correct": 52,
+      "right_only_correct": 0
+    },
+    "trace_44": {
+      "delta": 0.0625,
+      "left_correct": 52,
+      "left_only_correct": 7,
+      "mcnemar_exact_p": 0.34375,
+      "num_paired": 64,
+      "paired_bootstrap_95": [
+        -0.03125,
+        0.15625
+      ],
+      "right_correct": 48,
+      "right_only_correct": 3
+    }
+  },
+  "mean_length_comparisons_same_64_questions": {
+    "answer": {
+      "descriptive_secondary": true,
+      "mean_delta": 0.005208333333333333,
+      "num_distinct_questions": 64,
+      "paired_item_bootstrap_95": [
+        0.0,
+        0.015625
+      ],
+      "per_seed_delta": [
+        0.015625,
+        0.0,
+        0.0
+      ],
+      "training_seed_delta_std": 0.009021097956087904
+    },
+    "trace": {
+      "descriptive_secondary": true,
+      "mean_delta": 0.057291666666666664,
+      "num_distinct_questions": 64,
+      "paired_item_bootstrap_95": [
+        0.010416666666666666,
+        0.109375
+      ],
+      "per_seed_delta": [
+        0.046875,
+        0.0625,
+        0.0625
+      ],
+      "training_seed_delta_std": 0.009021097956087904
+    }
+  },
+  "protocol_id": "d8a9671022f294b1fae97e829d3c651d9a79a2bc62c1544115952f3f7edf04fd",
+  "short_64_accuracies": {
+    "answer_42": 0.109375,
+    "answer_43": 0.09375,
+    "answer_44": 0.078125,
+    "base": 0.71875,
+    "trace_42": 0.78125,
+    "trace_43": 0.8125,
+    "trace_44": 0.75
+  },
+  "source_analysis_sha256": "3206e501f407d277ea36d5d0f24f22eba69bdee94a84b7bb11d335b8025fcb73"
+}

@@ -1,0 +1,11 @@
+{
+  "as_of": "2026-10-19",
+  "source": "https://modal.com/pricing",
+  "gpu_per_second": {"L40S": 0.000542, "H100": 0.001097},
+  "cpu_core_per_second": 0.0000131,
+  "memory_gib_per_second": 0.00000222,
+  "physical_cores_limit": 2,
+  "memory_gib_limit": 16,
+  "overhead_seconds_per_task": 120,
+  "caution": "Reservations include a startup/idle allowance, not a provider billing guarantee. Image builds, storage and egress are additional; configure a workspace spending limit before paid work. Recheck rates before launch."
+}

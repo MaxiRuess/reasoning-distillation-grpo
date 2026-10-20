@@ -1,0 +1,7 @@
+{
+  "artifact_id": "ad6e09d99d92387133110f8982250961b072abd1dcb8f34bdcc41f72d8c67309",
+  "exact_cpu_logits_equal": true,
+  "maximum_absolute_difference": 0.0,
+  "parent_artifact_id": null,
+  "protocol_id": "6b95572ffeae5d5f98176ffd6f755143f4bd68e347b8c76d5814a02f06e99ede"
+}

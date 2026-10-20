@@ -1,0 +1,30 @@
+{
+  "archived": {
+    "final-response-v2": {
+      "not_valid_primary_calibration": true,
+      "role": "reproduction/prose diagnostics only"
+    },
+    "final-response-v3": {
+      "not_valid_primary_calibration": true,
+      "role": "reproduction/prose diagnostics only"
+    },
+    "final-response-v4": {
+      "not_valid_primary_calibration": true,
+      "role": "reproduction/prose diagnostics only"
+    },
+    "final-response-v5": {
+      "not_valid_primary_calibration": true,
+      "role": "reproduction/prose diagnostics only"
+    },
+    "final-response-v6": {
+      "not_valid_primary_calibration": true,
+      "role": "reproduction/prose diagnostics only"
+    }
+  },
+  "current": "boxed-final-v1",
+  "current_role": "primary new-study metric with explicit shared final-answer prompts",
+  "legacy-v1": {
+    "role": "original historical reproduction only"
+  },
+  "reason": "Prose heuristics cannot reliably distinguish inputs from intended conclusions; old generations did not receive the new answer instruction."
+}

@@ -1,166 +1,144 @@
-# Reasoning Trace Distillation: Can Small Models Learn to Think?
+# Reasoning-Trace Distillation under Output Limits
 
-**[Read the full paper (PDF)](https://maxiruess.github.io/reasoning-distillation-grpo/assets/paper.pdf)**
+**[Read the paper (PDF)](https://maxiruess.github.io/reasoning-distillation-grpo/assets/paper.pdf)** · [Findings](results/FINDINGS.md) · [Sampled results](docs/experiments/inference-extension-results-2026-10-20.md)
 
-## Research Questions
+This project studies reasoning-trace distillation into **the already post-trained `Qwen/Qwen3-1.7B` checkpoint**. It does not test reasoning emergence from a pretrained-only model. Earlier supervised/RL recipe comparisons are preserved as historical evidence.
 
-1. **Can reasoning be transferred through imitation alone?** When a 1.7B model is fine-tuned on reasoning traces from a much larger "thinking" model (DeepSeek-R1, 671B), does it learn genuine multi-step reasoning — or just surface-level pattern mimicry?
+[Paper (PDF)](assets/paper.pdf) · [Audit](docs/reviews/2026-10-19-research-audit.md) · [GPU review](docs/reviews/2026-10-19-gpu-efficiency-review.md) · [Remediation status](docs/remediation/STATUS.md)
 
-2. **Does reinforcement learning add value beyond distillation?** If distillation works, can GRPO (Group Relative Policy Optimization) further refine the distilled reasoning — or does the RL objective conflict with the distilled knowledge?
+The [bounded distillation study is complete](docs/experiments/distillation-results-2026-10-20.md): answer-only and teacher-trace SFT used the same 500 questions and final answers, three seeds, and 64 updates over two epochs. On 256 frozen GSM8K questions at 2K, trace SFT averaged 78.1% versus 70.3% for the unchanged student; the answer-only recipe collapsed to 6.25%. Its template supervised empty thinking blocks, so the large trace-versus-answer gap does not isolate a general distillation benefit. On the preselected 64-question 4K check, trace SFT averaged 83.9% versus 87.5% unchanged, with no demonstrated advantage. All 2,240 raw responses were persisted and independently hash-verified; strict scores reproduce on CPU. All experiment apps are stopped. New resource-time cost is estimated at $7.01, or $8.58 with extra startup allowance; the conservative total including earlier-run reserves and all allowances is $11.10 within $20. This is not a reconciled bill. No further GPU work is authorized from the remaining budget.
 
-3. **What is the right way to get RL benefits into small models?** If direct RL optimization fails, can we capture RL's improvements indirectly — by distilling the outputs of RL-trained models rather than RL-training the small model itself?
+The separately authorized [sampled inference follow-up is complete](docs/experiments/inference-extension-results-2026-10-20.md). On 128 shared questions, trace checkpoints average **86.20% at 8K versus 87.50% unchanged** (difference −1.30 points; 95% conditional item interval −5.73 to +2.86). The 2K trace advantage does not establish an advantage at 8K. Native sampled no-thinking reaches 78.91% at 2K with 237 mean tokens, versus 80.21% and 994 tokens for trace checkpoints; these policies use different sampling parameters. All 1,792 new responses were verified, and the app is stopped with no containers remaining. Estimated resource-time cost is **$13.34**, or **$15.47 including startup and incidental allowances**, within the separate **$30 cap**; this is not a reconciled bill. No training, second benchmark or further GPU spending is included. Original greedy results remain separate. The full CPU suite passes 84 tests plus 11 subtests.
 
-## Motivation
+The separately approved [checkpoint-loading ablation](docs/experiments/checkpoint-ablation-2026-10-19.md) compares the exact historical SFT parent, the missing-SFT loading control and the corrected sequential checkpoint on 256 frozen GSM8K questions. It performs no training and has its own $20 cap, quote and persistent ledger. Prepare its proposal with `PYTHONPATH=. python scripts/16_checkpoint_ablation.py`; execution requires the frozen proposal and explicit budget. The main controlled study remains unapproved.
 
-DeepSeek-R1 demonstrated that reinforcement learning can teach large models to reason, producing step-by-step `<think>` traces that dramatically improve math problem-solving. The subsequent distillation of R1's traces into smaller models (1.5B-70B) showed these capabilities can transfer across scale. But two questions remain open for practitioners working with sub-2B models: is the distillation alone sufficient, or does adding RL provide meaningful gains? And if the naive SFT→RL pipeline that works at 7B+ scale breaks down at smaller scales, what alternative captures RL's benefits?
+The [completed ablation](docs/experiments/checkpoint-ablation-results-2026-10-19.md) scored 191/256 for the exact SFT parent, 168/256 with SFT omitted and 184/256 after correct reconstruction. The predeclared restoration effect is +6.25 percentage points; accepting four repeated identical correct boxes reduces it to +4.69 points with an interval including zero. The corrected-versus-SFT difference is unresolved. All apps stopped; closing reported additional metered usage was $1.86, subject to billing adjustments.
 
-## Approach
+## Historical results and their limits
 
-We fine-tune `Qwen3-1.7B` (base) under five controlled conditions using the same LoRA configuration (r=64, rsLoRA, full bfloat16) and evaluate on GSM8K (grade school math):
+The six original evaluation files were recovered and their counts reconciled. These are **historical legacy-scored measurements**, not corrected or independently reproduced accuracies.
 
-**Distillation Conditions:**
-| Condition | Training Data | What We're Testing |
-|---|---|---|
-| `baseline` | 50K Orca Math (answers only) | Can answer memorization solve math? |
-| `sft_traces` | 1K DeepSeek-R1 traces (s1K-1.1) | Does imitating reasoning traces teach reasoning? |
-| `re_distill` | 1K Open-R1 RL-verified traces | Do RL-improved traces transfer better than raw traces? |
+| Historical recipe | Correct / 1,319 | Accuracy |
+|---|---:|---:|
+| Original post-trained Qwen checkpoint | 952 | 72.2% |
+| Orca **worked-solution** SFT | 913 | 69.2% |
+| s1K trace SFT | 974 | 73.8% |
+| GRPO from the original checkpoint | 999 | 75.7% |
+| s1K SFT → GRPO **requiring checkpoint reconstruction** | 919 | 69.7% |
+| Open-R1 verified-trace SFT | 1,036 | 78.5% |
 
-**RL Conditions:**
-| Condition | Method | What We're Testing |
-|---|---|---|
-| `grpo_only` | GRPO from base model on GSM8K | Can RL discover reasoning without seeing examples? |
-| `sft_then_grpo` | SFT on traces → GRPO refinement | Does RL refine or destroy distilled reasoning? |
+The audit found a missing SFT contribution when reloading the final combined adapter, scorer defects, and confounded data comparisons. The intermediate SFT checkpoint remains recoverable. Original records contain extracted answers, not raw responses, so corrected scoring requires new generations.
 
-## Findings
+[Recovered paired analysis](results/recovery/historical-paired-analysis.json) finds the s1K-versus-starting-checkpoint difference unresolved (paired 95% interval −0.76 to +4.09 percentage points). The Open-R1/s1K historical difference is +4.70 points (paired interval +2.50 to +6.97), but different question distributions and lengths prevent attributing it to verification alone. These tests do not validate checkpoint reconstruction or capture training-seed variability.
 
-| Condition | GSM8K Accuracy | Training Data | Method |
-|---|---|---|---|
-| `baseline` | 69.2% | 50K answers | SFT |
-| `sft_then_grpo` | 69.7% | 1K traces → 7.5K GSM8K | SFT → GRPO |
-| Base model | 72.2% | --- | None (zero-shot greedy) |
-| `sft_traces` | 73.8% | 1K DeepSeek-R1 traces | SFT |
-| `grpo_only` | 75.7% | 7.5K GSM8K | GRPO |
-| **`re_distill`** | **78.5%** | 1K RL-verified traces | SFT |
+## Setup and local verification
 
-Evaluated on the full GSM8K test set (1,319 problems, greedy decoding). For reference, Qwen reports 75.4% with 4-shot chain-of-thought prompting.
-
-**What we found:**
-
-- **Re-distillation is the best approach.** `re_distill` (78.5%) outperforms all other conditions — beating `sft_traces` (73.8%) by 4.7 points and `grpo_only` (75.7%) by 2.8 points, using the same 1K examples, same model, same hyperparameters. The only difference is trace source: RL-verified traces from Open-R1 are higher quality because they've been filtered for mathematical correctness. This captures RL's benefits (better reasoning paths) without RL's risks (forgetting, instability, engineering complexity).
-
-- **Direct GRPO marginally outperforms raw distillation.** `grpo_only` (75.7%) edges out `sft_traces` (73.8%) by 1.9 points, challenging the assumption that distillation dominates RL at small scale. Both exceed the base model (72.2%), confirming that both training signals provide genuine improvement.
-
-- **RL after distillation degrades performance.** `sft_then_grpo` (69.7%) performs 4.1 points *worse* than `sft_traces` alone (73.8%), falling below the base model. This is consistent with Niu et al.'s proof (arXiv:2601.07389) that SFT and RL objectives are mathematically non-decouplable, compounded by entropy collapse (arXiv:2602.02244), distribution mismatch (arXiv:2602.01058), and LoRA merge artifacts (arXiv:2410.21228).
-
-- **Distillation is data-efficient but not dominant.** 1,000 reasoning traces from DeepSeek-R1 (73.8%) outperform 50,000 answer-only examples (69.2%) by 4.6 points. The model produces genuine `<think>` reasoning blocks with self-correction and verification. However, GRPO achieves comparable results without any reasoning traces.
-
-- **Trace quality follows a clear hierarchy.** Baseline (69.2%) < base model (72.2%) < raw teacher traces (73.8%) < RL from base (75.7%) < RL-verified traces (78.5%). The largest single jump (4.7 points) comes from correctness verification — **data quality filtering is the highest-leverage intervention** for reasoning distillation.
-
-**Example: Distillation teaches reasoning, not just formatting.** The same question answered by `baseline` (answer-only SFT) and `sft_traces` (reasoning trace distillation):
-
-> **"A store sells apples for $2 each. If John buys 7 apples and pays with a $20 bill, how much change does he get?"**
-
-> *baseline response:*
-> `<think>` `</think>`
-> John buys 7 apples at $2 each, so the total cost of the apples is: 7 apples * $2/apple = $14. John pays with a $20 bill, so the change he gets back is: $20 - $14 = $6. John gets $6 in change.
-
-> *sft_traces response:*
-> `<think>` Okay, let me try to figure out this problem. So, John buys 7 apples, each costing $2, and he pays with a $20 bill. We need to find out how much change he gets. First, I know that the price per apple is $2. If he buys 7 apples, the total cost should be 7 multiplied by $2. Let me write that out: 7 * $2 = $14. John paid with a $20 bill. The change he should get back is $20 minus $14 = $6. Let me double-check: 7 apples at $2 each is $14. $20 minus $14 is $6. `</think>` John gets \boxed{6} dollars in change.
-
-Both models get this easy problem right, but the reasoning process is qualitatively different. The baseline produces an empty `<think>` block and jumps to the computation — it learned to format answers, not to reason. The distilled model restates the problem, identifies the relevant quantities, performs the calculation, and *self-verifies* ("Let me double-check"). On harder problems where the first attempt might be wrong, this self-verification is the difference between 69% and 74% accuracy.
-
-## Setup
+Use Python 3.11 or 3.12. Linux GPU jobs use separate fully resolved Python 3.11 locks under `requirements/`.
 
 ```bash
-git clone https://github.com/MaxiRuess/reasoning-distillation-grpo.git
-cd reasoning-distillation-grpo
-
-python -m venv venv
-source venv/bin/activate
-pip install -e .
-
-# Modal setup (for cloud GPU training)
-modal setup
-modal secret create wandb-secret WANDB_API_KEY=<key>
-modal secret create huggingface-secret HF_TOKEN=<token>
+python -m venv .venv
+source .venv/bin/activate
+pip install -e '.[dev]'
+python -m pytest tests -q
+ruff check src scripts tests modal_train.py
 ```
 
-## Usage
+The new stack uses TRL 0.28.0. [Recovered historical cards](results/recovery/recovered-runtimes.json) identify TRL 1.0.0 with different SFT/GRPO PyTorch and Transformers versions; their complete transitive environments are unknown.
+
+The [pilot repairs](docs/remediation/pilot-defect-fixes-2026-10-19.md) pass 53 CPU tests and a fresh GPU training/evaluation/persistence check. New runs use a shared explicit final-answer contract, correct GRPO token accounting and weighted-objective diagnostics. All pilot apps are stopped; reported metered usage across attempts is about $3.12 within the $10 approval. No full-study budget is approved.
+
+## Preparing and training
+
+Preparation preserves source IDs, pins revisions, quarantines malformed/overlength targets and overlap candidates, and fingerprints the exact data consumed by training. Prepare on CPU **before** allocating a training GPU.
+
+SFT preparation also saves verified token IDs, completion masks and packing boundaries, using the pinned TRL preprocessor. GPU SFT consumes this cache without repeating tokenization. The Modal study first warms pinned weights and benchmarks on CPU into `/vol/hf-cache-v2`; GPU images run offline. Direct Modal training entry points require this runtime cache and prepared data already to exist.
 
 ```bash
-# Step 1: Prepare datasets
-python scripts/01_prepare_sft_data.py --condition sft_traces
-python scripts/01_prepare_sft_data.py --condition re_distill
+python scripts/01_prepare_sft_data.py --condition controlled_verified
+python scripts/02_prepare_grpo_data.py --condition controlled_grpo
 
-# Step 2: Train SFT conditions (Modal, L40S GPU)
-modal run modal_train.py::train_sft --condition baseline
-modal run modal_train.py::train_sft --condition sft_traces
-modal run modal_train.py::train_sft --condition re_distill
-
-# Step 3: Train GRPO conditions (Modal, H100 GPU with vLLM)
-modal run modal_train.py::train_grpo --condition grpo_only
-modal run modal_train.py::train_grpo --condition sft_then_grpo --sft-checkpoint /vol/outputs/sft_then_grpo
-
-# Step 4: Evaluate on GSM8K (full test set, 1,319 problems)
-modal run modal_train.py::full_eval_gsm8k --model-path /vol/outputs/re_distill --condition re_distill
-
-# Evaluate base model (no adapter, apples-to-apples baseline)
-modal run modal_train.py::full_eval_gsm8k --base-model-only --condition base_model
-
-# Quick spot-check (subset of problems, faster)
-modal run modal_train.py::spot_check_gsm8k --model-path /vol/outputs/re_distill --num-problems 100
-
-# Step 5: Quick sanity check (5 sample problems, visual inspection)
-modal run modal_train.py::quick_test --model-path /vol/outputs/sft_traces
+# Local GPU training, after resource approval:
+python scripts/03_train_sft.py --condition controlled_verified --seed 42
+python scripts/04_train_grpo.py --condition controlled_verified_grpo --seed 42 \
+  --sft-checkpoint outputs/training/controlled_verified/RUN/sft
 ```
 
-## Project Structure
+The historical condition names remain available, including `re_distill`. Orca remains a worked-solution recipe; the genuine final-answer-only control is `controlled_answer_only`. Newly prepared historical recipes can differ from their original data selection because invalid targets and overlaps are now quarantined.
 
-```
-├── configs/
-│   └── config.yaml               # All hyperparameters for all conditions
-├── src/
-│   ├── data.py                    # Dataset loading & formatting (s1K, Open-R1, Orca, GSM8K)
-│   ├── reward.py                  # Answer extraction & reward functions (binary + format)
-│   ├── training.py                # Model loading, LoRA setup, SFT/GRPO trainer construction
-│   └── evaluation.py             # GSM8K/MATH benchmarks, pass@k computation
-├── scripts/                       # CLI entry points for each pipeline phase
-├── modal_train.py                 # Modal cloud orchestration (SFT + GRPO + eval)
-├── results/
-│   ├── gsm8k_results.json         # Structured results
-│   └── FINDINGS.md                # Detailed findings with literature comparison
-├── paper/
-│   └── literature_comparison.md   # Comprehensive literature review (30+ papers)
-└── data/                          # Processed datasets (gitignored)
+## Controlled study
+
+The six primary arms are the untouched checkpoint, final-answer-only SFT, unfiltered-trace SFT, verified-trace SFT, GRPO from the untouched checkpoint, and the same GRPO procedure after verified-trace SFT. The SFT arms share 1,000 Open-R1 questions. Training seeds are 42/43/44, with separate token-matched unfiltered/verified ablations. No pretrained-only cohort is included. Controlled SFT arms use a common 10% proportional warmup: the final-answer-only dataset packs into seven sequences and only three optimizer steps over three epochs, so a fixed ten-step warmup would cover the entire run. Historical recipe settings retain their fixed warmup.
+
+```bash
+# Local dry run: no Modal import, image build, or remote job.
+python scripts/08_run_study.py --experiment controlled
+python scripts/08_run_study.py --experiment legacy
+python scripts/08_run_study.py --experiment controlled --prepare-only
+
+# Produce the small pilot's reservation proposal without running it.
+python scripts/11_quote_pilot.py
 ```
 
-## Tech Stack
+Main-study execution requires a quote derived from measured pilots and an explicit budget. The runner executes sequentially, applies per-job timeouts/resource limits, persists reservations, and refuses ambiguous retries after interrupted paid calls. Reservations are **not a provider billing guarantee**: image builds, initialization, storage and egress need allowance, and a Modal workspace budget should be configured before paid work.
 
-- **Training**: TRL (SFTTrainer, GRPOTrainer), PEFT (LoRA r=64, rsLoRA), Transformers
-- **Base model**: Qwen3-1.7B in full bfloat16 (no quantization)
-- **Data**: [s1K-1.1](https://huggingface.co/datasets/simplescaling/s1K-1.1) (DeepSeek-R1 traces), [Open-R1 Math](https://huggingface.co/datasets/open-r1/OpenR1-Math-220k) (RL-verified traces), [Orca Math](https://huggingface.co/datasets/microsoft/orca-math-word-problems-200k), [GSM8K](https://huggingface.co/datasets/openai/gsm8k)
-- **Evaluation**: GSM8K test set (full 1,319 problems per condition, greedy decoding)
-- **Compute**: Modal cloud — L40S for SFT (~$2/run), H100 for GRPO with vLLM colocate (~$40/run)
-- **Tracking**: Weights & Biases
+The quote generator prints new content-addressed proposal paths under `results/proposals`; it preserves original approval artifacts. After agreeing a cap for a new run, use its printed quote path:
 
-## Open Questions
+```bash
+python scripts/08_run_study.py --experiment pilot --execute \
+  --quote PRINTED_QUOTE_PATH --budget-usd AGREED_CAP
+```
 
-**Does the SFT→RL degradation persist with better RL implementation?** Our GRPO setup faced significant engineering challenges (vLLM compatibility, dataset difficulty calibration, LoRA merge artifacts). The 4.1-point degradation may partly reflect suboptimal implementation rather than fundamental limitations. Entropy-preserving SFT (CurioSFT, arXiv:2602.02244), importance-weighted RL (PEAR, arXiv:2602.01058), or adapter composition methods could potentially avoid the degradation we observed. Whether any implementation can overcome the proven non-decouplability of SFT and RL objectives (arXiv:2601.07389) at sub-2B scale remains an open question.
+The main quote can then be generated from the completed pilot ledger with `scripts/12_quote_study.py --pilot-ledger LEDGER`. Collect a completed main study with `scripts/13_collect_study.py --ledger LEDGER`, then analyze its `campaign.json` using `scripts/09_analyze_results.py --campaign-manifest CAMPAIGN --output NEW_ANALYSIS`. These tools refuse missing pilot measurements and incomplete study records.
 
-**What is the optimal trace selection strategy for re-distillation?** Our `re_distill` condition uses the first math-verified correct solution from Open-R1. Alternative strategies — selecting the shortest correct trace, the most diverse trace set, or including negative examples (REDI, arXiv:2505.24850) — might further improve results. The 4.7-point gap between raw and verified traces suggests significant headroom from better data curation.
+The first pilot's prose-scoring defects are preserved in its [original outcome](results/recovery/pilot-outcome.json). The [final validated run](results/recovery/pilot-final-outcome.json) uses the explicit answer contract, reuses unchanged SFT, freshly prepares GRPO prompts, runs six updates and 32 evaluations, and verifies results independently. Old and new-protocol scores are not a training-improvement comparison. No full-study or hardware-comparison budget is approved.
 
-## References
+## Evaluation
 
-- [DeepSeek-R1](https://arxiv.org/abs/2501.12948) — reinforcement learning for reasoning in LLMs
-- [s1: Simple Test-Time Scaling](https://arxiv.org/abs/2501.19393) — source of s1K-1.1 dataset
-- [REDI](https://arxiv.org/abs/2505.24850) — reinforcement distillation with positive + negative traces
-- [Non-decoupling of SFT and RL](https://arxiv.org/abs/2601.07389) — proof that SFT-then-RL causes degradation
-- [Does RL Really Incentivize Reasoning?](https://arxiv.org/abs/2504.13837) — RL redistributes, doesn't create new capabilities
-- [Dr. GRPO](https://arxiv.org/abs/2503.20783) — critical analysis of R1-Zero-like training
-- [LoRA: Illusion of Equivalence](https://arxiv.org/abs/2410.21228) — LoRA's intruder dimensions degrade sequential adaptation
-- [QuAILoRA](https://arxiv.org/abs/2410.14713) — quantization degrades fine-tuning quality
-- [rsLoRA](https://arxiv.org/abs/2312.03732) — rank-stabilized LoRA scaling
+```bash
+python scripts/05_evaluate.py --condition verified_seed42 --model-path MODEL_EXPORT --benchmarks gsm8k
+python scripts/05_evaluate.py --condition qwen_original --base-model-only --benchmarks gsm8k
+python scripts/05_evaluate.py --condition verified_sampled --model-path MODEL_EXPORT \
+  --benchmarks gsm8k --num-samples 8 --temperature 0.6
+python scripts/05_evaluate.py --condition verified_math --model-path MODEL_EXPORT \
+  --benchmarks math500 --max-new-tokens 8192
+python scripts/06_analyze_traces.py --results-dir outputs/evaluations
+```
+
+Each run retains `evaluation.json`, raw `predictions.jsonl`, and a reproducible `summary.json`. `accuracy` means first-sample accuracy; pass@1/4/8 use the complete sampled correctness matrix. The old ambiguous benchmark name `math` is rejected; it was a NuminaMath training-tail diagnostic.
+
+New GRPO and evaluation use `boxed-final-v1`: a shared prompt requests one final boxed value, which the primary scorer reads. Missing/malformed/multiple boxes and unfinished thinking are reported separately. Integer gold answers compare exactly. See the [contract](docs/remediation/scoring-policy-boxed-final-v1.md). Frozen prose versions v2-v6 and `legacy-v1` remain diagnostic/reproduction options, not primary new-study metrics. `extract_answer_auto` is an archived diagnostic helper; production grading uses `score_response`.
+
+The bounded distillation study retains these strict GPU scores as a secondary endpoint. Its prospectively frozen numerical primary endpoint is computed from the same saved raw responses and accepts repeated identical numeric final boxes while rejecting conflicts and unfinished thinking. It does not change archived scores or GRPO rewards.
+
+CPU rescoring with `scripts/15_rescore_saved.py` preserves original files and writes new source-hashed artifacts. Choose an archived `--scorer` explicitly for old unprompted responses; applying the new contract retrospectively is rejected. Rescoring does not retrain the model or make historical and new-protocol scores directly comparable.
+
+Evaluation batches are bounded by live sequence count and output token budget. Sampling uses a versioned canonical-batch seed policy; interrupted partial batches replay deterministically. Remote volume commits are periodic with a final flush. `performance.json` records timing, actual generated tokens and GPU samples for each function invocation. Training writes sibling `sft-performance.json`/`grpo-performance.json` files. These measurements must establish throughput and memory headroom before scaling the study.
+
+Resume automatically uses the full immutable run identity, or accepts `--resume-dir` for one benchmark. Changing weights, dataset, scorer, template, decoding settings, or runtime identity refuses resume. The strict final-response scorer and historical `legacy-v1` policy are explicitly distinct.
+
+## Historical recovery
+
+The archive index records hashes; local model files remain in ignored storage. The original source/PDF and six original evaluation files were preserved before revision.
+
+```bash
+python scripts/07_recover_history.py --download-weights --destination outputs/historical/NEW_ARCHIVE
+python scripts/09_analyze_results.py --historical-archive outputs/historical/2026-10-19
+
+# Explicit reconstruction, after allowing for model download/RAM/disk:
+python scripts/10_import_checkpoint.py \
+  --source outputs/historical/2026-10-19/outputs/sft_then_grpo \
+  --sft-parent outputs/historical/2026-10-19/outputs/sft_then_grpo/checkpoint-117 \
+  --condition sft_then_grpo --output outputs/imported/combined
+```
+
+Legacy adapters are never silently attached to a guessed base. New complete exports load independently; intermediate adapters retain their parent identity. Historical revision uncertainty is recorded rather than erased.
+
+## Research interpretation
+
+The bounded three-seed distillation study and checkpoint-loading subset ablation are complete; the comprehensive six-arm controlled study and corrected historical full-benchmark evaluation remain unrun. Statistical separation does not establish a causal verification benefit. Equal rewards do not demonstrate entropy collapse; verification phrases do not establish faithful self-correction; and the historical combined-model failure does not prove that SFT and RL inherently conflict.
+
+The paper source is tracked at `paper/paper.tex`. Rebuild with `scripts/build_paper.sh`; this uses the completed follow-up's saved proposal, analysis, raw outputs and execution ledger to regenerate the tables and prose on CPU before compiling the PDF. The published proposal includes `execution-ledger.json`, so a fresh checkout does not need private `outputs/` files or cloud access to rebuild the paper. The [rewritten findings](results/FINDINGS.md) also show answer-format sensitivity: the strict one-box secondary rule changes the 8K point estimate to +2.60 points (conditional interval −2.60 to +8.07), while the numerical primary remains −1.30 points (−5.73 to +2.86). Neither establishes an 8K advantage. Structured historical results remain preserved under `results/historical/`; new measurements must be stored separately.
 
 ## License
 
-MIT
+MIT. Upstream models and datasets retain their respective licenses and terms.

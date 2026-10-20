@@ -1,0 +1,10 @@
+{
+  "cap_usd": 30,
+  "client_elapsed_at_resource_caps_usd": 13.339677179761015,
+  "extra_startup_allowance_usd": 1.1253456,
+  "gpu_call_hours": 6.135424376041111,
+  "ledger_sha256": "3e4fd0c4feaab09d0af610f2635343071ead340db31a760ff8394d87a2023045",
+  "method": "Elapsed time times bounded per-task resource rates; extra startup allowance can overlap measured elapsed time; not a reconciled bill",
+  "plus_startup_allowance_usd": 14.465022779761014,
+  "plus_startup_and_incidental_allowances_usd": 15.465022779761014
+}

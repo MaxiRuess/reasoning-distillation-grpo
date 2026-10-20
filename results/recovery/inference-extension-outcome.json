@@ -1,0 +1,319 @@
+{
+  "app": {
+    "app_id": "ap-Vdluc45l0EjklFFvOKg44M",
+    "created_at": "2026-10-20 08:35:04+02:00",
+    "description": "reasoning-distillation-grpo",
+    "state": "stopped",
+    "stopped_at": "2026-10-20 10:12:50+02:00",
+    "tasks": "0"
+  },
+  "authorization_cap_usd": 30,
+  "closed_record_at_utc": "2026-10-20T08:16:17.636205+00:00",
+  "cost_estimate": {
+    "cap_usd": 30,
+    "client_elapsed_at_resource_caps_usd": 13.339677179761015,
+    "extra_startup_allowance_usd": 1.1253456,
+    "gpu_call_hours": 6.135424376041111,
+    "ledger_sha256": "3e4fd0c4feaab09d0af610f2635343071ead340db31a760ff8394d87a2023045",
+    "method": "Elapsed time times bounded per-task resource rates; extra startup allowance can overlap measured elapsed time; not a reconciled bill",
+    "plus_startup_allowance_usd": 14.465022779761014,
+    "plus_startup_and_incidental_allowances_usd": 15.465022779761014
+  },
+  "cost_headroom_with_all_allowances_usd": 14.534977220238986,
+  "evaluated_runtime_identities": {
+    "eval_2048_base": {
+      "attention": "flash_attention_2",
+      "batch_size": 32,
+      "dtype": "torch.bfloat16",
+      "model": "49ad2b517ee12a85facad141a890ebd35924bda466b4804c31c87fa0b4769bb4",
+      "raw_sha256": "dcc623819fea39d6c5b5fd2f587a85b3ed5a5bd2d877309c3269b0d181ad87d0",
+      "sampling_policy": "canonical-batch-v3",
+      "source_digest": "dadacb4eab9b22d14932b0bde1467605ae649265706e14e517b67beef3e756ac"
+    },
+    "eval_2048_nothink_greedy_base": {
+      "attention": "flash_attention_2",
+      "batch_size": 32,
+      "dtype": "torch.bfloat16",
+      "model": "49ad2b517ee12a85facad141a890ebd35924bda466b4804c31c87fa0b4769bb4",
+      "raw_sha256": "b01d513863cb686ec65a2933e83c30fea00321aee04483fb3891def56789b292",
+      "sampling_policy": "canonical-batch-v3",
+      "source_digest": "dadacb4eab9b22d14932b0bde1467605ae649265706e14e517b67beef3e756ac"
+    },
+    "eval_2048_nothink_sampled_base": {
+      "attention": "flash_attention_2",
+      "batch_size": 32,
+      "dtype": "torch.bfloat16",
+      "model": "49ad2b517ee12a85facad141a890ebd35924bda466b4804c31c87fa0b4769bb4",
+      "raw_sha256": "72cdc3de397f5ad116baaa060921a492c91c73102cedf9506e2e86175556e3fe",
+      "sampling_policy": "canonical-batch-v3",
+      "source_digest": "dadacb4eab9b22d14932b0bde1467605ae649265706e14e517b67beef3e756ac"
+    },
+    "eval_2048_trace_42": {
+      "attention": "flash_attention_2",
+      "batch_size": 32,
+      "dtype": "torch.bfloat16",
+      "model": "3178751000547af7896793095dc802de6913a069051a722666b83211dbb81381",
+      "raw_sha256": "4162d03b46855ade6841635b4af867cb8ff5d93adc6c97d474d5ad0c6dcda9aa",
+      "sampling_policy": "canonical-batch-v3",
+      "source_digest": "dadacb4eab9b22d14932b0bde1467605ae649265706e14e517b67beef3e756ac"
+    },
+    "eval_2048_trace_43": {
+      "attention": "flash_attention_2",
+      "batch_size": 32,
+      "dtype": "torch.bfloat16",
+      "model": "fcb7c6ba585b52b4c9e8c52fcfea0fa9998b720518785159a5ec6c7f07832288",
+      "raw_sha256": "a9b6d030493db116afae94ac1fb199d12cbd8174f61ae889b04509fd223e141d",
+      "sampling_policy": "canonical-batch-v3",
+      "source_digest": "dadacb4eab9b22d14932b0bde1467605ae649265706e14e517b67beef3e756ac"
+    },
+    "eval_2048_trace_44": {
+      "attention": "flash_attention_2",
+      "batch_size": 32,
+      "dtype": "torch.bfloat16",
+      "model": "ffdb4ae0d6a978808d52f935f3153ada6a84e86831ce3179e16e844b65f78ad0",
+      "raw_sha256": "eb718d08c3f46006224c548f84d8e5ef6331bf34ebf96f89c089eefad0eda75c",
+      "sampling_policy": "canonical-batch-v3",
+      "source_digest": "dadacb4eab9b22d14932b0bde1467605ae649265706e14e517b67beef3e756ac"
+    },
+    "eval_4096_base": {
+      "attention": "flash_attention_2",
+      "batch_size": 16,
+      "dtype": "torch.bfloat16",
+      "model": "49ad2b517ee12a85facad141a890ebd35924bda466b4804c31c87fa0b4769bb4",
+      "raw_sha256": "cfd5cfb7efb37b70872f0e4d78fae7e10a251353cab6eb9baa88d5e85036ad24",
+      "sampling_policy": "canonical-batch-v3",
+      "source_digest": "dadacb4eab9b22d14932b0bde1467605ae649265706e14e517b67beef3e756ac"
+    },
+    "eval_4096_trace_42": {
+      "attention": "flash_attention_2",
+      "batch_size": 16,
+      "dtype": "torch.bfloat16",
+      "model": "3178751000547af7896793095dc802de6913a069051a722666b83211dbb81381",
+      "raw_sha256": "8350a73c09758d7168ed6207801c836258b35f868f5f819da0ffd36d1201ee3e",
+      "sampling_policy": "canonical-batch-v3",
+      "source_digest": "dadacb4eab9b22d14932b0bde1467605ae649265706e14e517b67beef3e756ac"
+    },
+    "eval_4096_trace_43": {
+      "attention": "flash_attention_2",
+      "batch_size": 16,
+      "dtype": "torch.bfloat16",
+      "model": "fcb7c6ba585b52b4c9e8c52fcfea0fa9998b720518785159a5ec6c7f07832288",
+      "raw_sha256": "ab4c4373d8a7f1a9019ccc01f5f42826c3a7592baf96675960f534cf245ec852",
+      "sampling_policy": "canonical-batch-v3",
+      "source_digest": "dadacb4eab9b22d14932b0bde1467605ae649265706e14e517b67beef3e756ac"
+    },
+    "eval_4096_trace_44": {
+      "attention": "flash_attention_2",
+      "batch_size": 16,
+      "dtype": "torch.bfloat16",
+      "model": "ffdb4ae0d6a978808d52f935f3153ada6a84e86831ce3179e16e844b65f78ad0",
+      "raw_sha256": "fc7b7758fff04d690353464d25c3ccd6b51eb875a95e418629e2010eaf13c2f1",
+      "sampling_policy": "canonical-batch-v3",
+      "source_digest": "dadacb4eab9b22d14932b0bde1467605ae649265706e14e517b67beef3e756ac"
+    },
+    "eval_8192_base": {
+      "attention": "flash_attention_2",
+      "batch_size": 8,
+      "dtype": "torch.bfloat16",
+      "model": "49ad2b517ee12a85facad141a890ebd35924bda466b4804c31c87fa0b4769bb4",
+      "raw_sha256": "0547530d9f4a1755a6ef22451c802137de7b52517a942a38898649f97864a105",
+      "sampling_policy": "canonical-batch-v3",
+      "source_digest": "dadacb4eab9b22d14932b0bde1467605ae649265706e14e517b67beef3e756ac"
+    },
+    "eval_8192_trace_42": {
+      "attention": "flash_attention_2",
+      "batch_size": 8,
+      "dtype": "torch.bfloat16",
+      "model": "3178751000547af7896793095dc802de6913a069051a722666b83211dbb81381",
+      "raw_sha256": "a4b499b330d5bd97cde8bf15dcc7561ca02d36febc2aec2d3b7ee31e60747a2e",
+      "sampling_policy": "canonical-batch-v3",
+      "source_digest": "dadacb4eab9b22d14932b0bde1467605ae649265706e14e517b67beef3e756ac"
+    },
+    "eval_8192_trace_43": {
+      "attention": "flash_attention_2",
+      "batch_size": 8,
+      "dtype": "torch.bfloat16",
+      "model": "fcb7c6ba585b52b4c9e8c52fcfea0fa9998b720518785159a5ec6c7f07832288",
+      "raw_sha256": "503dd048b8ad8b885c9fed560057d248509f8d970c0362c627161f71ec13ca53",
+      "sampling_policy": "canonical-batch-v3",
+      "source_digest": "dadacb4eab9b22d14932b0bde1467605ae649265706e14e517b67beef3e756ac"
+    },
+    "eval_8192_trace_44": {
+      "attention": "flash_attention_2",
+      "batch_size": 8,
+      "dtype": "torch.bfloat16",
+      "model": "ffdb4ae0d6a978808d52f935f3153ada6a84e86831ce3179e16e844b65f78ad0",
+      "raw_sha256": "42fcbbda4bc2f0d054b8d0e585cb10c968e830d283ed6f0da6c677fdb3e471bc",
+      "sampling_policy": "canonical-batch-v3",
+      "source_digest": "dadacb4eab9b22d14932b0bde1467605ae649265706e14e517b67beef3e756ac"
+    }
+  },
+  "evaluations": 14,
+  "evidence_sha256": {
+    "assets/paper.pdf": "699a63daad115fb26a456e023affd94dbf66be262e88203b917e26c290fc4723",
+    "docs/experiments/inference-extension-results-2026-10-20.md": "6f3b619d114cc0b33184120bdb140d43f9aaac1e8d85b9e3a575888823fb9424",
+    "outputs/inference-extension-tests-final.log": "896b4081b327385e2b7ef93c24a8e5bad6be6c2d49326dd2d609c70344497a09",
+    "outputs/inference-extension/33984830c98a921a700b1e58/ledger.json": "3e4fd0c4feaab09d0af610f2635343071ead340db31a760ff8394d87a2023045",
+    "paper/distillation_methods.tex": "e5c6c9890befb2ae7e9e9f2e87845965b880b933b76924a9df3af626bd033d3f",
+    "paper/inference-extension-cost.json": "75f61f8a1c6ff7be4220547611af07f10fe3d8f5d1112109af9e481c32deac61",
+    "paper/inference-extension-render.json": "681112bf0cc943f09b0405ab3d2ecfccfa3c0919dde1075fe287921def6b69b7",
+    "paper/paper.tex": "70a93189ab462d0ef3f74a8fb3f5bd27eb57f5836201c14d50a04fd263b98c72",
+    "results/proposals/inference-extension/f1b156f14754100c186bc396/authorization.json": "6d30a0e24df61c85038c26048d5b6ca93a57fec19fe00836ca3fc216f1ff0947",
+    "results/proposals/inference-extension/f1b156f14754100c186bc396/collected/analysis.json": "36ad3d0b05b9eb5b454936c056496f2913ce8185de72b13596045d705c64b091",
+    "results/proposals/inference-extension/f1b156f14754100c186bc396/plan.json": "4f908bbe277a8fca51e7d7d57fb31cfe82c893d554f44a76c68abe4d2ecaec53",
+    "results/proposals/inference-extension/f1b156f14754100c186bc396/protocol.json": "0a2bd6044cdfdd68dd01cff9cb1d09f2b146e5fb2c6f981cf0fefe0174ae5520",
+    "results/proposals/inference-extension/f1b156f14754100c186bc396/quote.json": "91c01cfcb24bb4dc722a2bd82098d682b40654821bc420a2d2c189be2762c452",
+    "results/recovery/inference-extension-apps-close.json": "09d41a707080cba8820a681872a47511a0e6be50ad3cc7ecba93f6cc02343837",
+    "results/recovery/inference-extension-containers-close.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "scripts/21_inference_extension_report.py": "7e26db4426dd74fb17c39321b29ba6c6330ea2927699cbf07d5e99a1e4e93921"
+  },
+  "frozen_execution_source_unchanged": true,
+  "gpu_profile_summaries": {
+    "eval_2048_base": {
+      "gpu_name": "NVIDIA L40S",
+      "sampled_peak_device_memory_mib": 44723.0,
+      "sampled_utilization_mean_percent": 79.36697247706422
+    },
+    "eval_2048_nothink_greedy_base": {
+      "gpu_name": "NVIDIA L40S",
+      "sampled_peak_device_memory_mib": 45103.0,
+      "sampled_utilization_mean_percent": 50.61290322580645
+    },
+    "eval_2048_nothink_sampled_base": {
+      "gpu_name": "NVIDIA L40S",
+      "sampled_peak_device_memory_mib": 32665.0,
+      "sampled_utilization_mean_percent": 57.87096774193548
+    },
+    "eval_2048_trace_42": {
+      "gpu_name": "NVIDIA L40S",
+      "sampled_peak_device_memory_mib": 45083.0,
+      "sampled_utilization_mean_percent": 80.22935779816514
+    },
+    "eval_2048_trace_43": {
+      "gpu_name": "NVIDIA L40S",
+      "sampled_peak_device_memory_mib": 44286.0,
+      "sampled_utilization_mean_percent": 84.7843137254902
+    },
+    "eval_2048_trace_44": {
+      "gpu_name": "NVIDIA L40S",
+      "sampled_peak_device_memory_mib": 41553.0,
+      "sampled_utilization_mean_percent": 80.87962962962963
+    },
+    "eval_4096_base": {
+      "gpu_name": "NVIDIA L40S",
+      "sampled_peak_device_memory_mib": 45341.0,
+      "sampled_utilization_mean_percent": 88.10876132930514
+    },
+    "eval_4096_trace_42": {
+      "gpu_name": "NVIDIA L40S",
+      "sampled_peak_device_memory_mib": 44075.0,
+      "sampled_utilization_mean_percent": 78.73230769230769
+    },
+    "eval_4096_trace_43": {
+      "gpu_name": "NVIDIA L40S",
+      "sampled_peak_device_memory_mib": 42913.0,
+      "sampled_utilization_mean_percent": 79.08459214501511
+    },
+    "eval_4096_trace_44": {
+      "gpu_name": "NVIDIA L40S",
+      "sampled_peak_device_memory_mib": 44040.0,
+      "sampled_utilization_mean_percent": 74.79264214046823
+    },
+    "eval_8192_base": {
+      "gpu_name": "NVIDIA L40S",
+      "sampled_peak_device_memory_mib": 44058.0,
+      "sampled_utilization_mean_percent": 85.93772893772893
+    },
+    "eval_8192_trace_42": {
+      "gpu_name": "NVIDIA L40S",
+      "sampled_peak_device_memory_mib": 45191.0,
+      "sampled_utilization_mean_percent": 66.45937961595273
+    },
+    "eval_8192_trace_43": {
+      "gpu_name": "NVIDIA L40S",
+      "sampled_peak_device_memory_mib": 45132.0,
+      "sampled_utilization_mean_percent": 88.3274478330658
+    },
+    "eval_8192_trace_44": {
+      "gpu_name": "NVIDIA L40S",
+      "sampled_peak_device_memory_mib": 45189.0,
+      "sampled_utilization_mean_percent": 72.41565452091768
+    }
+  },
+  "live_container_inventory": [],
+  "local_checks": {
+    "git_diff_check_passed": true,
+    "known_upstream_warnings": 6,
+    "scoped_ruff_passed": true,
+    "subtests_passed": 11,
+    "tests_passed": 84
+  },
+  "original_evidence_files_unchanged": 142,
+  "paid_retries": 0,
+  "paper_verification": {
+    "all_pages_visually_reviewed": true,
+    "final_latex_warnings": false,
+    "pages": 8,
+    "pages_1_to_6_identical_to_prior_reviewed_render": true,
+    "unresolved_references": false
+  },
+  "pricing_note": "Resource-time accounting, not a reconciled provider invoice; separate from original completed budgets",
+  "primary_8192": {
+    "mean_delta": -0.013020833333333334,
+    "num_distinct_questions": 128,
+    "paired_item_bootstrap_95": [
+      -0.05729166666666666,
+      0.028645833333333336
+    ],
+    "per_seed": [
+      {
+        "delta": -0.0078125,
+        "left_correct": 111,
+        "left_only_correct": 5,
+        "mcnemar_exact_p": 1.0,
+        "num_paired": 128,
+        "paired_bootstrap_95": [
+          -0.0625,
+          0.0390625
+        ],
+        "right_correct": 112,
+        "right_only_correct": 6
+      },
+      {
+        "delta": -0.015625,
+        "left_correct": 110,
+        "left_only_correct": 4,
+        "mcnemar_exact_p": 0.75390625,
+        "num_paired": 128,
+        "paired_bootstrap_95": [
+          -0.0625,
+          0.03125
+        ],
+        "right_correct": 112,
+        "right_only_correct": 6
+      },
+      {
+        "delta": -0.015625,
+        "left_correct": 110,
+        "left_only_correct": 7,
+        "mcnemar_exact_p": 0.803619384765625,
+        "num_paired": 128,
+        "paired_bootstrap_95": [
+          -0.078125,
+          0.046875
+        ],
+        "right_correct": 112,
+        "right_only_correct": 9
+      }
+    ],
+    "training_seed_delta_std": 0.004510548978043951,
+    "uncertainty": "Item interval conditional on observed trained models and decoding seed; shared items are not independent replications"
+  },
+  "proposal": "results/proposals/inference-extension/f1b156f14754100c186bc396",
+  "protocol_id": "f1b156f14754100c186bc396cae39df255c6e2213e20e566e7e63f12fe499f4f",
+  "remaining_scope": "No further GPU spending, training, second benchmark or publication authorized by this completed package",
+  "responses_cpu_and_hash_verified": 1792,
+  "status": "complete_app_stopped",
+  "tasks_completed": 29,
+  "training_executed": false
+}

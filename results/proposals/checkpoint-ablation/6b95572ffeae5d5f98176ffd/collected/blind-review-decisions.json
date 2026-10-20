@@ -1,0 +1,1728 @@
+{
+  "decisions": [
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "c45ca4d15d3aee209be31915d3c44cb3fdbe4762112dc1fb2208f911e874ce70",
+      "review_id": "01411d37493c452b",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_differs_from_gold",
+      "contract_correct": false,
+      "response_sha256": "08d43081bbd653004fb6a907c358be1a36c6e3a6f84fff2bf9268356288ebb88",
+      "review_id": "01a43d8157fbad71",
+      "semantic_final_value_matches_gold": false
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "bcbe9cf14de7ca125c4b071eb9a89449aa35b7c9b5c9731af5cdfd8c51e2c031",
+      "review_id": "03d35d632acac111",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "758d58bc2b8238637b2460c8d300e32da225aa88f744cfd0b9671aff7c217da7",
+      "review_id": "053cf5222b1dc4be",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "56ed455d19cff0252ef7079186301968ebfd06af69d678c683bca393589d9cd8",
+      "review_id": "058146c650e4a9b7",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "bd7d7c13cebbd3083b88654937cce51cd2a48d4c2f4d89f791a636a2cd2fb600",
+      "review_id": "05ccd54c4fb3a0fe",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "9e7c64db463044b9a932bd1be6828ce1516d6bab5d66351342d12b658262a0f1",
+      "review_id": "0930237f347706fc",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "c6b0e7dac25e2aeff6f6a4ccb6d0f80b42ab495109213e746c762f6c7b934de0",
+      "review_id": "0aa13cbe3a1a8737",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "60f32c802373bb5e5688148f2ec09bf38dd9e6e930368df94b4b4e81a1f20ad6",
+      "review_id": "0b3a2687592734ca",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "truncated_final_response_without_boxed_answer",
+      "contract_correct": false,
+      "response_sha256": "05fa8420d0ecff4e031c8c04d42e78ec1a9cee05fbefaffe2940efda78fc233f",
+      "review_id": "0b889a452dab5c04",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "0fbee5d39b414395ab87264400a1a77c6dfc25ca8dd5bc41426bfbb23cfeebbf",
+      "review_id": "0cd6fe032a718cf3",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "45de86fc2790646a4f45608ee64ed6d9caf097ed05c0b0a64ef78648d31daf0e",
+      "review_id": "0f03cf03adef2bbb",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "truncated_final_response_without_boxed_answer",
+      "contract_correct": false,
+      "response_sha256": "af4cd9f329d2deacfc4859a9dda6c388924173a2af0861f4888c36ef29b95b06",
+      "review_id": "10f0b50b40cf558a",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_differs_from_gold",
+      "contract_correct": false,
+      "response_sha256": "36a7fe49f353715928ea388bcf891112d35cef5725adf1a9230f7e0ed28251f2",
+      "review_id": "10f844a351b95450",
+      "semantic_final_value_matches_gold": false
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "62144093650c203dd66ecdf7de7bbcb63efc13527cafd14cb6f69fc9ffa0f762",
+      "review_id": "114da05d333dc76f",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "truncated_final_response_without_boxed_answer",
+      "contract_correct": false,
+      "response_sha256": "20eb73cb4075521a69e246afa071f9fc8141159264af02262c07adc98b7615de",
+      "review_id": "118808444088b5cf",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "0ad5a14598df61ef32ceeec939e99e318285ae5d5138fc80ba21b19f35920d18",
+      "review_id": "1254d927cddc5419",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "a732d5b75786bf253b1d2f9496603853be5601825d1e1cc0fe22c5eb43a8ada6",
+      "review_id": "141f7fe3cc0aa9c4",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "truncated_final_response_without_boxed_answer",
+      "contract_correct": false,
+      "response_sha256": "5ddc9c7fb42b6adf49d2aaf99ab5ade9601e7daa97abfd0297d6293afa395def",
+      "review_id": "1476b975cb6f1493",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "92c1a9d98ebb569c7c909a7ce50723574767003a7b91ecb747c4169b770009cb",
+      "review_id": "14b600659b872d11",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "820b2f4f2edb2f648fd58af2aa2f1597082ff8ff69a25229ca9b6259999a2154",
+      "review_id": "14d8202bdc01fb7c",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "3d7b90a7b82cd14ececfa54144bec086143a61174e5f015e5c87fb636e486b09",
+      "review_id": "15ae792eb5038cae",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "d726ffe53861fcfafbe1fc0cb2674bc2636608ac851f394ce41513cfe706751a",
+      "review_id": "16f0ccfba103ed09",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "119916682499e195ea2753612dda4a83a8c5714cfa25d5d2ecede5b1a21a3a8b",
+      "review_id": "189395cc3bfa9309",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "truncated_final_response_without_boxed_answer",
+      "contract_correct": false,
+      "response_sha256": "2a36b122d7b6c0b0da1f6381eafb442edcc45309f2a1c37d649c5c811a17296e",
+      "review_id": "19fe5d79e7fdfd45",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "c95d22162530310708b5f2585fa6e3cbd7327e57247ba94cb175c78c5c616bc5",
+      "review_id": "1a2cc0ca7d4b57c9",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "27472544aa04d9490ca5f4072a7233c148604b77f5eb237526fbd57f75de19d7",
+      "review_id": "1a521b75848c7f97",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_differs_from_gold",
+      "contract_correct": false,
+      "response_sha256": "a8f585d1b8a6e81dc6d4a01be1818213bad13d8a0aa379d72d8242a155c3d57d",
+      "review_id": "1a5d61023a1e37cb",
+      "semantic_final_value_matches_gold": false
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "011f7de2e8901cefd163436cbff1986a6bff5a5d1c78e632a9a27a8655e3d801",
+      "review_id": "1aeea5ff4e1d6886",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "765b784b6bd981ed6bfcf97acb8f1af700581d1989e103736879a0a6bcedc04d",
+      "review_id": "1b079679de323690",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "correct_value_at_unclosed_box_truncation",
+      "contract_correct": false,
+      "response_sha256": "3360eced751cc5ebdb9a4788b9f2e8a687178e77a8673b38c8341ce7869ec600",
+      "review_id": "1d179a38d8c54559",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "8ceb56d3acf0289ba03da9d6444ef3ea887b162eafb0918165f9a5c361d89db1",
+      "review_id": "1dcd12d3556b6522",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "c9b754ac4d151f82ec532aabb98b0fcb6188e5047651c8e32c61e7399e33e907",
+      "review_id": "1dd5b8f5b89bb2fd",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "0d9c3accc21dc660330507c70252afa87bb09735f4abd1d8e0d12707b4b78f5c",
+      "review_id": "1e50e3c47a57cd42",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "07d79cc4910926d93571c1fe4c79981f04455f2c642df88c537fab7bc0037834",
+      "review_id": "2051dfd490d8bb5f",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "ef1445aee44b433c5211487ccdd08af9ceac518e5a36092150ac874c82d918fd",
+      "review_id": "20cf4d82f4e0905a",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "truncated_final_response_without_boxed_answer",
+      "contract_correct": false,
+      "response_sha256": "5512bbd325de1d055bd8973b4050607793998d6bdc183a7cee18fd018bcc16c5",
+      "review_id": "21f0dc4cd9e5b427",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "1eab7f936b8d4c69c1f9ccc384e81346a68b5b5ca3360c957d0d1652e546af3a",
+      "review_id": "22c307b7ae725e7d",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "truncated_final_response_without_boxed_answer",
+      "contract_correct": false,
+      "response_sha256": "7844fe0d5d6160505c1b7ed0039f2b0f6cd095015dac7ce41859720468849722",
+      "review_id": "236d3177020e5f09",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "9e03e8ae787966ef36218d1189e60f1f2b63c62fabf9b73c85c60c2bebdd7992",
+      "review_id": "241fc564246eae38",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "5dbacef38cfe52990e2fa385be27ef200fa9842ba14726fc704ce4b05b60bdeb",
+      "review_id": "2453506957581ccb",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "e1fe1c038fb97671d78df45e3bd01e181766e8a8fa1adea8ccddc9c479de4260",
+      "review_id": "26233ecd5d4afff1",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "a68a7b34f6959d70f3453df3035e08ab2dc0823b83179f28c91447224f3b1bdb",
+      "review_id": "26db3076f72efcd0",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "2b5c9323b2575afae44aac5d684a510470de6082580668b9a3cac467d82b13d7",
+      "review_id": "27ee02ba4f3e019b",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "f39e783ef2d197e312813353b4324e31284142789ae8ac047b54ac1be3321123",
+      "review_id": "2887b2ec42c23dcd",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "9e39666ddfd4c117517a2d9406ab8e1e2c826b092a8046131920f8ef7cad6d45",
+      "review_id": "295675e92b457009",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "28ec5f43ccb5d6a3e30bb1c4b907198bfa03eaa3b4a878e5729a098297fe5bb5",
+      "review_id": "299690741be49eff",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "ec2fa75ef2577a4f905cc27d2d9b3ea8999a6dc0606b3deceb4fa8fe180c042a",
+      "review_id": "2b6d620f8e6cbf8d",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "e1b09ffac6ecf279d55fa96f69a1c5895d1cfbf370be08502702916729dcfc84",
+      "review_id": "3174db074a6887f2",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "1c41687c05d4bc18bbda33e72fc16f4b168562208f8d4784780da9847d1f604a",
+      "review_id": "3433e51fdcfc49a6",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "truncated_final_response_without_boxed_answer",
+      "contract_correct": false,
+      "response_sha256": "f53cb265287fcf418f6243062f619c75627576a20f665d271758209b27fe7bd8",
+      "review_id": "34aa23346420224f",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "19a3ffea13eee0311fcf50181c5ec182ab14a6a7226975ff6ff7eff6f537b280",
+      "review_id": "34fc7268cabdfd68",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "997240340210aad8c5ca229789d6db785a759a9e3fbf05f07b46787036168bf0",
+      "review_id": "3544fee206a61372",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "ad829e89d921d786caf3cff630577f6f2b2ed080c34804202ef5880e4b3e1d4b",
+      "review_id": "3878b2b9287af356",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "e26ed149f4f4ef402b5b17660934cd98983114bdefceb06f2f2461bbe0fd7a73",
+      "review_id": "392cdc1a22a03a7c",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "0010a8c859e161a0d46f3b903d2f93672a14852f442b87f4661bf062c42a3cb7",
+      "review_id": "39ea81235fdfd9bf",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "de5fe7b7d4bae198467837c3978ab6b4cd82b962a8aeacb7ad3b50b06ed46443",
+      "review_id": "3d47542c2e281ee1",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "055c99c0207dbb47cd7a0b899f4a675211ce6e27da8356da2cc0c7becd34fe05",
+      "review_id": "3f55da0ecfc87ebd",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "truncated_final_response_without_boxed_answer",
+      "contract_correct": false,
+      "response_sha256": "210b01a116736de0ccaa04857e6b691966f6242b8748a41688b1092e34a31c35",
+      "review_id": "4041cbb09a4e188a",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "truncated_final_response_without_boxed_answer",
+      "contract_correct": false,
+      "response_sha256": "1edb1f5b85123381dd95bed17818c4acaf3299d11446162457a048d33981e3ea",
+      "review_id": "40c1369fbbad047d",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "992c95730eab11a93d44855f0c03eb7b5f9843ff20581c1bbe0d4fe66a208547",
+      "review_id": "4283041a797ebf02",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "f368986fd0cab2d619a0059ad6e159340646c6c86ec02c04063e3764c05ad53b",
+      "review_id": "44158d76f81ef957",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "d47a13cd1dd21340c64317c9c07058908031b2ad63f4b6a7fa9b6eca218040f7",
+      "review_id": "4458c52a8c795d13",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "3435964e2e91277f79411e0e753a12a68f7f407b6f17ec4826296cfba621b92d",
+      "review_id": "45de99c86edf26c0",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "901c8179dbab95da102d67416bb3816cbf0b40c96c07c5b90f5b18550d4babf3",
+      "review_id": "465b1123c2a0b3e1",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_differs_from_gold",
+      "contract_correct": false,
+      "response_sha256": "1bfe0a0269fc9c436190c654b1b254282156e0268c52725085745d751f3aff7a",
+      "review_id": "4660f873afc4b9fd",
+      "semantic_final_value_matches_gold": false
+    },
+    {
+      "category": "truncated_final_response_without_boxed_answer",
+      "contract_correct": false,
+      "response_sha256": "c3a81f29a8fce237b1317aa302b09dce08fd357135f05736c21bb45cd6aeb6f9",
+      "review_id": "4785d13e8397d36a",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "truncated_final_response_without_boxed_answer",
+      "contract_correct": false,
+      "response_sha256": "796278c27b0cd393cdaab09cdc7d4d0144c4c5f8e38fccd507cc405e5b950335",
+      "review_id": "47edf8af148e7d7e",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "truncated_final_response_without_boxed_answer",
+      "contract_correct": false,
+      "response_sha256": "370d69c6b9d0ad1f8c5453c5c02b6ca6a3f53d6145503f27e2fd4cd0c35f9ea2",
+      "review_id": "497422a5809b396d",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "126144944844c6f1f2030b13db77a0ad21b70207cad3452ca5d3f81e1bed54ee",
+      "review_id": "4c2fd259a23c05ba",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "095f55797a13c1827c64110c4deb506ffc793bed120b473f121eaf7c753bfeb0",
+      "review_id": "4cc148bd49a730cf",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "d562a2f9caa79dd146d7ead14f3aef0d72bc0fb536028ee945641ad52a8f7a28",
+      "review_id": "5150f6becd59720a",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "fbcb5792092c410a6d18f3afba146425efea8d8ca95ecae196a888e53ba358f9",
+      "review_id": "51f7ebc0fa8ce07e",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "truncated_final_response_without_boxed_answer",
+      "contract_correct": false,
+      "response_sha256": "a3e7e7cd5149eccc8f2b8df8a30c7e1e88842da497a2b7d267afcd4d9f9dab46",
+      "review_id": "5240f4af4ab55a53",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "c76c93c4cbd3f134240fcb95a91c8b938fbe39ed99be8fa00080003462a04afd",
+      "review_id": "544300222faaa2d1",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "6022cc3314ffc9d4fdfe27ac6ccb6e9b4dce0bad78b67c963aa7c4b6ac87a8dc",
+      "review_id": "56a70f51f03cfe84",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "1dd680295c6463f46786d24f6777b2301d7bd764d8e985c9c387e243082f9ccf",
+      "review_id": "57576779bc118d09",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "24459b15dde3686baebf1b8ecaf792e840ac826d6353ed0e00c9615a8ae9a3b5",
+      "review_id": "5b24c80b958d1a90",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "741a4067f5610bd2e803b9e941ae373afa2d2e4ef5906ffa8ed718cce46849b4",
+      "review_id": "5b411fc676424fc4",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "2c5d1044cd50de8f2c6039265d16ed215d5b7c41561ef89d19143a610bb9e323",
+      "review_id": "5b7f3dfe41ea8f77",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "42b69bc484fa0b849a6783e61766ab711e0c2d642c26fc050cf393838633c233",
+      "review_id": "5c502702e0483ee0",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "43dd78116f760f6453b7d594f42207ac1b4292cbdfd88f95999036b5a51c8da0",
+      "review_id": "5ca15168b02ebb49",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "b8fc3603e132af1a7279d475f4f25ab96a23248f77351525ad141a44fd712a9e",
+      "review_id": "5cfda38d0dcc1669",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "6711c84d0b1ec21e9b25b67407219410c74c53bf03f0f8cefaace0cfb7ff6f08",
+      "review_id": "5d0073f1899f2f2f",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "d47a9f55b3013bde2eda09443029cd89e7ca67d5a4b0682017dfdcfee08a560c",
+      "review_id": "5dfacc0eaa874acf",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "64f159450dfe7707dd228b6408bb822b8eddaeb4137f28446ebfc8df2a30a116",
+      "review_id": "5e8df00f99d19196",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "same_correct_value_boxed_twice_contract_failure",
+      "contract_correct": false,
+      "response_sha256": "ae7789c23e90d09f9fb50c10469a35042ec01560ff80255090711d1125791cb8",
+      "review_id": "5f6a10f9de22eb03",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "38daf9c1edd842d8a5016f3ef21c31af7da6a99b3d39575d396a8576ce72d396",
+      "review_id": "62d8edd7e8a69981",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "506c67b9b3c49d740d9045bd5962e0780a7417bdb26658be800a0406acf4c7fe",
+      "review_id": "64d6fb0518df3e98",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "028978376b5855bb31e614d91d4b86fafd50c793490afe67407701ada9c10df4",
+      "review_id": "65f40142b26fc4cf",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "64900c82ee16ed07dd2221ded898e82bf2f90526dffd9f479913516d4482819b",
+      "review_id": "669eff4afe3c62f5",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "dd8c6c9a6725712b395096c276f36d81cfc1e3df08bdae8c8f28b7c522a8111b",
+      "review_id": "69605bd1d414f3c5",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "bc7605837da2f76787045449ff88651c8adeb1261c4a1f059023eaaa21335b31",
+      "review_id": "69dadbdc924c1963",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "862d5c7d15f6a257aaa16ecdb3775a6da8814948362de4f16a3760620accb232",
+      "review_id": "6b935ecc53d49283",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "f9848bf44de47a2fdef3412b006223f32254e621723eb6a900975011e460fb9a",
+      "review_id": "6dd789d9c7af55c4",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "ceb0add50b2589951880ce12b981950dac6243c3aa3e6081013d74bb361bc2fb",
+      "review_id": "707a3bae2c60578a",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "d1263c972cd29d38c30a0b94a904568a15d9e03626e0b89ec691ec29953f5b9f",
+      "review_id": "70c886930fef0d49",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "f3bc1ce57531c8f27a255e741db38328cde5f73fbe5d889a2f93368f92d4bfb1",
+      "review_id": "7274b686a7314d54",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "truncated_final_response_without_boxed_answer",
+      "contract_correct": false,
+      "response_sha256": "85a4a1e67eec47a19ff73b13d2fe56c12b1b929a10a530085eb064d89825b75b",
+      "review_id": "740b3c6ef2678bf8",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "6a7cea778b544a3335220794f05e6cb37976d90ab0584e42bab73b2060eda7c6",
+      "review_id": "74342a1131d7557e",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "a33aeeb7cccecc867c4e0606ff6fcfcb182015d40d461f7fc9399909177c8903",
+      "review_id": "74649f3c57fe6a99",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "7d64965bc164b712671bcb31b743b3e744c45517af1dfe56b71878ee67adfe02",
+      "review_id": "753f1a84b6ab1e46",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "b906b43a417765845e7474b819a78fb25bbdcb8faaa516c303c9c52aab36ac80",
+      "review_id": "772a39e54507e43e",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "991e0faed24c4dec06b2ecc6872406e16b3e20f78381fd7c32a1727d6c3097c5",
+      "review_id": "779296e1a556eed4",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "211f01fc79e5773f519a21c708183a28c3c5fb92b6a1039fd48ada61ab87a2ed",
+      "review_id": "77ecfbac29dd0ac9",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "35a1067f133794b31187ad788d4197380f6c77420b3c8bab6115b3883b41a154",
+      "review_id": "780c7a76d0ab4ae5",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "truncated_final_response_without_boxed_answer",
+      "contract_correct": false,
+      "response_sha256": "ab52de7c220ab72709cfc6d81c1179d2db90b262dff4617dbe1baa49f2d07969",
+      "review_id": "7b520faedf9314bb",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "8863162814fd80a3e255314d5ea414e8853afc8c7f9a6d9ab75869cceff7302a",
+      "review_id": "7b5c73e2a7d35f28",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "4ebee27bd8ba3793d4ec1485e03f704919d0ca463d5db990a3e2a3738171aa43",
+      "review_id": "7b84412023a09a0e",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "b9975ac0d0e19d6464c4b7738ae9120c44ce7bf207ee5e47f839aa93adbd3997",
+      "review_id": "7bb90e49c496c7c6",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "9c8c59102c6463459641c5030a69e8d022c7d1653f131bd59957891a07cd46dc",
+      "review_id": "7bc8caa40106065e",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "b4d467e65b7f0ed979490a5e4bc0899c513b2a42104930760cdd30870b552d62",
+      "review_id": "7d8cc143d5678fb8",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "65482d731bcf86c7cbee3356634a43577c8b4b0e3a06c449fb492bb24663ae49",
+      "review_id": "7e5c933357313bcb",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "5267aceef1f60b5909b378c0720a83ab056f394295e797e6de0c15593379bff7",
+      "review_id": "7eabe8d2d490b26b",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "8a829a61c36fa4db120434bd77cf8c41bd68f1f3b498b83723950d2a723ad899",
+      "review_id": "7f0a9c2d821cd2ba",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "463a543080efeca96da736932c69046ff03635d62f97ec97886b46844f093afe",
+      "review_id": "7ffa1f97b699a7b5",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "48679256368bccc6fd2eb71f94d2e4b365246a21de9849e2edeebef8267a444c",
+      "review_id": "8012023d1611611b",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "d74fbbd8f9edfd73527a1af6b0c91a702ab7be24938ac9b38e55e81e10478c54",
+      "review_id": "801fd9626fe85454",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "b96b0c29a3de94997daa169366a8176e4713dc76b72c5c944395d5a7462fe017",
+      "review_id": "80581bfa4794b6fe",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "792e4e686cb3e928f0e5300a20c48d7dc5d5171f7eb597cfbb84235b1bf79a88",
+      "review_id": "80dcf89f043f0ff9",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "0eb9120dc0d3d0319e6fa2e42b08b8b39876805c2e480fb7efae6dc2e4b40d6d",
+      "review_id": "812305aeb4a681d1",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "574c1135ec9996c5caa8664bbf59448f29b3164134bf45f55e2d12d77a9a9dc5",
+      "review_id": "825c75b2fbbfbda3",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "49994e6500f6fcf38577faeecb4e02fcc47562ad218e25756b09e45a5cb87689",
+      "review_id": "82ae7c1904b48929",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_differs_from_gold",
+      "contract_correct": false,
+      "response_sha256": "84afcd2c434334d7c5384c96cff1daebe979cd75424e8b08d831246e62efa3b2",
+      "review_id": "83254121baa20040",
+      "semantic_final_value_matches_gold": false
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "f3d6786ae3bd89ffa8ddfcc62f77ec0c8089ad26deb606806e2bd8f088fae3e8",
+      "review_id": "847b2cfa92173a7b",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "3c277e66ac829a57aa5894f31b1210204dbe2bced5a77c1a68a1d8195fa0815e",
+      "review_id": "87cf18f954babf79",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "26f6e7cadd7f5d0dabf1711ddb85711893291e66873f6fc4835a2b60ed05dfbf",
+      "review_id": "882991ad03d8912e",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "4b52e956fd3536d84666e49d61eae52ec02d78d3d19f2fcabcd89b1824741c8c",
+      "review_id": "88f4a55eec866631",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "6d98fbbed22cb790bb10c1116f7a89137fa349d58417575bc1f8a76216bad9f8",
+      "review_id": "8909b52b8ba91793",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "ca82adce6796b5568308f8166b152d69b21701d8e07f3add13e2565794b454b8",
+      "review_id": "89691803d6daa84f",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_differs_from_gold",
+      "contract_correct": false,
+      "response_sha256": "0a9708f23c5d4cc0eadb2d9a17e9f999d5fccd0c34f043aea42e75a422cc3386",
+      "review_id": "899a3c094d537a2f",
+      "semantic_final_value_matches_gold": false
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "c396e437c22e97f1edb4d17600a81827546564025fc0683bed8befc81aacc29a",
+      "review_id": "8b99d891d79b202d",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "eb7d31720c62960eaacd92d4ffd8223ac56dace47eaa6fab15d015a0ecc20081",
+      "review_id": "8d71b29679aa03bc",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "df257ec7139ac1615f490be1b1ca49ebe3a3c03c6922fdebaaef1c61729a955f",
+      "review_id": "8fd0e8a0808265c7",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "4a218c902d20142c9bb520f45c42358f43b2e920fa288b730862b7fe6c2b4ca2",
+      "review_id": "8feeaef150e39d8b",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "e16511134217d1f06b6d8d6124fa60d1a6efb3068faf8b429eaa2e78f31a48cc",
+      "review_id": "8ff99c53a40281d8",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "00904ef7ec03ff406beb493c73b513a956f82bfcd59eda7dda3414b221b30518",
+      "review_id": "900b790f3468233b",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "cb9550c7440004c9faf3d20fd45a0b5d1aaf0608682681695644c7f0bd9a045a",
+      "review_id": "9158323705924db7",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "07d605a9cf5eacba7c937d422a425d89ad217410f9b51424f040ceda1fd58489",
+      "review_id": "9215ed7b70efd2b3",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "1bfbd1fb69fb1db78094212c71d708961a1dbabb190b5d45df6db6211424e0bf",
+      "review_id": "9576c7140dd31c91",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "0ea01dc624ebad51e23fc94b539061a2d3bc3d222fd055ba0d20382ad2700e77",
+      "review_id": "9577445a04735ac0",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "abedb68253316c5e3457570ce30cfc2dbde81b7bbeaeb44f9ccda8dc1e0fd9e1",
+      "review_id": "9667b13b8530486d",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "dc376d0eddfb5517be967db03f10cf08b926ecfcf7311f4f724438c0e1671f39",
+      "review_id": "96e210e84575f97a",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "83b02763fae9465d1cf33d6b2c5f22f77c9a79b1677c22fed3ea7047774d0031",
+      "review_id": "970f412d919d5479",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "same_correct_value_boxed_twice_contract_failure",
+      "contract_correct": false,
+      "response_sha256": "7bfa0c4bf8900d2b7888c5dd0afddbcb801ed6b3a7b8a237bbdf296cb401f2c0",
+      "review_id": "990f4b1be034f20e",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "same_correct_value_boxed_twice_contract_failure",
+      "contract_correct": false,
+      "response_sha256": "d6f9d38c87f31ea7394e954bf40e0069f362ea772ab75a5cf2b88d072f2c4323",
+      "review_id": "9b50291a235eb9f5",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "ea18eabb169df55251119680cf4fb0aa1335ee8a6ac0c1d009429086a1b5ce7d",
+      "review_id": "9c7ae0565694a4c3",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "556e20bec792d9d4496325ec89de99164025db0e3c82955aaade04d3db10b819",
+      "review_id": "9c82705cd78faf05",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "3abd105140b559156593a495927a642e3265f4501e09d4c8e3f71ee1e0b285c8",
+      "review_id": "9cb639f28ceaa82f",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "50fb2f7fbe42bf94aa06d06cf6e0fed17fb501d8c9900ac8e84ba1b9fa39282e",
+      "review_id": "9fd8b518b9b7791c",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "c60dea369fa1aef60db7958065de35978780704fdfb13a9ab8b7896176518620",
+      "review_id": "a039fac5d4969691",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "369ad6b0c2f6058fec37d16e2c3f16fa3c41764c7a796f8d74a639e7c05f7d0c",
+      "review_id": "a12554d6f5bc9d41",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "truncated_final_response_without_boxed_answer",
+      "contract_correct": false,
+      "response_sha256": "a7c90b3f1c6fc0b1b52b57095279bd0085377ad9eaa9f7530084a372503a891d",
+      "review_id": "a1edc486f467994c",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "968213555bddbd2fb4125e4f720661415f74f79a143cb91cdd2612211cee17c3",
+      "review_id": "a3167dfdf85ee85a",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "same_correct_value_boxed_twice_contract_failure",
+      "contract_correct": false,
+      "response_sha256": "4b974c2dfa7c75ba0fbfd577c8d68f44da443bd6f52d430af2ad944e8107a12b",
+      "review_id": "a395bd0d4152f451",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "51149fc77a0dca50c6bf18cf4e3b4176dea7cd58b208d39ee6f5ec31706951b8",
+      "review_id": "a41057de106e23b4",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_differs_from_gold",
+      "contract_correct": false,
+      "response_sha256": "5a4dd534542564b3da06d3186f097aa85ba84491c67f2249f7e98eed6c0aea48",
+      "review_id": "a60a425f92c4b3b4",
+      "semantic_final_value_matches_gold": false
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "6ebb2c6d4bb8b4f895966d7081abea8731a3e29e2f7358551a52b0c47c271c94",
+      "review_id": "a8ed62d9464893c6",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_differs_from_gold",
+      "contract_correct": false,
+      "response_sha256": "3ea0e7db29c4075ce15176ee61a24b3ab62bb20ac9e2118b8c81462dbefde415",
+      "review_id": "a93e8e2322e4e8c5",
+      "semantic_final_value_matches_gold": false
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "820edf8ef812a2c584f6bb4d988a6a7978005088dd2d7adbe21f8ff2f96043d4",
+      "review_id": "a94eeccd9b87d3fb",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "truncated_final_response_without_boxed_answer",
+      "contract_correct": false,
+      "response_sha256": "c471acdb18643e164e437023196b587fbe3d3e3ffe2f380ae6e316eff3cfd3a1",
+      "review_id": "a9592d7f772e1854",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "89dd344b43ae20257e4a79107633fb1b7a40575be2df3d16dc686ae69735b3d0",
+      "review_id": "a985db0bfcb8dbcf",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "15d73c4991ee3b52ecc22eb080a62487c9db46d6f39408c014f21df053ebc625",
+      "review_id": "a9c87db876e8588d",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "ae1afc6726ae78f7fafa4c3feb2bdfb74e64da931bc38e027b5542804e9633f2",
+      "review_id": "aaacc71d40350328",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "truncated_final_response_without_boxed_answer",
+      "contract_correct": false,
+      "response_sha256": "89d5ae0f44edffd32563db82a7d696ffefbdab873febd783b15cb4c18aac7baf",
+      "review_id": "ac1b650a81893c89",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "e7e3dec94a972a642595d65b47471b4a66c38011390985ef765e233ca36880da",
+      "review_id": "ae3992a7330c024e",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "truncated_final_response_without_boxed_answer",
+      "contract_correct": false,
+      "response_sha256": "e0074303fa2fcdb3851cc064c0a53288fa116888d4b91d14acffe14b846881c6",
+      "review_id": "ae924954aa75f50e",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "eb0caaace81c681ff245d5141413b47f14040cad6e752239aac604c407ee6bbd",
+      "review_id": "b17c62c0f3bca8e2",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "f7097109d7b1df8caced1c81e0def65929b6e285d00fdbb6c4dfab6003454021",
+      "review_id": "b55736581812c9c3",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "b4913b791a1f524287a067369f7bbb0f0695c1008366beda8ea87fb7cbbbb724",
+      "review_id": "b647d41d9dacf276",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "3ad7d8e9e1e611c604406ec1f2df9b93564373f90d0f2eb640c0437ee1da31e8",
+      "review_id": "b64d9d5ac50b780a",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "249ea068aaf7dc8d9e06b56df54820ad595b711a0044b429e097a97930d4b9e0",
+      "review_id": "b64eae8c366913b1",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "96ba7e219c0da3de609c2634f67b160ea4af1bfb2b615dfafa3c4d77374d7e7f",
+      "review_id": "b822ba94c8a4403b",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "2e060a25b27501ed45cad72ce72be394189ce5a81679f7649079727cf7e458d0",
+      "review_id": "b83a93814386972d",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "4542b8d573480345c3968e446c1238330d044d2487be35ee210ae7ea8806b2fc",
+      "review_id": "b8d9c62a17e65c51",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "40e41ca20232f0154e64c0ff09955206279a4e5875bd249e7f7156b4d913fc1f",
+      "review_id": "ba63496c89cb4a8b",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "0eccc8ba8b614b2c17f386976dd97d0b9526d96cb898f7edaa0a5d2557b4bae4",
+      "review_id": "bb40daaa0ef25ddb",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_differs_from_gold",
+      "contract_correct": false,
+      "response_sha256": "81082e97afa5c0a75cfb806881a62d95c6583a160576ca651b81f540ce59f638",
+      "review_id": "bc91050cd636c582",
+      "semantic_final_value_matches_gold": false
+    },
+    {
+      "category": "completed_boxed_value_differs_from_gold",
+      "contract_correct": false,
+      "response_sha256": "2ffb806b0f79fd5e355424957328d7398eb0dabefe6da2ff8ffd277918d1ef5f",
+      "review_id": "bca2beb7da2f6d35",
+      "semantic_final_value_matches_gold": false
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "5ffa85919291af48548b550403ef6291739df98d37eb86be2a3ed3e5a6124733",
+      "review_id": "bccc136bba4274c7",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "9d6aa303baf7a10a0fef3f57fd4d8953db627fdf9355fce068d06b937cf1f921",
+      "review_id": "bdccf984e62f3fd0",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "a37ef01f14d688b11cca1758f4a99c077b832a2281de6c6b786d2a45c1be2cdc",
+      "review_id": "be347dcbb18de36d",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "d7905b076f9641522af67a4ff4a2f38052d5da1b11faf3975b4918b5d347d028",
+      "review_id": "bed6558c74dd950c",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "c683129a3f88bec2dd92ea9b921b741cdca9fb3c86f9fbb5959d97fc7a3cd42f",
+      "review_id": "bf9301d4fdc4824a",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "07f379e8aea043fbfc4b02dbf52687bc0c7ff042dd56822345799b32c93b3ee8",
+      "review_id": "c05bb442e690c31b",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "6044fea091a832ca9fa8c4bf5b1af714f7c53293a5779e52f0570b4715df44f6",
+      "review_id": "c149cca865bb0cd0",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_differs_from_gold",
+      "contract_correct": false,
+      "response_sha256": "d3bb8a4b2ffd7d7c7c0a4f795c276f01f7fea759777b621f4bf29a41bdb14ee5",
+      "review_id": "c180d432ba9e7590",
+      "semantic_final_value_matches_gold": false
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "1ef2eedc79f6ab883bcc846e8f32c998beea5f7ab988b4ddec8a2bb428ef6eb5",
+      "review_id": "c28b67b45a4dc6ea",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "6274d2f7104739592e4308fae3e8fae08837da39995fc1a11644835087aab70d",
+      "review_id": "c469b85a5f3256b0",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_differs_from_gold",
+      "contract_correct": false,
+      "response_sha256": "620663c8eb3ad7095539049945791ccc9bbb6b1ae717c6a943dcfe56f2929c96",
+      "review_id": "c6ef4afbf6ce878d",
+      "semantic_final_value_matches_gold": false
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "a9b44422a1448aca6fb71c84cf63785719cc01f84df3bf7e893fde3d9dd183dc",
+      "review_id": "c794f9dd50ea53a0",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "05d792dc1c74bc31d8c6b2e017b45db6d9f4abb5879efdbe0beeede5cca99c8c",
+      "review_id": "c944d1bb653a7e36",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "44a0c513ece4f9c360761b512d2bfab288cc7a3681fe900f185e7f66105b1749",
+      "review_id": "cb58668d4730e0ab",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_differs_from_gold",
+      "contract_correct": false,
+      "response_sha256": "098167946919fe04d241fcc5e2abf0dcb663eaa7aed241a2e8b333f3aac0ba83",
+      "review_id": "cc552e78d94589f8",
+      "semantic_final_value_matches_gold": false
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "5ff4bfb689a705d856d18d9e30e8a09ba08f24857bfd8bf2fd3af642ba477d20",
+      "review_id": "cd5e4fbc11bc5029",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "42ca6d28a3f2e7280c2b51e51fb43bd59147a88735eb5311217f9d5d8038b7cf",
+      "review_id": "ce32f22f854c8f36",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "6bca8ba26feda000e1dd59d52aec84cd4756793e2b3b2db894b48158a7ae5928",
+      "review_id": "cea7bac042072993",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "76d1d48d0b511480f996315d2ae695b9161623b451ffb4e95f8ec1176762f0d9",
+      "review_id": "d0a19706ef0beda4",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "truncated_final_response_without_boxed_answer",
+      "contract_correct": false,
+      "response_sha256": "d80884571f7a8e4e6aaf0af4b9284f5e6433297a3f7bb8b96c2405f67c4df0fe",
+      "review_id": "d13b185ddba092a9",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "53d0616730cb6f69419aa61cbe1c4d89e78376f8cedc04848918639a7ccc33de",
+      "review_id": "d1686fe305424c5a",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "bf9b1ed8e788fbfad818c008e7751b4b2dd84a53e912612d5358be3c0010eea7",
+      "review_id": "d38604614a00b2ef",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "7b7ea0f7991afe5eb563b4d59ef51e49f24e615f833974924dee9773ca92a2b5",
+      "review_id": "d81d68a19be0be2e",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_differs_from_gold",
+      "contract_correct": false,
+      "response_sha256": "3e236a528d0619fd9208568a01e347226aa3cc85e089d6ffa5e0218fdfb91550",
+      "review_id": "db45f95f6dbe2439",
+      "semantic_final_value_matches_gold": false
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "99a70310c47b689b56a71ff22466d75c02117bdc9a8fc5786347825f4f6b7627",
+      "review_id": "dc55f338c2ccd45a",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "d18aeb73d8d7f70955abd4f1d1e4363cc40e63145030cd5dda46cdb4bcaa2163",
+      "review_id": "dc5f4b71d5ce2616",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "99662d65072f181197fe5c4f70bd038773714ff1d54c704d4275a678b766bb9e",
+      "review_id": "dcaa410f2578a781",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "1856f22f48759a823060e0f0868a78277fb7e847e1458033eda91c1dcb689370",
+      "review_id": "de6993ade0ec9ceb",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "4fff7c88e8ba86022001c709cd199598957b79afb65c0325947b826a254cb699",
+      "review_id": "deb7a9c5fcf32cb3",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "42a0ea120208ebd5dac60bc6399fee573e9802ace03b5d3ae4fda386de1c5780",
+      "review_id": "df4f5978f501eec3",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "41e694487675410d4999447df858e2527b6283659bc11c7078908243499c005a",
+      "review_id": "e28c490f07804019",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "31738b3980c171d5a1d214f8fc15a80b2f3602e08ad8759e92fe4dfabfa32f84",
+      "review_id": "e2e55a69bb935fe7",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "truncated_final_response_without_boxed_answer",
+      "contract_correct": false,
+      "response_sha256": "6efc5ec5a7e1b2138cc2b8790b5672896bebbdd1d4bb5c2462b59639fd233ac5",
+      "review_id": "e3136951644a4a05",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "50b57b79fee20ea0853104a70dc6f40c21bcdcc2062aba899bc6dc48afaf4b8a",
+      "review_id": "e3ba384c09e67ace",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "1a67c71edc61fb386ffedaefd759084575daaf3aee5de7c7b9df50c03b47c605",
+      "review_id": "e47db23f51e43241",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "931af058eea9a63c2b63dc026ad310b486e14077acc5ba2f6d4f5fdcd1309c08",
+      "review_id": "e899fa91e7b03b42",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "f58cadfe3bb7fbf2fe3e78579ff3ac190a9ccc8286c1300d697801f25201b8b1",
+      "review_id": "e9581c2ece772fe2",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "04b8d2252590efa2e838a42150d5b20872bd69b37849378c22660fb98d2a0c7f",
+      "review_id": "e9f8c3418b2601da",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "4ff902e8bd7ae137b18c45931a5fda0f0657190f7364a3b2b8385e35ad27641a",
+      "review_id": "eb2a3e9a96c7a9f6",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "8edb465d5af789c86eb74f35821f0937069677df21be6c82ce31db4f29d516ed",
+      "review_id": "ec30ef92f37be31c",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "c21bdeb243d8ca374d484e921ab0012097c62a2cc23b36d58653baeeb81393d9",
+      "review_id": "ecfceacc32766a47",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "e68f7fc89cf069dbc17080344117ae01c567637f687a53f16433e74e82e0bb90",
+      "review_id": "ede078b1bcbbb2a4",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_differs_from_gold",
+      "contract_correct": false,
+      "response_sha256": "204b606d6e3d9b89edcc2997c859ad707d93645cb3869eff523d366edc092e52",
+      "review_id": "ee92dd90e11f484c",
+      "semantic_final_value_matches_gold": false
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "7c466cd5e840fc2710e1bcd7176400448f4338dfdd3ef6a9939c831bc6a24d04",
+      "review_id": "eebd893966c23242",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_differs_from_gold",
+      "contract_correct": false,
+      "response_sha256": "32d211e7744715de6b5d108121e9d085ed54f72a9a3dadaced0bfb45c4c38502",
+      "review_id": "ef7b0c9b351233b5",
+      "semantic_final_value_matches_gold": false
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "d1a0993c19e13bdb7e6981c252c46e792fdd403b7e2d9632c5cadddb80f0d3cf",
+      "review_id": "f17314dbfc7d1192",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "9d2acd7fb87e0ce06f4e4b27bbe9b8b9294e81fb3ac450e9411d167bfcd6d2ab",
+      "review_id": "f2a4cb27d81f243a",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "befbcce0e880aa969e2cf9a1c7fda67642a868a7d6aa9df9d8fe97dad03a799f",
+      "review_id": "f30028b4557361af",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "e585ae4453a4d7225e930526250370926bf70440b156131521072b6fe16d93f3",
+      "review_id": "f32ed12aa9d5263c",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "dcc9653b07a00c175516f0a79087c6b2c844002dc11771b7822198c69788f1c6",
+      "review_id": "f38bec90c97813e6",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "1cb0b822fed466ec60f9b24ccdc9e074ca689e98933954226b94db0fe45cdffe",
+      "review_id": "f3a88916688b54a4",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "45f4d0900457ba651c9beaa51ef06a8b35eaebe98d01e40b87a49faf52a4c665",
+      "review_id": "f4b0107c03233306",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "35eb096af7e78a9db7d76ccd225e831e457db155e0a0832884e7ee1800254cc5",
+      "review_id": "f4f278a3387bcda8",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_differs_from_gold",
+      "contract_correct": false,
+      "response_sha256": "2cb703cf8daabeff4aa8fde2101da518751f8bb87f426c14d011c2f2e1a3d0c9",
+      "review_id": "f54842eba482271e",
+      "semantic_final_value_matches_gold": false
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "df0631d0ea03121847f8f6459efb0d15119aad66f86befed85f0212ba502af0e",
+      "review_id": "f5d56de909514c20",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "58a1e5939e6d9a0874857a9968802dd83be7f660e488ab998030197a7bc097bc",
+      "review_id": "f6524361333bba27",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "6f7580f1d5bbfd5c384410421d7addc3a6775de46af4fbfa55dca422ec92462f",
+      "review_id": "f67a164c73de1ecf",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "c375c0e58503facc3e79eb7b0ccadece24e4716e8a501ebee0b518c536b473ba",
+      "review_id": "f7553a6e671aa58c",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "d2160faf651525c573a288649920c1b7d3bca14165b57999278264d829afbd5c",
+      "review_id": "f762a52a227ab951",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "4ccbc7995d5d4e2154d55974af1290f7f3603e4b2f00b49b32752c73501b5924",
+      "review_id": "f8833b7ee76c6049",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "adf7721d8c6e60ec7b90619b7d017ae06f29cf1cff0c27753e6a49d0fa9486fa",
+      "review_id": "f9b5fe0f2fd11e2a",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "truncated_final_response_without_boxed_answer",
+      "contract_correct": false,
+      "response_sha256": "97de10b0796ae7a87751007902f6fec986f557b3e86199cafe5863ebd60868f5",
+      "review_id": "fa208baff0285295",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "0f40fec2850a3e249da463d4916c1f35d2ecfa36e633a097d8427233bd71c22d",
+      "review_id": "fa8a168bb1941a16",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "completed_boxed_value_matches_gold",
+      "contract_correct": true,
+      "response_sha256": "a4ee19ded62589bed0f2512c3b339a3b3e984c88a1f250f213af57ae8392f908",
+      "review_id": "fd89e5e28b95b57a",
+      "semantic_final_value_matches_gold": true
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "f953b137e4160cc6ab06a72b5a287e20ccb7c6e2cad6679d446a2327de8a71c0",
+      "review_id": "fe203d6108116216",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "2b6d6cf4cedc93ffc2acf4e4efc752e462eaed39afbf796f1f5f35bb6d9251a4",
+      "review_id": "fe937a4132c2a1bc",
+      "semantic_final_value_matches_gold": null
+    },
+    {
+      "category": "thinking_unfinished_no_complete_final_response",
+      "contract_correct": false,
+      "response_sha256": "620bc701bc1a047a29a423f57b6948ae58dcd17eded172bfeb94479a06a2ded3",
+      "review_id": "ff17a93942add6c1",
+      "semantic_final_value_matches_gold": null
+    }
+  ],
+  "method": "Model-label-hidden inspection of final fields for every question with cross-arm correctness or archived-scorer disagreement. Explicit manual lists for incorrect numeric fields, repeated boxes and incomplete boxes; structural classification for uncompleted responses. No primary scores changed.",
+  "reviewer": "Same coding assistant; not an independent human review"
+}

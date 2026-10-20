@@ -1,0 +1,33 @@
+{
+  "attempts": [
+    {
+      "app_id": "ap-wquVeB6J5sISSERXQ6R3DK",
+      "cause": "Local CLI passed a string to a Path-only atomic writer before remote dispatch",
+      "gpu_jobs_called": 0,
+      "remote_jobs_called": 0,
+      "status": "stopped_zero_tasks",
+      "verification": "distillation-initial-app-close.json"
+    },
+    {
+      "app_id": "ap-SWHIoHEMttHLW4x0DvKLmD",
+      "cause": "Stopped CPU preparation to correct a numerical-only instruction for symbolic training targets",
+      "gpu_jobs_called": 0,
+      "ledger": "outputs/distillation/7a5dd3ee2c000742ad3b661c/ledger.json",
+      "reserved_cpu_cost_usd": 0.18,
+      "status": "stopped_zero_tasks",
+      "verification": "distillation-cpu-stop.json"
+    },
+    {
+      "app_id": "ap-iEbSoWAWgoSG51hH9sQkDT",
+      "cause": "Normalize teacher final fields after the CPU audit found 50 multi-box final responses",
+      "gpu_jobs_called": 0,
+      "ledger": "outputs/distillation/cc2ec508a561a67d1fd15e91/ledger.json",
+      "status": "stopped_zero_tasks",
+      "verification": "distillation-second-cpu-stop.json"
+    }
+  ],
+  "new_scientific_results_before_final_protocol": 0,
+  "outcome_dependent_reruns": false,
+  "total_envelope_usd": 20,
+  "total_stopped_cpu_preparation_reserve_usd": 0.18
+}

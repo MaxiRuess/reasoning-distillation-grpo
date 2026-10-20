@@ -15,7 +15,7 @@
   },
   "conditions": {
     "base_model": {
-      "description": "Unmodified Qwen3-1.7B base model (no adapter, no fine-tuning)",
+      "description": "Unmodified post-trained Qwen3-1.7B starting checkpoint",
       "training_method": "None (zero-shot greedy evaluation)",
       "training_data": "N/A",
       "training_data_size": 0,
@@ -25,7 +25,7 @@
       "notes": "Apples-to-apples baseline using identical evaluation protocol (zero-shot, greedy, full test set). Qwen reports 75.4% with 4-shot CoT prompting."
     },
     "baseline": {
-      "description": "SFT on 50K Orca Math examples (answer-only, no reasoning traces)",
+      "description": "Orca worked-solution SFT; includes reasoning and is not answer-only",
       "training_method": "SFT with LoRA",
       "training_data": "microsoft/orca-math-word-problems-200k (50K subset)",
       "training_data_size": 50000,
@@ -63,7 +63,7 @@
     },
     "sft_then_grpo": {
       "description": "SFT on reasoning traces, then GRPO refinement on GSM8K",
-      "training_method": "SFT with LoRA → merge → GRPO with LoRA (vLLM colocate)",
+      "training_method": "SFT with LoRA \u2192 merge \u2192 GRPO with LoRA (vLLM colocate)",
       "sft_data": "simplescaling/s1K-1.1",
       "grpo_data": "openai/gsm8k (train split, 7.5K)",
       "grpo_max_steps": 500,
@@ -83,9 +83,16 @@
       "num_evaluated": 1319,
       "num_correct": 1036,
       "accuracy": 0.785,
-      "training_loss": 0.370,
+      "training_loss": 0.37,
       "training_token_accuracy": 0.867,
       "training_time_minutes": 61
     }
+  },
+  "validation": {
+    "status": "historical_unrevalidated",
+    "scorer": "legacy-v1",
+    "raw_responses_available": false,
+    "combined_checkpoint_reconstruction": "required before interpreting sft_then_grpo",
+    "paired_analysis": "recovery/historical-paired-analysis.json"
   }
 }

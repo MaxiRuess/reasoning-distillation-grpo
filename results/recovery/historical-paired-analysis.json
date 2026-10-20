@@ -1,0 +1,135 @@
+{
+  "caution": "These paired outcomes do not repair checkpoint reconstruction or support causal attribution.",
+  "checkpoint_validation": "pending",
+  "comparisons": {
+    "grpo_only__vs__base_model": {
+      "delta": 0.0356330553449583,
+      "holm_adjusted_p_exploratory_family": 0.003991294462777142,
+      "left_correct": 999,
+      "left_only_correct": 122,
+      "mcnemar_exact_p": 0.0009978236156942856,
+      "num_paired": 1319,
+      "paired_bootstrap_95": [
+        0.014404852160727824,
+        0.056103108415466264
+      ],
+      "right_correct": 952,
+      "right_only_correct": 75
+    },
+    "re_distill__vs__grpo_only": {
+      "delta": 0.028051554207733132,
+      "holm_adjusted_p_exploratory_family": 0.023481214359417996,
+      "left_correct": 1036,
+      "left_only_correct": 121,
+      "mcnemar_exact_p": 0.011740607179708998,
+      "num_paired": 1319,
+      "paired_bootstrap_95": [
+        0.006823351023502654,
+        0.04927975739196361
+      ],
+      "right_correct": 999,
+      "right_only_correct": 84
+    },
+    "re_distill__vs__sft_traces": {
+      "delta": 0.04700530705079606,
+      "holm_adjusted_p_exploratory_family": 0.00024217723726385827,
+      "left_correct": 1036,
+      "left_only_correct": 145,
+      "mcnemar_exact_p": 4.843544745277165e-05,
+      "num_paired": 1319,
+      "paired_bootstrap_95": [
+        0.025018953752843062,
+        0.06974981046247157
+      ],
+      "right_correct": 974,
+      "right_only_correct": 83
+    },
+    "sft_then_grpo__vs__sft_traces": {
+      "delta": -0.04169825625473844,
+      "holm_adjusted_p_exploratory_family": 0.004017789427528193,
+      "left_correct": 919,
+      "left_only_correct": 115,
+      "mcnemar_exact_p": 0.0013392631425093978,
+      "num_paired": 1319,
+      "paired_bootstrap_95": [
+        -0.0667172100075815,
+        -0.016679302501895376
+      ],
+      "right_correct": 974,
+      "right_only_correct": 170
+    },
+    "sft_traces__vs__base_model": {
+      "delta": 0.016679302501895376,
+      "holm_adjusted_p_exploratory_family": 0.1944024798524062,
+      "left_correct": 974,
+      "left_only_correct": 142,
+      "mcnemar_exact_p": 0.1944024798524062,
+      "num_paired": 1319,
+      "paired_bootstrap_95": [
+        -0.0075815011372251705,
+        0.04094010614101592
+      ],
+      "right_correct": 952,
+      "right_only_correct": 120
+    }
+  },
+  "conditions": {
+    "base_model": {
+      "accuracy": 0.7217589082638363,
+      "num_correct": 952,
+      "num_total": 1319,
+      "wilson_95": [
+        0.6969572503885674,
+        0.7452726147999068
+      ]
+    },
+    "baseline": {
+      "accuracy": 0.6921910538286581,
+      "num_correct": 913,
+      "num_total": 1319,
+      "wilson_95": [
+        0.6667525566428653,
+        0.7165133265204789
+      ]
+    },
+    "grpo_only": {
+      "accuracy": 0.7573919636087946,
+      "num_correct": 999,
+      "num_total": 1319,
+      "wilson_95": [
+        0.7335326797590138,
+        0.7797563432546168
+      ]
+    },
+    "re_distill": {
+      "accuracy": 0.7854435178165277,
+      "num_correct": 1036,
+      "num_total": 1319,
+      "wilson_95": [
+        0.7624771778040814,
+        0.8067520332846726
+      ]
+    },
+    "sft_then_grpo": {
+      "accuracy": 0.6967399545109931,
+      "num_correct": 919,
+      "num_total": 1319,
+      "wilson_95": [
+        0.6713914092962575,
+        0.7209458557171066
+      ]
+    },
+    "sft_traces": {
+      "accuracy": 0.7384382107657316,
+      "num_correct": 974,
+      "num_total": 1319,
+      "wilson_95": [
+        0.7140525865035762,
+        0.7614390121349711
+      ]
+    }
+  },
+  "raw_responses_available": false,
+  "scorer": "legacy-v1",
+  "status": "historical_outcomes_only"
+}

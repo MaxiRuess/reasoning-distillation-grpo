@@ -1,0 +1,105 @@
+{
+  "legacy_diagnostic": {
+    "missing_sft": {
+      "legacy_correct": 197,
+      "legacy_only_by_status": {
+        "ambiguous_final_answer": 4,
+        "missing_final_answer": 15,
+        "unfinished_thinking": 10
+      },
+      "legacy_only_correct": 29,
+      "legacy_only_eos": 4,
+      "primary_only_correct": 0,
+      "status_counts": {
+        "ambiguous_final_answer": 4,
+        "missing_final_answer": 17,
+        "ok": 173,
+        "unfinished_thinking": 62
+      }
+    },
+    "reconstructed": {
+      "legacy_correct": 200,
+      "legacy_only_by_status": {
+        "malformed_final_answer": 1,
+        "missing_final_answer": 1,
+        "unfinished_thinking": 14
+      },
+      "legacy_only_correct": 16,
+      "legacy_only_eos": 0,
+      "primary_only_correct": 0,
+      "status_counts": {
+        "malformed_final_answer": 1,
+        "missing_final_answer": 2,
+        "ok": 197,
+        "unfinished_thinking": 56
+      }
+    },
+    "sft_parent": {
+      "legacy_correct": 203,
+      "legacy_only_by_status": {
+        "missing_final_answer": 5,
+        "unfinished_thinking": 7
+      },
+      "legacy_only_correct": 12,
+      "legacy_only_eos": 0,
+      "primary_only_correct": 0,
+      "status_counts": {
+        "missing_final_answer": 7,
+        "ok": 204,
+        "unfinished_thinking": 45
+      }
+    }
+  },
+  "primary_orientation": {
+    "delta": 0.046875,
+    "left_correct": 184,
+    "left_only_correct": 30,
+    "mcnemar_exact_p": 0.11140289106101878,
+    "num_paired": 256,
+    "paired_bootstrap_95": [
+      -0.00390625,
+      0.09765625
+    ],
+    "right_correct": 172,
+    "right_only_correct": 18
+  },
+  "primary_scores_unchanged": true,
+  "review_categories_by_arm": {
+    "missing_sft": {
+      "completed_boxed_value_differs_from_gold": 3,
+      "completed_boxed_value_matches_gold": 23,
+      "same_correct_value_boxed_twice_contract_failure": 4,
+      "thinking_unfinished_no_complete_final_response": 36,
+      "truncated_final_response_without_boxed_answer": 16
+    },
+    "reconstructed": {
+      "completed_boxed_value_differs_from_gold": 7,
+      "completed_boxed_value_matches_gold": 39,
+      "correct_value_at_unclosed_box_truncation": 1,
+      "thinking_unfinished_no_complete_final_response": 34,
+      "truncated_final_response_without_boxed_answer": 1
+    },
+    "sft_parent": {
+      "completed_boxed_value_differs_from_gold": 7,
+      "completed_boxed_value_matches_gold": 46,
+      "thinking_unfinished_no_complete_final_response": 23,
+      "truncated_final_response_without_boxed_answer": 6
+    }
+  },
+  "review_decisions_sha256": "f5e84a4b893a65efb8b76a49534dfa545493e9348c2d0e2c4f4ceb4f4173ca80",
+  "rule": "Accept the four manually reviewed final responses that repeat an identical correct boxed value twice; all other primary decisions unchanged. This was not preregistered.",
+  "secondary_orientation": {
+    "delta": -0.02734375,
+    "left_correct": 184,
+    "left_only_correct": 12,
+    "mcnemar_exact_p": 0.28104151505976915,
+    "num_paired": 256,
+    "paired_bootstrap_95": [
+      -0.0703125,
+      0.015625
+    ],
+    "right_correct": 191,
+    "right_only_correct": 19
+  },
+  "status": "post_hoc_exploratory_not_primary"
+}

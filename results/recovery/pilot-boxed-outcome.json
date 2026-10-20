@@ -1,0 +1,123 @@
+{
+  "all_pilot_apps_stopped": true,
+  "app_id": "ap-zwvnwtALx33P1B86kJydzO",
+  "cpu_scores_reproduced": true,
+  "cpu_tests_passed": 53,
+  "evaluation_status_counts": {
+    "ok": 28,
+    "unfinished_thinking": 4
+  },
+  "evaluation_summary": {
+    "accuracy": 0.4375,
+    "accuracy_definition": "explicit_final_answer_accuracy",
+    "benchmark": "gsm8k",
+    "condition": "pilot_verified_grpo",
+    "extraction_failure_rate": 0.125,
+    "format_failure_rate": 0.0,
+    "mean_generated_tokens": 490.71875,
+    "model_identity": "f28fe0d93e9254cd702861028b5a2edc2cc88b59fd362073a729e739259c4293",
+    "num_correct": 14,
+    "num_samples_per_problem": 1,
+    "num_total": 32,
+    "pass@1": 0.4375,
+    "pilot_or_subset": true,
+    "results_path": "/vol/evaluations-v2/pilot_verified_grpo/gsm8k/a86b937eec4994240295194d",
+    "run_id": "a86b937eec4994240295194d194dcb5b4af2d535edcfedb12fb4a30251a10a6a",
+    "scorer_version": "boxed-final-v1",
+    "truncation_rate": 0.125,
+    "unfinished_thinking_rate": 0.125
+  },
+  "exposure": {
+    "available_prepared_rows": 500,
+    "completion_tokens": 45344,
+    "elapsed_seconds": 141.71385662999998,
+    "epochs_completed": 0.012,
+    "optimizer_steps": 6,
+    "processed_train_sequences": 500,
+    "processed_train_tokens": 50392,
+    "processed_train_tokens_scope": "prompt_plus_completion",
+    "prompt_groups": 6,
+    "rollouts": 48,
+    "source_ids": [
+      "4155",
+      "5076",
+      "5494",
+      "5848",
+      "593",
+      "7215"
+    ],
+    "train_metrics": {
+      "total_flos": 0.0,
+      "train_loss": -5.232791105906169e-06,
+      "train_runtime": 89.266,
+      "train_samples_per_second": 0.538,
+      "train_steps_per_second": 0.067
+    },
+    "unique_prompts": 6
+  },
+  "fresh_grpo_prompts": true,
+  "grpo_source_ids_unchanged": true,
+  "independent_container_hash_verified": true,
+  "ledger": "outputs/studies/670043ab83e41bfba8bcc140/ledger.json",
+  "ledger_sha256": "d7ef3737ba40419980e88d767259104d210014dcac4a3f86700ae33186156af0",
+  "limits": [
+    "32 questions are a development/smoke subset, not full-benchmark evidence",
+    "No full study or hardware comparison was launched",
+    "Long-context/sampled GPU matrix and optimal hardware remain unmeasured",
+    "Pinned vendor tokenizer/dtype warnings remain upstream; project Qwen tokenizer round trip was verified"
+  ],
+  "material_protocol_change": "New arms share a request for one explicit boxed final answer; primary accuracy includes format compliance, reported separately. Historical prose generations are not rescored as though this instruction was present.",
+  "merged_weight_hash_changed_from_sft": true,
+  "old_sft_reused": true,
+  "paper": {
+    "all_pages_visually_checked": true,
+    "pages": 5,
+    "path": "assets/paper.pdf",
+    "sha256": "a70b45292b38b7bebad45f8cb7bd5c58a15b3034064899bd225cb2d1fd885d5d"
+  },
+  "parent_lineage_verified": true,
+  "prediction_sha256": "fc58596b22d2e02e26aca7b0419009943394757914325aabd9b6d8c660e4e921",
+  "profiles": {
+    "evaluation_generated_tokens": 15703,
+    "evaluation_generation_seconds": 131.80944062199998,
+    "grpo_export_seconds": 11.200846627000004,
+    "grpo_train_seconds": 89.839484497
+  },
+  "quote_generator_preserves_original_approvals": true,
+  "review": "Targeted manual review in primary context due to overlapping prior branch work; no independent-model review, commits or pushes.",
+  "reward_objective": {
+    "diagnostics": {
+      "groups": 6,
+      "reward_mean": 0.5416666666666666,
+      "reward_sum": 26.0,
+      "rollouts": 48,
+      "zero_variance_fraction": 0.3333333333333333,
+      "zero_variance_groups": 2
+    },
+    "scorer_version": "boxed-final-v1",
+    "vendor_reward_log": "unweighted component sum",
+    "weights": [
+      1.0,
+      0.0
+    ]
+  },
+  "scorer": "boxed-final-v1",
+  "shared_explicit_answer_contract": true,
+  "source_digest": "434a937a43b1b403a7902652ba564c2a4c2137ceadc59f490595e4aa9dc83fcd",
+  "spending": {
+    "billing_may_lag": true,
+    "original_cap_usd": 10,
+    "reported_workspace_metered_increment_usd": 3.1235571600000007,
+    "snapshot": "results/recovery/pilot-close-billing.json",
+    "workspace_billed_cost_usd": 0.0
+  },
+  "stale_source_quote_guard_verified": true,
+  "status": "identified_implementation_defects_fixed_and_gpu_validated",
+  "supersedes": [
+    "pilot-outcome.json",
+    "pilot-v3-outcome.json",
+    "pilot-v4-outcome.json",
+    "pilot-v5-outcome.json",
+    "pilot-v6-outcome.json"
+  ]
+}

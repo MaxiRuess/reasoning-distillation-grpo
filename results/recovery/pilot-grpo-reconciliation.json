@@ -1,0 +1,20 @@
+{
+  "additional_image_allowance_usd": 1,
+  "approved_total_cap_usd": 10,
+  "correction": "Disable vLLM sleep; retain resident weights/cache with monitored memory",
+  "failure": "weight synchronization into sleeping vLLM buffers",
+  "original_ledger": "outputs/studies/855e33aa554617b8489e4e56/ledger.json",
+  "original_ledger_sha256": "2e485c04a6dc93433385cb76df1c7560eb72fef23ddb98e97e35264d4e2561ac",
+  "prior_app_confirmed_stopped": true,
+  "prior_full_plan_reserve_usd": 2.5474799999999997,
+  "recovery_full_plan_reserve_usd": 2.5474799999999997,
+  "recovery_ledger": "outputs/studies/e0d016d28610bfdc294d97b0/ledger.json",
+  "recovery_runner_cap_usd": 6.45252,
+  "reused_complete_nodes": [
+    "prepare:runtime",
+    "pilot:prepare:sft",
+    "pilot:prepare:grpo",
+    "pilot:sft"
+  ],
+  "sft_artifact_id": "8d40e93bde59e6b596d7685060e5bbf8518a1a91428d584619832ba09513cb11"
+}

@@ -1,0 +1,41 @@
+\section{Experimental design}
+\label{sec:distillation}
+\subsection{Matched training questions and supervision}
+\paragraph{Student and matched supervision.}
+The student is a pinned revision of the post-trained \texttt{Qwen/Qwen3-1.7B} checkpoint. Both arms use the same 500 questions and existing DeepSeek-R1 teacher generations from OpenR1-Math-220k~\cite{data}. Eligible generations have a positive dataset correctness-verification flag, a complete thinking block, a final boxed value and a complete serialized target within 16,128 tokens. This reserves instruction space under the 16,384-token training ceiling. Exact and near-duplicate overlap candidates against GSM8K and MATH-500 test questions are removed before selection~\cite{gsm,math}. Verification labels come from the dataset; they were not independently reviewed by humans.
+
+The answer-only arm receives the final boxed value. The trace arm receives the teacher's \texttt{<think>} block, unchanged apart from outer whitespace, followed by the identical box. Post-thinking prose is removed from both arms, and final fields are normalized to the same box. Both arms receive the same question and final-answer instruction. The selected answers include numeric and symbolic values; their composition and exact prompt are given in Appendix~\ref{app:details}.
+
+The Qwen3 chat template inserts an empty thinking block before each answer-only assistant target. The prepared completion masks supervise these markers in all 500 answer-only examples. Trace targets instead supervise the teacher's populated thinking block. This template behavior is part of the compared recipe.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{lrrr}
+\toprule
+Supervision & Questions & Input tokens/epoch & Supervised tokens/epoch \\
+\midrule
+Final answer only & 500 & 63,828 & 7,377 \\
+Teacher thinking plus final answer & 500 & 2,691,567 & 2,635,116 \\
+\bottomrule
+\end{tabular}
+\caption{Training token exposure per epoch. Complete targets retain their end-of-turn token. Questions and updates are matched across arms; token exposure and compute differ.}
+\label{tab:distill-exposure}
+\end{table}
+
+\paragraph{Training.}
+Each arm uses seeds 42, 43 and 44, two epochs and 64 optimizer updates, with the same seeded question minibatches. Training uses rank-64 rsLoRA and completion-only loss. Questions and updates are matched, while token exposure and compute differ substantially (Table~\ref{tab:distill-exposure}). Other hyperparameters are listed in Appendix~\ref{app:details}.
+
+\subsection{Original greedy evaluation}
+The unchanged student and all six trained checkpoints receive the same 256 frozen GSM8K test questions~\cite{gsm}, with thinking enabled, greedy decoding and a 2,048-token output limit (2K). Selection excludes earlier development and checkpoint-ablation questions. Before generation, 64 of these questions are selected for a 4,096-token check (4K) on all seven checkpoints. The original primary comparison is mean trace-minus-answer-only numerical accuracy at 2K. Comparisons with the unchanged student and the 4K check are secondary or descriptive. The protocol and numerical rule were fixed before these generations.
+
+\subsection{Sampled inference follow-up}
+After reviewing the original results, a separate protocol froze 128 of its 256 questions. The unchanged student and three existing trace checkpoints each receive one sampled generation per question at 2K, 4K and 8,192 tokens (8K). Qwen's model card advises against greedy thinking-mode decoding; the follow-up uses its recommended temperature 0.6, top-p 0.95, top-k 20 and disabled min-p~\cite{qwen}. The decoding seed is fixed. A common generated-token memory ceiling gives batches of 32, 16 and 8 across the three limits. Batch membership determines random-number seeds, so the runs are separately sampled trajectories rather than prefixes of one shared rollout.
+
+Two unchanged-student no-thinking controls use the same 128 questions at 2K. One uses the recommended no-thinking sampling policy, temperature 0.7, top-p 0.8 and top-k 20, with disabled min-p. The other uses greedy decoding to compare with the original answer-only outputs. Both retain the common final-answer instruction. Original greedy records are restricted to these exact questions rather than regenerated.
+
+The follow-up primary comparison, fixed before its generations, is mean trace-minus-unchanged numerical accuracy at 8K. Outcomes at 2K/4K, no-thinking controls, strict scores and completion or length diagnostics are secondary or descriptive. This development-informed follow-up preserves the original primary comparison and runs no new training.
+
+\subsection{Scoring and uncertainty}
+The numerical primary rule excludes any balanced thinking blocks and grades the remaining final response. It requires at least one complete numeric box and accepts repeated boxes only when their values are numerically identical. Missing, malformed, conflicting or nonnumeric final boxes and unfinished or malformed thinking fail; integer gold answers compare exactly. The strict secondary rule additionally requires exactly one box. In native no-thinking mode, the chat template supplies an empty closed thinking block in the prompt. End-of-sequence (EOS) termination is recorded separately: a response can close its thinking block and still reach the output limit. Lengths count generated thinking and final-response tokens.
+
+For each comparison, we average the three trained-checkpoint correctness differences within each question, then draw 10,000 paired question-bootstrap resamples with seed 42. Reported 95\% intervals describe item uncertainty conditional on the observed checkpoints and, for the sampled follow-up, the decoding seed. Training-seed difference standard deviations are reported separately. Three checkpoints on 128 shared questions do not constitute 384 independent items. The original protocol uses the same calculation on its 256 questions. Raw outputs retain both scoring rules and were checked for persistence and CPU strict-score reproduction.

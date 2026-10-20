@@ -1,0 +1,7 @@
+{
+  "authority": "User requested implementation of the preceding experiment design within its $20 budget",
+  "budget_usd": 20.0,
+  "protocol_id": "6b95572ffeae5d5f98176ffd6f755143f4bd68e347b8c76d5814a02f06e99ede",
+  "quote_sha256": "8796836bde0f8199e09c629e032aab7bce2d0306aae1ce74344851b2e0b65e0a",
+  "scope": "Implementation of the accepted 256-question, three-model evaluation-only experiment"
+}

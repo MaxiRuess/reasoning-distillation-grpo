@@ -1,28 +1,19 @@
 [project]
 name = "reasoning-distillation-grpo"
-version = "0.1.0"
-description = "Reasoning trace distillation: Can small models learn to think?"
-requires-python = ">=3.10"
+version = "0.2.0"
+description = "Reproducible adaptation experiments on post-trained Qwen3-1.7B"
+requires-python = ">=3.11,<3.13"
 dependencies = [
-    "torch>=2.4.0",
-    "transformers>=4.51.0",
-    "trl>=0.28.0",
-    "peft>=0.14.0",
-    "bitsandbytes>=0.45.0",
-    "datasets>=3.5.0",
-    "accelerate>=1.5.0",
-    "wandb>=0.17.0",
-    "modal>=0.73.0",
-    "pyyaml",
-    "liger-kernel",
-    "sympy",
-    "scipy",
-    "pandas",
-    "matplotlib",
+    "torch==2.8.0", "transformers==4.57.6", "trl==0.28.0", "peft==0.18.1",
+    "filelock>=3,<5", "datasets>=3.5,<6", "accelerate>=1.5,<2", "pyyaml>=6,<7",
+    "scipy>=1.15,<2", "math-verify==0.9.0", "modal==1.6.2",
+    "pandas>=2.2,<4", "matplotlib>=3.9,<4",
 ]
 
 [project.optional-dependencies]
-dev = ["ruff", "pytest"]
+dev = ["ruff==0.17.1", "pytest>=8,<10"]
+gpu = ["bitsandbytes==0.48.2", "liger-kernel==0.6.4", "wandb>=0.17,<1"]
+grpo = ["vllm==0.10.2"]
 
 [build-system]
 requires = ["setuptools>=68.0"]
@@ -33,3 +24,8 @@ line-length = 120
 
 [tool.setuptools.packages.find]
 include = ["src*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+markers = ["gpu: requires CUDA and explicit paid-job approval"]

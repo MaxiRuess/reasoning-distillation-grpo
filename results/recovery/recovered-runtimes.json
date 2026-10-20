@@ -1,0 +1,62 @@
+{
+  "baseline": {
+    "framework_versions": {
+      "Datasets": "4.8.4",
+      "PEFT": "0.18.1",
+      "Pytorch": "2.8.0",
+      "TRL": "1.0.0",
+      "Tokenizers": "0.22.2",
+      "Transformers": "5.4.0"
+    },
+    "full_environment_recovered": false,
+    "source": "outputs/baseline/README.md"
+  },
+  "grpo_only": {
+    "framework_versions": {
+      "Datasets": "4.8.4",
+      "PEFT": "0.18.1",
+      "Pytorch": "2.10.0",
+      "TRL": "1.0.0",
+      "Tokenizers": "0.22.2",
+      "Transformers": "4.57.6"
+    },
+    "full_environment_recovered": false,
+    "source": "outputs/grpo_only/README.md"
+  },
+  "re_distill": {
+    "framework_versions": {
+      "Datasets": "4.8.4",
+      "PEFT": "0.18.1",
+      "Pytorch": "2.8.0",
+      "TRL": "1.0.0",
+      "Tokenizers": "0.22.2",
+      "Transformers": "5.4.0"
+    },
+    "full_environment_recovered": false,
+    "source": "outputs/re_distill/README.md"
+  },
+  "sft_then_grpo": {
+    "framework_versions": {
+      "Datasets": "4.8.4",
+      "PEFT": "0.18.1",
+      "Pytorch": "2.10.0",
+      "TRL": "1.0.0",
+      "Tokenizers": "0.22.2",
+      "Transformers": "4.57.6"
+    },
+    "full_environment_recovered": false,
+    "source": "outputs/sft_then_grpo/README.md"
+  },
+  "sft_traces": {
+    "framework_versions": {
+      "Datasets": "4.8.4",
+      "PEFT": "0.18.1",
+      "Pytorch": "2.8.0",
+      "TRL": "1.0.0",
+      "Tokenizers": "0.22.2",
+      "Transformers": "5.4.0"
+    },
+    "full_environment_recovered": false,
+    "source": "outputs/sft_traces/README.md"
+  }
+}

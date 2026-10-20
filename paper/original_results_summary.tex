@@ -1,0 +1,14 @@
+\par\begin{table}[ht]\centering\small\begin{tabular}{llrrr}\toprule
+Checkpoint & Seed & Correct/256 & Accuracy (\%) & Tokens \\
+\midrule
+Unchanged & -- & 180 & 70.31 & 1436 \\
+Answer only & 42 & 15 & 5.86 & 12 \\
+Teacher trace & 42 & 197 & 76.95 & 974 \\
+Answer only & 43 & 16 & 6.25 & 12 \\
+Teacher trace & 43 & 207 & 80.86 & 956 \\
+Answer only & 44 & 17 & 6.64 & 11 \\
+Teacher trace & 44 & 196 & 76.56 & 1034 \\
+\bottomrule\end{tabular}\caption{Original numerical outcomes on 256 common GSM8K questions with greedy thinking and a 2K limit. All seven checkpoints use the same questions.}\label{tab:original}\end{table}\par
+The original primary trace-minus-answer difference was +71.88 percentage points (95\% conditional item interval +67.06 to +76.56; seed-difference SD 2.44 points). Trace SFT averaged 78.12\%, answer-only SFT 6.25\% and the unchanged student 70.31\%. The separate descriptive trace-minus-unchanged difference was +7.81 points (conditional interval +3.39 to +12.50). The unchanged student's strict score was 176/256; strict and numerical scores coincide for the other six checkpoints.
+
+All 768 answer-only outputs contained empty visible thinking blocks. The recipe's large deficit limits interpretation of the primary contrast. An original preselected 64-question greedy check at 4K yielded a trace mean of 83.85\% versus 87.50\% unchanged, a descriptive difference of $-3.65$ points (conditional interval $-8.33$ to $+1.04$). This check uses a different subset and greedy decoding, rather than the follow-up's sampled policy.

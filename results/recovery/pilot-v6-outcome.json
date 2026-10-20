@@ -1,0 +1,37 @@
+{
+  "app_stopped": true,
+  "counterexamples": [
+    {
+      "problem_id": "1",
+      "selected": "2",
+      "stated_total": "3"
+    },
+    {
+      "problem_id": "23",
+      "selected": "4",
+      "stated_total": "8"
+    }
+  ],
+  "ledger": "outputs/studies/fed166b37e3b11a95114ce3e/ledger.json",
+  "next_protocol": "boxed-final-v1",
+  "original_artifacts_preserved": true,
+  "original_evaluation": {
+    "accuracy": 0.3125,
+    "benchmark": "gsm8k",
+    "condition": "pilot_verified_grpo",
+    "extraction_failure_rate": 0.3125,
+    "mean_generated_tokens": 1015.75,
+    "model_identity": "322d27e9922709f15839d5f6eb8b296076e7d3294d4cbcd281ae56358ee475d4",
+    "num_correct": 10,
+    "num_samples_per_problem": 1,
+    "num_total": 32,
+    "pass@1": 0.3125,
+    "pilot_or_subset": true,
+    "results_path": "/vol/evaluations-v2/pilot_verified_grpo/gsm8k/a2233c75a2f8d483a67fd8f3",
+    "run_id": "a2233c75a2f8d483a67fd8f39dc7ef1b9c030347f75f4d5834b76cb97048f2e3",
+    "scorer_version": "final-response-v6",
+    "truncation_rate": 0.34375
+  },
+  "root_cause": "Free prose contains input quantities and conclusions; scalar selection has no reliable authoritative field",
+  "status": "prose_heuristics_rejected_as_primary_metric"
+}

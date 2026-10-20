@@ -1,0 +1,196 @@
+{
+  "expected_cost_caution": "Reservations are ceilings, not forecasts; 4K latency is extrapolated and bounded by timeout",
+  "non_runtime_allowance_usd": 0.4,
+  "pilot_evidence": "results/recovery/pilot-final-outcome.json and completed checkpoint ablation profiles",
+  "plan_digest": "0246475cbcbe11a73c731d61a64639c9880f1346c8b6be6c608c6cc121086a0e",
+  "pricing_rechecked": "2026-10-20",
+  "pricing_source": "https://modal.com/pricing",
+  "reserved_runtime_usd": 17.4413436,
+  "tasks": {
+    "eval:2048:answer_42": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 1400
+    },
+    "eval:2048:answer_42:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 60
+    },
+    "eval:2048:answer_43": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 1400
+    },
+    "eval:2048:answer_43:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 60
+    },
+    "eval:2048:answer_44": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 1400
+    },
+    "eval:2048:answer_44:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 60
+    },
+    "eval:2048:base": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 1400
+    },
+    "eval:2048:base:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 60
+    },
+    "eval:2048:trace_42": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 1400
+    },
+    "eval:2048:trace_42:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 60
+    },
+    "eval:2048:trace_43": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 1400
+    },
+    "eval:2048:trace_43:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 60
+    },
+    "eval:2048:trace_44": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 1400
+    },
+    "eval:2048:trace_44:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 60
+    },
+    "eval:4096:answer_42": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 1150
+    },
+    "eval:4096:answer_42:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 60
+    },
+    "eval:4096:answer_43": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 1150
+    },
+    "eval:4096:answer_43:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 60
+    },
+    "eval:4096:answer_44": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 1150
+    },
+    "eval:4096:answer_44:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 60
+    },
+    "eval:4096:base": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 1150
+    },
+    "eval:4096:base:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 60
+    },
+    "eval:4096:trace_42": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 1150
+    },
+    "eval:4096:trace_42:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 60
+    },
+    "eval:4096:trace_43": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 1150
+    },
+    "eval:4096:trace_43:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 60
+    },
+    "eval:4096:trace_44": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 1150
+    },
+    "eval:4096:trace_44:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 60
+    },
+    "prepare:distill_answer": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 900
+    },
+    "prepare:distill_trace": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 900
+    },
+    "prepare:runtime": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 600
+    },
+    "train:distill_answer:42": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 300
+    },
+    "train:distill_answer:43": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 300
+    },
+    "train:distill_answer:44": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 300
+    },
+    "train:distill_trace:42": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 2400
+    },
+    "train:distill_trace:43": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 2400
+    },
+    "train:distill_trace:44": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 2400
+    }
+  }
+}

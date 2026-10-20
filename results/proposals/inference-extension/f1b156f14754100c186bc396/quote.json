@@ -1,0 +1,161 @@
+{
+  "caution": "Timeout reservations are not expected usage or a provider invoice; no credits assumed",
+  "non_runtime_allowance_usd": 1.0,
+  "pilot_evidence": "Original study ledger and 2K/4K L40S performance profiles; 8K is extrapolated",
+  "plan_digest": "33984830c98a921a700b1e58bf6e1063112488284b1ecf81e516e7bdcebd080e",
+  "pricing_rechecked": "2026-10-20",
+  "pricing_source": "https://modal.com/pricing",
+  "rates": {
+    "cpu_core_per_second": 1.31e-05,
+    "gpu_per_second": 0.000542,
+    "memory_gib_per_second": 2.22e-06
+  },
+  "reserved_runtime_usd": 28.0453128,
+  "tasks": {
+    "eval:2048:base": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 1200
+    },
+    "eval:2048:base:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 90
+    },
+    "eval:2048:nothink_greedy:base": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 600
+    },
+    "eval:2048:nothink_greedy:base:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 90
+    },
+    "eval:2048:nothink_sampled:base": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 600
+    },
+    "eval:2048:nothink_sampled:base:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 90
+    },
+    "eval:2048:trace_42": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 1200
+    },
+    "eval:2048:trace_42:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 90
+    },
+    "eval:2048:trace_43": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 1200
+    },
+    "eval:2048:trace_43:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 90
+    },
+    "eval:2048:trace_44": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 1200
+    },
+    "eval:2048:trace_44:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 90
+    },
+    "eval:4096:base": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 2400
+    },
+    "eval:4096:base:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 90
+    },
+    "eval:4096:trace_42": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 2400
+    },
+    "eval:4096:trace_42:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 90
+    },
+    "eval:4096:trace_43": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 2400
+    },
+    "eval:4096:trace_43:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 90
+    },
+    "eval:4096:trace_44": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 2400
+    },
+    "eval:4096:trace_44:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 90
+    },
+    "eval:8192:base": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 7200
+    },
+    "eval:8192:base:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 90
+    },
+    "eval:8192:trace_42": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 7200
+    },
+    "eval:8192:trace_42:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 90
+    },
+    "eval:8192:trace_43": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 7200
+    },
+    "eval:8192:trace_43:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 90
+    },
+    "eval:8192:trace_44": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 7200
+    },
+    "eval:8192:trace_44:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 90
+    },
+    "prepare:runtime": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 600
+    }
+  }
+}

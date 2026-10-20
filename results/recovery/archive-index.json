@@ -1,0 +1,288 @@
+{
+  "archive_id": "1265739cb2ee03800e1f9f3c99fc8f8f61affadfdf0434f4fda2af70f2a13971",
+  "complete": true,
+  "files": [
+    {
+      "bytes": 665,
+      "remote": "outputs/baseline/tokenizer_config.json",
+      "sha256": "47bfa3e7727312946b29ac10d6dd0672d63cf7815b2a160b9523872040d2e536"
+    },
+    {
+      "bytes": 11422650,
+      "remote": "outputs/baseline/tokenizer.json",
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506"
+    },
+    {
+      "bytes": 4168,
+      "remote": "outputs/baseline/chat_template.jinja",
+      "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+    },
+    {
+      "bytes": 278973888,
+      "remote": "outputs/baseline/adapter_model.safetensors",
+      "sha256": "5090ba525595112e1a6b7e2c4e3b34f7c211f63f6e7dd38a3c0bbec0beb8edf6"
+    },
+    {
+      "bytes": 1045,
+      "remote": "outputs/baseline/adapter_config.json",
+      "sha256": "4c8191aeb18ffe20b7cd59c320091517ed4bbecc2aecb4af01fd93327fe7c163"
+    },
+    {
+      "bytes": 1656,
+      "remote": "outputs/baseline/README.md",
+      "sha256": "6e1674b0fa96c4f98956ff7f6b5070a1046e7356ce712be5f4b9ab33055062c5"
+    },
+    {
+      "bytes": 18396,
+      "remote": "outputs/baseline/checkpoint-669/trainer_state.json",
+      "sha256": "ca17806ea6bd47218de9fd73c740d84f6fb07f735b19c5d5385c1893585178f3"
+    },
+    {
+      "bytes": 665,
+      "remote": "outputs/sft_traces/tokenizer_config.json",
+      "sha256": "47bfa3e7727312946b29ac10d6dd0672d63cf7815b2a160b9523872040d2e536"
+    },
+    {
+      "bytes": 11422650,
+      "remote": "outputs/sft_traces/tokenizer.json",
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506"
+    },
+    {
+      "bytes": 4168,
+      "remote": "outputs/sft_traces/chat_template.jinja",
+      "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+    },
+    {
+      "bytes": 278973888,
+      "remote": "outputs/sft_traces/adapter_model.safetensors",
+      "sha256": "18a7f54b25e717c399e49400ce2869b281431a336c8f58dd6995135be35be088"
+    },
+    {
+      "bytes": 1045,
+      "remote": "outputs/sft_traces/adapter_config.json",
+      "sha256": "a227471fa9bb03d3456f29b146f496c006569dc3b119c6cd498255ff5301151e"
+    },
+    {
+      "bytes": 1660,
+      "remote": "outputs/sft_traces/README.md",
+      "sha256": "16c17768bdfcfead37c35e078b5aa04691687fcfd7fabb1fb1561b6fbb023c57"
+    },
+    {
+      "bytes": 3672,
+      "remote": "outputs/sft_traces/checkpoint-117/trainer_state.json",
+      "sha256": "22e8fe4601a818204f07cd9093afec0159277057693dacda5b1dbea11a817ff4"
+    },
+    {
+      "bytes": 2776833,
+      "remote": "outputs/grpo_only/vocab.json",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    {
+      "bytes": 5404,
+      "remote": "outputs/grpo_only/tokenizer_config.json",
+      "sha256": "443bfa629eb16387a12edbf92a76f6a6f10b2af3b53d87ba1550adfcf45f7fa0"
+    },
+    {
+      "bytes": 11422654,
+      "remote": "outputs/grpo_only/tokenizer.json",
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+    },
+    {
+      "bytes": 499,
+      "remote": "outputs/grpo_only/special_tokens_map.json",
+      "sha256": "a5dba86f1cb07d7e5b093bbea2339d2c3c4effec4d6a76d812a7271897bd151a"
+    },
+    {
+      "bytes": 1671853,
+      "remote": "outputs/grpo_only/merges.txt",
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+    },
+    {
+      "bytes": 4168,
+      "remote": "outputs/grpo_only/chat_template.jinja",
+      "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+    },
+    {
+      "bytes": 707,
+      "remote": "outputs/grpo_only/added_tokens.json",
+      "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680"
+    },
+    {
+      "bytes": 278973888,
+      "remote": "outputs/grpo_only/adapter_model.safetensors",
+      "sha256": "40c23b270ef87496ca1d08bbe0f6dab4c76cb7bc8ef8aa8e9acd470fb287e1c1"
+    },
+    {
+      "bytes": 1045,
+      "remote": "outputs/grpo_only/adapter_config.json",
+      "sha256": "314ea4afb7df010eb67988fd3c309339032760752f0a0c08d5b7f520061ceae6"
+    },
+    {
+      "bytes": 2196,
+      "remote": "outputs/grpo_only/README.md",
+      "sha256": "f1ddbe4d6f95e348ae566bff0b02fdb420f65ce49b17254736f55edcfd18ab04"
+    },
+    {
+      "bytes": 575535,
+      "remote": "outputs/grpo_only/checkpoint-500/trainer_state.json",
+      "sha256": "5e9b113c111a1f1f7b49e4473e105becc26077ff2f1e6f9fdb6214e63f49462f"
+    },
+    {
+      "bytes": 11422654,
+      "remote": "outputs/sft_then_grpo/tokenizer.json",
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+    },
+    {
+      "bytes": 2776833,
+      "remote": "outputs/sft_then_grpo/vocab.json",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    {
+      "bytes": 5404,
+      "remote": "outputs/sft_then_grpo/tokenizer_config.json",
+      "sha256": "443bfa629eb16387a12edbf92a76f6a6f10b2af3b53d87ba1550adfcf45f7fa0"
+    },
+    {
+      "bytes": 499,
+      "remote": "outputs/sft_then_grpo/special_tokens_map.json",
+      "sha256": "a5dba86f1cb07d7e5b093bbea2339d2c3c4effec4d6a76d812a7271897bd151a"
+    },
+    {
+      "bytes": 1671853,
+      "remote": "outputs/sft_then_grpo/merges.txt",
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+    },
+    {
+      "bytes": 4168,
+      "remote": "outputs/sft_then_grpo/chat_template.jinja",
+      "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+    },
+    {
+      "bytes": 707,
+      "remote": "outputs/sft_then_grpo/added_tokens.json",
+      "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680"
+    },
+    {
+      "bytes": 278973888,
+      "remote": "outputs/sft_then_grpo/adapter_model.safetensors",
+      "sha256": "3b10d8de2b25379f0b7306cbd5cb0b4836b2c06f89e402fc2756d91bf5c9e120"
+    },
+    {
+      "bytes": 1045,
+      "remote": "outputs/sft_then_grpo/adapter_config.json",
+      "sha256": "5d49ed0c47e7ed2f056f92748446a24b659b466a1ce5195bb2fabbb8f09123b9"
+    },
+    {
+      "bytes": 2204,
+      "remote": "outputs/sft_then_grpo/README.md",
+      "sha256": "9372601781ea119515399e778cf3da1ab1a31a7e0c861e41d6f8fd1cb0cab9ee"
+    },
+    {
+      "bytes": 589899,
+      "remote": "outputs/sft_then_grpo/checkpoint-500/trainer_state.json",
+      "sha256": "322a1b69794c5847771677e7465086b6221d603da1cdef403e0974eac44d657d"
+    },
+    {
+      "bytes": 665,
+      "remote": "outputs/re_distill/tokenizer_config.json",
+      "sha256": "47bfa3e7727312946b29ac10d6dd0672d63cf7815b2a160b9523872040d2e536"
+    },
+    {
+      "bytes": 11422650,
+      "remote": "outputs/re_distill/tokenizer.json",
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506"
+    },
+    {
+      "bytes": 4168,
+      "remote": "outputs/re_distill/chat_template.jinja",
+      "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+    },
+    {
+      "bytes": 278973888,
+      "remote": "outputs/re_distill/adapter_model.safetensors",
+      "sha256": "fbdf082d1cdfcf1d080e48d2ef7fe458b87b4ccff7ff0b6ea1095944315e20ed"
+    },
+    {
+      "bytes": 1045,
+      "remote": "outputs/re_distill/adapter_config.json",
+      "sha256": "1863aedae34c78e6178e1f7dc03c597b4cf2664185fd86e1fce0c22afbe29eda"
+    },
+    {
+      "bytes": 1660,
+      "remote": "outputs/re_distill/README.md",
+      "sha256": "fba18da28da4bd7b27f5e5ba61eff98cecb8d1020cdda8bdd67484e08484a864"
+    },
+    {
+      "bytes": 2588,
+      "remote": "outputs/re_distill/checkpoint-72/trainer_state.json",
+      "sha256": "72915be30c2d9e777cb2ff3928ad79f7b48c27e2c40241a1ff52b755b4aa388c"
+    },
+    {
+      "bytes": 3677,
+      "remote": "outputs/sft_then_grpo/checkpoint-117/trainer_state.json",
+      "sha256": "d1b696b87e4c62752c5ae725a8d30da50c742b82f5457105b200db3ad7dbd0af"
+    },
+    {
+      "bytes": 665,
+      "remote": "outputs/sft_then_grpo/checkpoint-117/tokenizer_config.json",
+      "sha256": "47bfa3e7727312946b29ac10d6dd0672d63cf7815b2a160b9523872040d2e536"
+    },
+    {
+      "bytes": 11422650,
+      "remote": "outputs/sft_then_grpo/checkpoint-117/tokenizer.json",
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506"
+    },
+    {
+      "bytes": 4168,
+      "remote": "outputs/sft_then_grpo/checkpoint-117/chat_template.jinja",
+      "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+    },
+    {
+      "bytes": 278973888,
+      "remote": "outputs/sft_then_grpo/checkpoint-117/adapter_model.safetensors",
+      "sha256": "9b0947d6544f8f054ef49197f752f127f6960fe60c579f23a843844c2e2a7a1f"
+    },
+    {
+      "bytes": 1045,
+      "remote": "outputs/sft_then_grpo/checkpoint-117/adapter_config.json",
+      "sha256": "e60dcfcfd003800e45dea4b563289ae71896d1092a432af3083d229a1acbb906"
+    },
+    {
+      "bytes": 5196,
+      "remote": "outputs/sft_then_grpo/checkpoint-117/README.md",
+      "sha256": "c6dd09d3543023c3021e35ef9d5d24e882707dbde6afc7df7375569e8dea79b9"
+    },
+    {
+      "bytes": 158409,
+      "remote": "eval_checkpoints/sft_then_grpo_gsm8k_final.json",
+      "sha256": "b43ca622b88cc08077836544f1118080c90d84420b48c052c25ce389d8981735"
+    },
+    {
+      "bytes": 158506,
+      "remote": "eval_checkpoints/sft_traces_gsm8k_final.json",
+      "sha256": "1eb19ffb5a910cffe1e5db830e82edb26ae705ae1b550976f2605001747f5c89"
+    },
+    {
+      "bytes": 158404,
+      "remote": "eval_checkpoints/re_distill_gsm8k_final.json",
+      "sha256": "008bab1e07814963875494597a674a885213815ad8303b040fe2e8c2c860791c"
+    },
+    {
+      "bytes": 158378,
+      "remote": "eval_checkpoints/grpo_only_gsm8k_final.json",
+      "sha256": "c09be6ac434ca0eb55d638467f44e70e1c559d652b5640e4ccbf96a91672c3a0"
+    },
+    {
+      "bytes": 158398,
+      "remote": "eval_checkpoints/base_model_gsm8k_final.json",
+      "sha256": "89b52783fc7342c7965599aa019bc071c22c1128db6e47c8c08e3db1c2138dc0"
+    },
+    {
+      "bytes": 157494,
+      "remote": "eval_checkpoints/baseline_gsm8k_final.json",
+      "sha256": "e8a32f7c011e78ef44456b5106555c9edf57d4efa4950c900ca517126d8df722"
+    }
+  ],
+  "local_path": "outputs/historical/2026-10-19",
+  "weights_downloaded": true
+}

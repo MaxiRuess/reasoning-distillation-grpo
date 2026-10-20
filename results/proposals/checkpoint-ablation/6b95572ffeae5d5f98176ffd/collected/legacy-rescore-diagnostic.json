@@ -1,0 +1,4610 @@
+[
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "32"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "37"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "42"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "50"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "55"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "60"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "73"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "82"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "83"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "84"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "87"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "99"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "100"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "101"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "123"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "124"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "130"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "132"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "137"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "163"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "174"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "182"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "188"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "193"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "197"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "202"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "204"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "215"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "217"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "220"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "222"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "225"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "229"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "232"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "233"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "242"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "249"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "256"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "258"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "270"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "275"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "277"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "279"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "280"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "281"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "296"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "300"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "308"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "309"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "314"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "320"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "323"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "331"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "336"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "338"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "347"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "348"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "353"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "359"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "360"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "381"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "387"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "389"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "394"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "405"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "406"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "412"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "415"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "418"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "430"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "432"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "434"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "439"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "441"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "446"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "455"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "462"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "470"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "471"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "475"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "479"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "488"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "489"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "491"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "500"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "505"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "509"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "523"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "539"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "546"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "547"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "561"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "562"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "564"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "571"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "577"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "581"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "582"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "590"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "592"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "606"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "620"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "621"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "626"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "627"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "630"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "634"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "653"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "656"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "658"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "662"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "664"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "673"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "675"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "680"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "686"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "699"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "703"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "708"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "720"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "729"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "736"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "742"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "744"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "752"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "755"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "762"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "763"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "769"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "776"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "787"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "790"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "802"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "816"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "829"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "830"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "831"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "845"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "847"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "848"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "849"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "855"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "867"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "874"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "875"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "880"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "883"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "887"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "892"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "893"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "896"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "903"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "911"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "918"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "920"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "921"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "929"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "935"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "942"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "952"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "953"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "956"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "957"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "959"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "962"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "967"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "968"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "969"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "970"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "971"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "976"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "982"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "987"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "989"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "993"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "994"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1000"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "1006"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1012"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1013"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1019"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1022"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1026"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1034"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1036"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1037"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "1039"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1050"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1051"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1052"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1059"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1061"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1065"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1069"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1071"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1077"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1079"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1080"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1082"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1083"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1087"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1090"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1092"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1095"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1096"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "1097"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1102"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1103"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1106"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1111"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1117"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1123"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1133"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1134"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1147"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1148"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1149"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1151"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1152"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1153"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1154"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1167"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1170"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1171"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1173"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1174"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1178"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1182"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1187"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1195"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1199"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "1202"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1204"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1208"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1210"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1214"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1221"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1226"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1231"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1232"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1233"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1236"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1242"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1255"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1256"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1257"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1261"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1262"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1281"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1289"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1298"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1303"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1304"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1306"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1308"
+  },
+  {
+    "arm": "sft_parent",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1315"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "32"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "37"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "42"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "50"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "55"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "60"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "73"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "82"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "83"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "84"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "87"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "99"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "100"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "101"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "123"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "124"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "130"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "132"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "137"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "163"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "174"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "182"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "188"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "193"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "197"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "202"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "204"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "215"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "217"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "220"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "222"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "225"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "229"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "232"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "233"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "242"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "249"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "256"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "258"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "270"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "275"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "277"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "279"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "280"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "281"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "296"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "300"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "308"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "309"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "314"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "320"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "323"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "331"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "336"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "338"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "347"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "348"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "353"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "359"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "360"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "381"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "387"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "389"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "394"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "405"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "406"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "412"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "415"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "418"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "430"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "432"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "434"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "439"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "441"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "446"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "455"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "462"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "470"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "471"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "475"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "479"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "488"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "489"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "491"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "500"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "505"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "509"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "523"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "539"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "546"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "547"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "561"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "562"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "564"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "571"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "577"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "581"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "582"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "590"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "592"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "606"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "620"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "621"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "626"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "627"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "630"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "634"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "653"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "656"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "658"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "662"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "664"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "673"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "675"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "680"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "686"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "699"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "703"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "708"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "720"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "729"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "736"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "742"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "744"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "752"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "755"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "762"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "763"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "769"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "776"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "787"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "790"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "802"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "816"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "829"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "830"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "831"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "845"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "847"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "848"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "849"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "855"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "867"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "874"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "875"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "880"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "883"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "887"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "892"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "893"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "896"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "903"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "911"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "918"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "920"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "921"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "929"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "935"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "942"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "952"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "953"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "956"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "957"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "959"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "962"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "967"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "968"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "969"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "970"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "971"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "976"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "982"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "987"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "989"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "993"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "994"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "1000"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1006"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1012"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1013"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1019"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1022"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1026"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1034"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1036"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1037"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1039"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1050"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1051"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "1052"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1059"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1061"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1065"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "1069"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1071"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1077"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1079"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1080"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1082"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1083"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "1087"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1090"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1092"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1095"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1096"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "1097"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1102"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1103"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "1106"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1111"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1117"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1123"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1133"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1134"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1147"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1148"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1149"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1151"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1152"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1153"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1154"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1167"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1170"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "1171"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "1173"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "1174"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1178"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1182"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1187"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1195"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1199"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1202"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1204"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1208"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1210"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1214"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1221"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1226"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1231"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1232"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1233"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1236"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1242"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1255"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "1256"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1257"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1261"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1262"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "1281"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1289"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "1298"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1303"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1304"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1306"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1308"
+  },
+  {
+    "arm": "missing_sft",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1315"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "32"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "37"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "42"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "50"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "55"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "60"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "73"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "82"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "83"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "84"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "87"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "99"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "100"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "101"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "123"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "124"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "130"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "132"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "137"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "163"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "174"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "182"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "188"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "193"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "197"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "202"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "204"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "215"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "217"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "220"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "222"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "225"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "229"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "232"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "233"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "242"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "249"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "256"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "258"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "270"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "275"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "277"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "279"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "280"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "281"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "296"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "300"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "308"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "309"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "314"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "320"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "323"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "331"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "336"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "338"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "347"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "348"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "353"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "359"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "360"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "381"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "387"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "389"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "394"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "405"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "406"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "412"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "415"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "418"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "430"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "432"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "434"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "439"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "441"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "446"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "455"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "462"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "470"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "471"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "475"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "479"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "488"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "489"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "491"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "500"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "505"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "509"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "523"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "539"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "546"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "547"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "561"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "562"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "564"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "571"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "577"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "581"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "582"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "590"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "592"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "606"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "620"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "621"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "626"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "627"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "630"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "634"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "653"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "656"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "658"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "662"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "664"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "673"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "675"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "680"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "686"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "699"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "703"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "708"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "720"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "729"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "736"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "742"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "744"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "752"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "755"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "762"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "763"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "769"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "776"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "787"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "790"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "802"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "816"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "829"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "830"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "831"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "845"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "847"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "848"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "849"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "855"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "867"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "874"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "875"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "880"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "883"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "887"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "892"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "893"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "896"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "903"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "911"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "918"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "920"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "921"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "929"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "935"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "942"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "952"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "953"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "956"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "957"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "959"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "962"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "967"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "968"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "969"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "970"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "971"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "976"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "982"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "987"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "989"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "993"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "994"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1000"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1006"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1012"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1013"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1019"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1022"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1026"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1034"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1036"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1037"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1039"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1050"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1051"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1052"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1059"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1061"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1065"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1069"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1071"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "1077"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1079"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1080"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1082"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1083"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1087"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1090"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1092"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1095"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1096"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1097"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1102"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1103"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1106"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1111"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1117"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1123"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1133"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1134"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "1147"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1148"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1149"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1151"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1152"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1153"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1154"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1167"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1170"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1171"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1173"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1174"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1178"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1182"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "1187"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1195"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1199"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": false,
+    "primary_correct": false,
+    "problem_id": "1202"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "1204"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1208"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1210"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1214"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1221"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1226"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "1231"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1232"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1233"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1236"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1242"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1255"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1256"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1257"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1261"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1262"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1281"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1289"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1298"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "1303"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1304"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "1306"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": true,
+    "problem_id": "1308"
+  },
+  {
+    "arm": "reconstructed",
+    "legacy_correct": true,
+    "primary_correct": false,
+    "problem_id": "1315"
+  }
+]

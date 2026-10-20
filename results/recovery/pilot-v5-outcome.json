@@ -1,0 +1,26 @@
+{
+  "app_stopped": true,
+  "ledger": "outputs/studies/a7a500bdc685a4ca2b4b6b85/ledger.json",
+  "ledger_sha256": "af77b9ff1d5bce90b3626871e8474f55331f6d3efb986183acc285cc4359ccdc",
+  "next_validation": "pilot-v6-authorization.json",
+  "original_evaluation": {
+    "accuracy": 0.3125,
+    "benchmark": "gsm8k",
+    "condition": "pilot_verified_grpo",
+    "extraction_failure_rate": 0.375,
+    "mean_generated_tokens": 974.65625,
+    "model_identity": "35d94a3a4b07116202c76342cfc4ed7409c9c3b3a493cfe0467312986d0b0a80",
+    "num_correct": 10,
+    "num_samples_per_problem": 1,
+    "num_total": 32,
+    "pass@1": 0.3125,
+    "pilot_or_subset": true,
+    "results_path": "/vol/evaluations-v2/pilot_verified_grpo/gsm8k/14590e084115860817d9f196",
+    "run_id": "14590e084115860817d9f1960dca5d5cc1795da47028f968c306a887830cfcfa",
+    "scorer_version": "final-response-v5",
+    "truncation_rate": 0.3125
+  },
+  "original_grpo_metadata_path": "outputs/pilot-evidence/v5/grpo/training_metadata.json",
+  "remaining_case": "Question 17 gives a correct salary followed by an if-clause; unified context handling in v6",
+  "status": "v5_complete_remaining_conditional_context_false_negative"
+}

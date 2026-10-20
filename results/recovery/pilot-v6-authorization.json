@@ -1,0 +1,243 @@
+{
+  "image_build_allowance_usd": 1,
+  "ledger": "outputs/studies/fed166b37e3b11a95114ce3e/ledger.json",
+  "new_plan_reservation_usd": 2.5474799999999997,
+  "note": "All prior apps stopped. Completed calls are settled using measured end-to-end time plus 120 seconds at bounded resources; failed attempts remain fully reserved. No main study/hardware comparison.",
+  "original_total_cap_usd": 10,
+  "quote_sha256": "50e299212806172d8f8857aabf2b9b45656c49022775c781360cd7b527cd5863",
+  "remaining_runner_cap_usd": 5.31553381,
+  "settled_prior_upper_bound_usd": 3.6844661913444336,
+  "settlements": [
+    {
+      "ledger": "outputs/studies/855e33aa554617b8489e4e56/ledger.json",
+      "method": "failed attempt retains original full reservation",
+      "node": "pilot:grpo",
+      "original_reserve_usd": 1.1818944,
+      "settled_upper_bound_usd": 1.1818944
+    },
+    {
+      "ledger": "outputs/studies/855e33aa554617b8489e4e56/ledger.json",
+      "method": "completed call wall time, including wait/startup, plus at least 120 seconds reserve",
+      "node": "pilot:prepare:grpo",
+      "original_reserve_usd": 0.025922399999999998,
+      "settled_upper_bound_usd": 0.008218364627240673
+    },
+    {
+      "ledger": "outputs/studies/855e33aa554617b8489e4e56/ledger.json",
+      "method": "completed call wall time, including wait/startup, plus at least 120 seconds reserve",
+      "node": "pilot:prepare:sft",
+      "original_reserve_usd": 0.2295984,
+      "settled_upper_bound_usd": 0.013623268806955515
+    },
+    {
+      "ledger": "outputs/studies/855e33aa554617b8489e4e56/ledger.json",
+      "method": "completed call wall time, including wait/startup, plus at least 120 seconds reserve",
+      "node": "pilot:sft",
+      "original_reserve_usd": 0.43467839999999996,
+      "settled_upper_bound_usd": 0.1811166528729801
+    },
+    {
+      "ledger": "outputs/studies/855e33aa554617b8489e4e56/ledger.json",
+      "method": "completed call wall time, including wait/startup, plus at least 120 seconds reserve",
+      "node": "prepare:runtime",
+      "original_reserve_usd": 0.2295984,
+      "settled_upper_bound_usd": 0.010033382175168488
+    },
+    {
+      "ledger": "outputs/studies/e0d016d28610bfdc294d97b0/ledger.json",
+      "method": "completed call wall time, including wait/startup, plus at least 120 seconds reserve",
+      "node": "pilot:eval",
+      "original_reserve_usd": 0.43467839999999996,
+      "settled_upper_bound_usd": 0.17065460002793803
+    },
+    {
+      "ledger": "outputs/studies/e0d016d28610bfdc294d97b0/ledger.json",
+      "method": "completed call wall time, including wait/startup, plus at least 120 seconds reserve",
+      "node": "pilot:grpo",
+      "original_reserve_usd": 1.1818944,
+      "settled_upper_bound_usd": 0.38399418878722563
+    },
+    {
+      "ledger": "outputs/studies/e0d016d28610bfdc294d97b0/ledger.json",
+      "method": "previous completed output reused; no duplicate dispatch",
+      "node": "pilot:prepare:grpo",
+      "original_reserve_usd": 0,
+      "settled_upper_bound_usd": 0
+    },
+    {
+      "ledger": "outputs/studies/e0d016d28610bfdc294d97b0/ledger.json",
+      "method": "previous completed output reused; no duplicate dispatch",
+      "node": "pilot:prepare:sft",
+      "original_reserve_usd": 0,
+      "settled_upper_bound_usd": 0
+    },
+    {
+      "ledger": "outputs/studies/e0d016d28610bfdc294d97b0/ledger.json",
+      "method": "previous completed output reused; no duplicate dispatch",
+      "node": "pilot:sft",
+      "original_reserve_usd": 0,
+      "settled_upper_bound_usd": 0
+    },
+    {
+      "ledger": "outputs/studies/e0d016d28610bfdc294d97b0/ledger.json",
+      "method": "completed call wall time, including wait/startup, plus at least 120 seconds reserve",
+      "node": "pilot:verify",
+      "original_reserve_usd": 0.011109599999999999,
+      "settled_upper_bound_usd": 0.007858312068093513
+    },
+    {
+      "ledger": "outputs/studies/e0d016d28610bfdc294d97b0/ledger.json",
+      "method": "previous completed output reused; no duplicate dispatch",
+      "node": "prepare:runtime",
+      "original_reserve_usd": 0,
+      "settled_upper_bound_usd": 0
+    },
+    {
+      "ledger": "outputs/studies/5f5e387226f223d5e47ad32b/ledger.json",
+      "method": "completed call wall time, including wait/startup, plus at least 120 seconds reserve",
+      "node": "pilot:eval",
+      "original_reserve_usd": 0.43467839999999996,
+      "settled_upper_bound_usd": 0.1687164048638643
+    },
+    {
+      "ledger": "outputs/studies/5f5e387226f223d5e47ad32b/ledger.json",
+      "method": "completed call wall time, including wait/startup, plus at least 120 seconds reserve",
+      "node": "pilot:grpo",
+      "original_reserve_usd": 1.1818944,
+      "settled_upper_bound_usd": 0.36372457164374067
+    },
+    {
+      "ledger": "outputs/studies/5f5e387226f223d5e47ad32b/ledger.json",
+      "method": "previous completed output reused; no duplicate dispatch",
+      "node": "pilot:prepare:grpo",
+      "original_reserve_usd": 0,
+      "settled_upper_bound_usd": 0
+    },
+    {
+      "ledger": "outputs/studies/5f5e387226f223d5e47ad32b/ledger.json",
+      "method": "previous completed output reused; no duplicate dispatch",
+      "node": "pilot:prepare:sft",
+      "original_reserve_usd": 0,
+      "settled_upper_bound_usd": 0
+    },
+    {
+      "ledger": "outputs/studies/5f5e387226f223d5e47ad32b/ledger.json",
+      "method": "previous completed output reused; no duplicate dispatch",
+      "node": "pilot:sft",
+      "original_reserve_usd": 0,
+      "settled_upper_bound_usd": 0
+    },
+    {
+      "ledger": "outputs/studies/5f5e387226f223d5e47ad32b/ledger.json",
+      "method": "completed call wall time, including wait/startup, plus at least 120 seconds reserve",
+      "node": "pilot:verify",
+      "original_reserve_usd": 0.011109599999999999,
+      "settled_upper_bound_usd": 0.007709526914692484
+    },
+    {
+      "ledger": "outputs/studies/5f5e387226f223d5e47ad32b/ledger.json",
+      "method": "previous completed output reused; no duplicate dispatch",
+      "node": "prepare:runtime",
+      "original_reserve_usd": 0,
+      "settled_upper_bound_usd": 0
+    },
+    {
+      "ledger": "outputs/studies/988d96fc9d984daf13206d83/ledger.json",
+      "method": "completed call wall time, including wait/startup, plus at least 120 seconds reserve",
+      "node": "pilot:eval",
+      "original_reserve_usd": 0.43467839999999996,
+      "settled_upper_bound_usd": 0.1700014699232826
+    },
+    {
+      "ledger": "outputs/studies/988d96fc9d984daf13206d83/ledger.json",
+      "method": "completed call wall time, including wait/startup, plus at least 120 seconds reserve",
+      "node": "pilot:grpo",
+      "original_reserve_usd": 1.1818944,
+      "settled_upper_bound_usd": 0.3966209732040511
+    },
+    {
+      "ledger": "outputs/studies/988d96fc9d984daf13206d83/ledger.json",
+      "method": "previous completed output reused; no duplicate dispatch",
+      "node": "pilot:prepare:grpo",
+      "original_reserve_usd": 0,
+      "settled_upper_bound_usd": 0
+    },
+    {
+      "ledger": "outputs/studies/988d96fc9d984daf13206d83/ledger.json",
+      "method": "previous completed output reused; no duplicate dispatch",
+      "node": "pilot:prepare:sft",
+      "original_reserve_usd": 0,
+      "settled_upper_bound_usd": 0
+    },
+    {
+      "ledger": "outputs/studies/988d96fc9d984daf13206d83/ledger.json",
+      "method": "previous completed output reused; no duplicate dispatch",
+      "node": "pilot:sft",
+      "original_reserve_usd": 0,
+      "settled_upper_bound_usd": 0
+    },
+    {
+      "ledger": "outputs/studies/988d96fc9d984daf13206d83/ledger.json",
+      "method": "completed call wall time, including wait/startup, plus at least 120 seconds reserve",
+      "node": "pilot:verify",
+      "original_reserve_usd": 0.011109599999999999,
+      "settled_upper_bound_usd": 0.007746715120341237
+    },
+    {
+      "ledger": "outputs/studies/988d96fc9d984daf13206d83/ledger.json",
+      "method": "previous completed output reused; no duplicate dispatch",
+      "node": "prepare:runtime",
+      "original_reserve_usd": 0,
+      "settled_upper_bound_usd": 0
+    },
+    {
+      "ledger": "outputs/studies/a7a500bdc685a4ca2b4b6b85/ledger.json",
+      "method": "completed call wall time, including wait/startup, plus at least 120 seconds reserve",
+      "node": "pilot:eval",
+      "original_reserve_usd": 0.43467839999999996,
+      "settled_upper_bound_usd": 0.1623413386001408
+    },
+    {
+      "ledger": "outputs/studies/a7a500bdc685a4ca2b4b6b85/ledger.json",
+      "method": "completed call wall time, including wait/startup, plus at least 120 seconds reserve",
+      "node": "pilot:grpo",
+      "original_reserve_usd": 1.1818944,
+      "settled_upper_bound_usd": 0.4425457792099898
+    },
+    {
+      "ledger": "outputs/studies/a7a500bdc685a4ca2b4b6b85/ledger.json",
+      "method": "previous completed output reused; no duplicate dispatch",
+      "node": "pilot:prepare:grpo",
+      "original_reserve_usd": 0,
+      "settled_upper_bound_usd": 0
+    },
+    {
+      "ledger": "outputs/studies/a7a500bdc685a4ca2b4b6b85/ledger.json",
+      "method": "previous completed output reused; no duplicate dispatch",
+      "node": "pilot:prepare:sft",
+      "original_reserve_usd": 0,
+      "settled_upper_bound_usd": 0
+    },
+    {
+      "ledger": "outputs/studies/a7a500bdc685a4ca2b4b6b85/ledger.json",
+      "method": "previous completed output reused; no duplicate dispatch",
+      "node": "pilot:sft",
+      "original_reserve_usd": 0,
+      "settled_upper_bound_usd": 0
+    },
+    {
+      "ledger": "outputs/studies/a7a500bdc685a4ca2b4b6b85/ledger.json",
+      "method": "completed call wall time, including wait/startup, plus at least 120 seconds reserve",
+      "node": "pilot:verify",
+      "original_reserve_usd": 0.011109599999999999,
+      "settled_upper_bound_usd": 0.007666242498728595
+    },
+    {
+      "ledger": "outputs/studies/a7a500bdc685a4ca2b4b6b85/ledger.json",
+      "method": "previous completed output reused; no duplicate dispatch",
+      "node": "prepare:runtime",
+      "original_reserve_usd": 0,
+      "settled_upper_bound_usd": 0
+    }
+  ]
+}

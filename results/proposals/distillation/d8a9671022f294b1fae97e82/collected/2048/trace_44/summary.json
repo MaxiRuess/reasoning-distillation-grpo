@@ -1,0 +1,20 @@
+{
+  "accuracy": 0.765625,
+  "accuracy_definition": "explicit_final_answer_accuracy",
+  "benchmark": "gsm8k",
+  "condition": "distillation_trace_44",
+  "extraction_failure_rate": 0.203125,
+  "format_failure_rate": 0.01953125,
+  "mean_generated_tokens": 1033.61328125,
+  "model_identity": "ffdb4ae0d6a978808d52f935f3153ada6a84e86831ce3179e16e844b65f78ad0",
+  "num_correct": 196,
+  "num_samples_per_problem": 1,
+  "num_total": 256,
+  "pass@1": 0.765625,
+  "pilot_or_subset": true,
+  "results_path": "/vol/evaluations-v2/distillation_trace_44/gsm8k/3334dec819ce4426b83cf49f",
+  "run_id": "3334dec819ce4426b83cf49fdb5fcb1c5d81ee3a65b9cfeb7f153b399593a7ed",
+  "scorer_version": "boxed-final-v1",
+  "truncation_rate": 0.1875,
+  "unfinished_thinking_rate": 0.18359375
+}

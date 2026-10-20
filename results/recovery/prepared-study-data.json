@@ -1,0 +1,81 @@
+{
+  "datasets": {
+    "controlled_answer_only": {
+      "content_hash": "5f6f59d338cb91d42149e4e3fdf271720c3fc3e8ee31ac8d6460920a6bb753f2",
+      "max_chat_tokens": 647,
+      "phase": "sft",
+      "quarantine_counts": {},
+      "rows": 1000,
+      "source_ids_hash": "acb45db28450fd4d1e4a48946a16b9140751a69c9654274e699aa2be7ce5164a",
+      "token_budget": null,
+      "verified_fraction": 1.0
+    },
+    "controlled_grpo": {
+      "content_hash": "beec219e42990abc250c5c7b1e81108a96226d9cdfb4ad7fb4a3221744a1c189",
+      "max_chat_tokens": null,
+      "phase": "grpo",
+      "quarantine_counts": {},
+      "rows": 500,
+      "source_ids_hash": "ccaf3b6f230941b7822a8eecc6580410481868626663cb9041eeba9fc4e5b870",
+      "token_budget": null
+    },
+    "controlled_unfiltered": {
+      "content_hash": "250f2db1be4080141d0ba7c40c00dc2fd15f7a454e7cf7b367450e08fbdd9bbb",
+      "max_chat_tokens": 16179,
+      "phase": "sft",
+      "quarantine_counts": {},
+      "rows": 1000,
+      "source_ids_hash": "acb45db28450fd4d1e4a48946a16b9140751a69c9654274e699aa2be7ce5164a",
+      "token_budget": null,
+      "verified_fraction": 0.963
+    },
+    "controlled_unfiltered_tokens": {
+      "content_hash": "94016a866cdca0dd327bc75dbd4e761ef9a20c1fdc73025bab8ca7aebd459f85",
+      "max_chat_tokens": 16179,
+      "phase": "sft",
+      "quarantine_counts": {},
+      "rows": 3000,
+      "source_ids_hash": "0836def0593eb701615ffcae8393f27a8a054414d29d446138461b01e412fafe",
+      "token_budget": {
+        "overshoot": 0,
+        "requested_tokens": 17045721,
+        "supervised_tokens": 17045721
+      },
+      "verified_fraction": 0.963
+    },
+    "controlled_verified": {
+      "content_hash": "ecb5b35134afcbac94c4d74cd3dcddd466026debe744bd3dfcbae3d8d3dcb351",
+      "max_chat_tokens": 16179,
+      "phase": "sft",
+      "quarantine_counts": {},
+      "rows": 1000,
+      "source_ids_hash": "acb45db28450fd4d1e4a48946a16b9140751a69c9654274e699aa2be7ce5164a",
+      "token_budget": null,
+      "verified_fraction": 1.0
+    },
+    "controlled_verified_grpo": {
+      "content_hash": "beec219e42990abc250c5c7b1e81108a96226d9cdfb4ad7fb4a3221744a1c189",
+      "max_chat_tokens": null,
+      "phase": "grpo",
+      "quarantine_counts": {},
+      "rows": 500,
+      "source_ids_hash": "ccaf3b6f230941b7822a8eecc6580410481868626663cb9041eeba9fc4e5b870",
+      "token_budget": null
+    },
+    "controlled_verified_tokens": {
+      "content_hash": "29d1dae24a94cfd13038cd2c3423453795e203dd74394972bbfff332ec420553",
+      "max_chat_tokens": 16179,
+      "phase": "sft",
+      "quarantine_counts": {},
+      "rows": 2951,
+      "source_ids_hash": "f6d5e36b34ecd6e2e844d9814ce200651d4a9ddca607c7da3639b483cfb0236b",
+      "token_budget": {
+        "overshoot": 2777,
+        "requested_tokens": 17045721,
+        "supervised_tokens": 17048498
+      },
+      "verified_fraction": 1.0
+    }
+  },
+  "validation": "CPU-only; no models trained"
+}

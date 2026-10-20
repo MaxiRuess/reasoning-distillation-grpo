@@ -1,0 +1,30 @@
+{
+  "all_14_results_table_data_rows_unchanged": true,
+  "frozen_evidence_files_unchanged": 142,
+  "kind": "manuscript_only_revision",
+  "new_gpu_or_cloud_experiment_jobs": 0,
+  "no_commit_push_or_publication": true,
+  "pdf": {
+    "all_pages_rendered_and_visually_inspected": true,
+    "pages": 8,
+    "path": "assets/paper.pdf",
+    "sha256": "665c75e4188f275c2e8219c8fa4d4e2514f1b83e6af94c5050dfd34b66cf9046",
+    "warnings": 0
+  },
+  "predeclared_primary_comparison_unchanged": true,
+  "previous_revision_backup": "outputs/paper-polish-before-2026-10-20",
+  "report_regression_test": "1 passed",
+  "ruff_scoped_check": "passed",
+  "scientific_analysis_and_scoring_code_unchanged": true,
+  "source_files": {
+    "assets/distillation-2026-10-20.png": "454a7d82ee5338f5b16d22460d458748dd29094468a17e830a88bb26a73854e6",
+    "paper/distillation_abstract_results.tex": "53f49f5da54de206c89d53b557128183046c4e8722a9317ac3308c33f025ec35",
+    "paper/distillation_methods.tex": "9af9486901d38471e0bcc008040bb4ea8fc395f1b42fa07ea43599f134731b74",
+    "paper/distillation_results.tex": "b615b12e57ad934c0f2f1ef1ddaf4c3c77c0e14e9bbba61296d6a078728aeb50",
+    "paper/paper.tex": "15119155f2ea15df3a688969ae16bedd9fc15ceb7a35954c5dd1f7c842d53fe7",
+    "results/FINDINGS.md": "45a1fd91a6b64ecebebd243f81964382b80869c8b17e75d338abbb9361c98740",
+    "scripts/19_generate_distillation_results.py": "527af6479323a539e00e9902892792e775eaf5c5f7b3db4b7711a4ba4175ea09"
+  },
+  "title": "Reasoning-Trace Distillation under Output Limits: A Study of Qwen3-1.7B",
+  "unchanged_student_comparison_still_secondary": true
+}

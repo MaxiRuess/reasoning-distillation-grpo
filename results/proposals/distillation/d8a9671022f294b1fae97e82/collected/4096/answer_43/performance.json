@@ -1,0 +1,52 @@
+{
+  "generated_tokens_this_call": 725,
+  "generation_seconds": 2.511118341999996,
+  "gpu": {
+    "cuda_available": true,
+    "gpu_name": "NVIDIA L40S",
+    "interpretation": "Device-wide sampled memory includes vLLM; torch allocator peaks cover this process only. Sampling can miss short peaks.",
+    "sampled_peak_device_memory_mib": 4317.0,
+    "sampled_utilization_mean_percent": 0.0,
+    "samples": [
+      {
+        "elapsed_seconds": 0.07746877900000015,
+        "gpu_utilization_percent": 0.0,
+        "power_watts": 32.42,
+        "total_memory_mib": 46068.0,
+        "used_memory_mib": 3.0
+      },
+      {
+        "elapsed_seconds": 5.126028713999999,
+        "gpu_utilization_percent": 0.0,
+        "power_watts": 32.31,
+        "total_memory_mib": 46068.0,
+        "used_memory_mib": 3.0
+      },
+      {
+        "elapsed_seconds": 10.158718183000001,
+        "gpu_utilization_percent": 0.0,
+        "power_watts": 32.4,
+        "total_memory_mib": 46068.0,
+        "used_memory_mib": 3.0
+      },
+      {
+        "elapsed_seconds": 15.184596925999998,
+        "gpu_utilization_percent": 0.0,
+        "power_watts": 92.61,
+        "total_memory_mib": 46068.0,
+        "used_memory_mib": 4317.0
+      }
+    ],
+    "sampling_error": null,
+    "sampling_interval_seconds": 5,
+    "torch_peak_allocated_bytes": 3895036416,
+    "torch_peak_reserved_bytes": 3978297344,
+    "wall_seconds": 15.638908565999998
+  },
+  "model_load_seconds": 11.629603704,
+  "results_paths": [
+    "/vol/evaluations-v2/distillation_answer_43/gsm8k/bfa708af9352e93931e9f3f3"
+  ],
+  "scope": "This function invocation, across benchmarks, including any replayed prefix",
+  "status": "complete"
+}

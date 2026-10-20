@@ -1,0 +1,18 @@
+[
+  {
+    "app_id": "ap-Vdluc45l0EjklFFvOKg44M",
+    "description": "reasoning-distillation-grpo",
+    "state": "stopped",
+    "tasks": "0",
+    "created_at": "2026-10-20 08:35:04+02:00",
+    "stopped_at": "2026-10-20 10:12:50+02:00"
+  },
+  {
+    "app_id": "ap-ekpAP00VhMZpE5YoZKs7R0",
+    "description": "dc-analyze-sandbox",
+    "state": "deployed",
+    "tasks": "0",
+    "created_at": "2026-06-23 08:16:59+02:00",
+    "stopped_at": null
+  }
+]

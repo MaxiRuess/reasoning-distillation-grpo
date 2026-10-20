@@ -1,0 +1,24 @@
+{
+  "applied_after_all_gpu_jobs_and_app_closed": true,
+  "changes": {
+    "src/distillation_experiment.py": {
+      "after": "57de0feb514d9b691333a96527a77e1a74a3efa6e74eaea38bcb955b5ccb1c0d",
+      "before": "873a925746f98b929de56a7d7630547b434abaa7a39d78e113fb5fbef688330b",
+      "fix": "Collect SFT profiles from the actual sibling sft-performance.json location"
+    },
+    "src/pipeline.py": {
+      "after": "9d18f0cdcdfecd97cd404cbe3538326927ceb0f1f67a580c879ca1ebe78f27ff",
+      "before": "fc0c9ad920837a254cfbdfe4d016f0a58c31903e7786862467f4ba55cf1b3635",
+      "fix": "Label unpacked SFT input exposure as input for future runs; quantities and archived metadata unchanged"
+    }
+  },
+  "frozen_source_snapshot": "results/proposals/distillation/d8a9671022f294b1fae97e82/source-snapshot",
+  "no_training_or_evaluation_reruns": true,
+  "protocol_id": "d8a9671022f294b1fae97e829d3c651d9a79a2bc62c1544115952f3f7edf04fd",
+  "unchanged_scientific_functions": {
+    "analyze_distillation": true,
+    "distillation_rows": true,
+    "numeric_final_score": true,
+    "study_config": true
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "pilot_evidence": [
+    {
+      "note": "v3 measurements preserved; two remaining clear prose cases corrected in frozen-version v4. Reuse only unchanged SFT and CPU preparation.",
+      "path": "outputs/studies/5f5e387226f223d5e47ad32b/ledger.json",
+      "sha256": "8ca369de25faf9fbc6db12b0eed8b15f6cb373d1d09ef748e692b93c5905da3b"
+    }
+  ],
+  "plan_digest": "988d96fc9d984daf13206d834b9d7c44594ac246887d1be6f3bf11c2d9c560d3",
+  "pricing_source": {
+    "as_of": "2026-10-19",
+    "caution": "Reservations include a startup/idle allowance, not a provider billing guarantee. Image builds, storage and egress are additional; configure a workspace spending limit before paid work. Recheck rates before launch.",
+    "cpu_core_per_second": 1.31e-05,
+    "gpu_per_second": {
+      "H100": 0.001097,
+      "L40S": 0.000542
+    },
+    "memory_gib_limit": 16,
+    "memory_gib_per_second": 2.22e-06,
+    "overhead_seconds_per_task": 120,
+    "physical_cores_limit": 2,
+    "source": "https://modal.com/pricing"
+  },
+  "runtime_reservations_usd": 2.5474799999999997,
+  "status": "authorized_v4_defect_validation",
+  "suggested_cap_usd": 10,
+  "tasks": {
+    "pilot:eval": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 600
+    },
+    "pilot:grpo": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00115872,
+      "timeout_seconds": 900
+    },
+    "pilot:prepare:grpo": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 300
+    },
+    "pilot:prepare:sft": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 3600
+    },
+    "pilot:sft": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 600
+    },
+    "pilot:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 60
+    },
+    "prepare:runtime": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 3600
+    }
+  }
+}

@@ -1,0 +1,335 @@
+# New-run configuration. Historical measurements remain archived separately.
+model:
+  name: Qwen/Qwen3-1.7B
+  tokenizer: Qwen/Qwen3-1.7B
+  eos_token: <|im_end|>
+  revision: 70d244cc86ccca08cf5af4e1e306ecf908b1ad5e
+  training_stage: pretraining_and_post_training
+quantization:
+  enabled: false
+lora:
+  r: 64
+  lora_alpha: 64
+  lora_dropout: 0.05
+  bias: none
+  task_type: CAUSAL_LM
+  use_rslora: true
+  target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+datasets:
+  s1k:
+    name: simplescaling/s1K-1.1
+    split: train
+    revision: 96c411f1fe4c49d20f0e2a1565f61e1a28b0b84d
+  orca_math:
+    name: microsoft/orca-math-word-problems-200k
+    split: train
+    revision: 29255d1770cc4eac66e5e7fa378cba542c026350
+  gsm8k:
+    name: openai/gsm8k
+    subset: main
+    split: test
+    revision: 740312add88f781978c0658806c59bc2815b9866
+  openr1:
+    name: open-r1/OpenR1-Math-220k
+    subset: default
+    split: train
+    revision: e4e141ec9dea9f8326f4d347be56105859b2bd68
+  math500:
+    name: HuggingFaceH4/MATH-500
+    split: test
+    revision: 6e4ed1a2a79af7d8630a6b768ec859cb5af4d3be
+conditions:
+  baseline:
+    type: sft
+    dataset: orca_math
+    sft:
+      learning_rate: 0.0002
+      num_train_epochs: 3
+      max_seq_length: 4096
+      per_device_train_batch_size: 4
+      gradient_accumulation_steps: 4
+      warmup_steps: 10
+      optim: paged_adamw_8bit
+      use_liger_kernel: true
+      packing: true
+      output_dir: outputs/baseline
+    description: Orca worked-solution SFT; not answer-only
+  sft_traces:
+    type: sft
+    dataset: s1k
+    sft:
+      learning_rate: 0.0002
+      num_train_epochs: 3
+      max_seq_length: 16384
+      per_device_train_batch_size: 4
+      gradient_accumulation_steps: 4
+      warmup_steps: 10
+      optim: paged_adamw_8bit
+      use_liger_kernel: true
+      packing: true
+      output_dir: outputs/sft_traces
+  re_distill:
+    type: sft
+    dataset: openr1
+    sft:
+      learning_rate: 0.0002
+      num_train_epochs: 3
+      max_seq_length: 16384
+      per_device_train_batch_size: 4
+      gradient_accumulation_steps: 4
+      warmup_steps: 10
+      optim: paged_adamw_8bit
+      use_liger_kernel: true
+      packing: true
+      output_dir: outputs/re_distill
+  grpo_only:
+    type: grpo
+    dataset: gsm8k
+    grpo:
+      learning_rate: 1.0e-06
+      max_steps: 500
+      per_device_train_batch_size: 1
+      gradient_accumulation_steps: 8
+      num_generations: 8
+      max_completion_length: 4096
+      temperature: 0.7
+      reward_weights:
+      - 0.5
+      - 0.5
+      optim: paged_adamw_8bit
+      use_liger_kernel: true
+      output_dir: outputs/grpo_only
+      loss_type: dapo
+      beta: 0.0
+      scale_rewards: group
+      top_p: 1.0
+      top_k: 0
+      logging_steps: 10
+      log_completions: false
+  sft_then_grpo:
+    type: sft_then_grpo
+    sft_dataset: s1k
+    grpo_dataset: gsm8k
+    sft:
+      learning_rate: 0.0002
+      num_train_epochs: 3
+      max_seq_length: 16384
+      per_device_train_batch_size: 4
+      gradient_accumulation_steps: 4
+      warmup_steps: 10
+      optim: paged_adamw_8bit
+      use_liger_kernel: true
+      packing: true
+      output_dir: outputs/sft_then_grpo/sft_phase
+    grpo:
+      learning_rate: 1.0e-06
+      max_steps: 500
+      per_device_train_batch_size: 1
+      gradient_accumulation_steps: 8
+      num_generations: 8
+      max_completion_length: 4096
+      temperature: 0.7
+      reward_weights:
+      - 1.0
+      - 0.0
+      optim: paged_adamw_8bit
+      use_liger_kernel: true
+      output_dir: outputs/sft_then_grpo/grpo_phase
+      loss_type: dapo
+      beta: 0.0
+      scale_rewards: group
+      top_p: 1.0
+      top_k: 0
+      logging_steps: 10
+      log_completions: false
+  controlled_answer_only:
+    type: sft
+    dataset: controlled_answer_only
+    sft:
+      learning_rate: 0.0002
+      num_train_epochs: 3
+      max_seq_length: 16384
+      per_device_train_batch_size: 4
+      gradient_accumulation_steps: 4
+      warmup_steps: 0
+      optim: paged_adamw_8bit
+      use_liger_kernel: true
+      packing: true
+      output_dir: outputs/controlled_answer_only
+      warmup_ratio: 0.1
+  controlled_unfiltered:
+    type: sft
+    dataset: controlled_unfiltered
+    sft:
+      learning_rate: 0.0002
+      num_train_epochs: 3
+      max_seq_length: 16384
+      per_device_train_batch_size: 4
+      gradient_accumulation_steps: 4
+      warmup_steps: 0
+      optim: paged_adamw_8bit
+      use_liger_kernel: true
+      packing: true
+      output_dir: outputs/controlled_unfiltered
+      warmup_ratio: 0.1
+  controlled_verified:
+    type: sft
+    dataset: controlled_verified
+    sft:
+      learning_rate: 0.0002
+      num_train_epochs: 3
+      max_seq_length: 16384
+      per_device_train_batch_size: 4
+      gradient_accumulation_steps: 4
+      warmup_steps: 0
+      optim: paged_adamw_8bit
+      use_liger_kernel: true
+      packing: true
+      output_dir: outputs/controlled_verified
+      warmup_ratio: 0.1
+  controlled_unfiltered_tokens:
+    type: sft
+    dataset: controlled_unfiltered
+    sft:
+      learning_rate: 0.0002
+      num_train_epochs: 1
+      max_seq_length: 16384
+      per_device_train_batch_size: 4
+      gradient_accumulation_steps: 4
+      warmup_steps: 0
+      optim: paged_adamw_8bit
+      use_liger_kernel: true
+      packing: true
+      output_dir: outputs/controlled_unfiltered_tokens
+      token_matched: true
+      warmup_ratio: 0.1
+  controlled_verified_tokens:
+    type: sft
+    dataset: controlled_verified
+    sft:
+      learning_rate: 0.0002
+      num_train_epochs: 1
+      max_seq_length: 16384
+      per_device_train_batch_size: 4
+      gradient_accumulation_steps: 4
+      warmup_steps: 0
+      optim: paged_adamw_8bit
+      use_liger_kernel: true
+      packing: true
+      output_dir: outputs/controlled_verified_tokens
+      token_matched: true
+      warmup_ratio: 0.1
+  controlled_grpo:
+    type: grpo
+    dataset: gsm8k
+    grpo:
+      learning_rate: 1.0e-06
+      max_steps: 500
+      per_device_train_batch_size: 1
+      gradient_accumulation_steps: 8
+      num_generations: 8
+      max_completion_length: 4096
+      temperature: 0.7
+      reward_weights:
+      - 1.0
+      - 0.0
+      optim: paged_adamw_8bit
+      use_liger_kernel: true
+      output_dir: outputs/controlled_grpo
+      loss_type: dapo
+      beta: 0.0
+      scale_rewards: group
+      top_p: 1.0
+      top_k: 0
+      max_samples: 500
+      logging_steps: 10
+      log_completions: false
+  controlled_verified_grpo:
+    type: grpo
+    dataset: gsm8k
+    grpo:
+      learning_rate: 1.0e-06
+      max_steps: 500
+      per_device_train_batch_size: 1
+      gradient_accumulation_steps: 8
+      num_generations: 8
+      max_completion_length: 4096
+      temperature: 0.7
+      reward_weights:
+      - 1.0
+      - 0.0
+      optim: paged_adamw_8bit
+      use_liger_kernel: true
+      output_dir: outputs/controlled_verified_grpo
+      loss_type: dapo
+      beta: 0.0
+      scale_rewards: group
+      top_p: 1.0
+      top_k: 0
+      max_samples: 500
+      logging_steps: 10
+      log_completions: false
+    requires_sft: true
+    sft_parent: controlled_verified
+evaluation:
+  benchmarks:
+  - gsm8k
+  - math500
+  max_new_tokens: 2048
+  temperature: 0.0
+  num_samples_per_problem: 1
+  batch_size: 32
+  scorer: boxed-final-v1
+  seed: 42
+  top_p: 0.95
+  top_k: 20
+  enable_thinking: true
+  output_root: outputs/evaluations
+  max_generation_sequences: 32
+  max_batch_generated_tokens: 65536
+  commit_every_batches: 4
+  commit_interval_seconds: 60
+  telemetry_interval_seconds: 5
+wandb:
+  project: reasoning-distillation
+  entity: null
+seed: 42
+reward_scorer: boxed-final-v1
+data_seed: 2026
+study:
+  seeds:
+  - 42
+  - 43
+  - 44
+  selection_seed: 2026
+  num_sft_questions: 1000
+  max_length: 16384
+  primary_comparisons:
+  - - controlled_verified
+    - controlled_answer_only
+  - - controlled_verified
+    - controlled_unfiltered
+  - - controlled_verified_grpo
+    - controlled_verified
+  secondary_seed: 42
+  greedy_budgets:
+  - 2048
+  - 4096
+  - 8192
+  sampled:
+    num_samples_per_problem: 8
+    temperature: 0.6
+    top_p: 0.95
+    top_k: 20
+performance:
+  pilot_sft_steps: 2
+  pilot_grpo_steps: 6
+  pilot_eval_problems: 32
+  telemetry_interval_seconds: 5

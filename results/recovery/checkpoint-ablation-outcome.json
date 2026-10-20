@@ -1,0 +1,141 @@
+{
+  "additional_subtests_passed": 11,
+  "analysis_path": "results/proposals/checkpoint-ablation/6b95572ffeae5d5f98176ffd/collected/analysis.json",
+  "app": {
+    "app_id": "ap-vKGUikmJi87JOanH5v4HYi",
+    "created_at": "2026-10-19 19:08:13+02:00",
+    "description": "reasoning-distillation-grpo",
+    "state": "stopped",
+    "stopped_at": "2026-10-19 20:02:47+02:00",
+    "tasks": "0"
+  },
+  "cpu_scores_reproduced": 768,
+  "cpu_tests_passed": 65,
+  "figure": "assets/checkpoint-ablation-2026-10-19.png",
+  "format_sensitivity_post_hoc": {
+    "delta": 0.046875,
+    "left_correct": 184,
+    "left_only_correct": 30,
+    "mcnemar_exact_p": 0.11140289106101878,
+    "num_paired": 256,
+    "paired_bootstrap_95": [
+      -0.00390625,
+      0.09765625
+    ],
+    "right_correct": 172,
+    "right_only_correct": 18
+  },
+  "full_size_reload_proofs": {
+    "missing_sft": {
+      "artifact_id": "ad6e09d99d92387133110f8982250961b072abd1dcb8f34bdcc41f72d8c67309",
+      "exact_cpu_logits_equal": true,
+      "maximum_absolute_difference": 0.0,
+      "parent_artifact_id": null,
+      "protocol_id": "6b95572ffeae5d5f98176ffd6f755143f4bd68e347b8c76d5814a02f06e99ede"
+    },
+    "reconstructed": {
+      "artifact_id": "46257daf019bf91c1ed25371a6a087738c9f5d71813d42488a1c5278dfa71563",
+      "exact_cpu_logits_equal": true,
+      "maximum_absolute_difference": 0.0,
+      "parent_artifact_id": "e8799e1bdfa324fc598a4b01c775c57ed7e44dd8bdc1c9fa7932c8c6e2f31490",
+      "protocol_id": "6b95572ffeae5d5f98176ffd6f755143f4bd68e347b8c76d5814a02f06e99ede"
+    },
+    "sft_parent": {
+      "artifact_id": "e8799e1bdfa324fc598a4b01c775c57ed7e44dd8bdc1c9fa7932c8c6e2f31490",
+      "exact_cpu_logits_equal": true,
+      "maximum_absolute_difference": 0.0,
+      "parent_artifact_id": null,
+      "protocol_id": "6b95572ffeae5d5f98176ffd6f755143f4bd68e347b8c76d5814a02f06e99ede"
+    }
+  },
+  "ledger_path": "outputs/checkpoint-ablation/00d4327ad01cc048cbc00739/ledger.json",
+  "ledger_sha256": "245f861c2164054d64745a4bfdf3a291db84c3dcba4b8d0ad05fc484f3b3fdf9",
+  "limits": [
+    "One historical training run; uncertainty covers test items, not training seeds",
+    "The original base revision is unknown; all reconstructions use the same declared pinned revision",
+    "New boxed-answer prompting differs from historical evaluation; historical scores remain unchanged",
+    "No claims about general RL efficacy, reasoning emergence, or verification causality",
+    "Question selection excludes the recent pilot but is not a previously unseen benchmark",
+    "Historical legacy rewards were not repaired by reconstructing these weights.",
+    "The primary gain is sensitive to a four-response output-format rule; the post hoc relaxed interval includes zero.",
+    "No independent human review, new training seeds, broader benchmark or longer-context experiment was run."
+  ],
+  "local_changes_uncommitted": true,
+  "prediction_hashes": {
+    "missing_sft": "9c3f9c877dc2249603c006487ed0caaad587db60e74f5c0f892968093b7f5040",
+    "reconstructed": "6a72217942dcfd1e1a8e40ef01c985b45d55329aebc2b01825d6d2cb366f00fe",
+    "sft_parent": "234a56061f6343127295f121e395b77df90a0ced020c04b3177fe72931c2e55a"
+  },
+  "primary": {
+    "delta": 0.0625,
+    "left_correct": 184,
+    "left_only_correct": 34,
+    "mcnemar_exact_p": 0.03648340000835981,
+    "num_paired": 256,
+    "paired_bootstrap_95": [
+      0.0078125,
+      0.1171875
+    ],
+    "right_correct": 168,
+    "right_only_correct": 18
+  },
+  "primary_scores_unchanged": true,
+  "proposal_path": "results/proposals/checkpoint-ablation/6b95572ffeae5d5f98176ffd",
+  "protocol_file_sha256": "7b2b817557bd4c45cd0cc510851ff8f20a3ed64e7bfa2627ba82fa31df6b2965",
+  "protocol_id": "6b95572ffeae5d5f98176ffd6f755143f4bd68e347b8c76d5814a02f06e99ede",
+  "report": "docs/experiments/checkpoint-ablation-results-2026-10-19.md",
+  "review": {
+    "categories": {
+      "completed_boxed_value_differs_from_gold": 17,
+      "completed_boxed_value_matches_gold": 108,
+      "correct_value_at_unclosed_box_truncation": 1,
+      "same_correct_value_boxed_twice_contract_failure": 4,
+      "thinking_unfinished_no_complete_final_response": 93,
+      "truncated_final_response_without_boxed_answer": 23
+    },
+    "contract_classification_disagreements_with_primary": 0,
+    "method": "Model-label-hidden inspection of final fields for every question with cross-arm correctness or archived-scorer disagreement. Explicit manual lists for incorrect numeric fields, repeated boxes and incomplete boxes; structural classification for uncompleted responses. No primary scores changed.",
+    "question_groups": 82,
+    "records_reviewed": 246,
+    "reviewer": "Same coding assistant; not an independent human review"
+  },
+  "rows_per_arm": 256,
+  "secondary": {
+    "delta": -0.02734375,
+    "left_correct": 184,
+    "left_only_correct": 12,
+    "mcnemar_exact_p": 0.28104151505976915,
+    "num_paired": 256,
+    "paired_bootstrap_95": [
+      -0.0703125,
+      0.015625
+    ],
+    "right_correct": 191,
+    "right_only_correct": 19
+  },
+  "sensitivity_path": "results/proposals/checkpoint-ablation/6b95572ffeae5d5f98176ffd/collected/exploratory-sensitivity.json",
+  "separate_container_verifications": 3,
+  "spending": {
+    "agreed_additional_cap_usd": 20,
+    "billing_may_lag_or_be_adjusted": true,
+    "client_walltime_plus_startup_rate_estimate_usd": 2.1390247139252825,
+    "closing_snapshot": "results/recovery/checkpoint-ablation-billing-close.json",
+    "reported_workspace_metered_increment_usd": 1.8600003999999988,
+    "runtime_reservations_usd": 10.4364324,
+    "workspace_billed_increment_usd": 0.0
+  },
+  "status": "complete",
+  "three_distinct_weight_files": {
+    "missing_sft": {
+      "model.safetensors": "7097a5e79ce935926af564d18b61137f5cd1feed0978977a1f920023f6c0c6a4"
+    },
+    "reconstructed": {
+      "model.safetensors": "25ceda6b48daa960144f7fb61ad856f7ad5e537bdb873ff86c4a5a1ac4b0babc"
+    },
+    "sft_parent": {
+      "model.safetensors": "61ec608f276d424912247c3e38d05face84f0c70475f6afc980bfbac79e6e427"
+    }
+  },
+  "total_saved_responses": 768,
+  "training_jobs_started": 0
+}

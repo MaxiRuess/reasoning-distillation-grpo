@@ -1,0 +1,11 @@
+{
+  "approved_total_cap_usd": 10,
+  "billing_may_lag": true,
+  "correction": "Set offline environment before adding local sources",
+  "failed_app": "ap-VwKqFLPD3MjOYeJOpkC9yn",
+  "failure": "Modal environment build layer followed mounted local files",
+  "next_attempt_runtime_reservation_usd": 2.54748,
+  "reported_metered_cost_after": "11.78573849",
+  "reported_metered_cost_before": "11.76493307",
+  "status": "stopped_before_pilot_task_dispatch"
+}

@@ -1,2 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Preserve byte hashes of published evaluation artifacts.
+*.jsonl -text
+*.csv -text -whitespace

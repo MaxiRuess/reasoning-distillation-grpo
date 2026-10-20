@@ -1,0 +1,31 @@
+{
+  "all_original_scores_reproduced": true,
+  "app_id": "ap-8BlIJrj0Z5UTg0xCTdw92A",
+  "app_stopped": true,
+  "evaluation_summary": {
+    "accuracy": 0.4375,
+    "benchmark": "gsm8k",
+    "condition": "pilot_verified_grpo",
+    "extraction_failure_rate": 0.28125,
+    "mean_generated_tokens": 825.78125,
+    "model_identity": "96e0756d20e63a8f037cafb275427d9dc9c390c76012ed00033b6f1bcbf6a301",
+    "num_correct": 14,
+    "num_samples_per_problem": 1,
+    "num_total": 32,
+    "pass@1": 0.4375,
+    "pilot_or_subset": true,
+    "results_path": "/vol/evaluations-v2/pilot_verified_grpo/gsm8k/39121dff35526ac07f5d13ed",
+    "run_id": "39121dff35526ac07f5d13eda338eeff7b1e90c68c69fda228a34bf2772644d7",
+    "scorer_version": "final-response-v4",
+    "truncation_rate": 0.21875
+  },
+  "ledger": "outputs/studies/988d96fc9d984daf13206d83/ledger.json",
+  "ledger_sha256": "46fa04e16f717d7fc62cb8b16be4ab785740f5073485def82ce1c5c06b88e7bf",
+  "next_validation": "pilot-v5-authorization.json",
+  "remaining_cases": {
+    "16": "Model abstains from giving an answer",
+    "25": "Correct final answer is written as two; fixed by v5 cardinal normalization"
+  },
+  "scorer": "final-response-v4",
+  "status": "v4_pilot_complete_cardinal_word_answer_unsupported"
+}

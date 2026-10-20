@@ -1,0 +1,1724 @@
+[
+  {
+    "review_id": "01411d37493c452b",
+    "gold": "17",
+    "final": "Bernadette wants to arrive 5 minutes before Wayne. If Wayne leaves at time \\( t \\), he arrives at \\( t + 4 \\). Bernadette needs to arrive at \\( t + 4 - 5 = t - 1 \\). Therefore, Bernadette's departure time should be \\( t - 1 - 16 = t - 17 \\). This means Bernadette should leave 17 minutes earlier than Wayne.\n\nThus, the final answer is \\(\\boxed{17}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "01a43d8157fbad71",
+    "gold": "240",
+    "final": "mate's share of the monthly bill is:\n\n$$\n\\frac{100}{4} = 25 \\text{ dollars per month}\n$$\n\n---\n\n### Step 2: Annual Payment per Roommate\n\nTo find the total amount each roommate pays in a year, we multiply the monthly payment by the number of months in a year:\n\n$$\n25 \\times 12 = 300 \\text{ dollars per year}\n$$\n\n---\n\n### Final Answer\n\n$$\n\\boxed{300}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "03d35d632acac111",
+    "gold": "2",
+    "final": "times 2 \\text{ feedings/day} \\times 60 \\text{ grams/feeding} = 360 \\text{ grams/day}\n$$\n\n---\n\n### Step 2: Determine How Long 720 Grams Will Last\n\nWe now divide the total amount of food (720 grams) by the daily consumption (360 grams/day):\n\n$$\n\\frac{720 \\text{ grams}}{360 \\text{ grams/day}} = 2 \\text{ days}\n$$\n\n---\n\n### Final Answer\n\n$$\n\\boxed{2}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "053cf5222b1dc4be",
+    "gold": "480",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "058146c650e4a9b7",
+    "gold": "72",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "05ccd54c4fb3a0fe",
+    "gold": "300",
+    "final": "tiliser. A quarter of the trucks (20 trucks * 0.25 = 5 trucks) had mechanical failures, leaving 15 trucks that could deliver the fertiliser. The total amount of fertiliser delivered is calculated as follows:\n\n15 trucks * 20 tons per truck = 300 tons.\n\nThus, the total number of tons of fertiliser that reached the farmers that day is \\(\\boxed{300}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "0930237f347706fc",
+    "gold": "2",
+    "final": "Rozanne uses 4 dozen eggs, which is \\(4 \\times 12 = 48\\) eggs, and 2 loose eggs. The total number of eggs she has is \\(48 + 2 = 50\\). Each glass of eggnog requires 5 eggs, so the number of glasses she can make is \\(50 \\div 5 = 10\\). Each tray holds 5 glasses, so the number of trays needed is \\(10 \\div 5 = 2\\).\n\n\\[\n\\boxed{2}\n\\]",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "0aa13cbe3a1a8737",
+    "gold": "70",
+    "final": "p:\n   \\[\n   50 + 80 = 130 \\\\\n   130 + 80 = 210 \\\\\n   210 + 60 = 270 \\\\\n   270 + 40 = 310 \\\\\n   310 + 90 = 400 \\\\\n   400 + 100 = 500 \\\\\n   500 + 70 = 570 \\\\\n   570 + 60 = 630\n   \\]\n   The total sum of the scores is 630.\n4. **Divide the total sum by the number of scores**:\n   \\[\n   \\frac{630}{9} = 70\n   \\]\n\nThus, Sally's mean score is \\(\\boxed{70}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "0b3a2687592734ca",
+    "gold": "1",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "0b889a452dab5c04",
+    "gold": "1",
+    "final": "1: Convert Total Time to Minutes\n\nDoctor Jones spends **9 hours** at the clinic.  \n$$\n9 \\text{ hours} = 9 \\times 60 = 540 \\text{ minutes}\n$$\n\n---\n\n### Step 2: Calculate Time Spent on Rounds\n\nHe checks on **9 inpatients**, and each round takes **20 minutes**.  \n$$\n9 \\text{ inpatients} \\times 20 \\text{ minutes} = 180 \\text{ minutes}\n$$\n\n---\n\n### Step",
+    "thinking_status": "ok",
+    "finish": "length"
+  },
+  {
+    "review_id": "0cd6fe032a718cf3",
+    "gold": "5",
+    "final": "equal parts. Each part is calculated as follows:\n\n$$\n\\frac{100 \\text{ cm}}{4} = 25 \\text{ cm}\n$$\n\nNext, each of these 25 cm parts must be divided into 5 equal parts. The length of each final cut is determined by dividing the length of each part by 5:\n\n$$\n\\frac{25 \\text{ cm}}{5} = 5 \\text{ cm}\n$$\n\nThus, the length of each final cut is \\(\\boxed{5}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "0f03cf03adef2bbb",
+    "gold": "1000",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "10f0b50b40cf558a",
+    "gold": "240",
+    "final": "or **15 minutes each night** for **7 nights** in the first week.  \n$$\n\\text{Total minutes in first week} = 15 \\times 7 = 105 \\text{ minutes}\n$$\n\nShe reads **2 pages per 1.5 minutes**.  \n$$\n\\text{Pages per minute} = \\frac{2}{1.5} = \\frac{4}{3} \\text{ pages per minute}\n$$\n\nNow, calculate the total pages read in the first week:\n$$\n\\text{Pages in first",
+    "thinking_status": "ok",
+    "finish": "length"
+  },
+  {
+    "review_id": "10f844a351b95450",
+    "gold": "324",
+    "final": "ctures**: She needs 20 pictures, but the base includes 10. This means she needs 10 extra pictures. Each extra picture costs $15.00, so the cost for pictures is \\(10 \\times 15 = 150\\) dollars.\n\nAdding the extra costs: \\(30 + 150 = 180\\) dollars. Adding this to the base cost: \\(129 + 180 = 309\\) dollars.\n\nThe total cost for Angela is \\(\\boxed{309}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "114da05d333dc76f",
+    "gold": "64800",
+    "final": "\n     - Total money: \\(32,400 \\, \\text{widgets} \\times 6 \\, \\text{\\$/widget} = 194,400 \\, \\text{\\$}\\)\n\n3. **Calculate the difference in earnings:**\n   - Difference: \\(259,200 \\, \\text{\\$} - 194,400 \\, \\text{\\$} = 64,800 \\, \\text{\\$}\\)\n\nThus, Fern will make \\(\\boxed{64800}\\) dollars more from the Widgeteer 3000 than the WidgetMaster 9000 in a month.",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "118808444088b5cf",
+    "gold": "255",
+    "final": "s that **2% interest will be charged for each unit** (i.e., for each phone). Since the interest is applied **per unit**, we calculate the total interest as:\n\n$$\n\\text{Total interest} = 5 \\times (150 \\times 0.02) = 5 \\times 3 = 15\n$$\n\n---\n\n### **Step 3: Total Amount to be Paid**\n\n$$\n\\text{Total amount} = \\text{Total cost} + \\text{Total interest} = 7",
+    "thinking_status": "ok",
+    "finish": "length"
+  },
+  {
+    "review_id": "1254d927cddc5419",
+    "gold": "12",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "141f7fe3cc0aa9c4",
+    "gold": "5",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "1476b975cb6f1493",
+    "gold": "6277",
+    "final": " children in the city of Soda, we start by analyzing the given data:\n\n- Total population: **23,786**\n- Number of men: **8,417**\n- Number of women: **9,092**\n\n---\n\n### Step 1: Calculate the total number of men and women\n\n$$\n8,417 + 9,092 = 17,509\n$$\n\nThis gives us the total number of adults (men and women) in the city.\n\n---\n\n### Step 2: Subtract the",
+    "thinking_status": "ok",
+    "finish": "length"
+  },
+  {
+    "review_id": "14b600659b872d11",
+    "gold": "16",
+    "final": "Jaime has 64 eggs and 2 trays, each capable of holding 24 eggs. The total capacity of both trays combined is \\(24 + 24 = 48\\) eggs. To find out how many eggs won't be placed on the trays, we subtract the total capacity from the number of eggs Jaime has:\n\n\\[\n64 - 48 = 16\n\\]\n\nThus, the number of eggs Jaime cannot place on the trays is \\(\\boxed{16}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "14d8202bdc01fb7c",
+    "gold": "1800",
+    "final": "John buys 4 phones: 2 for himself, his two kids, and his wife. The first two phones are full price at $600 each, and the remaining two are half price at $300 each. The total cost is calculated as follows:\n\n$$\n2 \\times 600 + 2 \\times 300 = 1200 + 600 = 1800\n$$\n\nThus, the total amount John paid for all the phones is \\(\\boxed{1800}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "15ae792eb5038cae",
+    "gold": "480",
+    "final": "\\text{ people}\n\\]\n\nNext, we calculate the total number of people in the cars:\n\\[\n20 \\text{ cars} \\times 3 \\text{ people per car} = 60 \\text{ people}\n\\]\n\nAdding these two results together gives the total number of people inside the church:\n\\[\n420 \\text{ people} + 60 \\text{ people} = 480 \\text{ people}\n\\]\n\nThus, the final answer is:\n\\[\n\\boxed{480}\n\\]",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "16f0ccfba103ed09",
+    "gold": "100",
+    "final": " Step 2: Set Up the Equation\n\nThe total number of cases needed for all three houses is 250:\n\n$$\nx + 2x + 2x = 250\n$$\n\n$$\n5x = 250\n$$\n\n$$\nx = \\frac{250}{5} = 50\n$$\n\n---\n\n### Step 3: Find the Number of Cases for the Third House\n\nSince the third house needs double the first house:\n\n$$\n2x = 2 \\times 50 = 100\n$$\n\n---\n\n### Final Answer\n\n$$\n\\boxed{100}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "189395cc3bfa9309",
+    "gold": "100",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "19fe5d79e7fdfd45",
+    "gold": "300",
+    "final": "To determine the total amount of fertiliser that reached the farmers that day, we begin by analyzing the given information:\n\n- Mr. Hezekiah dispatched **20 trucks**.\n- Each truck carries **20 tons** of fertiliser.\n- **5 trucks** (a quarter of 20)",
+    "thinking_status": "ok",
+    "finish": "length"
+  },
+  {
+    "review_id": "1a2cc0ca7d4b57c9",
+    "gold": "100",
+    "final": "rd house needs \\( 2x \\) cases (since it is double the first house). The total number of cases required is given by:\n\n\\[\nx + 2x + 2x = 5x\n\\]\n\nWe know the total number of cases is 250, so:\n\n\\[\n5x = 250\n\\]\n\nSolving for \\( x \\):\n\n\\[\nx = \\frac{250}{5} = 50\n\\]\n\nThus, the third house needs \\( 2x = 2 \\times 50 = 100 \\) cases of shingles.\n\n\\[\n\\boxed{100}\n\\]",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "1a521b75848c7f97",
+    "gold": "1",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "1a5d61023a1e37cb",
+    "gold": "2",
+    "final": "payment, which amounts to $20,000. She earns $25 per hour (10 dollars from wages and 15 dollars from tips) and works 40 hours a week. Her weekly earnings are $40 \\times 25 = 1,000. To find out how many weeks she needs to work, we divide the total amount needed by her weekly earnings: $20,000 \\div 1,000 = 20$. \n\nThus, the final answer is \\boxed{20}.",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "1aeea5ff4e1d6886",
+    "gold": "129200",
+    "final": "Juan's house is 30% less expensive than Herb's house, which is worth $76,000. To find the value of Juan's house, we calculate 70% of $76,000:\n\n\\[\n0.70 \\times 76,000 = 53,200\n\\]\n\nNext, we add the value of Herb's house and Juan's house together:\n\n\\[\n76,000 + 53,200 = 129,200\n\\]\n\nThus, the combined value of the two houses is:\n\n\\[\n\\boxed{129200}\n\\]",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "1b079679de323690",
+    "gold": "19",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "1d179a38d8c54559",
+    "gold": "6",
+    "final": "ings per packet is $0.5. For 4 packets, the total savings on milk is:\n$$ 4 \\text{ packets} \\times \\$0.5 \\text{ discount per packet} = \\$2 $$\n\nAdding the savings from both items, the total savings is:\n$$ \\$4 \\text{ (ice cream)} + \\$2 \\text{ (milk)} = \\$6 $$\n\nThus, the total savings if you buy 2 tubs of ice cream and 4 packets of milk is:\n$$\n\\boxed{6",
+    "thinking_status": "ok",
+    "finish": "length"
+  },
+  {
+    "review_id": "1dcd12d3556b6522",
+    "gold": "110",
+    "final": " dollars/hour} = 30 \\text{ dollars}\\)\n- Since she teaches 2 classes, which is not more than 3, she does not get the additional $5.\n- Total earnings on Wednesday: \\(30 \\text{ dollars}\\)\n\n**Total earnings for both days:**\n- Monday: \\(80 \\text{ dollars}\\)\n- Wednesday: \\(30 \\text{ dollars}\\)\n- Total: \\(80 + 30 = 110 \\text{ dollars}\\)\n\n\\[\n\\boxed{110}\n\\]",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "1dd5b8f5b89bb2fd",
+    "gold": "8400",
+    "final": "ollars}\\)\n- Net pay: \\(36,000 - 3,600 = 32,400 \\, \\text{dollars/year}\\)\n\n**Comparison:**\n- Net pay for Job A: \\(24,000 \\, \\text{dollars/year}\\)\n- Net pay for Job B: \\(32,400 \\, \\text{dollars/year}\\)\n- Difference: \\(32,400 - 24,000 = 8,400 \\, \\text{dollars/year}\\)\n\nThe higher net pay rate is achieved by Job B, and the difference is \\(\\boxed{8400}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "1e50e3c47a57cd42",
+    "gold": "5",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "2051dfd490d8bb5f",
+    "gold": "6277",
+    "final": "late the number of adults:\n\\[\n8,417 \\text{ (men)} + 9,092 \\text{ (women)} = 17,509 \\text{ adults}\n\\]\n\nNext, we subtract the number of adults from the total population to find the number of children:\n\\[\n23,786 \\text{ (total population)} - 17,509 \\text{ (adults)} = 6,277 \\text{ (children)}\n\\]\n\nThus, the number of children in Soda is \\(\\boxed{6277}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "20cf4d82f4e0905a",
+    "gold": "50",
+    "final": "here are 8 males.\n   \\[\n   8 \\text{ males} \\times 4 \\text{ dumplings each} = 32 \\text{ dumplings}\n   \\]\n\n3. **Total dumplings cooked**: Sum the dumplings eaten by females and males.\n   \\[\n   18 \\text{ dumplings (females)} + 32 \\text{ dumplings (males)} = 50 \\text{ dumplings}\n   \\]\n\nThus, the total number of dumplings Larry cooked is \\(\\boxed{50}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "21f0dc4cd9e5b427",
+    "gold": "7",
+    "final": "To determine how many matches Joey played in one week, we analyze the information provided:\n\n- On **Monday**, Joey played **2 matches**.\n- On **Friday",
+    "thinking_status": "ok",
+    "finish": "length"
+  },
+  {
+    "review_id": "22c307b7ae725e7d",
+    "gold": "6",
+    "final": " on ice cream is $2 \\times 2 = $4.\n\nThe packet of milk was sold at a discount of $0.5. Assuming the original price of a packet was $1 (since the discount is $0.5), the discounted price is $0.5. For 4 packets, the total savings on milk is $0.5 \\times 4 = $2.\n\nThe total savings is the sum of the savings on ice cream and milk: $4 + $2 = $6.\n\n\\boxed{6}",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "236d3177020e5f09",
+    "gold": "40",
+    "final": "ind the average number of birds Mack saw per day, we need to sum the total number of birds seen each day and then divide by the number of days.\n\n1. **Days 1 and 2**: Total birds = 50\n2. **Day 3**: Total birds = 0\n3. **Days 4 and 5**: Total birds = 120\n4. **Day 6**: Total birds = 20\n5. **Day 7**: Total birds = 90\n\nSumming these totals:\n\\[ 50 + 0 + 1",
+    "thinking_status": "ok",
+    "finish": "length"
+  },
+  {
+    "review_id": "241fc564246eae38",
+    "gold": "8400",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "2453506957581ccb",
+    "gold": "90",
+    "final": "es 75 = 15\n$$\nSubtract the discount from the total cost:\n$$\n75 - 15 = 60\n$$\n\nKaren also wants to add nail art on each of her 10 fingers, which costs $3 per nail:\n$$\n10 \\times 3 = 30\n$$\n\nFinally, add the discounted cost of the manicure and pedicure to the cost of the nail art:\n$$\n60 + 30 = 90\n$$\n\nThe total amount Karen would pay is:\n$$\n\\boxed{90}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "26233ecd5d4afff1",
+    "gold": "145",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "26db3076f72efcd0",
+    "gold": "6",
+    "final": "n 2 tubs**: 2 \u00d7 $2 = **$4**\n\n---\n\n### Step 2: Calculate the savings on the milk packets\n\n- **Discount per packet**: $0.5  \n- **Total savings on 4 packets**: 4 \u00d7 $0.5 = **$2**\n\n---\n\n### Step 3: Total savings\n\n- **Savings from ice cream**: $4  \n- **Savings from milk**: $2  \n- **Total savings**: $4 + $2 = **$6**\n\n---\n\n### Final Answer\n\n$$\n\\boxed{6}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "27ee02ba4f3e019b",
+    "gold": "90",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "2887b2ec42c23dcd",
+    "gold": "72",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "295675e92b457009",
+    "gold": "16",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "299690741be49eff",
+    "gold": "20",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "2b6d620f8e6cbf8d",
+    "gold": "22",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "3174db074a6887f2",
+    "gold": "138",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "3433e51fdcfc49a6",
+    "gold": "8",
+    "final": " party. If 22 men stayed at the party, the number of women who stayed is the total number of people who stayed minus the number of men who stayed. \n\nThe calculation is as follows:\n- Total people who stayed: \\(40 - 10 = 30\\)\n- Number of men who stayed: 22\n- Number of women who stayed: \\(30 - 22 = 8\\)\n\nThus, the number of women left is \\(\\boxed{8}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "34aa23346420224f",
+    "gold": "64800",
+    "final": "*WidgetMaster 9000** produces 45 widgets per hour:\n  $$\n  720 \\text{ hours} \\times 45 \\text{ widgets/hour} = 32,400 \\text{ widgets}\n  $$\n\n---\n\n### Step 3: Calculate Total Revenue for Each Machine\n\n- **Widgeteer 3000**:\n  $$\n  43,200 \\text{ widgets} \\times 6 \\text{ dollars/widget} = 259,200 \\text{ dollars}\n  $$\n\n- **WidgetMaster 9000**:\n  $$\n  32,40",
+    "thinking_status": "ok",
+    "finish": "length"
+  },
+  {
+    "review_id": "34fc7268cabdfd68",
+    "gold": "23",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "3544fee206a61372",
+    "gold": "20",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "3878b2b9287af356",
+    "gold": "4",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "392cdc1a22a03a7c",
+    "gold": "168",
+    "final": "ulate how many shells team The finders found\n\nTeam The finders found **60%** of the remaining **420 shells**:\n\n$$\n0.6 \\times 420 = 252\n$$\n\nSo, The finders found **252 shells**.\n\n---\n\n### Step 4: Calculate how many shells team Gogetters found\n\n$$\n420 - 252 = 168\n$$\n\nThus, team Gogetters found **168 shells**.\n\n---\n\n### Final Answer\n\n$$\n\\boxed{168}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "39ea81235fdfd9bf",
+    "gold": "2",
+    "final": ", which is \\(4 \\times 12 = 48\\) eggs, and 2 loose eggs. The total number of eggs she has is \\(48 + 2 = 50\\) eggs. Each glass of eggnog requires 5 eggs, so the number of glasses she can make is \\(50 \\div 5 = 10\\) glasses. Each tray holds 5 glasses, so the number of trays she can put out is \\(10 \\div 5 = 2\\).\n\nThus, the final answer is \\(\\boxed{2}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "3d47542c2e281ee1",
+    "gold": "17",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "3f55da0ecfc87ebd",
+    "gold": "10",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "4041cbb09a4e188a",
+    "gold": "98",
+    "final": "The hotel initially had 100 guests. 24 guests checked out early, leaving 76 guests. In the afternoon, twice as many people checked in as those who opted for a late checkout. Since 1",
+    "thinking_status": "ok",
+    "finish": "length"
+  },
+  {
+    "review_id": "40c1369fbbad047d",
+    "gold": "826",
+    "final": "To determine the cost to fill the Smith family's swimming pool, we need to follow these steps:\n\n1. **Calculate the volume of the pool in cubic feet:**\n   \\[\n   \\text{Volume} = \\text{width} \\times \\text{length} \\times \\text{depth} = 14 \\, \\text{ft} \\times 25 \\, \\text{ft} \\times 4 \\, \\text{ft} = 1400 \\, \\text{cubic feet}",
+    "thinking_status": "ok",
+    "finish": "length"
+  },
+  {
+    "review_id": "4283041a797ebf02",
+    "gold": "15",
+    "final": "ds per minute}} = 5 \\text{ minutes}\n   \\]\n\n2. **Distance in water**:\n   \\[\n   \\frac{200 \\text{ yards}}{2} = 100 \\text{ yards}\n   \\]\n   Time taken to swim in water:\n   \\[\n   \\frac{100 \\text{ yards}}{10 \\text{ yards per minute}} = 10 \\text{ minutes}\n   \\]\n\nTotal time taken:\n\\[\n5 \\text{ minutes} + 10 \\text{ minutes} = 15 \\text{ minutes}\n\\]\n\n\\boxed{15}",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "44158d76f81ef957",
+    "gold": "1",
+    "final": "Doctor Jones spends 9 hours at the clinic. He spends 9 inpatients * 20 minutes each = 180 minutes (3 hours) on rounds. He also has 10 appointments * 30 minutes each = 300 minutes (5 hours) on appointments. Total time spent is 3 hours + 5 hours = 8 hours. Subtracting this from the total time, 9 hours - 8 hours = 1 hour. \n\n\\boxed{1}",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "4458c52a8c795d13",
+    "gold": "5",
+    "final": "ep 2: Determine Jane's Peeling Rate\n\n- Jane takes **4 minutes** to peel one orange.\n- In **60 minutes**, the number of oranges she can peel is:\n  $$\n  \\frac{60}{4} = 15 \\text{ oranges}\n  $$\n\n---\n\n### Step 3: Calculate the Difference\n\n- The difference in the number of oranges peeled is:\n  $$\n  20 - 15 = 5\n  $$\n\n---\n\n### Final Answer\n\n$$\n\\boxed{5}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "45de99c86edf26c0",
+    "gold": "540",
+    "final": "} \\times 6 \\text{ dollars/box} = 90 \\text{ dollars}\\)\n  - Apple pie earnings: \\(15 \\text{ boxes} \\times 15 \\text{ dollars/box} = 225 \\text{ dollars}\\)\n  - Total earnings: \\(90 + 225 = 315 \\text{ dollars}\\)\n\nSumming the earnings for both days:\n\\[\n225 + 315 = 540 \\text{ dollars}\n\\]\n\nThus, the total earnings for Sunny over two days is \\(\\boxed{540}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "465b1123c2a0b3e1",
+    "gold": "3",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "4660f873afc4b9fd",
+    "gold": "1000",
+    "final": "Jen has to pay $400 for the supplies. The tickets for travel cost 50% more than the supplies. To find the total travel cost, we first calculate 50% of $400, which is $0.5 \\times 400 = 200$. Adding this to the $400 supplies cost gives $400 + 200 = 600$. Therefore, the total travel cost is $\\boxed{600}$.",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "4785d13e8397d36a",
+    "gold": "95",
+    "final": "To determine how long it will take Billy to finish prepping the potatoes, we need to calculate the total time required for both peeling and cutting each potato.\n\n---\n\n### Step 1: Time per",
+    "thinking_status": "ok",
+    "finish": "length"
+  },
+  {
+    "review_id": "47edf8af148e7d7e",
+    "gold": "22",
+    "final": "Lauren can draw 5 large-sized picture scenes per day, 6 medium-sized picture scenes per day, or 7 small-sized picture scenes per day. The project requires 45 large-sized, 36 medium-sized, and 49 small",
+    "thinking_status": "ok",
+    "finish": "length"
+  },
+  {
+    "review_id": "497422a5809b396d",
+    "gold": "8400",
+    "final": "Nick is choosing between two jobs. Job A pays $15 an hour for 2000 hours a year, and Job B pays $42,000 a year. We need to determine which job provides a higher net pay rate and by how much.\n\n**Job A Calculation:**\n- Gross pay: \\(15 \\, \\text{dollars/hour",
+    "thinking_status": "ok",
+    "finish": "length"
+  },
+  {
+    "review_id": "4c2fd259a23c05ba",
+    "gold": "1",
+    "final": "$$\n16 - 7 = 9\n$$\n\nTwo-thirds of the remainder are sent to family:\n\n$$\n\\frac{2}{3} \\times 9 = 6\n$$\n\nThe remaining emails after sending family emails are:\n\n$$\n9 - 6 = 3\n$$\n\nOne-third of the remaining emails are sent to her boyfriend:\n\n$$\n\\frac{1}{3} \\times 3 = 1\n$$\n\nThus, the number of emails Robyn sends to her boyfriend each day is:\n\n$$\n\\boxed{1}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "4cc148bd49a730cf",
+    "gold": "15400",
+    "final": "**: 20%\n- **Price per day with 20% increase**:\n  $$\n  1500 \\times 1.20 = 1800\n  $$\n- **Number of days**: 3\n- **Total cost for hotel**:\n  $$\n  3 \\times 1800 = 5,400\n  $$\n\n---\n\n### **3. Total Cost of the Trip**\n\n$$\n\\text{Total cost} = \\text{Plane tickets} + \\text{Hotel cost} = 10,000 + 5,400 = 15,400\n$$\n\n---\n\n### **Final Answer**\n\n$$\n\\boxed{15400}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "5150f6becd59720a",
+    "gold": "12",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "51f7ebc0fa8ce07e",
+    "gold": "45",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "5240f4af4ab55a53",
+    "gold": "160",
+    "final": "Jim is making a comforter for his king-sized bed, which measures 6 feet long by 8 feet wide. He needs two pieces of fabric that are each 2 feet longer and 2 feet wider than the bed. \n\n1. **Determine the dimensions of each piece of fabric:**",
+    "thinking_status": "ok",
+    "finish": "length"
+  },
+  {
+    "review_id": "544300222faaa2d1",
+    "gold": "60",
+    "final": " of students is given as 200. Therefore, we can set up the equation:\n\n\\[\nx + x + (x - 10) = 200\n\\]\n\nSimplifying the equation:\n\n\\[\n3x - 10 = 200\n\\]\n\nAdding 10 to both sides:\n\n\\[\n3x = 210\n\\]\n\nDividing both sides by 3:\n\n\\[\nx = 70\n\\]\n\nThus, the number of students in the smallest group is \\( x - 10 = 70 - 10 = 60 \\).\n\nThe final answer is \\(\\boxed{60}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "56a70f51f03cfe84",
+    "gold": "10",
+    "final": "o the original 100 pods:\n\n$$\n100 + 20 = 120 \\text{ pods}\n$$\n\nThe special box costs $12, so for $1, the number of pods available is:\n\n$$\n\\frac{120 \\text{ pods}}{12} = 10 \\text{ pods}\n$$\n\nSince each cycle uses 1 pod, the number of cycles that can be run for $1 is equal to the number of pods available. Therefore, the final answer is:\n\n$$\n\\boxed{10}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "57576779bc118d09",
+    "gold": "81",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "5b24c80b958d1a90",
+    "gold": "2",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "5b411fc676424fc4",
+    "gold": "70",
+    "final": "0 \\\\\n210 + 60 = 270 \\\\\n270 + 40 = 310 \\\\\n310 + 90 = 400 \\\\\n400 + 100 = 500 \\\\\n500 + 70 = 570 \\\\\n570 + 60 = 630\n$$\n\nSo, the **total sum of the scores** is **630**.\n\n---\n\n### Step 2: Divide by the number of scores\n\nThere are **9** scores in total. Therefore, the mean is:\n\n$$\n\\text{Mean} = \\frac{630}{9} = 70\n$$\n\n---\n\n### Final Answer\n\n$$\n\\boxed{70}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "5b7f3dfe41ea8f77",
+    "gold": "35",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "5c502702e0483ee0",
+    "gold": "19",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "5ca15168b02ebb49",
+    "gold": "4",
+    "final": "ding their daily consumption together:\n\n$$\n2 \\text{ (Abby)} + 4 \\text{ (Josh)} = 6 \\text{ slices per day}\n$$\n\n---\n\n### Step 3: Determine How Long the Loaf Will Last\n\nThe loaf has **24 slices**. If they consume **6 slices per day**, the number of days the loaf will last is:\n\n$$\n\\frac{24}{6} = 4 \\text{ days}\n$$\n\n---\n\n### Final Answer\n\n$$\n\\boxed{4}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "5cfda38d0dcc1669",
+    "gold": "1",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "5d0073f1899f2f2f",
+    "gold": "81",
+    "final": "3 other families**.  \n  \u2192 Number of families notified in this round: $ 9 \\times 3 = 27 $\n\n- **Round 4**: Each of the 27 families from Round 3 calls **3 other families**.  \n  \u2192 Number of families notified in this round: $ 27 \\times 3 = 81 $\n\n---\n\n### Final Calculation\n\nThe number of families notified during the **fourth round** is:\n\n$$\n\\boxed{81}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "5dfacc0eaa874acf",
+    "gold": "6",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "5e8df00f99d19196",
+    "gold": "58",
+    "final": "sery, so the total number of plants she has before giving any away is:\n\n$$\n80 + 18 = 98 \\text{ plants}\n$$\n\nShe plans to give 1 potted plant from each of the 40 ledges to friends and family, which means she will give away:\n\n$$\n40 \\text{ plants}\n$$\n\nTherefore, the number of potted plants Mary will remain with is:\n\n$$\n98 - 40 = 58\n$$\n\n$$\n\\boxed{58}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "5f6a10f9de22eb03",
+    "gold": "10",
+    "final": "--\n\n### Step 3: Calculate the Number of Pods in a $1 Box\n\nSince the special box costs $12 for 120 pods, a $1 box would contain:\n$$\n\\frac{120}{12} = 10 \\text{ pods}\n$$\n\n---\n\n### Step 4: Determine the Number of Cycles\n\nEach cycle uses 1 pod, so the number of cycles you can run with 10 pods is:\n$$\n\\boxed{10}\n$$\n\n---\n\n### Final Answer\n\n$$\n\\boxed{10}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "62d8edd7e8a69981",
+    "gold": "20",
+    "final": "ice a day, which is \\(4 \\times 2 = 8\\) pounds per day.\n2. For five pigs, the total feed consumed per day is \\(8 \\times 5 = 40\\) pounds.\n3. Over a week (7 days), the total feed consumed is \\(40 \\times 7 = 280\\) pounds.\n4. Dexter ordered 300 pounds of feed, so the remaining feed is \\(300 - 280 = 20\\) pounds.\n\nThus, the final answer is \\(\\boxed{20}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "64d6fb0518df3e98",
+    "gold": "168",
+    "final": "\\% \\text{ of } 420 = 0.6 \\times 420 = 252\n   \\]\n\n4. Subtract The finders' share from the remaining shells to find Gogetters' share:\n   \\[\n   420 - 252 = 168\n   \\]\n\nVerification:\n- Alphas: 280 shells\n- The finders: 252 shells\n- Gogetters: 168 shells\n- Total: \\(280 + 252 + 168 = 700\\)\n\nThus, the number of shells found by Gogetters is \\(\\boxed{168}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "65f40142b26fc4cf",
+    "gold": "98",
+    "final": " = 61 guests. In the afternoon, twice as many people checked in as those who opted for a late checkout. Since 15 guests checked out late, twice that number is 30, so 30 guests checked in in the afternoon. Adding these to the remaining guests, we get 61 + 30 = 91. After dinner, 7 more guests checked in, bringing the total to 91 + 7 = 98.\n\n\\boxed{98}",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "669eff4afe3c62f5",
+    "gold": "5600",
+    "final": "cookies on Tuesday.\n\nThe total number of cookies Sue ate is \\(20 + 26 = 46\\). The total number of cookies her sister ate is \\(5 + 13 = 18\\).\n\nEach cookie has 200 calories. The difference in calories consumed by Sue and her sister is calculated as follows:\n\\[\n(46 - 18) \\times 200 = 28 \\times 200 = 5600\n\\]\n\nThus, the final answer is \\(\\boxed{5600}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "69605bd1d414f3c5",
+    "gold": "826",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "69dadbdc924c1963",
+    "gold": "90",
+    "final": "h change color, which means \\( \\frac{1}{3} \\times \\frac{N}{5} = \\frac{N}{15} \\) jellyfish change color.\n3. The problem states that 6 jellyfish changed color, so we set up the equation \\( \\frac{N}{15} = 6 \\).\n\nSolving for \\( N \\):\n\\[\n\\frac{N}{15} = 6 \\implies N = 6 \\times 15 = 90\n\\]\n\nThus, the total number of jellyfish in the tank is \\(\\boxed{90}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "6b935ecc53d49283",
+    "gold": "50",
+    "final": "xt{ dumplings}\n\\]\n\nCalculating the total number of dumplings eaten by the males:\n\\[\n8 \\text{ males} \\times 4 \\text{ dumplings each} = 32 \\text{ dumplings}\n\\]\n\nAdding these amounts together gives the total number of dumplings cooked:\n\\[\n18 \\text{ dumplings} + 32 \\text{ dumplings} = 50 \\text{ dumplings}\n\\]\n\nThus, the final answer is:\n\\[\n\\boxed{50}\n\\]",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "6dd789d9c7af55c4",
+    "gold": "160",
+    "final": "et\n\nSo, each piece of fabric is **8 feet by 10 feet**.\n\n---\n\n### Step 2: Calculate the area of one piece of fabric\n\n$$\n\\text{Area of one piece} = 8 \\times 10 = 80 \\text{ square feet}\n$$\n\n---\n\n### Step 3: Calculate the total area for two pieces\n\n$$\n\\text{Total area} = 2 \\times 80 = 160 \\text{ square feet}\n$$\n\n---\n\n### Final Answer\n\n$$\n\\boxed{160}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "707a3bae2c60578a",
+    "gold": "2",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "70c886930fef0d49",
+    "gold": "10",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "7274b686a7314d54",
+    "gold": "17",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "740b3c6ef2678bf8",
+    "gold": "3160",
+    "final": "{ square feet}\n$$\n\n---\n\n### 2. **Total Area of All Four Bedrooms**\n\n$$\n\\text{Total area of 4 bedrooms} = 4 \\times 240 = 960 \\text{ square feet}\n$$\n\n---\n\n### 3. **Area of the Living Room**\n\nThe living room is 5 times the area of one bedroom:\n$$\n\\text{Area of living room} = 5 \\times 240 = 1200 \\text{ square feet}\n$$\n\n---\n\n### 4. **Area of the Rest of",
+    "thinking_status": "ok",
+    "finish": "length"
+  },
+  {
+    "review_id": "74342a1131d7557e",
+    "gold": "35",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "74649f3c57fe6a99",
+    "gold": "5",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "753f1a84b6ab1e46",
+    "gold": "7",
+    "final": ", and double the number of matches he played on Monday on Saturday. Since he played 2 matches on Monday, he played \\(2 \\times 2 = 4\\) matches on Saturday. \n\nAdding these together, the total number of matches Joey played in one week is:\n\\[\n2 \\text{ (Monday)} + 1 \\text{ (Friday)} + 4 \\text{ (Saturday)} = 7\n\\]\n\nThus, the final answer is \\(\\boxed{7}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "772a39e54507e43e",
+    "gold": "110",
+    "final": "mes 15 = 30 \\text{ dollars}\n$$\n\n**Step 2:** Check if the bonus applies:\n- She teaches 2 classes, which is **not more than 3**, so no additional bonus.\n\n**Total for Wednesday:**\n$$\n30 \\text{ dollars}\n$$\n\n---\n\n### **Total Earnings:**\n$$\n80 \\text{ (Monday)} + 30 \\text{ (Wednesday)} = 110 \\text{ dollars}\n$$\n\n---\n\n### **Final Answer:**\n$$\n\\boxed{110}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "779296e1a556eed4",
+    "gold": "10",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "77ecfbac29dd0ac9",
+    "gold": "60",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "780c7a76d0ab4ae5",
+    "gold": "2",
+    "final": "e sum of all four colors:\n\n$$\nR + R + R + Y = 12\n$$\n\n$$\n3R + Y = 12\n$$\n\nWe are also told that **half the mural is yellow**, so:\n\n$$\nY = \\frac{12}{2} = 6\n$$\n\n---\n\n### Step 3: Solve for $ R $\n\nSubstitute $ Y = 6 $ into the equation:\n\n$$\n3R + 6 = 12\n$$\n\n$$\n3R = 6\n$$\n\n$$\nR = 2\n$$\n\n---\n\n### Final Answer\n\nThe amount of red paint used is:\n\n$$\n\\boxed{2}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "7b520faedf9314bb",
+    "gold": "24",
+    "final": " Setup**\nOn **Friday morning**, Sue's neighbors placed **18 pink plastic flamingos** on her front yard.\n\nSo, at the start:\n- **Pink flamingos**: 18\n- **White flamingos**: 0\n\n---\n\n### **Step 2: Saturday Morning**\nOn **Saturday morning**, the neighbors took **one third** of the flamingos back. Since there were 18 pink flamingos, one third of that is:",
+    "thinking_status": "ok",
+    "finish": "length"
+  },
+  {
+    "review_id": "7b5c73e2a7d35f28",
+    "gold": "129200",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "7b84412023a09a0e",
+    "gold": "58",
+    "final": "0\\) potted plants. She plans to give 1 potted plant from each ledge to friends and family, which totals \\(40\\) plants. \n\nFirst, we calculate the remaining plants after giving away 40:\n\\[\n80 - 40 = 40\n\\]\n\nThen, we add the 18 new potted plants she received:\n\\[\n40 + 18 = 58\n\\]\n\nThus, the number of potted plants Mary will remain with is \\(\\boxed{58}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "7bb90e49c496c7c6",
+    "gold": "240",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "7bc8caa40106065e",
+    "gold": "205",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "7d8cc143d5678fb8",
+    "gold": "3160",
+    "final": "s 12 = 240\\) square feet. For four bedrooms, the total area is \\(240 \\times 4 = 960\\) square feet. The living room is 5 times the area of one bedroom, which is \\(240 \\times 5 = 1200\\) square feet. The remaining area of the house is given as 1000 square feet. Adding these areas together: \\(960 + 1200 + 1000 = 3160\\) square feet. \n\n\\[\n\\boxed{3160}\n\\]",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "7e5c933357313bcb",
+    "gold": "7",
+    "final": " double the number of matches he played on Monday on Saturday. Since he played 2 matches on Monday, he played \\(2 \\times 2 = 4\\) matches on Saturday. \n\nAdding these together, we get:\n- Matches on Monday: 2\n- Matches on Friday: 1\n- Matches on Saturday: 4\n\nTotal matches played in the week:\n\\[ 2 + 1 + 4 = 7 \\]\n\nThus, the final answer is \\(\\boxed{7}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "7eabe8d2d490b26b",
+    "gold": "5",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "7f0a9c2d821cd2ba",
+    "gold": "20",
+    "final": " the total consumption per day is \\(8 \\times 5 = 40\\) pounds.\n\nNext, we calculate the total consumption over a week (7 days):\n\n3. Total consumption in a week is \\(40 \\times 7 = 280\\) pounds.\n\nFinally, we subtract the total consumption from the initial order:\n\n4. Remaining feed is \\(300 - 280 = 20\\) pounds.\n\nThus, the final answer is \\(\\boxed{20}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "7ffa1f97b699a7b5",
+    "gold": "50",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "8012023d1611611b",
+    "gold": "175",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "801fd9626fe85454",
+    "gold": "90",
+    "final": "ly the 20% discount:\n   \\[\n   20\\% \\text{ of } 75 = 0.20 \\times 75 = 15\n   \\]\n   \\[\n   75 - 15 = 60\n   \\]\n\n3. Calculate the cost for nail art on 10 fingers:\n   \\[\n   10 \\text{ fingers} \\times 3 \\text{ dollars per nail} = 30\n   \\]\n\n4. Add the discounted total and the nail art cost:\n   \\[\n   60 + 30 = 90\n   \\]\n\nThe final total cost is \\(\\boxed{90}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "80581bfa4794b6fe",
+    "gold": "255",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "80dcf89f043f0ff9",
+    "gold": "1000",
+    "final": "le had voted. The remaining people at 12:00 are 3000, so the number of people who voted between 12:00 and 16:00 is:\n\n\\[\n\\frac{2}{3} \\times 3000 = 2000\n\\]\n\nThe number of people who had not voted by 16:00 is the remaining people after 2000 had voted:\n\n\\[\n3000 - 2000 = 1000\n\\]\n\nThus, the number of people who had not voted by 16:00 is \\(\\boxed{1000}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "812305aeb4a681d1",
+    "gold": "20",
+    "final": "ll walk is:\n\n$$\n4 \\text{ days/week} \\times 3 \\text{ weeks} = 12 \\text{ days}\n$$\n\n---\n\n### Step 2: Calculate the minutes per day\n\nNow, we divide the total time (240 minutes) by the number of days (12 days) to find the minutes per day:\n\n$$\n\\frac{240 \\text{ minutes}}{12 \\text{ days}} = 20 \\text{ minutes/day}\n$$\n\n---\n\n### Final Answer\n\n$$\n\\boxed{20}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "825c75b2fbbfbda3",
+    "gold": "10",
+    "final": "text{ dollars per pod}\n     \\]\n4. **Purchasing with $1**: \n   - Number of pods that can be purchased with $1: \n     \\[\n     \\frac{1}{0.10} = 10 \\text{ pods}\n     \\]\n   - Since each cycle uses 1 pod, the number of cycles is equal to the number of pods.\n\nThus, the number of dishwashing cycles that can be run with the new box for $1 is \\(\\boxed{10}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "82ae7c1904b48929",
+    "gold": "12",
+    "final": ", and the remaining students are good at both math and English. \n\nFirst, we calculate the number of students who are good at both math and English:\n\\[\n20 - 5 - 8 = 7\n\\]\n\nNext, we add the number of students who are good at math only and those who are good at both:\n\\[\n5 + 7 = 12\n\\]\n\nThus, the number of students who are good at math is \\(\\boxed{12}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "83254121baa20040",
+    "gold": "23",
+    "final": "= 20 \\Rightarrow M = 22\n$$\n\n---\n\n### Step 4: Solve for Jean's Age\n\n$$\nJe = M + 2 = 22 + 2 = 24\n$$\n\n---\n\n### Step 5: Verify the Solution\n\n- Two years ago, Mark was $ 22 - 2 = 20 $\n- Half of Jan's age is $ \\frac{30}{2} = 15 $\n- 15 + 5 = 20, which matches Mark's age two years ago.\n\nAll conditions are satisfied.\n\n---\n\n### Final Answer\n\n$$\n\\boxed{24}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "847b2cfa92173a7b",
+    "gold": "54",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "87cf18f954babf79",
+    "gold": "168",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "882991ad03d8912e",
+    "gold": "110",
+    "final": "n while twice that number (100 people) board the train. At the third stop, 80 more people descend.\n\n1. Initial number of people: 120\n2. After the first stop: \\(120 + 20 = 140\\)\n3. After the second stop: \\(140 - 50 + 100 = 190\\)\n4. After the third stop: \\(190 - 80 = 110\\)\n\nThe total number of people on the train at the final stop is \\(\\boxed{110}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "88f4a55eec866631",
+    "gold": "5",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "8909b52b8ba91793",
+    "gold": "138",
+    "final": " A third of these lines are his, so he needs to memorize \\(108 \\div 3 = 36\\) lines. The second scene has six more lines than the solo song, which is \\(54 + 6 = 60\\) lines. Four-fifths of these lines are his, so he needs to memorize \\(60 \\times \\frac{4}{5} = 48\\) lines. Adding all the lines together, we get \\(54 + 36 + 48 = 138\\).\n\n\\[\n\\boxed{138}\n\\]",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "89691803d6daa84f",
+    "gold": "31",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "899a3c094d537a2f",
+    "gold": "10",
+    "final": "ew rope. The cost for 26 meters is:\n$$\n26 \\text{ meters} \\times 1.50 \\text{ dollars/meter} = 39 \\text{ dollars}\n$$\n\nSubtracting this cost from the total profit gives the remaining money:\n$$\n40 \\text{ dollars} - 39 \\text{ dollars} = 1 \\text{ dollar}\n$$\n\nThus, the amount of money Sarah will have left over after buying the new rope is:\n$$\n\\boxed{1}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "8b99d891d79b202d",
+    "gold": "64800",
+    "final": "4 \\text{ hours/day} \\times 30 \\text{ days} = 43,200\\) widgets, earning \\(43,200 \\times 6 = 259,200\\) dollars. The WidgetMaster 9000 produces \\(45 \\text{ widgets/hour} \\times 24 \\text{ hours/day} \\times 30 \\text{ days} = 32,400\\) widgets, earning \\(32,400 \\times 6 = 194,400\\) dollars. The difference is \\(259,200 - 194,400 = 64,800\\). \n\n\\boxed{64800}",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "8d71b29679aa03bc",
+    "gold": "2",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "8fd0e8a0808265c7",
+    "gold": "324",
+    "final": "total - 10 included = 10 extra\n\nSumming the extra items: 2 mirrors + 1 chandelier + 10 pictures = 13 additional items.\n\nEach additional item costs $15.00, so the cost for additional items is:\n\\[ 13 \\times 15 = 195 \\]\n\nAdding the base installation cost to the additional cost:\n\\[ 129 + 195 = 324 \\]\n\nThus, the total cost for Angela is \\(\\boxed{324}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "8feeaef150e39d8b",
+    "gold": "145",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "8ff99c53a40281d8",
+    "gold": "480",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "900b790f3468233b",
+    "gold": "4",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "9158323705924db7",
+    "gold": "240",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "9215ed7b70efd2b3",
+    "gold": "5600",
+    "final": "he total number of cookies Sue ate is \\(20 + 26 = 46\\). The total number of cookies her sister ate is \\(5 + 13 = 18\\). \n\nEach cookie has 200 calories, so Sue's total calories are \\(46 \\times 200 = 9200\\) and her sister's total calories are \\(18 \\times 200 = 3600\\). \n\nThe difference in calories consumed is \\(9200 - 3600 = 5600\\).\n\n\\[\n\\boxed{5600}\n\\]",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "9576c7140dd31c91",
+    "gold": "31",
+    "final": "alue: \\(750 \\times 1 = 750\\) cents\n   - Convert to dollars: \\(750 \\div 100 = 7.50\\) dollars\n\nSumming up all the values:\n- Quarters: \\(8\\) dollars\n- Dimes: \\(9.50\\) dollars\n- Nickels: \\(6\\) dollars\n- Pennies: \\(7.50\\) dollars\n\nTotal amount:\n\\[\n8 + 9.50 + 6 + 7.50 = 31.00 \\text{ dollars}\n\\]\n\nThus, the total dollar amount in the jar is \\(\\boxed{31}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "9577445a04735ac0",
+    "gold": "2",
+    "final": "2\\) dollars.\n\n2. **Total cost for bunches**: \n   - Each bunch costs $3.00, so 10 bunches cost \\(10 \\times 3.00 = 30\\) dollars.\n\n3. **Savings calculation**: \n   - The difference between the individual cost and the bunch cost is \\(32 - 30 = 2\\) dollars.\n\nThus, Jenny saved \\(\\boxed{2}\\) dollars by buying the bananas in bunches instead of individually.",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "9667b13b8530486d",
+    "gold": "17",
+    "final": " oranges are good.\n\n1. Calculate the number of unripe oranges:\n   \\[\n   20\\% \\text{ of } 25 = 0.20 \\times 25 = 5\n   \\]\n\n2. Subtract the bad, unripe, and sour oranges from the total to find the number of good oranges:\n   \\[\n   25 - 1 \\text{ (bad)} - 5 \\text{ (unripe)} - 2 \\text{ (sour)} = 17\n   \\]\n\nThus, the number of good oranges is \\(\\boxed{17}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "96e210e84575f97a",
+    "gold": "240",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "970f412d919d5479",
+    "gold": "2",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "990f4b1be034f20e",
+    "gold": "20",
+    "final": "text{Total feed consumed in a week} = 40 \\text{ pounds/day} \\times 7 \\text{ days} = 280 \\text{ pounds}\n$$\n\n---\n\n### Step 3: Calculate remaining feed\n\nDexter ordered **300 pounds** of feed. After consuming 280 pounds in a week, the remaining feed is:\n\n$$\n300 \\text{ pounds} - 280 \\text{ pounds} = \\boxed{20}\n$$\n\n---\n\n### Final Answer\n\n$$\n\\boxed{20}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "9b50291a235eb9f5",
+    "gold": "540",
+    "final": "s 6 = 60$\n- Apple pie: $11 \\times 15 = 165$\n- **Total for Saturday:** $60 + 165 = 225$\n\n**Sunday:**\n- Gingerbread: $15 \\times 6 = 90$\n- Apple pie: $15 \\times 15 = 225$\n- **Total for Sunday:** $90 + 225 = 315$\n\n---\n\n### **Step 3: Total earnings for both days**\n\n$$\n\\text{Total} = 225 + 315 = \\boxed{540}\n$$\n\n---\n\n### **Final Answer**\n$$\n\\boxed{540}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "9c7ae0565694a4c3",
+    "gold": "95",
+    "final": "is 90 seconds. Adding the cutting time (5 seconds) gives 90 + 5 = 95 seconds per potato. \n\nFor 60 potatoes, the total time in seconds is:\n\\[ 60 \\times 95 = 5700 \\text{ seconds} \\]\n\nConverting 5700 seconds back to minutes:\n\\[ 5700 \\div 60 = 95 \\text{ minutes} \\]\n\nThus, the total time Billy will take to finish prepping the potatoes is \\(\\boxed{95}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "9c82705cd78faf05",
+    "gold": "240",
+    "final": "each day, and he helps 2 people per hour. The total number of people he helps per day is:\n\\[\n3 \\text{ hours/day} \\times 2 \\text{ people/hour} = 6 \\text{ people/day}\n\\]\n\nOver 40 working days, the total number of people Billy helps is:\n\\[\n40 \\text{ days} \\times 6 \\text{ people/day} = 240 \\text{ people}\n\\]\n\nThus, the final answer is:\n\\[\n\\boxed{240}\n\\]",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "9cb639f28ceaa82f",
+    "gold": "5",
+    "final": "Marty starts with 100 cm of ribbon and cuts it into 4 equal parts. Each part is calculated by dividing 100 by 4, resulting in 25 cm per part. Next, each of these 25 cm parts is divided into 5 equal parts. To find the length of each final part, we divide 25 by 5, resulting in 5 cm. Therefore, the length of each final cut is \\boxed{5}.",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "9fd8b518b9b7791c",
+    "gold": "1800",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "a039fac5d4969691",
+    "gold": "540",
+    "final": "1 \\times 15 = 165\\)\n  - Total earnings: \\(60 + 165 = 225\\)\n- **Sunday:**\n  - Gingerbread earnings: \\(15 \\times 6 = 90\\)\n  - Apple pie earnings: \\(15 \\times 15 = 225\\)\n  - Total earnings: \\(90 + 225 = 315\\)\n\nSumming the earnings for both days:\n- Total earnings: \\(225 + 315 = 540\\)\n\nThus, the total earnings for Sunny over two days is \\(\\boxed{540}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "a12554d6f5bc9d41",
+    "gold": "17",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "a1edc486f467994c",
+    "gold": "6",
+    "final": "s:\n\n$$\n400 \\text{ miles} \\times 362.5 \\text{ rotations/mile} = 145,000 \\text{ rotations per month}\n$$\n\n---\n\n### **Step 3: Total Rotations Before Replacement**\n\nEach tire can undergo **10,440,000 rotations** before needing replacement.\n\n---\n\n### **Step 4: Number of Months Until Replacement**\n\nTo find how many months it takes for the tires to reach 1",
+    "thinking_status": "ok",
+    "finish": "length"
+  },
+  {
+    "review_id": "a3167dfdf85ee85a",
+    "gold": "17",
+    "final": " = 5\n   \\]\n2. **Sour Oranges**: There are 2 sour oranges.\n3. **Bad Oranges**: There is 1 bad orange.\n\nAdding the number of unripe, sour, and bad oranges:\n\\[\n5 \\text{ (unripe)} + 2 \\text{ (sour)} + 1 \\text{ (bad)} = 8\n\\]\n\nSubtracting the number of non-good oranges from the total:\n\\[\n25 - 8 = 17\n\\]\n\nThus, the number of good oranges is \\(\\boxed{17}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "a395bd0d4152f451",
+    "gold": "15",
+    "final": "ac{100 \\text{ yards}}{20 \\text{ yards/minute}} = 5 $ minutes  \n- **Time in water** = $ \\frac{100 \\text{ yards}}{10 \\text{ yards/minute}} = 10 $ minutes\n\n---\n\n### **Step 4: Total Time**\n\nAdd the time spent on land and in water:\n\n$$\n\\text{Total time} = 5 \\text{ minutes} + 10 \\text{ minutes} = \\boxed{15}\n$$\n\n---\n\n### **Final Answer**\n\n$$\n\\boxed{15}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "a41057de106e23b4",
+    "gold": "2",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "a60a425f92c4b3b4",
+    "gold": "2",
+    "final": "Janet needs to save $20,000 for the down payment. Her weekly earnings are $1,000 (40 hours * $25/hour). To find the number of weeks required, divide the total needed by her weekly earnings: $20,000 / $1,000 = 20 weeks. \n\n\\boxed{20}",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "a8ed62d9464893c6",
+    "gold": "2",
+    "final": " \\( \\frac{12}{2} = 6 \\) pints.\n3. The total paint used is the sum of red, white, purple, and yellow paint:\n   \\[\n   R + R + R + 6 = 12\n   \\]\n4. Simplifying the equation:\n   \\[\n   3R + 6 = 12\n   \\]\n5. Solving for \\( R \\):\n   \\[\n   3R = 12 - 6\n   \\]\n   \\[\n   3R = 6\n   \\]\n   \\[\n   R = 2\n   \\]\n\nThus, the amount of red paint used is \\(\\boxed{2}\\) pints.",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "a93e8e2322e4e8c5",
+    "gold": "6",
+    "final": "tal cost if David buys the bracelet and Dasha buys tickets**: $30 (bracelet) + $36 (tickets) = $66.\n4. **Total cost if they both buy tickets**: Each ride costs $4, so for 9 rides, $9 \\times 4 = $36.\n5. **Difference in cost**: $66 (total cost with bracelet and tickets) - $36 (total cost with tickets) = $30.\n\nThus, David saves \\(\\boxed{30}\\) dollars.",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "a94eeccd9b87d3fb",
+    "gold": "110",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "a9592d7f772e1854",
+    "gold": "205",
+    "final": "s**:\n\n$$\n\\text{Labor Cost} = 35 \\times 2.25 = 78.75\n$$\n\n---\n\n### 3. **Parts Cost**\nThe job also used **$60 in parts**.\n\n---\n\n### 4. **Total Charge**\nNow, we sum up all the components:\n\n$$\n\\text{Total Charge} = \\text{Visit Fee} + \\text{Labor Cost} + \\text{Parts Cost}\n$$\n\n$$\n\\text{Total Charge} = 40 + 78.75 + 60 = 178.75\n$$\n\n---\n\n### Final Answer\n\n$$",
+    "thinking_status": "ok",
+    "finish": "length"
+  },
+  {
+    "review_id": "a985db0bfcb8dbcf",
+    "gold": "205",
+    "final": "labor, plus parts. For a job that took 2.25 hours and used $60 in parts, the labor cost is calculated by rounding up 2.25 hours to the next whole hour, which is 3 hours. The labor cost is then $35 per hour for 3 hours, resulting in $105. Adding the visit fee of $40 and the parts cost of $60, the total charge is $40 + $105 + $60 = $205.\n\n\\boxed{205}",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "a9c87db876e8588d",
+    "gold": "240",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "aaacc71d40350328",
+    "gold": "15400",
+    "final": " \\times 3 = 4,500 \\text{ dollars}\n   \\]\n   The hotel is 20% more expensive, so the total cost for the hotel is:\n   \\[\n   4,500 \\times 1.20 = 5,400 \\text{ dollars}\n   \\]\n\n3. **Total Cost**: Adding the costs of the plane tickets and the hotel stay:\n   \\[\n   10,000 + 5,400 = 15,400 \\text{ dollars}\n   \\]\n\nThe final numerical value is \\(\\boxed{15400}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "ac1b650a81893c89",
+    "gold": "1000",
+    "final": "\n\nAt 8:00 AM, **5000 people** were lined up to vote.\n\n---\n\n### Step 2: Number of Voters by Midday (12:00 PM)\n\nBy midday, **2/5** of the people had voted.\n\n$$\n\\text{Voters by midday} = \\frac{2}{5} \\times 5000 = 2000\n$$\n\n$$\n\\text{Remaining people not voted by midday} = 5000 - 2000 = 3000\n$$\n\n---\n\n### Step 3: Number of Voters by 16:00 (4:00 PM)\n\nBy 16",
+    "thinking_status": "ok",
+    "finish": "length"
+  },
+  {
+    "review_id": "ae3992a7330c024e",
+    "gold": "300",
+    "final": "he amount delivered by the broken-down trucks:\n\\[ 5 \\text{ trucks} \\times 20 \\text{ tons per truck} = 100 \\text{ tons} \\]\n\nSubtracting the broken-down trucks' contribution from the total:\n\\[ 400 \\text{ tons} - 100 \\text{ tons} = 300 \\text{ tons} \\]\n\nThus, the total number of tons of fertiliser that reached the farmers that day is:\n\\[\n\\boxed{300}\n\\]",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "ae924954aa75f50e",
+    "gold": "19",
+    "final": "Amy initially has two eyeshadow palettes, each with four colors, totaling \\(2 \\times 4 = 8\\) colors. She also has three makeup sets, each with six eyeshadow colors, totaling \\(3 \\times 6 = 18\\) colors. The sister steals one palette, leaving Amy with one",
+    "thinking_status": "ok",
+    "finish": "length"
+  },
+  {
+    "review_id": "b17c62c0f3bca8e2",
+    "gold": "95",
+    "final": "time for 60 potatoes: \\(60 \\times 5 = 300\\) seconds\n   - Convert seconds to minutes: \\(300 \\div 60 = 5\\) minutes\n\n3. **Total Time Calculation**:\n   - Convert peeling time to minutes: 90 minutes\n   - Add peeling and cutting times: \\(90 + 5 = 95\\) minutes\n\nThus, the total time Billy will take to finish prepping the potatoes is \\(\\boxed{95}\\) minutes.",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "b55736581812c9c3",
+    "gold": "3",
+    "final": "s/week} \\]\n\nMike can write 1 page every 6 minutes. Therefore, the total time he spends writing in a week is:\n\\[ 30 \\text{ pages/week} \\times 6 \\text{ minutes/page} = 180 \\text{ minutes/week} \\]\n\nConverting minutes to hours:\n\\[ 180 \\text{ minutes/week} \\div 60 \\text{ minutes/hour} = 3 \\text{ hours/week} \\]\n\nThus, the final answer is:\n\\[\n\\boxed{3}\n\\]",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "b647d41d9dacf276",
+    "gold": "60",
+    "final": "sum of the students in all three groups:\n\\[\nx + x + (x - 10) = 200\n\\]\n\nSimplifying the equation:\n\\[\n3x - 10 = 200\n\\]\n\nAdding 10 to both sides:\n\\[\n3x = 210\n\\]\n\nDividing both sides by 3:\n\\[\nx = 70\n\\]\n\nThe number of students in the smallest group is \\( x - 10 \\):\n\\[\n70 - 10 = 60\n\\]\n\nThus, the number of students in the smallest group is \\(\\boxed{60}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "b64d9d5ac50b780a",
+    "gold": "45",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "b64eae8c366913b1",
+    "gold": "12",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "b822ba94c8a4403b",
+    "gold": "240",
+    "final": "ricity bill is $100. To find out how much each roommate pays per year, we first calculate the monthly share:\n\n$$\n\\frac{100}{5} = 20 \\text{ dollars per month}\n$$\n\nNext, we convert this monthly amount to an annual amount by multiplying by 12:\n\n$$\n20 \\times 12 = 240 \\text{ dollars per year}\n$$\n\nThus, each roommate will pay per year:\n\n$$\n\\boxed{240}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "b83a93814386972d",
+    "gold": "72",
+    "final": "hour, we need to follow these steps:\n\n1. Convert kilobits per second to megabits per second:\n   \\[\n   20 \\, \\text{kb/s} \\div 1000 = 0.02 \\, \\text{Mb/s}\n   \\]\n\n2. Convert seconds to hours:\n   \\[\n   0.02 \\, \\text{Mb/s} \\times 3600 \\, \\text{s/h} = 72 \\, \\text{Mb/h}\n   \\]\n\nThus, Ashley's internet connection speed in megabits per hour is \\(\\boxed{72}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "b8d9c62a17e65c51",
+    "gold": "2",
+    "final": "urs per week**, so her weekly earnings are:\n\n$$\n40 \\text{ hours} \\times \\$25 = \\$1,000 \\text{ per week}\n$$\n\n---\n\n### **Step 3: Determine the Number of Weeks Needed**\n\nJanet needs to save **\\$2,000**. If she saves **\\$1,000 per week**, then:\n\n$$\n\\frac{\\$2,000}{\\$1,000 \\text{ per week}} = 2 \\text{ weeks}\n$$\n\n---\n\n### **Final Answer**\n\n$$\n\\boxed{2}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "ba63496c89cb4a8b",
+    "gold": "12",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "bb40daaa0ef25ddb",
+    "gold": "145",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "bc91050cd636c582",
+    "gold": "6",
+    "final": "otations per year:**\n   - Rotations per month: \\( 145,000 \\).\n   - Total rotations per year: \\( 145,000 \\times 12 = 1,740,000 \\).\n\n3. **Years before replacement:**\n   - Total allowable rotations per tire: \\( 10,440,000 \\).\n   - Number of years: \\( \\frac{10,440,000}{1,740,000} = 60 \\).\n\nThus, the tires need to be replaced after \\(\\boxed{60}\\) years.",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "bca2beb7da2f6d35",
+    "gold": "23",
+    "final": "s age is 15. Therefore, the equation is:\n\n\\[\nM - 2 = 15 + 5\n\\]\n\nSolving for \\( M \\):\n\n\\[\nM - 2 = 20\n\\]\n\\[\nM = 22\n\\]\n\nThus, Mark is currently 22 years old, and Jean is two years older:\n\n\\[\n22 + 2 = 24\n\\]\n\nVerification:\n- Two years ago, Mark was 20, which is 5 years older than half Jan's age (15). This checks out.\n\nThe final answer is \\(\\boxed{24}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "bccc136bba4274c7",
+    "gold": "90",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "bdccf984e62f3fd0",
+    "gold": "12",
+    "final": " English only from the total number of students:\n\\[\n20 - 5 - 8 = 7\n\\]\nThis means 7 students are good at both math and English.\n\nNext, we add the number of students who are good at math only and those who are good at both to find the total number of students good at math:\n\\[\n5 + 7 = 12\n\\]\n\nThus, the number of students good at math is \\(\\boxed{12}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "be347dcbb18de36d",
+    "gold": "2",
+    "final": "  $$\n  \\text{Test tubes} + \\text{Beakers} + \\text{Petri dishes} = 8 + (7 - x) + 16\n  $$\n  $$\n  = 8 + 7 + 16 - x = 31 - x\n  $$\n\nWe are told the total number of items placed on the bench is 29:\n\n$$\n31 - x = 29\n$$\n\nSolving for $ x $:\n\n$$\nx = 31 - 29 = 2\n$$\n\n---\n\n### **Conclusion:**\n\nIgor lost **2 beakers** on the way to the lab bench.\n\n$$\n\\boxed{2}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "bed6558c74dd950c",
+    "gold": "138",
+    "final": " A third of these lines are his, so he needs to memorize \\(108 \\div 3 = 36\\) lines. The second scene has six more lines than the solo song, which is \\(54 + 6 = 60\\) lines. Four-fifths of these lines are his, so he needs to memorize \\(60 \\times \\frac{4}{5} = 48\\) lines. Adding all the lines together, we get \\(54 + 36 + 48 = 138\\).\n\n\\[\n\\boxed{138}\n\\]",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "bf9301d4fdc4824a",
+    "gold": "160",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "c05bb442e690c31b",
+    "gold": "1800",
+    "final": "ns:\n\n- The **first two** phones are **full price**.\n- The **next two** phones are **half price**.\n\nSo, the pricing is:\n\n- First 2 phones: $600 each\n- Next 2 phones: $600 \u00f7 2 = $300 each\n\n---\n\n### Step 3: Calculate the total cost\n\n$$\n\\text{Total cost} = (2 \\times 600) + (2 \\times 300) = 1200 + 600 = 1800\n$$\n\n---\n\n### Final Answer\n\n$$\n\\boxed{1800}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "c149cca865bb0cd0",
+    "gold": "40",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "c180d432ba9e7590",
+    "gold": "110",
+    "final": "text{ hours} = 4 \\text{ hours}\\)\n- Earnings for hours: \\(4 \\text{ hours} \\times 15 \\text{ dollars/hour} = 60 \\text{ dollars}\\)\n- No additional $5 per day since she teaches fewer than 3 classes: \\(60 \\text{ dollars}\\)\n\nAdding the earnings from both days:\n- Total earnings: \\(305 + 60 = 365 \\text{ dollars}\\)\n\nThus, the final answer is \\(\\boxed{365}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "c28b67b45a4dc6ea",
+    "gold": "240",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "c469b85a5f3256b0",
+    "gold": "5",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "c6ef4afbf6ce878d",
+    "gold": "6",
+    "final": "o she pays for the 9 rides individually, which costs $36. \n\nThe total cost if they buy tickets individually is $36. If David buys the bracelet, the total cost is $30 (for the bracelet) + $36 (for Dasha's tickets) = $66. The difference between these two scenarios is $66 - 36 = 30$ dollars.\n\nTherefore, the amount of money David saves is $\\boxed{30}$.",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "c794f9dd50ea53a0",
+    "gold": "12",
+    "final": "r is \\(5 \\times 6 = 30\\) bales. The total number of bales picked up by the truck is \\(3 \\times 6 = 18\\) bales. The net change in the number of bales in the field is the difference between the bales baled and the bales picked up, which is \\(30 - 18 = 12\\) bales. Therefore, the number of bales left in the field after the 6-hour day is \\(\\boxed{12}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "c944d1bb653a7e36",
+    "gold": "10",
+    "final": "dding these stamps, the total number of already-stamped letters becomes 30. Let \\( x \\) be the initial number of already-stamped letters. \n\nThe equation representing this situation is:\n\\[\nx + 20 = 30\n\\]\n\nSolving for \\( x \\):\n\\[\nx = 30 - 20\n\\]\n\\[\nx = 10\n\\]\n\nThus, the number of letters in the already-stamped pile when Jennie began was \\(\\boxed{10}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "cb58668d4730e0ab",
+    "gold": "240",
+    "final": " = 0.2 \\times 50 = 10 \\text{ days off} \\]\n\\[ 50 - 10 = 40 \\text{ days worked} \\]\n\nBilly works 3 hours each day, and he helps 2 people per hour. The total number of people he helps is calculated as follows:\n\\[ 40 \\text{ days} \\times 3 \\text{ hours/day} \\times 2 \\text{ people/hour} = 240 \\text{ people} \\]\n\nThus, the final answer is:\n\\[\n\\boxed{240}\n\\]",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "cc552e78d94589f8",
+    "gold": "10",
+    "final": "eds to read 200 pages at a rate of 10 pages per day. To find the number of days required, we divide the total pages by the pages per day: \n\n$$\n\\frac{200 \\text{ pages}}{10 \\text{ pages/day}} = 20 \\text{ days}\n$$\n\nSince the deadline is 30 days, Mike will finish his reading 20 days before the deadline. Therefore, the final answer is:\n\n$$\n\\boxed{20}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "cd5e4fbc11bc5029",
+    "gold": "22",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "ce32f22f854c8f36",
+    "gold": "6277",
+    "final": " and women.\n\n1. **Total population**: 23,786\n2. **Number of men**: 8,417\n3. **Number of women**: 9,092\n\nFirst, we add the number of men and women:\n\\[\n8,417 + 9,092 = 17,509\n\\]\n\nNext, we subtract this sum from the total population to find the number of children:\n\\[\n23,786 - 17,509 = 6,277\n\\]\n\nThus, the number of children in Soda is \\(\\boxed{6277}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "cea7bac042072993",
+    "gold": "12",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "d0a19706ef0beda4",
+    "gold": "4",
+    "final": " 4 slices per day. Together, they consume \\(2 + 4 = 6\\) slices per day. The loaf of bread has 24 slices. To find out how many days the loaf will last, we divide the total number of slices by their combined daily consumption:\n\n\\[\n\\frac{24 \\text{ slices}}{6 \\text{ slices/day}} = 4 \\text{ days}\n\\]\n\nThus, the loaf of bread will last \\(\\boxed{4}\\) days.",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "d13b185ddba092a9",
+    "gold": "10",
+    "final": "0\n  $$\n- The number of **already-stamped letters** becomes:\n  $$\n  X + 20\n  $$\n  (because she added 20 new stamps to the already-stamped pile)\n\n---\n\n### Step 3: Use the Given Information\n\nWe are told that **now there are 30 letters in the pile of already-stamped letters**. So:\n$$\nX + 20 = 30\n$$\n\n---\n\n### Step 4: Solve for $ X $\n\n$$\nX = 30 - 20 = 10",
+    "thinking_status": "ok",
+    "finish": "length"
+  },
+  {
+    "review_id": "d1686fe305424c5a",
+    "gold": "98",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "d38604614a00b2ef",
+    "gold": "5",
+    "final": "gain per hour**: The net gain of snowballs per hour is the difference between the number made and the number melted: \\(20 - 8 = 12\\).\n\nTo find the time required to make 60 snowballs, we divide the total number of snowballs by the net gain per hour:\n\\[\n\\frac{60}{12} = 5\n\\]\n\nThus, the time it will take Jay to make 60 snowballs is \\(\\boxed{5}\\) hours.",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "d81d68a19be0be2e",
+    "gold": "1000",
+    "final": "\n$$\n400 + 200 = 600\n$$\n\n---\n\n### Step 2: Determine the total travel cost\n\nThe problem asks, \"How much does travel cost?\" This is interpreted as the total cost of the trip, which includes both the supplies and the tickets.\n\n$$\n\\text{Total travel cost} = \\text{Supplies} + \\text{Tickets} = 400 + 600 = 1000\n$$\n\n---\n\n### Final Answer\n\n$$\n\\boxed{1000}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "db45f95f6dbe2439",
+    "gold": "255",
+    "final": " months: $3 \\times 3 = 9$\n   - Total amount for one phone: $150 + 9 = 159$\n\n2. **Calculate the total amount for five phones:**\n   - $159 \\times 5 = 795$\n\n3. **Determine the monthly payment:**\n   - Total amount over three months: $795\n   - Monthly payment: $795 \\div 3 = 265$\n\nThus, the amount Shiela will pay each month for 3 months is $\\boxed{265}$.",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "dc55f338c2ccd45a",
+    "gold": "24",
+    "final": "ted white and returned. This left 12 pink flamingos and 6 white flamingos. On Sunday morning, they added another 18 pink flamingos. \n\nAt noon on Sunday, the number of pink flamingos is \\( 12 + 18 = 30 \\) and the number of white flamingos remains 6. The difference between the number of pink and white flamingos is \\( 30 - 6 = 24 \\).\n\n\\[\n\\boxed{24}\n\\]",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "dc5f4b71d5ce2616",
+    "gold": "54",
+    "final": "$$\n\n- On the remaining 4 days:  \n  The problem states \"four fewer cars on each of the remaining days,\" so:\n  $$\n  10 - 4 = 6 \\text{ cars/day}\n  $$\n  $$\n  4 \\text{ days} \\times 6 \\text{ cars/day} = 24 \\text{ cars}\n  $$\n\n---\n\n### Step 3: Add the totals\n\n$$\n30 \\text{ cars} + 24 \\text{ cars} = 54 \\text{ cars}\n$$\n\n---\n\n### Final Answer\n\n$$\n\\boxed{54}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "dcaa410f2578a781",
+    "gold": "90",
+    "final": " Total jellyfish: $ T = 90 $\n- Large jellyfish: $ \\frac{90}{5} = 18 $\n- Large jellyfish that change color: $ \\frac{18}{3} = 6 $\n- Small jellyfish: $ 90 - 18 = 72 $\n\nThis matches the given condition that **6 jellyfish changed color**, and all other jellyfish remain blue. Therefore, the solution is consistent.\n\n---\n\n### Final Answer\n\n$$\n\\boxed{90}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "de6993ade0ec9ceb",
+    "gold": "45",
+    "final": "p per minute, so to peel 90 shrimp, it will take \\( \\frac{90}{6} = 15 \\) minutes. She can saut\u00e9 30 shrimp in 10 minutes, so to saut\u00e9 90 shrimp, it will take \\( 3 \\times 10 = 30 \\) minutes. Since these tasks are sequential (she cannot do both at the same time), the total time is the sum of the two times: \\( 15 + 30 = 45 \\) minutes.\n\n\\[\n\\boxed{45}\n\\]",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "deb7a9c5fcf32cb3",
+    "gold": "12",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "df4f5978f501eec3",
+    "gold": "24",
+    "final": " flamingos and 6 white flamingos. On Sunday morning, they added another 18 pink flamingos. At noon on Sunday, the total number of pink flamingos was 30, and the total number of white flamingos remained 6. The difference between the number of pink and white flamingos is calculated as follows:\n\n$$\n30 - 6 = 24\n$$\n\nThus, the final answer is \\boxed{24}.",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "e28c490f07804019",
+    "gold": "1000",
+    "final": "rs later), 2/3 of the remaining people had voted. The remaining people at 12:00 were 3000, so the number of people who voted between 12:00 and 16:00 is:\n\n\\[\n\\frac{2}{3} \\times 3000 = 2000\n\\]\n\nTherefore, the number of people who had not voted by 16:00 is:\n\n\\[\n3000 - 2000 = 1000\n\\]\n\nThe number of people who had not voted by 16:00 is \\(\\boxed{1000}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "e2e55a69bb935fe7",
+    "gold": "2",
+    "final": "uys the bananas individually, the cost would be \\(40 \\times 0.80 = 32\\) dollars. \n\nAlternatively, buying the bananas in bunches costs \\(10 \\times 3.00 = 30\\) dollars. \n\nThe amount saved by buying the bananas in bunches instead of individually is the difference between the two costs: \\(32 - 30 = 2\\) dollars.\n\nThus, the final answer is \\(\\boxed{2}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "e3136951644a4a05",
+    "gold": "16",
+    "final": "64 eggs** and **2 trays**.\n- The **total capacity** of both trays is:  \n  $$\n  24 \\text{ eggs/tray} \\times 2 \\text{ trays} = 48 \\text{ eggs}\n  $$\n\n---\n\n### Step-by-Step Reasoning:\n\n1. **Total eggs available**: 64  \n2. **Total capacity of trays**: 48  \n3. **Eggs that can be placed on the trays**: 48  \n4. **Eggs that cannot be placed**:  \n   $$\n   64",
+    "thinking_status": "ok",
+    "finish": "length"
+  },
+  {
+    "review_id": "e3ba384c09e67ace",
+    "gold": "175",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "e47db23f51e43241",
+    "gold": "31",
+    "final": "5 \\text{ cents} = 600 \\text{ cents}\\)\n- Pennies: \\(750 \\text{ pennies} \\times 1 \\text{ cent} = 750 \\text{ cents}\\)\n\nAdding these values together:\n\\[\n800 + 950 + 600 + 750 = 3100 \\text{ cents}\n\\]\n\nConverting the total cents to dollars:\n\\[\n3100 \\text{ cents} \\div 100 = 31 \\text{ dollars}\n\\]\n\nThus, the total dollar amount in the jar is \\(\\boxed{31}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "e899fa91e7b03b42",
+    "gold": "40",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "e9581c2ece772fe2",
+    "gold": "70",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "e9f8c3418b2601da",
+    "gold": "4",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "eb2a3e9a96c7a9f6",
+    "gold": "15",
+    "final": "ds per minute}} = 5 \\text{ minutes}\n   \\]\n\n2. **Distance in water**:\n   \\[\n   \\frac{200 \\text{ yards}}{2} = 100 \\text{ yards}\n   \\]\n   Time taken to swim in water:\n   \\[\n   \\frac{100 \\text{ yards}}{10 \\text{ yards per minute}} = 10 \\text{ minutes}\n   \\]\n\nTotal time taken:\n\\[\n5 \\text{ minutes} + 10 \\text{ minutes} = 15 \\text{ minutes}\n\\]\n\n\\boxed{15}",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "ec30ef92f37be31c",
+    "gold": "81",
+    "final": "calls 3 families, resulting in \\(3 \\times 3 = 9\\) families.\n- **Third round**: Each of the 9 families calls 3 families, resulting in \\(9 \\times 3 = 27\\) families.\n- **Fourth round**: Each of the 27 families calls 3 families, resulting in \\(27 \\times 3 = 81\\) families.\n\nThus, the number of families notified during the fourth round is \\(\\boxed{81}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "ecfceacc32766a47",
+    "gold": "5",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "ede078b1bcbbb2a4",
+    "gold": "3160",
+    "final": "et}\n\\]\n\nThe living room is 5 times bigger than one bedroom, so its area is:\n\\[\n5 \\times 240 = 1200 \\text{ square feet}\n\\]\n\nThe rest of the house is given as 1000 square feet. Adding all these areas together gives the total area of the house:\n\\[\n960 + 1200 + 1000 = 3160 \\text{ square feet}\n\\]\n\nThus, the total area of the house is:\n\\[\n\\boxed{3160}\n\\]",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "ee92dd90e11f484c",
+    "gold": "240",
+    "final": "he electricity bill is divided equally among 4 roommates:\n\\[\n\\frac{100}{4} = 25 \\text{ dollars per month}\n\\]\n\nNext, we calculate the annual payment by multiplying the monthly share by 12 (the number of months in a year):\n\\[\n25 \\times 12 = 300 \\text{ dollars per year}\n\\]\n\nThus, each roommate will pay \\(\\boxed{300}\\) dollars per year for electricity.",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "eebd893966c23242",
+    "gold": "6",
+    "final": "$\n\n---\n\n### Step 2: Cost of the Ride Bracelet\n\nThe ride bracelet costs $30 and grants access to all 9 rides.\n\nSo, the cost of the bracelet is:\n$$\n\\$30\n$$\n\n---\n\n### Step 3: Calculate the Savings\n\nDavid saves the difference between the cost of buying tickets and the cost of the bracelet:\n$$\n\\$36 - \\$30 = \\$6\n$$\n\n---\n\n### Final Answer\n\n$$\n\\boxed{6}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "ef7b0c9b351233b5",
+    "gold": "2",
+    "final": "nsumed per day is:\n\\[\n60 \\, \\text{grams/feeding} \\times 2 \\, \\text{feedings/day} = 120 \\, \\text{grams/day}\n\\]\n\nNext, we divide the total amount of food available by the daily consumption to find out how many days the food will last:\n\\[\n720 \\, \\text{grams} \\div 120 \\, \\text{grams/day} = 6 \\, \\text{days}\n\\]\n\nThus, the final answer is:\n\\[\n\\boxed{6}\n\\]",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "f17314dbfc7d1192",
+    "gold": "58",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "f2a4cb27d81f243a",
+    "gold": "826",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "f30028b4557361af",
+    "gold": "2",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "f32ed12aa9d5263c",
+    "gold": "324",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "f38bec90c97813e6",
+    "gold": "10",
+    "final": "s already stamped. When Jennie stamps 20 letters, the total number of already stamped letters becomes \\( X + 20 \\). According to the problem, this total is 30. Therefore, we set up the equation:\n\n\\[\nX + 20 = 30\n\\]\n\nSolving for \\( X \\):\n\n\\[\nX = 30 - 20\n\\]\n\\[\nX = 10\n\\]\n\nThus, the number of letters already stamped when Jennie began was \\(\\boxed{10}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "f3a88916688b54a4",
+    "gold": "5",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "f4b0107c03233306",
+    "gold": "4",
+    "final": " we can set up the following equations:\n\n\\[\n4x = 12 \\quad \\text{and} \\quad 4y = 4\n\\]\n\nSolving these equations, we find:\n\n\\[\nx = \\frac{12}{4} = 3 \\quad \\text{and} \\quad y = \\frac{4}{4} = 1\n\\]\n\nTherefore, Sophia bought 3 onions and 1 potato. The total number of onions and potatoes Sophia bought is:\n\n\\[\n3 + 1 = 4\n\\]\n\nThe final answer is \\(\\boxed{4}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "f4f278a3387bcda8",
+    "gold": "240",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "f54842eba482271e",
+    "gold": "35",
+    "final": "id, including the tip, is:\n\n$$\n\\text{Total} = \\text{Original Bill} + \\text{Tip} = 50 + 10 = 60\n$$\n\n---\n\n### Step 4: Split the Check Evenly\n\nYour wife wants to **evenly split the check**, so you and she each pay half of the total amount.\n\n$$\n\\text{Each person pays} = \\frac{60}{2} = 30\n$$\n\n---\n\n### Final Answer\n\nYou ended up paying:\n\n$$\n\\boxed{30}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "f5d56de909514c20",
+    "gold": "3",
+    "final": "Mike is penpals with 3 people after stopping with 2. Each person sends 2 letters weekly, totaling \\(3 \\times 2 = 6\\) letters. Each letter is 5 pages, so he writes \\(6 \\times 5 = 30\\) pages. At 6 minutes per page, total time is \\(30 \\times 6 = 180\\) minutes. Converting to hours: \\(180 \\div 60 = 3\\) hours. \n\n\\boxed{3}",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "f6524361333bba27",
+    "gold": "129200",
+    "final": "** of Herb's house price.\n\n---\n\n### Step 2: Calculate the value of Juan's house\n\nHerb's house is worth $76,000. So, Juan's house is:\n\n$$\n0.70 \\times 76,000 = 53,200\n$$\n\n---\n\n### Step 3: Add the values of both houses\n\nNow, we add the value of Herb's house and Juan's house:\n\n$$\n76,000 + 53,200 = 129,200\n$$\n\n---\n\n### Final Answer\n\n$$\n\\boxed{129200}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "f67a164c73de1ecf",
+    "gold": "4",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "f7553a6e671aa58c",
+    "gold": "8",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "f762a52a227ab951",
+    "gold": "10",
+    "final": "c{200 \\text{ pages}}{10 \\text{ pages/day}} = 20 \\text{ days}\n$$\n\n---\n\n### Step 2: Determine how many days before the deadline Mike finishes\n\nSince the deadline is 30 days, and Mike finishes in 20 days, the number of days before the deadline he will finish is:\n\n$$\n\\text{Days before deadline} = 30 - 20 = 10\n$$\n\n---\n\n### Final Answer\n\n$$\n\\boxed{10}\n$$",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "f8833b7ee76c6049",
+    "gold": "175",
+    "final": "Jerome's friends pressed the doorbell as follows:\n1. The first friend pressed 20 times.\n2. The second friend pressed \\(20 + \\frac{1}{4} \\times 20 = 25\\) times.\n3. The third friend pressed \\(60 + 10 = 70\\) times.\n4. The fourth friend pressed 60 times.\n\nAdding these together:  \n\\(20 + 25 + 70 + 60 = 175\\).\n\n\\boxed{175}",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "f9b5fe0f2fd11e2a",
+    "gold": "54",
+    "final": "al number of cars pulled on the remaining four days:\n   \\[\n   6 \\text{ cars/day} \\times 4 \\text{ days} = 24 \\text{ cars}\n   \\]\n\n4. Add the results from the first three days and the remaining four days:\n   \\[\n   30 \\text{ cars} + 24 \\text{ cars} = 54 \\text{ cars}\n   \\]\n\nThus, the total number of cars the tow truck pulled that week is \\(\\boxed{54}\\).",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "fa208baff0285295",
+    "gold": "4",
+    "final": "e number of onions and potatoes that Sophia bought, and that **Rose** bought **12 onions** and **4 potatoes**.\n\n---\n\n### Step 1: Define Variables\n\nLet:\n- $ S_o $ = number of onions Sophia bought\n- $ S_p $ = number of potatoes Sophia bought\n\nThen, according to the problem:\n- Rose bought $ 4 \\times S_o $ onions\n- Rose bought $ 4 \\times S_p $ potatoes",
+    "thinking_status": "ok",
+    "finish": "length"
+  },
+  {
+    "review_id": "fa8a168bb1941a16",
+    "gold": "15400",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "fd89e5e28b95b57a",
+    "gold": "110",
+    "final": "boarded the train. This means 100 people boarded the train. The total number of people after the third stop is:\n\\[ 90 + 100 = 190 \\]\n\nFinally, 80 more people descend at the third station. The total number of people after the third station is:\n\\[ 190 - 80 = 110 \\]\n\nThus, the total number of people on the train at the final stop is:\n\\[\n\\boxed{110}\n\\]",
+    "thinking_status": "ok",
+    "finish": "eos"
+  },
+  {
+    "review_id": "fe203d6108116216",
+    "gold": "5600",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "fe937a4132c2a1bc",
+    "gold": "8",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  },
+  {
+    "review_id": "ff17a93942add6c1",
+    "gold": "4",
+    "final": null,
+    "thinking_status": "unfinished_thinking",
+    "finish": "length"
+  }
+]

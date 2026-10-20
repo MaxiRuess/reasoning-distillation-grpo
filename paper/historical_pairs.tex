@@ -1,0 +1,16 @@
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Comparison & Difference (pp) & Paired 95\% interval (pp) & Holm $p$ \\
+\midrule
+Open-R1 SFT minus s1K SFT & +4.70 & +2.50 to +6.97 & 0.00024 \\
+GRPO minus starting checkpoint & +3.56 & +1.44 to +5.61 & 0.00399 \\
+Combined$^*$ minus s1K SFT & -4.17 & -6.67 to -1.67 & 0.00402 \\
+s1K SFT minus starting checkpoint & +1.67 & -0.76 to +4.09 & 0.19440 \\
+Open-R1 SFT minus GRPO & +2.81 & +0.68 to +4.93 & 0.02348 \\
+\bottomrule
+\end{tabular}
+\caption{Exploratory paired analysis of historical legacy-scored results. The combined-model caveat applies regardless of its statistical separation. Training-seed variability is unavailable for these runs.}
+\end{table}

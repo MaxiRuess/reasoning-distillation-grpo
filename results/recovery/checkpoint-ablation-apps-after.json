@@ -1,0 +1,26 @@
+[
+  {
+    "app_id": "ap-vKGUikmJi87JOanH5v4HYi",
+    "description": "reasoning-distillation-grpo",
+    "state": "stopped",
+    "tasks": "0",
+    "created_at": "2026-10-19 19:08:13+02:00",
+    "stopped_at": "2026-10-19 20:02:47+02:00"
+  },
+  {
+    "app_id": "ap-zwvnwtALx33P1B86kJydzO",
+    "description": "reasoning-distillation-grpo",
+    "state": "stopped",
+    "tasks": "0",
+    "created_at": "2026-10-19 18:12:13+02:00",
+    "stopped_at": "2026-10-19 18:18:34+02:00"
+  },
+  {
+    "app_id": "ap-ekpAP00VhMZpE5YoZKs7R0",
+    "description": "dc-analyze-sandbox",
+    "state": "deployed",
+    "tasks": "0",
+    "created_at": "2026-06-23 08:16:59+02:00",
+    "stopped_at": null
+  }
+]

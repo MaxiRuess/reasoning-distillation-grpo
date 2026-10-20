@@ -1,0 +1,60 @@
+{
+  "pilot_evidence": [
+    "initial smoke pilot: measurements not yet available"
+  ],
+  "plan_digest": "855e33aa554617b8489e4e564112ffe9bdbc9c22c88fbec9f2091c6b6bf939b2",
+  "pricing_source": {
+    "as_of": "2026-10-19",
+    "caution": "Reservations include a startup/idle allowance, not a provider billing guarantee. Image builds, storage and egress are additional; configure a workspace spending limit before paid work. Recheck rates before launch.",
+    "cpu_core_per_second": 1.31e-05,
+    "gpu_per_second": {
+      "H100": 0.001097,
+      "L40S": 0.000542
+    },
+    "memory_gib_limit": 16,
+    "memory_gib_per_second": 2.22e-06,
+    "overhead_seconds_per_task": 120,
+    "physical_cores_limit": 2,
+    "source": "https://modal.com/pricing"
+  },
+  "runtime_reservations_usd": 2.5474799999999997,
+  "status": "proposal_not_approved",
+  "suggested_cap_usd": 10,
+  "tasks": {
+    "pilot:eval": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 600
+    },
+    "pilot:grpo": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00115872,
+      "timeout_seconds": 900
+    },
+    "pilot:prepare:grpo": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 300
+    },
+    "pilot:prepare:sft": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 3600
+    },
+    "pilot:sft": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 600
+    },
+    "pilot:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 60
+    },
+    "prepare:runtime": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 3600
+    }
+  }
+}

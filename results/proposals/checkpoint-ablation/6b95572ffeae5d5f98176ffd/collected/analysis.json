@@ -1,0 +1,95 @@
+{
+  "arms": {
+    "missing_sft": {
+      "accuracy": 0.65625,
+      "extraction_failure_rate": 0.32421875,
+      "format_failure_rate": 0.08203125,
+      "mean_generated_tokens": 1397.5,
+      "num_correct": 168,
+      "num_samples_per_problem": 1,
+      "num_total": 256,
+      "pass@1": 0.65625,
+      "truncation_rate": 0.30859375,
+      "unfinished_thinking_rate": 0.2421875,
+      "wilson_95": [
+        0.5961441219901447,
+        0.7117359228767708
+      ]
+    },
+    "reconstructed": {
+      "accuracy": 0.71875,
+      "extraction_failure_rate": 0.23046875,
+      "format_failure_rate": 0.01171875,
+      "mean_generated_tokens": 1174.1953125,
+      "num_correct": 184,
+      "num_samples_per_problem": 1,
+      "num_total": 256,
+      "pass@1": 0.71875,
+      "truncation_rate": 0.23046875,
+      "unfinished_thinking_rate": 0.21875,
+      "wilson_95": [
+        0.6607529778983336,
+        0.770279084915348
+      ]
+    },
+    "sft_parent": {
+      "accuracy": 0.74609375,
+      "extraction_failure_rate": 0.203125,
+      "format_failure_rate": 0.02734375,
+      "mean_generated_tokens": 1141.1796875,
+      "num_correct": 191,
+      "num_samples_per_problem": 1,
+      "num_total": 256,
+      "pass@1": 0.74609375,
+      "truncation_rate": 0.20703125,
+      "unfinished_thinking_rate": 0.17578125,
+      "wilson_95": [
+        0.6894097171973219,
+        0.7955013534680699
+      ]
+    }
+  },
+  "legacy_rescore_caution": "Same new prompted responses; not a reproduction of historical scores",
+  "legacy_rescore_diagnostic": {
+    "missing_sft": 29,
+    "reconstructed": 16,
+    "sft_parent": 12
+  },
+  "limits": [
+    "One historical training run; uncertainty covers test items, not training seeds",
+    "The original base revision is unknown; all reconstructions use the same declared pinned revision",
+    "New boxed-answer prompting differs from historical evaluation; historical scores remain unchanged",
+    "No claims about general RL efficacy, reasoning emergence, or verification causality",
+    "Question selection excludes the recent pilot but is not a previously unseen benchmark"
+  ],
+  "primary": {
+    "delta": 0.0625,
+    "left_correct": 184,
+    "left_only_correct": 34,
+    "mcnemar_exact_p": 0.03648340000835981,
+    "num_paired": 256,
+    "paired_bootstrap_95": [
+      0.0078125,
+      0.1171875
+    ],
+    "right_correct": 168,
+    "right_only_correct": 18
+  },
+  "protocol_id": "6b95572ffeae5d5f98176ffd6f755143f4bd68e347b8c76d5814a02f06e99ede",
+  "secondary": {
+    "delta": -0.02734375,
+    "left_correct": 184,
+    "left_only_correct": 12,
+    "mcnemar_exact_p": 0.28104151505976915,
+    "num_paired": 256,
+    "paired_bootstrap_95": [
+      -0.0703125,
+      0.015625
+    ],
+    "right_correct": 191,
+    "right_only_correct": 19
+  },
+  "secondary_is_exploratory": true,
+  "status": "complete_single_run_subset_ablation",
+  "uncertainty": "Paired test-item uncertainty only; one training run, one prompt and token budget"
+}

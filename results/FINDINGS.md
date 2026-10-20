@@ -1,117 +1,65 @@
-# Reasoning Trace Distillation: Can Small Models Learn to Think?
+# Findings from the reasoning-trace distillation study
 
-## Research Question
+The completed experiments show shorter observed responses and a numerical accuracy advantage for trace SFT at a 2K output limit. They do **not establish an accuracy advantage at 8K**. Native no-thinking inference also avoids the severe failure of the answer-only SFT recipe. The evidence supports a case study of output-budget sensitivity in an already post-trained Qwen3-1.7B student.
 
-For sub-2B parameter models, is reasoning trace distillation sufficient for math reasoning — or does reinforcement learning provide additional benefit? And if RL helps, what is the right way to transfer its benefits to small models?
+## Numerical accuracy depends on the evaluated output budget
 
-## Experimental Setup
+The sampled follow-up evaluates the unchanged student and three existing trace checkpoints on the same 128 GSM8K questions. Thinking-mode sampling uses temperature 0.6, top-p 0.95 and top-k 20, with one fixed decoding seed.
 
-- **Student model**: Qwen3-1.7B (base, not instruct) with LoRA r=64, rsLoRA, full bfloat16
-- **Benchmark**: GSM8K test set (grade school math, full 1,319 problems per condition, greedy decoding)
-- **Compute**: Modal cloud (L40S for SFT, H100 for GRPO with vLLM colocate)
+| Output limit | Unchanged accuracy | Trace mean accuracy | Trace mean minus unchanged |
+|---|---:|---:|---:|
+| 2,048 tokens | 67.97% | 80.21% | +12.24 pp |
+| 4,096 tokens | 85.94% | 84.64% | −1.30 pp |
+| 8,192 tokens | 87.50% | 86.20% | −1.30 pp |
 
-### Training Conditions
+The follow-up's primary comparison is at 8K: **−1.30 percentage points**, with a 95% paired item-bootstrap interval of **−5.73 to +2.86** and training-seed difference SD of 0.45 points. This interval establishes neither an advantage nor equivalence. It conditions on the three trained checkpoints and the one decoding seed; there are 128 shared questions, not 384 independent observations. The 2K/4K contrasts are descriptive.
 
-| Condition | Method | Training Data |
-|---|---|---|
-| `baseline` | SFT on answer-only data | 50K Orca Math examples |
-| `sft_traces` | SFT on reasoning traces | 1K DeepSeek-R1 traces (s1K-1.1) |
-| `re_distill` | SFT on RL-verified traces | 1K Open-R1 math-verified traces |
-| `grpo_only` | GRPO from base model | 7.5K GSM8K with binary + format rewards |
-| `sft_then_grpo` | SFT on traces, then GRPO | 1K traces → 7.5K GSM8K GRPO |
+This follow-up was designed after reviewing the original experiment and reuses previously evaluated questions. Effective batch sizes change from 32 to 16 to 8 across limits, which also changes random-number streams. These are separately sampled trajectories, not truncated versions of a shared 8K rollout. The curve does not isolate a causal effect of output length alone.
 
-## Results
+## Answer-format scoring changes the 8K point estimate
 
-| Condition | GSM8K Accuracy | N |
-|---|---|---|
-| `baseline` | **69.2%** | 1,319 |
-| `sft_then_grpo` | **69.7%** | 1,319 |
-| Base model | **72.2%** | 1,319 |
-| `sft_traces` | **73.8%** | 1,319 |
-| `grpo_only` | **75.7%** | 1,319 |
-| `re_distill` | **78.5%** | 1,319 |
+The numerical primary rule accepts repeated, numerically identical final boxes. The strict secondary rule requires exactly one box. Both were retained before follow-up generation.
 
-Evaluated on the full GSM8K test set (1,319 problems, greedy decoding, ±2.5pp confidence intervals). For reference, Qwen reports 75.4% with 4-shot chain-of-thought prompting (Qwen3 Technical Report, arXiv:2505.09388).
+Five unchanged-student responses at 8K contain repeated, numerically consistent correct boxes. Its score is therefore 112/128 (87.50%) numerically and 107/128 (83.59%) under the strict rule. The trace scores are unchanged. Under the strict secondary rule, the trace-minus-unchanged difference is **+2.60 points**, with a conditional item interval of **−2.60 to +8.07**.
 
-## Key Findings
+The point estimate changes sign, while neither scoring rule establishes an 8K advantage. The primary rule and original scores remain unchanged. The [secondary calculation](../paper/inference-extension-secondary.json) uses the same saved raw responses.
 
-### Finding 1: Re-distillation from RL-verified traces is the best approach
+## Short-limit gains coincide with more frequent completion
 
-`re_distill` (78.5%) outperforms all other conditions — beating `grpo_only` (75.7%) by 2.8 points and `sft_traces` (73.8%) by **4.7 percentage points** using the same amount of data (1K examples), the same model, and identical hyperparameters. The only difference is the source of traces — math-verified correct solutions from the Open-R1 project (RL-trained model outputs) versus raw DeepSeek-R1 traces from s1K-1.1. With ±2.5pp confidence intervals, this gap is statistically significant.
+In the sampled follow-up at 2K, 69.53% of unchanged-student responses terminate at an end-of-sequence token, versus 84.90% across trace checkpoints. Mean generated lengths are 1,451 and 994 tokens, respectively. At 8K, EOS rates are 97.66% and 97.92%; mean lengths are 2,012 and 1,520 tokens. These counts include generated thinking and final-response tokens and remain subject to each output limit.
 
-This demonstrates that **the right way to get RL benefits into a small model is through better training data, not through direct RL optimization.** Let a larger model do the RL, verify the outputs for correctness, then distill the verified traces into the small model.
+A post hoc check of the original 256-question greedy outputs gives a related observation: 99 of 101 question–seed pairs where a trace checkpoint alone is correct involve an output-limited unchanged response. Conversely, 29 of 41 unchanged-only-correct pairs involve an output-limited trace response. Questions repeat across the three seed comparisons.
 
-The REDI paper (arXiv:2505.24850) established this approach at scale: Qwen-REDI-1.5B achieves 83.1% on MATH-500 using 131K Open-R1 traces, matching DeepSeek's 800K-trace distillation. Our result extends this finding to the extreme low-data regime (1K traces) and confirms the mechanism — RL-verified traces are higher quality because they've been filtered for correctness, removing the noise and errors present in raw teacher traces.
+Among original outputs without unfinished thinking, accuracies are 93.26% unchanged and 93.46% pooled trace. Among actual EOS-terminated outputs, they are 97.83% and 93.60%. These denominators select different questions for each model. They cannot establish equal reasoning ability or reveal how truncated responses would have answered if continued.
 
-### Finding 2: Direct GRPO marginally outperforms raw distillation
+The trace-arm targets average 5,270 supervised tokens per example, yet student responses are shorter on GSM8K. This is an observed length change across different training and test tasks. No teacher-length ablation identifies a learned compression mechanism.
 
-`grpo_only` (75.7%) outperforms `sft_traces` (73.8%) by 1.9 percentage points — a gap within our ±2.5pp confidence intervals and thus not conclusive, but notable because it challenges the assumption that distillation dominates RL at small scale. Both conditions exceed the base model (72.2%), confirming that both training signals provide genuine improvement.
+## Native no-thinking does not reproduce answer-only SFT collapse
 
-During GRPO training, the reward signal was sparse: `frac_reward_zero_std` was 0.75-0.85 (75-85% of steps had zero gradient). Despite this, GRPO achieved comparable or slightly better results than distillation, suggesting that even sparse RL signal is sufficient for grade-school math at 1.7B scale.
+| Unchanged student at 2K on the same 128 questions | Correct | Accuracy | Mean generated tokens |
+|---|---:|---:|---:|
+| Native no-thinking, greedy | 99/128 | 77.34% | 239 |
+| Native no-thinking, sampled | 101/128 | 78.91% | 237 |
 
-### Finding 3: GRPO after distillation degrades performance
+Both native no-thinking runs terminate at EOS on all 128 questions. On these exact questions, the original answer-only checkpoints average 6.51% under greedy decoding. Merely disabling the native thinking channel does not reproduce that failure. The control does not identify knowledge forgetting or the cause of the training collapse; native no-thinking outputs can contain worked steps in their final responses.
 
-`sft_then_grpo` (69.7%) performs **4.1 percentage points worse** than `sft_traces` alone (73.8%), falling below the base model to near-baseline performance. Adding GRPO refinement to a distilled model is harmful at the 1.7B scale.
+Sampled native no-thinking reaches 78.91% with 237 mean tokens, compared with the trace mean of 80.21% and 994 tokens at 2K. These are descriptive results for different inference policies: no-thinking uses temperature 0.7/top-p 0.8, while thinking uses 0.6/0.95. The observations do not establish equivalence, general policy ordering, latency gains or proportional GPU-cost savings.
 
-This finding is supported by theoretical proof. Niu et al. (arXiv:2601.07389) demonstrate on Qwen3-0.6B that SFT and RL objectives are mathematically non-decouplable: RL training necessarily increases SFT loss. Three compounding mechanisms explain the degradation:
+## The original training comparison remains a recipe-specific result
 
-1. **Distribution mismatch**: Zhang et al. (arXiv:2602.01058) show that stronger SFT checkpoints can significantly underperform weaker ones after RL, because the offline SFT data distribution mismatches on-policy RL rollouts.
+The original experiment trains three seeds per arm on the same 500 OpenR1 questions and final answers from DeepSeek-R1 generations, with two epochs and 64 optimizer updates. The trace arm additionally receives the teacher's thinking. Its supervised-token exposure and compute are much larger despite matched questions and updates.
 
-2. **Entropy collapse**: Wang et al. (arXiv:2602.02244) demonstrate that standard SFT reduces generation diversity, leaving RL with a narrowed solution space. Our GRPO training showed 75-85% of steps with zero within-group reward variance, consistent with an entropy-collapsed policy.
+On 256 GSM8K questions at 2K with greedy thinking, trace SFT averages 78.1%, unchanged 70.3%, and answer-only SFT 6.25%. The original primary trace-minus-answer difference is +71.88 points (conditional item interval +67.06 to +76.56). The secondary trace-minus-unchanged difference is +7.81 points (+3.39 to +12.50). All 768 answer-only outputs contain empty visible thinking blocks; their training targets supervise template-inserted empty thinking blocks. The failed recipe gives little evidence about trace SFT relative to a well-functioning answer-only method.
 
-3. **LoRA merge artifacts**: Our pipeline used `PeftModel.merge_and_unload()` to merge SFT LoRA weights before applying a fresh LoRA for GRPO. Shuttleworth et al. (arXiv:2410.21228) show LoRA produces "intruder dimensions" that degrade sequential adaptation.
+On the original preselected 64-question 4K check, trace SFT averages 83.85% versus 87.50% unchanged (−3.65 points, interval −8.33 to +1.04). These original greedy results are distinct from the sampled 128-question follow-up.
 
-This degradation is not widely reported in prior work because most SFT-then-RL pipelines use models at 7B+ scale, where model capacity buffers against forgetting. At 7B, AceReason-Nemotron (arXiv:2505.16400) shows RL improves distilled models by +14.6%. The critical insight is **scale-dependent**: SFT-then-RL is complementary at sufficient model size, but harmful at 1.7B.
+## Scope, evidence and compute
 
-### Finding 4: Distillation is data-efficient but not dominant
+The study covers one student, one 500-question training sample, one answer-only recipe and one benchmark. GSM8K had been used in the repository before this study. Dataset overlap screening does not establish absence of pretraining contamination, and the 8K ceiling is below Qwen's recommended 32,768-token allowance. Final-answer scores do not assess the correctness or faithfulness of intermediate reasoning.
 
-`sft_traces` (73.8%) outperforms `baseline` (69.2%) by 4.6 percentage points despite training on **50x fewer examples** (1,000 vs 50,000). The quality of the training signal — reasoning traces with `<think>` tags from DeepSeek-R1 — matters more than quantity. However, GRPO achieves comparable results (75.7%) without any reasoning traces, demonstrating that distillation is not the only path to improvement at this scale.
+The original experiment retains 2,240 responses; the follow-up retains 1,792. Persistence hashes and local CPU strict scores were verified. All 29 follow-up tasks succeeded, with no training or paid retries. The app stopped with zero tasks and no remaining containers. Estimated follow-up resource-time cost is $13.34, or $15.47 with all extra allowances, within its separate $30 cap; this is not a reconciled provider invoice. This manuscript revision uses CPU only and adds no GPU work.
 
-Interestingly, `baseline` (69.2%) performs *below* the unmodified base model (72.2%). Rajani et al. (arXiv:2507.10616) provide a mechanism: SFT modifies mid-layer MLPs aggressively, *replacing* existing capabilities. Answer-only SFT may teach the model to skip reasoning steps it would otherwise perform in-context, degrading its latent chain-of-thought ability.
-
-### Finding 5: Trace quality follows a clear hierarchy
-
-Our five conditions reveal a hierarchy of training signal quality:
-
-| Training Signal | GSM8K | Quality Source |
-|---|---|---|
-| Answer-only (50K Orca Math) | 69.2% | No reasoning process |
-| Base model (no training) | 72.2% | Zero-shot greedy |
-| Raw teacher traces (1K s1K-1.1) | 73.8% | DeepSeek-R1 reasoning patterns |
-| GRPO from base (7.5K GSM8K) | 75.7% | RL probability redistribution |
-| RL-verified traces (1K Open-R1) | 78.5% | Filtered for correctness |
-
-The largest single jump (4.7 points) comes from verifying trace correctness — suggesting that **data quality filtering is the single highest-leverage intervention** for reasoning distillation.
-
-## Hypothesis Evaluation
-
-| Hypothesis | Result | Evidence |
-|---|---|---|
-| **H1**: Distillation sufficient for easy problems | **Supported** | 73.8% on GSM8K from 1K traces; re_distill pushes to 78.5% |
-| **H2**: RL refines distilled reasoning | **Falsified** | 69.7% < 73.8% (−4.1pp); but re-distillation (78.5%) shows RL benefits transfer through data |
-| **H3**: Pure RL needs scale | **Not supported** | GRPO-Only (75.7%) outperforms SFT-Traces (73.8%); RL is viable at 1.7B |
-| **H4**: Trace compression emerges with RL | **Not observed** | GRPO degraded rather than compressed traces |
-
-## Limitations
-
-1. **Different trace sources**: `sft_traces` uses s1K-1.1 (curated 1K problems) while `re_distill` uses Open-R1 (filtered from 220K). The improvement may partly reflect different problem distributions, not solely trace quality.
-
-2. **GRPO implementation challenges**: The GRPO results reflect significant engineering constraints (vLLM compatibility, memory management, dataset difficulty calibration). A better-optimized GRPO setup might produce different results.
-
-3. **LoRA merge confound**: The `sft_then_grpo` degradation may be partly a LoRA merge artifact rather than a fundamental SFT-RL conflict. A controlled experiment with full fine-tuning or adapter composition would isolate this.
-
-4. **Contamination**: GRPO-Only trains on the GSM8K training split and is evaluated on GSM8K test. While these are standard splits, the model learns the GSM8K distribution during training, which may inflate its score relative to conditions trained on different distributions.
-
-5. **Single benchmark**: GSM8K measures grade-school math only. Results may not generalize to harder math (MATH, AIME) or other reasoning domains (code, logic).
-
-6. **Greedy decoding only**: All results use temperature=0. Pass@k evaluation would reveal whether GRPO improves sampling efficiency even if not peak capability.
-
-## Conclusion
-
-For small language models (1-2B parameters), **data quality is the most effective lever for mathematical reasoning.**
-
-Our five-condition experiment reveals a clear hierarchy: RL-verified reasoning traces (78.5%) > GRPO from base (75.7%) > raw teacher traces (73.8%) > base model (72.2%) > answer-only training (69.2%). The largest gains come from filtering traces for mathematical correctness before distillation.
-
-Notably, direct GRPO (75.7%) marginally outperforms raw distillation (73.8%), challenging the assumption that distillation dominates RL at small scale. However, applying GRPO *after* distillation degrades performance by 4.1 points, consistent with theoretical work on the non-decouplability of SFT and RL objectives.
-
-The practical recommendation for practitioners working with sub-2B models is clear: **use re-distillation.** Let a larger RL-trained model generate solutions, verify them for correctness, and SFT-distill the verified traces into your small model. This captures the benefits of RL (higher-quality reasoning paths) without the risks of direct RL optimization (forgetting, instability, engineering complexity). One thousand verified traces and a single SFT run (~$2 on Modal) outperform all other approaches at a fraction of the compute cost.
+- [Sampled follow-up analysis](proposals/inference-extension/f1b156f14754100c186bc396/collected/analysis.json) and [results report](../docs/experiments/inference-extension-results-2026-10-20.md).
+- [Original distillation results](../docs/experiments/distillation-results-2026-10-20.md) and [completion diagnostic](../paper/original-completion-diagnostic.json).
+- [Completed compute record](recovery/inference-extension-outcome.json), [paper source](../paper/paper.tex) and [current PDF](../assets/paper.pdf).
+- [Earlier findings and historical audit context](historical/FINDINGS-before-manuscript-rewrite-2026-10-20.md), including the separate checkpoint-loading ablation. Those legacy results are not pooled with the experiments above.

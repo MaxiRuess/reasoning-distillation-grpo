@@ -1,0 +1,17 @@
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{@{}lrrl@{}}
+\toprule
+Historical recipe & Correct / 1,319 & Accuracy & 95\% Wilson interval \\
+\midrule
+Unchanged post-trained checkpoint & 952 & 72.18\% & 69.70--74.53\% \\
+Orca worked-solution SFT & 913 & 69.22\% & 66.68--71.65\% \\
+s1K reasoning-trace SFT & 974 & 73.84\% & 71.41--76.14\% \\
+GRPO from starting checkpoint & 999 & 75.74\% & 73.35--77.98\% \\
+s1K SFT then GRPO$^*$ & 919 & 69.67\% & 67.14--72.09\% \\
+Open-R1 verified-trace SFT & 1,036 & 78.54\% & 76.25--80.68\% \\
+\bottomrule
+\end{tabular}
+\caption{Preserved historical outcomes under the legacy scorer and greedy decoding with a 2,048-token budget. These are not corrected or independently reproduced accuracies. $^*$The combined model requires reconstruction with its original SFT contribution.}
+\end{table}

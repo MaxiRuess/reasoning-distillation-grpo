@@ -1,0 +1,109 @@
+{
+  "as_of": "2026-10-19",
+  "status": "planning_estimate_not_authorized_not_execution_quote",
+  "scope": "Remaining paper experiments: six historical GSM8K reevaluations and combined checkpoint reconstruction; full controlled DAG including token-matched arms, three seeds, length sensitivity, MATH-500 and sampled pass@8. No teacher generation or new hardware study.",
+  "rates_verified_source": "https://modal.com/pricing",
+  "published_gpu_hourly_usd": {
+    "L40S": 1.9511999999999998,
+    "H100": 3.9492000000000003
+  },
+  "cpu_memory_hourly_allowance_usd": 0.222192,
+  "controlled_job_counts": {
+    "prepare_runtime": 1,
+    "evaluate": 46,
+    "verify": 46,
+    "prepare": 7,
+    "sft": 15,
+    "grpo": 6
+  },
+  "measured_inputs": {
+    "pilot_ledger": "outputs/studies/670043ab83e41bfba8bcc140/ledger.json",
+    "pilot_ledger_sha256": "d7ef3737ba40419980e88d767259104d210014dcac4a3f86700ae33186156af0",
+    "sft_seconds_per_step": 52.317916942500005,
+    "grpo_seconds_per_step": 14.973247416166666,
+    "evaluation_tokens_per_second": 119.13410697973217,
+    "evaluation_problems": 32,
+    "grpo_measured_steps": 6
+  },
+  "scenarios": {
+    "pilot_like_lengths": {
+      "assumed_mean_generated_tokens": {
+        "2048": 490.71875,
+        "4096": 750,
+        "8192": 1000,
+        "math500": 2000,
+        "sampled": 600
+      },
+      "evaluation_time_multiplier": 1,
+      "component_usd": {
+        "primary_evaluations": 74.11,
+        "secondary_evaluations": 295.22,
+        "sft": 27.83,
+        "grpo": 53.54,
+        "six_historical_gsm8k_reevaluations": 20.21
+      },
+      "subtotal_usd": 470.91,
+      "total_with_20_percent_contingency_and_20_usd_setup": 585.1,
+      "evaluation_gpu_hours": 169.93
+    },
+    "longer_outputs": {
+      "assumed_mean_generated_tokens": {
+        "2048": 900,
+        "4096": 1400,
+        "8192": 2000,
+        "math500": 4000,
+        "sampled": 1000
+      },
+      "evaluation_time_multiplier": 1.25,
+      "component_usd": {
+        "primary_evaluations": 167.38,
+        "secondary_evaluations": 649.63,
+        "sft": 27.83,
+        "grpo": 53.54,
+        "six_historical_gsm8k_reevaluations": 45.65
+      },
+      "subtotal_usd": 944.04,
+      "total_with_20_percent_contingency_and_20_usd_setup": 1152.84,
+      "evaluation_gpu_hours": 375.92
+    },
+    "every_response_at_limit": {
+      "assumed_mean_generated_tokens": {
+        "2048": 2048,
+        "4096": 4096,
+        "8192": 8192,
+        "math500": 8192,
+        "sampled": 2048
+      },
+      "evaluation_time_multiplier": 1,
+      "component_usd": {
+        "primary_evaluations": 303.11,
+        "secondary_evaluations": 1276.55,
+        "sft": 27.83,
+        "grpo": 53.54,
+        "six_historical_gsm8k_reevaluations": 82.67
+      },
+      "subtotal_usd": 1743.7,
+      "total_with_20_percent_contingency_and_20_usd_setup": 2112.44,
+      "evaluation_gpu_hours": 726.82
+    }
+  },
+  "planning_range_usd": [
+    600,
+    1200
+  ],
+  "suggested_staged_budget_usd": 1250,
+  "limits": [
+    "These are runtime extrapolations, not guaranteed upper bounds or approval to spend.",
+    "Only 32 primary evaluation questions and six GRPO steps were measured. Other arm workloads and future completion lengths can differ.",
+    "4K/8K, MATH-500 symbolic scoring and eight-sample throughput/memory have not been measured; pilot and re-price these before broad dispatch.",
+    "Every-response-at-limit scenario uses measured primary throughput. Reduced long-context throughput could cost more than that scenario.",
+    "SFT step counts for other arms use known or estimated packed sequence counts; require fresh token-cache preparation for an executable quote.",
+    "CPU/RAM charged using existing two-core/16-GiB allowance, fixed measured setup plus 120 seconds per GPU job; setup and retry contingency added separately.",
+    "Historical cost assumes available usable checkpoints; any required historical retraining is excluded. Six historical evaluations remain separate from the new instructed protocol.",
+    "Prices are before account credits and taxes. No newly paid jobs were started."
+  ],
+  "primary_stage_planning_range_usd": [
+    200,
+    400
+  ]
+}

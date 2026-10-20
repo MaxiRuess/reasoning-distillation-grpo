@@ -1,0 +1,32 @@
+{
+  "answer": {
+    "descriptive_secondary": true,
+    "mean_delta": -0.7760416666666667,
+    "num_distinct_questions": 64,
+    "paired_item_bootstrap_95": [
+      -0.875,
+      -0.671875
+    ],
+    "per_seed_delta": [
+      -0.75,
+      -0.78125,
+      -0.796875
+    ],
+    "training_seed_delta_std": 0.023867581744561665
+  },
+  "trace": {
+    "descriptive_secondary": true,
+    "mean_delta": -0.03645833333333333,
+    "num_distinct_questions": 64,
+    "paired_item_bootstrap_95": [
+      -0.08333333333333333,
+      0.010416666666666664
+    ],
+    "per_seed_delta": [
+      -0.046875,
+      0.0,
+      -0.0625
+    ],
+    "training_seed_delta_std": 0.03252603124165833
+  }
+}

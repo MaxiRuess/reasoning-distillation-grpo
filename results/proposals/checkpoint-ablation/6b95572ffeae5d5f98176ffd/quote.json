@@ -1,0 +1,82 @@
+{
+  "additional_allowances_usd": {
+    "recovery_contingency": 6,
+    "setup_and_builds": 2
+  },
+  "budget_usd": 20,
+  "method": "Three L40S calls capped at 90 minutes; CPU jobs bounded separately. No automatic retries. Pilot throughput extrapolates to about $2-8 for evaluation; timeouts are not a billing guarantee.",
+  "pilot_evidence": [
+    {
+      "path": "results/recovery/pilot-final-outcome.json",
+      "sha256": "4adc57fbe1e1142f97dd07ce00ab82803ce182c559334e6c6c41d93901aac884"
+    }
+  ],
+  "plan_digest": "00d4327ad01cc048cbc00739bbd4be1ba5474b268b049ba5745ae8f0b9757b21",
+  "pricing_source": {
+    "as_of": "2026-10-19",
+    "caution": "Reservations include a startup/idle allowance, not a provider billing guarantee. Image builds, storage and egress are additional; configure a workspace spending limit before paid work. Recheck rates before launch.",
+    "cpu_core_per_second": 1.31e-05,
+    "gpu_per_second": {
+      "H100": 0.001097,
+      "L40S": 0.000542
+    },
+    "memory_gib_limit": 16,
+    "memory_gib_per_second": 2.22e-06,
+    "overhead_seconds_per_task": 120,
+    "physical_cores_limit": 2,
+    "source": "https://modal.com/pricing"
+  },
+  "status": "bounded_checkpoint_ablation_proposal",
+  "tasks": {
+    "eval:missing_sft": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 5400
+    },
+    "eval:missing_sft:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 90
+    },
+    "eval:reconstructed": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 5400
+    },
+    "eval:reconstructed:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 90
+    },
+    "eval:sft_parent": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 5400
+    },
+    "eval:sft_parent:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 90
+    },
+    "prepare:runtime": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 600
+    },
+    "reconstruct:missing_sft": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 1800
+    },
+    "reconstruct:reconstructed": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 1800
+    },
+    "reconstruct:sft_parent": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 1800
+    }
+  }
+}

@@ -1,0 +1,9 @@
+# Final-response scoring policy v6
+
+V6 is frozen for diagnostics. The current [explicit-answer policy](scoring-policy-boxed-final-v1.md) replaces heuristic prose selection. V6 retains [v5's cardinal-number handling](scoring-policy-v5.md) and unifies context boundaries for explicit answers, predicate assertions, scalar equation results and ordinary declarative prose.
+
+A claimed value is separated from trailing conditional, explanatory and purpose clauses, including “if,” “given,” “because,” “which” and infinitives such as “to ensure.” Temporal “units over a period” context is separated only after an intervening unit phrase; “one over two” is not silently interpreted as the scalar one. Alternatives, mathematical expression fragments, questions, bounds, abstentions and unfinished thinking remain rejected. All context handling starts after a value; quantities in an assertion's subject cannot prematurely cut off a later predicate's answer.
+
+The change addresses the salary-with-an-if-clause failure found by fresh v5 evaluation. Development validation includes independent-form fixtures and CPU replay of all 128 retained responses from the four measured pilot cohorts. Remaining unparseable cases in that corpus are an ambiguous/nonconclusive output or an explicit abstention. This is development evidence, not held-out scorer accuracy or a full benchmark. The policy grades finite scalar/cardinal answers; it does not claim unrestricted language interpretation or general unit conversion.
+
+Measured v2/v3/v4/v5 modules and original score files remain unchanged and reproduce under their explicit version dispatch. New evaluation and GRPO requests declare `final-response-v6`. CPU rescoring uses new source-hashed identities and does not retrain older models. See the [defect-repair report](pilot-defect-fixes-2026-10-19.md) for GPU validation, accounting and remaining research limits.

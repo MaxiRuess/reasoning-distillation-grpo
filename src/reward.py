@@ -1,203 +1,120 @@
-"""Answer extraction and binary reward function for GRPO training."""
+"""Explicit final-answer scoring; archived prose heuristics remain reproducible."""
 
-import math
+import importlib
 import re
+from dataclasses import asdict, dataclass
+
+from src.scoring_v6 import (
+    _numeric,
+    extract_answer_auto,
+    extract_boxed_answer,
+    extract_gsm8k_answer,
+    final_response,
+    normalize_answer,
+)
+from src.scoring_v6 import answers_match as _approximate_match
+
+__all__ = [
+    "SCORER_VERSION",
+    "SCORER_VERSIONS",
+    "Score",
+    "answers_match",
+    "binary_reward_fn",
+    "extract_answer_auto",
+    "extract_boxed_answer",
+    "extract_gsm8k_answer",
+    "final_response",
+    "format_reward_fn",
+    "normalize_answer",
+    "score_response",
+]
+
+SCORER_VERSION = "boxed-final-v1"
+SCORER_VERSIONS = (SCORER_VERSION, *(f"final-response-v{n}" for n in range(6, 1, -1)), "legacy-v1")
 
 
-def extract_gsm8k_answer(text: str) -> str | None:
-    """Extract the final numerical answer after the #### delimiter.
+@dataclass(frozen=True)
+class Score:
+    predicted: str | None
+    correct: bool
+    status: str
+    scorer_version: str = SCORER_VERSION
 
-    GSM8K format: reasoning steps followed by #### final_answer
-    """
-    if "####" not in text:
-        return None
-
-    # Take everything after the last ####
-    answer = text.split("####")[-1].strip()
-
-    # Clean up common formatting
-    answer = answer.replace(",", "").replace("$", "").replace("%", "")
-    answer = answer.strip().rstrip(".")
-
-    return answer if answer else None
+    def to_dict(self):
+        return asdict(self)
 
 
-def extract_boxed_answer(text: str) -> str | None:
-    """Extract answer from \\boxed{...} with proper brace-depth counting.
-
-    Handles nested braces like \\boxed{\\frac{1}{2}} correctly.
-    """
-    # Find the last occurrence of \boxed{
-    idx = text.rfind("\\boxed{")
-    if idx == -1:
-        return None
-
-    # Start after \boxed{
-    start = idx + len("\\boxed{")
-    depth = 1
-    i = start
-
-    while i < len(text) and depth > 0:
-        if text[i] == "{":
-            depth += 1
-        elif text[i] == "}":
-            depth -= 1
-        i += 1
-
-    if depth != 0:
-        return None
-
-    # Extract content (excluding the final closing brace)
-    return text[start : i - 1].strip()
+def answers_match(predicted, ground_truth):
+    value, truth = _numeric(predicted), _numeric(ground_truth)
+    if value is None or truth is None:
+        return False
+    if truth == truth.to_integral_value():
+        return value == truth
+    return _approximate_match(predicted, ground_truth)
 
 
-def normalize_answer(answer: str) -> str:
-    """Normalize an answer string for comparison.
-
-    Strips whitespace, handles common math formatting, and attempts
-    numeric parsing for robust comparison.
-    """
-    answer = answer.strip()
-    answer = answer.rstrip(".")
-    answer = answer.replace(",", "")
-    answer = answer.replace("$", "")
-    answer = answer.replace("%", "")
-
-    # Try to simplify LaTeX fractions like \frac{1}{2} -> 1/2
-    frac_match = re.match(r"\\frac\{([^}]+)\}\{([^}]+)\}", answer)
-    if frac_match:
-        try:
-            num = float(frac_match.group(1))
-            den = float(frac_match.group(2))
-            if den != 0:
-                return str(num / den)
-        except ValueError:
-            pass
-
-    # Try numeric parse
-    try:
-        val = float(answer)
-        # Represent integers without decimal point
-        if val == int(val):
-            return str(int(val))
-        return str(val)
-    except ValueError:
-        pass
-
-    return answer
-
-
-def answers_match(predicted: str, ground_truth: str) -> bool:
-    """Compare two answers after normalization.
-
-    Tries numeric comparison first (with tolerance), then exact string match.
-    """
-    pred_norm = normalize_answer(predicted)
-    truth_norm = normalize_answer(ground_truth)
-
-    # Try numeric comparison
-    try:
-        pred_val = float(pred_norm)
-        truth_val = float(truth_norm)
-        return math.isclose(pred_val, truth_val, rel_tol=1e-6, abs_tol=1e-8)
-    except ValueError:
-        pass
-
-    # Fall back to exact string match
-    return pred_norm == truth_norm
-
-
-def extract_answer_auto(text: str) -> str | None:
-    """Try multiple extraction methods in order of specificity.
-
-    1. \\boxed{} (most specific, MATH format)
-    2. #### delimiter (GSM8K format)
-    3. Last number in text (fallback)
-    """
-    # Try \boxed{} first
-    answer = extract_boxed_answer(text)
-    if answer is not None:
-        return answer
-
-    # Try #### delimiter
-    answer = extract_gsm8k_answer(text)
-    if answer is not None:
-        return answer
-
-    # Fallback: extract last number from text
-    numbers = re.findall(r"-?\d+\.?\d*", text)
-    if numbers:
-        return numbers[-1]
-
-    return None
-
-
-def _extract_completion_text(completion) -> str:
-    """Extract plain text from a completion, handling both string and message dict formats."""
-    if isinstance(completion, list):
-        return " ".join(
-            msg["content"] for msg in completion if isinstance(msg, dict) and "content" in msg
+def score_response(text, ground_truth, benchmark="gsm8k", scorer=SCORER_VERSION):
+    if scorer in SCORER_VERSIONS[1:]:
+        module = "scoring_v2" if scorer == "legacy-v1" else "scoring_v" + scorer.rsplit("v", 1)[1]
+        old = importlib.import_module("src." + module).score_response(text, ground_truth, benchmark, scorer=scorer)
+        return Score(**old.to_dict())
+    if scorer != SCORER_VERSION or benchmark not in {"gsm8k", "math500"}:
+        raise ValueError("Unknown scorer or benchmark")
+    answer, status = final_response(text)
+    if status != "ok":
+        return Score(None, False, status)
+    if r"\boxed{" not in (answer or ""):
+        return Score(None, False, "missing_final_answer")
+    if answer.count(r"\boxed{") != 1:
+        return Score(None, False, "ambiguous_final_answer")
+    boxed = extract_boxed_answer(answer)
+    if boxed is None:
+        return Score(None, False, "malformed_final_answer")
+    if benchmark == "gsm8k":
+        predicted = normalize_answer(boxed) or None
+        return Score(
+            predicted,
+            answers_match(predicted, ground_truth),
+            "ok" if predicted is not None else "unparseable_final_answer",
         )
-    elif not isinstance(completion, str):
-        return str(completion)
-    return completion
+    from math_verify import LatexExtractionConfig, parse, verify
+
+    gold = parse("$" + ground_truth + "$", extraction_config=[LatexExtractionConfig()])
+    predicted = parse("$" + boxed + "$", extraction_config=[LatexExtractionConfig()])
+    return Score(
+        boxed if predicted else None,
+        bool(gold and predicted and verify(gold, predicted)),
+        "ok" if predicted else "unparseable_final_answer",
+    )
 
 
-def format_reward_fn(prompts, completions, **kwargs) -> list[float]:
-    """Reward for producing structured reasoning output.
+def _completion_text(completion):
+    if isinstance(completion, list):
+        return " ".join(str(message.get("content", "")) for message in completion if isinstance(message, dict))
+    return str(completion)
 
-    Gives partial credit for format compliance, providing gradient signal
-    even when the answer is wrong. This bootstraps the base model into
-    learning the <think>...</think> + answer structure before correctness
-    reward can kick in.
 
-    Scoring (0.0 to 1.0):
-    - 0.5 for <think>...</think> block
-    - 0.25 for \boxed{...} answer
-    - 0.25 for any number appearing after </think>
-    """
+def format_reward_fn(prompts, completions, **kwargs):
     rewards = []
     for completion in completions:
-        text = _extract_completion_text(completion)
-        score = 0.0
-
-        # Check for <think>...</think> block
-        if re.search(r"<think>.*?</think>", text, re.DOTALL):
-            score += 0.5
-
-        # Check for \boxed{} answer
-        if "\\boxed{" in text:
-            score += 0.25
-
-        # Check for a number after </think> (or anywhere if no think block)
-        after_think = text.split("</think>")[-1] if "</think>" in text else text
-        if re.search(r"\d+", after_think):
-            score += 0.25
-
-        rewards.append(score)
-    return rewards
-
-
-def binary_reward_fn(prompts, completions, answer, **kwargs) -> list[float]:
-    """Binary reward function for GRPOTrainer.
-
-    Returns 1.0 if the extracted answer matches ground truth, 0.0 otherwise.
-
-    TRL passes these arguments to reward functions:
-    - prompts: list of prompt strings or message dicts
-    - completions: list of completion strings or message dicts
-    - answer: list of ground truth strings (from dataset's `answer` column)
-    - **kwargs: completion_ids, trainer_state, log_extra, log_metric, etc.
-
-    In TRL 1.0, completions may be passed as lists of message dicts
-    (e.g. [{"role": "assistant", "content": "..."}]) rather than plain strings.
-    """
-    rewards = []
-    for completion, ground_truth in zip(completions, answer):
-        text = _extract_completion_text(completion)
-        predicted = extract_answer_auto(text)
-        if predicted is not None and answers_match(predicted, ground_truth):
-            rewards.append(1.0)
-        else:
+        text = _completion_text(completion)
+        answer, status = final_response(text)
+        if status != "ok":
             rewards.append(0.0)
+            continue
+        thinking = re.search(r"<think>(.*?)</think>", text, re.DOTALL)
+        reward = 0.5 if thinking and thinking[1].strip() else 0.0
+        boxed = extract_boxed_answer(answer or "") if (answer or "").count(r"\boxed{") == 1 else None
+        reward += 0.25 if boxed else 0.0
+        reward += 0.25 if boxed and normalize_answer(boxed) else 0.0
+        rewards.append(reward)
     return rewards
+
+
+def binary_reward_fn(prompts, completions, answer, **kwargs):
+    if len(completions) != len(answer):
+        raise ValueError("Completions and ground truths must align")
+    return [
+        float(score_response(_completion_text(text), str(truth)).correct)
+        for text, truth in zip(completions, answer, strict=True)
+    ]

@@ -1,0 +1,64 @@
+{
+  "pilot_evidence": [
+    {
+      "note": "Free-prose answer selection remained ambiguous. Shared boxed-final-v1 prompts and strict final-field scoring replace heuristics. Reprepare GRPO prompts; retain unchanged SFT only.",
+      "path": "outputs/studies/fed166b37e3b11a95114ce3e/ledger.json",
+      "sha256": "b96ab3cce5b272ec84db5b7a74ce346832a9c15efc3ff84b71013d4fd01d5c07"
+    }
+  ],
+  "plan_digest": "fa87d33cdf7c97c79b5e10ba88b56ac7ab2c781d8e9a87952ad051a41e61f8a1",
+  "pricing_source": {
+    "as_of": "2026-10-19",
+    "caution": "Reservations include a startup/idle allowance, not a provider billing guarantee. Image builds, storage and egress are additional; configure a workspace spending limit before paid work. Recheck rates before launch.",
+    "cpu_core_per_second": 1.31e-05,
+    "gpu_per_second": {
+      "H100": 0.001097,
+      "L40S": 0.000542
+    },
+    "memory_gib_limit": 16,
+    "memory_gib_per_second": 2.22e-06,
+    "overhead_seconds_per_task": 120,
+    "physical_cores_limit": 2,
+    "source": "https://modal.com/pricing"
+  },
+  "runtime_reservations_usd": 2.5474799999999997,
+  "status": "authorized_explicit_answer_contract_validation",
+  "suggested_cap_usd": 10,
+  "tasks": {
+    "pilot:eval": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 600
+    },
+    "pilot:grpo": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00115872,
+      "timeout_seconds": 900
+    },
+    "pilot:prepare:grpo": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 300
+    },
+    "pilot:prepare:sft": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 3600
+    },
+    "pilot:sft": {
+      "overhead_seconds": 120,
+      "rate_per_second": 0.00060372,
+      "timeout_seconds": 600
+    },
+    "pilot:verify": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 60
+    },
+    "prepare:runtime": {
+      "overhead_seconds": 120,
+      "rate_per_second": 6.172e-05,
+      "timeout_seconds": 3600
+    }
+  }
+}

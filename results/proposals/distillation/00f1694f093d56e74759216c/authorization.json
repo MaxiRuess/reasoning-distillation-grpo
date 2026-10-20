@@ -1,0 +1,9 @@
+{
+  "authority": "User: Let's implement this within the budget constraint",
+  "cap_usd": 17.85,
+  "envelope_usd": 20,
+  "previous_metered_usd": 1.8600004,
+  "protocol_id": "00f1694f093d56e74759216c35302825953b4313690180421827df57d43c1056",
+  "quote_sha256": "36d86a8cf2b69b6cb2b892065592d8b7ad88c8e4b51e9f0e3fa7ae3f8b24b09f",
+  "scope": "Matched answer versus reasoning-trace SFT, three seeds, fixed evaluation subsets"
+}

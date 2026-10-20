@@ -1,0 +1,7 @@
+{
+  "endpoint": "completed-consistent-numeric-boxes-v1",
+  "frozen_implementation_sha256": "873a925746f98b929de56a7d7630547b434abaa7a39d78e113fb5fbef688330b",
+  "protocol_id": "d8a9671022f294b1fae97e829d3c651d9a79a2bc62c1544115952f3f7edf04fd",
+  "scores_sha256": "c04b062f619f7ca5cde4bc2046985ff081cf3b86bc565639429de0b44bc32289",
+  "source_predictions_sha256": "997caf890cfa4c8c7727a198e69f19233117f128a2d378ad1351b26734abfc48"
+}

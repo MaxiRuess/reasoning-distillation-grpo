@@ -1,0 +1,8 @@
+\subsection{Post hoc completion diagnostic for the original 2K evaluation}
+Among the 101 question--seed pairs where a trace checkpoint was correct and the unchanged student was incorrect, the unchanged response hit the output limit in 99 pairs. These pairs reuse the same 256 questions across training seeds. Conversely, there were 41 unchanged-only correct pairs, of which 29 involved an output-limited trace response. Most trace-only correct pairs thus involve an output-limited unchanged response, while leaving unknown how those responses would have answered with more generation.
+\par\begin{table}[ht]\centering\small\begin{tabular}{lrr}\toprule
+Original 2K subset & Unchanged & Trace, pooled \\
+\midrule
+EOS-terminated & 180/184 (97.83\%) & 600/641 (93.60\%) \\
+No unfinished thinking & 180/193 (93.26\%) & 600/642 (93.46\%) \\
+\bottomrule\end{tabular}\caption{Correct responses divided by each model-dependent subset, with conditional accuracy in parentheses. Trace pooling reuses 256 questions across three checkpoints. Closing a thinking block does not imply EOS termination; these selected subsets do not isolate reasoning ability.}\label{tab:original-completion}\end{table}\par

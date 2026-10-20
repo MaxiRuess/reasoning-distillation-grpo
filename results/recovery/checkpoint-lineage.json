@@ -1,0 +1,9 @@
+{
+  "sft_source": "outputs/sft_then_grpo/checkpoint-117",
+  "grpo_source": "outputs/sft_then_grpo",
+  "recorded_grpo_base": "Qwen/Qwen3-1.7B",
+  "recorded_grpo_revision": null,
+  "sampled_sft_module": "base_model.model.model.layers.0.self_attn.q_proj.lora_A.weight",
+  "sampled_sft_update_frobenius_norm": 2.3570432662963867,
+  "interpretation": "A nonzero SFT update is recoverable. Original evaluation omitted it according to the recorded code path; corrected model accuracy remains unmeasured."
+}

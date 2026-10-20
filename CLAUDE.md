@@ -1,96 +1,68 @@
-# CLAUDE.md
+# Repository instructions
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
-
-## Project Overview
-
-ML research project comparing five training conditions for teaching reasoning to a small model (Qwen3 1.7B) via distillation from DeepSeek-R1 traces, GRPO reinforcement learning, and re-distillation from RL-verified traces. Uses TRL (SFTTrainer, GRPOTrainer) with LoRA (r=64, rsLoRA) in full bfloat16 precision.
+This is a study of additional adaptation of **post-trained Qwen/Qwen3-1.7B**, not the pretrained-only `-Base` checkpoint. Preserve historical measurements separately from corrected and newly generated results.
 
 ## Commands
 
 ```bash
-# Install (editable, venv recommended)
-pip install -e .
-
-# Data preparation
-python scripts/01_prepare_sft_data.py --condition sft_traces
-python scripts/01_prepare_sft_data.py --condition re_distill
-
-# SFT training (requires GPU / Modal)
-modal run modal_train.py::train_sft --condition sft_traces
-modal run modal_train.py::train_sft --condition re_distill
-
-# GRPO training
-modal run modal_train.py::train_grpo --condition grpo_only
-modal run modal_train.py::train_grpo --condition sft_then_grpo --sft-checkpoint /vol/outputs/sft_then_grpo
-
-# Evaluation (spot check on N problems)
-modal run modal_train.py::spot_check_gsm8k --model-path /vol/outputs/sft_traces --num-problems 100
-modal run modal_train.py::spot_check_gsm8k --model-path /vol/outputs/sft_traces --num-problems 100 --start-from 33
-
-# Quick test (5 sample questions, visual check)
-modal run modal_train.py::quick_test --model-path /vol/outputs/sft_traces
+pip install -e '.[dev]'
+python -m pytest tests -q
+ruff check src scripts tests modal_train.py
+python scripts/08_run_study.py --experiment controlled           # local dry run, no remote jobs
+python scripts/08_run_study.py --experiment controlled --prepare-only  # local CPU data preparation
+python scripts/11_quote_pilot.py                                # priced proposal, no execution
+sh scripts/build_paper.sh
 ```
 
-## Architecture
+The pilot and main study are separate spending decisions. The user approved the small pilot under the proposed $10 cap on October 19, 2026; authorization and the quote hash are recorded in `results/recovery/pilot-authorization.json`. No main-study or additional hardware-comparison spending is approved. Use the quoted runner and preserve/reconcile its ledger before any retry. Reservations/timeouts are not a guarantee of provider billing; include initialization, image builds, storage and egress.
 
-```
-configs/config.yaml     <- Single source of truth for all hyperparameters
-        |
-src/data.py             <- Loads HF datasets, formats per condition
-src/reward.py           <- Answer extraction (####, \boxed{}), binary + format rewards
-src/training.py         <- Model loading (bf16 or quantized), LoRA + trainer construction
-src/evaluation.py       <- GSM8K/MATH benchmarks, pass@k computation
-        |
-scripts/01-06           <- CLI entry points for each pipeline phase
-modal_train.py          <- Cloud orchestration (L40S for SFT, H100 for GRPO)
-results/                <- Evaluation results and findings
-paper/                  <- Literature comparison
-```
+The identified pilot defects are fixed: 53 CPU tests and the fresh structured-protocol GPU pilot pass. All pilot apps are stopped. `results/recovery/pilot-final-outcome.json` and the repair report record exact source/lineage/counter/hash checks and about $3.12 reported metered usage under the original $10 cap. No main-study or hardware-comparison approval is inferred.
 
-**Config flow**: Scripts call `load_config()` -> extract `config["conditions"][condition_name]` -> pass to trainer builders which read the nested `["sft"]` or `["grpo"]` sub-key.
+The user subsequently approved implementation of a separate 256-question, three-construction checkpoint-loading ablation with an additional $20 cap. Its frozen protocol/quote/authorization live under `results/proposals/checkpoint-ablation/6b95572ffeae5d5f98176ffd/`; the execution ledger lives under `outputs/checkpoint-ablation/`. This permits CPU reconstruction and three bounded L40S evaluations, with separate persistence checks. It authorizes no training, full-study matrix or automatic paid retry. See `docs/experiments/checkpoint-ablation-2026-10-19.md`. The expanded CPU suite passes 65 tests plus 11 subtests. Run its CLI with `PYTHONPATH=.` from the repository root.
 
-## Five Experimental Conditions
+That ablation is complete: all 768 responses were persisted, separately verified and rescored on CPU. Exact SFT parent: 191/256; missing SFT: 168/256; corrected reconstruction: 184/256. The +6.25-point strict restoration effect is sensitive to four repeated identical correct boxes: the post hoc relaxed effect is +4.69 points with an interval crossing zero. Corrected versus SFT is unresolved. The app is stopped; closing reported additional metered usage was $1.86 ($0 billed after credits in that snapshot), within the separate $20 cap. See `results/recovery/checkpoint-ablation-outcome.json` and `docs/experiments/checkpoint-ablation-results-2026-10-19.md`. Do not rerun the completed protocol, expand the sample, change the primary scores or infer a new compute authorization.
 
-| Condition | Trains with | Script(s) |
-|---|---|---|
-| `baseline` | SFT on Orca Math (Q&A, no traces) | `train_sft` |
-| `sft_traces` | SFT on s1K-1.1 (DeepSeek-R1 traces) | `train_sft` |
-| `re_distill` | SFT on Open-R1 (RL-verified traces) | `train_sft` |
-| `grpo_only` | GRPO from base model | `train_grpo` |
-| `sft_then_grpo` | SFT on traces, then GRPO refinement | `train_sft` -> `train_grpo` |
+On October 20 the user explicitly authorized the matched-question distillation study within the same $20 envelope. Its final frozen protocol is `results/proposals/distillation/d8a9671022f294b1fae97e82/`: 500 shared teacher questions, answer-only versus explicit teacher-thinking supervision with identical final fields, two epochs/64 updates, three seeds, seven 256-question 2K evaluations and seven preselected 64-question 4K checks. The new cap is $17.65; $2.14 remains reserved for the earlier run and $0.18 for stopped CPU preparation. Use `outputs/distillation-active.json` for current state. Older preparation protocols are superseded and must not be executed. This authorizes no GRPO, broader matrix, automatic paid retry or extension using leftover funds.
 
-## Critical Patterns
+The distillation study prospectively uses `completed-consistent-numeric-boxes-v1` as its numerical primary endpoint, scored on saved raw generations. It accepts identical repeated numeric final boxes and rejects conflicts, malformed boxes and unfinished thinking. Unchanged `boxed-final-v1` GPU scores are secondary. Keep both policies and raw outputs. Three seeds on 256 common questions do not become 768 independent items. Its source snapshot is preserved under the frozen proposal. The expanded CPU suite passes 79 tests plus 11 subtests.
 
-**Two Modal images** — `sft_image` uses torch 2.8 + flash-attn (pre-built wheel). `grpo_image` uses `trl[vllm]` which pulls its own torch version. They cannot be combined because vLLM's CUDA memory pool conflicts with flash-attn build requirements.
+That study is complete: all 37 nodes, six exports and 2,240 responses were verified; every experiment app is stopped with zero tasks and the final container inventory is empty. At 2K, trace SFT averages 78.1%, unchanged 70.3%, and answer-only 6.25%. The answer-only template supervises empty thinking blocks; its collapse is a recipe-specific limitation. The same-64-question 4K comparison does not demonstrate an advantage over the unchanged student. Estimated new resource-time cost is $7.01 ($8.58 with extra startup allowance); the conservative envelope total including earlier-run reserves and all allowances is $11.10, not a reconciled invoice. See `docs/experiments/distillation-results-2026-10-20.md` and `results/recovery/distillation-study-close.json`. Do not rerun, expand or spend remaining funds. Post-run collection-path and token-scope-label fixes are recorded separately; the frozen executed source remains preserved. The CLI source guard rejects the old proposal under changed source, including collection; the CPU-only collection API was regression-checked without launching models.
 
-**GRPO requires vLLM** — Without vLLM, GRPO generation is unusably slow. Uses `vllm_mode="colocate"` with `vllm_enable_sleep_mode=True`. Requires distributed env vars (`RANK=0`, `LOCAL_RANK=0`, `WORLD_SIZE=1`).
+On October 20 the user then explicitly authorized the separate 128-question sampled inference follow-up with a new additional $30 cap. Frozen proposal: `results/proposals/inference-extension/f1b156f14754100c186bc396`; active pointer: `outputs/inference-extension-active.json`. It uses only the existing unchanged student and trace seeds 42/43/44 at 2K/4K/8K, plus sampled and original-greedy unchanged-student no-thinking diagnostics at 2K. All 14 evaluations share the same 128 questions. No training, second benchmark, extra decoding seeds or automatic paid retry is authorized. Fixed total reservations including incidentals are $29.0453128. The follow-up primary is trace-minus-unchanged accuracy at 8K; the old primary and scores are preserved. The sampled single-response seed defect is fixed under canonical-batch-v3; old greedy results are unaffected. The full local suite now passes 84 tests plus 11 subtests. Use the active ledger for progress; do not relaunch a completed or interrupted paid task. The previous prohibition on spending leftover funds still governs the old study and does not negate this new explicit authorization.
 
-**Reward functions** — TRL passes `prompts`, `completions`, and dataset columns as kwargs:
-```python
-def binary_reward_fn(prompts, completions, answer, **kwargs) -> list[float]
-def format_reward_fn(prompts, completions, **kwargs) -> list[float]
-```
-Both handle TRL's message dict format (completions may be `[{"role": "assistant", "content": "..."}]`).
+## Architecture and invariants
 
-**Attention auto-detect** — `_get_attn_implementation()` returns `"flash_attention_2"` if flash-attn is installed, `"sdpa"` otherwise. Used in `load_model()`, `load_sft_checkpoint()`, and `load_model_for_eval()`.
+- `configs/config.yaml`: pinned model/dataset revisions, named historical and controlled conditions, seeds and protocols. Historical `baseline` is Orca worked-solution SFT.
+- `src/data.py`: shared-question controls, complete targets, decontamination/quarantine, immutable prepared manifests. Preparation happens on CPU. GPU training requires existing validated data.
+- `src/preprocessing.py`: CPU-only pinned TRL tokenization/packing; preserve masks and document boundaries, hash saved token files, and skip GPU-side re-preparation.
+- `src/runtime_cache.py`: pinned weights and benchmark warmup on CPU into the shared volume. GPU images are offline; never download weights during GPU allocation.
+- `src/performance.py`: sampled device utilization/memory and Torch allocator peaks. CPU evidence is not a GPU performance measurement.
+- `src/reward.py`: primary `boxed-final-v1` scorer. New GRPO/evaluation share the authoritative boxed-answer instruction in `src/prompting.py`; integer gold values compare exactly. Format failures and unfinished thinking remain separate. Archived prose v2-v6/legacy policies are reproduction diagnostics only; `extract_answer_auto` must not grade new runs. Never silently change score identities or retroactively apply a new prompt contract.
+- `src/rescoring.py`: CPU rescoring with source hashes and new output identities; never overwrite original results or imply that an older model was retrained.
+- `src/artifacts.py`: file identities, saved source snapshots, model lineage and atomic evaluation transactions.
+- `src/training.py`: pass the actual tokenizer to trainers, preserve complete packed targets, retain intermediate adapters and export all effective model weights.
+- `src/pipeline.py`: shared CLI/Modal implementation. Enforce SFT condition/seed and current reward policy. GRPO tokens come from trainer state, not the unused SFT counter. `objective/*` metrics use configured reward weights; upstream `reward` is an unweighted sum.
+- `src/evaluation.py`: raw predictions, explicit benchmark/scorer identities, first-sample accuracy, sampled pass@k and exclusive resume writers. Supported benchmarks are `gsm8k` and `math500`; `math` is rejected.
+- Evaluation sampling is canonical-batch seeded. Effective batch size and sampling policy are part of run identity; a partial batch replays before skipping committed questions. Keep final volume flushes and performance profiles.
+- `src/study.py`: sequential dependency graph, separate paid-job reservations and immutable ledger. Interrupted charged jobs require reconciliation, not blind retries.
+- Quote proposals use content-addressed output directories; never overwrite the original approved quote or change its bound hash.
+- `modal_train.py`: separate locked Linux/Python 3.11 SFT and GRPO images, built and smoke-tested on GPU. Set environment/build layers before attaching local files. Keep vLLM sleep disabled for the pinned stack: its wake/sync ordering failed on GPU. New outputs live below `/vol/training-v2` and `/vol/evaluations-v2`; do not overwrite historical `/vol/outputs`.
+- `scripts/07-15`: archival, orchestration, statistics, reconstruction, quotes, collection, paper results and CPU rescoring.
 
-**EOS token alignment** — Qwen3 base uses `<|endoftext|>` as eos_token, but its chat template uses `<|im_end|>` as end-of-turn. Config sets `eos_token: "<|im_end|>"` which `load_model()` applies to the tokenizer.
+Use the shared loader for all evaluation. Never attach a combined GRPO adapter to original Qwen weights without the original SFT contribution. Full exports are independent; retained intermediate adapters require their declared parent.
 
-**Quantization is optional** — `config["quantization"]["enabled"]` controls whether to use 4-bit NF4 or full bf16. Currently disabled (full bf16).
+Record real prompts consumed, rollouts, processed tokens and optimizer steps. Dataset cardinality is not exposure. Missing raw historical responses cannot be rescored without regeneration. Equal rewards are not proof of entropy collapse; lexical verification markers are not proof of faithful reasoning.
 
-**rsLoRA scaling** — LoRA rank is set to 64 with `use_rslora: true`. Standard LoRA scaling (alpha/r) causes gradient collapse at high ranks; rsLoRA scales by alpha/sqrt(r) instead.
+Source `paper/paper.tex` and its generated tables are tracked. Build the PDF locally, inspect its rendering, and keep narrative claims aligned with structured results. `docs/remediation/STATUS.md` records remaining empirical gates.
 
-**Dataset format conventions**:
-- SFT datasets: `prompt` + `completion` columns, both lists of message dicts
-- GRPO datasets: `prompt` (message dicts) + `answer` (plain string for reward function)
+## Inference follow-up closing state — October 20, 2026
 
-**SFT->GRPO checkpoint handoff**: `load_sft_checkpoint()` merges the LoRA adapter into base weights via `merge_and_unload()`, then loads tokenizer from base model (not checkpoint, to avoid cross-version tokenizer incompatibility).
+The separately authorized $30 inference follow-up is complete: all 29 tasks succeeded, all 1,792 new responses passed persistence/identity/CPU strict-score checks, and live Modal inventory confirms app `ap-Vdluc45l0EjklFFvOKg44M` stopped with zero tasks and no containers. The primary 8K result is trace mean 86.20% versus unchanged 87.50%: −1.30 points, conditional item interval −5.73 to +2.86. No advantage or equivalence is established. Native no-thinking scores 77.34% greedy and 78.91% sampled at 2K, and does not reproduce the old answer-only collapse. Resource-time cost is estimated at $13.34, $14.47 with extra startup allowance, or $15.47 with incidental allowance; these are not reconciled invoices. All are within the separately authorized $30 cap. No further GPU work is authorized from unused funds. Do not rerun this protocol or change its completed outputs. See `docs/experiments/inference-extension-results-2026-10-20.md` and `results/recovery/inference-extension-outcome.json`. The paper now covers the original greedy experiment and this separately frozen sampled follow-up; earlier historical score tables and checkpoint-repair history remain in the repository rather than the paper. No commit, push or public release has been performed.
 
-**Evaluation**: `spot_check_gsm8k` supports `start_from` parameter for resumable evaluation after timeouts.
+## Manuscript revision after follow-up
 
-**Modal volumes**: Functions must call `volume.commit()` after writing outputs or data is lost.
+At the user's request, the findings and full paper were rewritten around the completed evidence. Current title: `Reasoning-Trace Distillation under Output Limits: A Qwen3-1.7B Case Study`. The original numerical primary remains unchanged. A separately derived saved-output strict secondary calculation gives +2.60 points at 8K (conditional interval −2.60 to +8.07), compared with the numerical primary −1.30 (−5.73 to +2.86); neither establishes an advantage. Five unchanged responses with repeated consistent correct boxes account for the sign change. See `paper/inference-extension-secondary.json`, `docs/reviews/2026-10-20-manuscript-rewrite.md` and the manuscript revision record. All 4,032 raw strict scores reproduce on CPU; a separate bootstrap calculation matches both intervals. No GPU work was added. The nine-page PDF supersedes the earlier manuscript version hashed in the experiment's closing record, which remains historical and unchanged. The build script now regenerates current paper fragments from saved follow-up analysis on CPU. Do not alter completed experiment records to make old manuscript hashes match a revised PDF.
 
-## Linting
+## GitHub publication authorization
 
-Ruff with line-length 120.
+The user explicitly requested publishing through the existing GitHub paper link and then explicitly requested committing and pushing the changes. GitHub Pages serves `main` at the repository root. Publish the reviewed PDF and supporting code/results through that existing branch using a normal fast-forward push; preserve unrelated work and never force-push. The public follow-up proposal now includes an exact `execution-ledger.json` copy, which the paper renderer uses only when its ignored local ledger is absent. Clean-copy rebuilding requires no cloud calls and reproduces the reviewed PDF text and figure. See `docs/experiments/github-publication-2026-10-20.md`. No additional GPU work is authorized.

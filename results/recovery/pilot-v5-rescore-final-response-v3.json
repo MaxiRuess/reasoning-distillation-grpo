@@ -1,0 +1,19 @@
+{
+  "accuracy": 0.3125,
+  "benchmark": "gsm8k",
+  "extraction_failure_rate": 0.40625,
+  "generation_repeated": false,
+  "mean_generated_tokens": 1074.625,
+  "model_identity": "5a92f5f18ae5d99978cd2406cc07e4b54d38a7b95fc0b4acd8a3525a321fd76d",
+  "num_correct": 10,
+  "num_samples_per_problem": 1,
+  "num_total": 32,
+  "pass@1": 0.3125,
+  "pilot_or_subset": true,
+  "results_path": "outputs/rescored-v5/fdfe0fd92940f2f3bcc1d0b8",
+  "run_id": "fdfe0fd92940f2f3bcc1d0b81dcf76bfdaa2122f9bc1e71f760c45250866120f",
+  "scorer_version": "final-response-v5",
+  "source_run_id": "cb7effa6b2656afbcf9f575235f3d9d5f178a508cf5dca8166a141f9984b4fe2",
+  "training_repeated": false,
+  "truncation_rate": 0.375
+}

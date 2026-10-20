@@ -1,0 +1,3074 @@
+{
+  "0086d09406a2d162": {
+    "arm": "reconstructed",
+    "problem_id": "874"
+  },
+  "01411d37493c452b": {
+    "arm": "sft_parent",
+    "problem_id": "439"
+  },
+  "016e355a62d0f2ab": {
+    "arm": "sft_parent",
+    "problem_id": "256"
+  },
+  "017adc120716b306": {
+    "arm": "sft_parent",
+    "problem_id": "1012"
+  },
+  "01a43d8157fbad71": {
+    "arm": "missing_sft",
+    "problem_id": "752"
+  },
+  "02c9edb9240e7185": {
+    "arm": "sft_parent",
+    "problem_id": "903"
+  },
+  "03614b8a12c24138": {
+    "arm": "sft_parent",
+    "problem_id": "562"
+  },
+  "03c7e199872cac25": {
+    "arm": "reconstructed",
+    "problem_id": "83"
+  },
+  "03d35d632acac111": {
+    "arm": "missing_sft",
+    "problem_id": "1059"
+  },
+  "03f49f66b5513a61": {
+    "arm": "reconstructed",
+    "problem_id": "571"
+  },
+  "04c8f27c96674b9a": {
+    "arm": "sft_parent",
+    "problem_id": "1036"
+  },
+  "04e918c73066b390": {
+    "arm": "reconstructed",
+    "problem_id": "215"
+  },
+  "053cf5222b1dc4be": {
+    "arm": "sft_parent",
+    "problem_id": "1097"
+  },
+  "058146c650e4a9b7": {
+    "arm": "sft_parent",
+    "problem_id": "626"
+  },
+  "05b84b555411fbcf": {
+    "arm": "reconstructed",
+    "problem_id": "675"
+  },
+  "05ccd54c4fb3a0fe": {
+    "arm": "sft_parent",
+    "problem_id": "1069"
+  },
+  "069aa11727d5372b": {
+    "arm": "missing_sft",
+    "problem_id": "621"
+  },
+  "06db80c3798c25f4": {
+    "arm": "missing_sft",
+    "problem_id": "744"
+  },
+  "070f0292f09a2059": {
+    "arm": "missing_sft",
+    "problem_id": "1182"
+  },
+  "072f5488fceadfbe": {
+    "arm": "reconstructed",
+    "problem_id": "132"
+  },
+  "0797fb0c2034d7f5": {
+    "arm": "missing_sft",
+    "problem_id": "32"
+  },
+  "07c569e68d391ba4": {
+    "arm": "sft_parent",
+    "problem_id": "1050"
+  },
+  "07ed3bb4c0a57a04": {
+    "arm": "sft_parent",
+    "problem_id": "280"
+  },
+  "086b838193f72119": {
+    "arm": "sft_parent",
+    "problem_id": "418"
+  },
+  "0924fad7f7b04bae": {
+    "arm": "sft_parent",
+    "problem_id": "405"
+  },
+  "0930237f347706fc": {
+    "arm": "reconstructed",
+    "problem_id": "446"
+  },
+  "097e17ee49002bbf": {
+    "arm": "reconstructed",
+    "problem_id": "1134"
+  },
+  "09c2a78bba111629": {
+    "arm": "reconstructed",
+    "problem_id": "300"
+  },
+  "0aa13cbe3a1a8737": {
+    "arm": "sft_parent",
+    "problem_id": "1231"
+  },
+  "0b3a2687592734ca": {
+    "arm": "sft_parent",
+    "problem_id": "956"
+  },
+  "0b889a452dab5c04": {
+    "arm": "missing_sft",
+    "problem_id": "1000"
+  },
+  "0b9428dfb7467e18": {
+    "arm": "missing_sft",
+    "problem_id": "323"
+  },
+  "0c58c1d31298765c": {
+    "arm": "sft_parent",
+    "problem_id": "762"
+  },
+  "0c85920d593417ed": {
+    "arm": "missing_sft",
+    "problem_id": "762"
+  },
+  "0cd6fe032a718cf3": {
+    "arm": "sft_parent",
+    "problem_id": "1106"
+  },
+  "0d0bfa823fc44edf": {
+    "arm": "sft_parent",
+    "problem_id": "1214"
+  },
+  "0da48c5e08806369": {
+    "arm": "reconstructed",
+    "problem_id": "488"
+  },
+  "0ee73a54dd5617ff": {
+    "arm": "reconstructed",
+    "problem_id": "887"
+  },
+  "0eff70cd6b3e9a65": {
+    "arm": "reconstructed",
+    "problem_id": "1178"
+  },
+  "0f03cf03adef2bbb": {
+    "arm": "sft_parent",
+    "problem_id": "962"
+  },
+  "0fe16672cf95c577": {
+    "arm": "missing_sft",
+    "problem_id": "968"
+  },
+  "100eb9656b4e97bf": {
+    "arm": "missing_sft",
+    "problem_id": "281"
+  },
+  "103c4f6f285de1c9": {
+    "arm": "missing_sft",
+    "problem_id": "630"
+  },
+  "1046353bb3de7ff5": {
+    "arm": "missing_sft",
+    "problem_id": "592"
+  },
+  "10f0b50b40cf558a": {
+    "arm": "missing_sft",
+    "problem_id": "564"
+  },
+  "10f844a351b95450": {
+    "arm": "reconstructed",
+    "problem_id": "831"
+  },
+  "11074ef33e2e235a": {
+    "arm": "missing_sft",
+    "problem_id": "1148"
+  },
+  "114da05d333dc76f": {
+    "arm": "sft_parent",
+    "problem_id": "935"
+  },
+  "118808444088b5cf": {
+    "arm": "missing_sft",
+    "problem_id": "73"
+  },
+  "120bc2e039e52e31": {
+    "arm": "sft_parent",
+    "problem_id": "1095"
+  },
+  "1229ad13c52dd61b": {
+    "arm": "reconstructed",
+    "problem_id": "188"
+  },
+  "12321d81340453ac": {
+    "arm": "missing_sft",
+    "problem_id": "1012"
+  },
+  "1254d927cddc5419": {
+    "arm": "missing_sft",
+    "problem_id": "1087"
+  },
+  "135cd5a0265e6ab7": {
+    "arm": "missing_sft",
+    "problem_id": "1134"
+  },
+  "141f7fe3cc0aa9c4": {
+    "arm": "missing_sft",
+    "problem_id": "1187"
+  },
+  "1476b975cb6f1493": {
+    "arm": "missing_sft",
+    "problem_id": "197"
+  },
+  "1491e29b9da29703": {
+    "arm": "sft_parent",
+    "problem_id": "1117"
+  },
+  "149af822683baef8": {
+    "arm": "missing_sft",
+    "problem_id": "571"
+  },
+  "14b600659b872d11": {
+    "arm": "reconstructed",
+    "problem_id": "491"
+  },
+  "14d076ed7efb0b12": {
+    "arm": "sft_parent",
+    "problem_id": "849"
+  },
+  "14d8202bdc01fb7c": {
+    "arm": "sft_parent",
+    "problem_id": "969"
+  },
+  "15703fecb8571cc9": {
+    "arm": "missing_sft",
+    "problem_id": "348"
+  },
+  "15ae792eb5038cae": {
+    "arm": "reconstructed",
+    "problem_id": "1097"
+  },
+  "16370c7deb37608b": {
+    "arm": "reconstructed",
+    "problem_id": "314"
+  },
+  "16a7533253c9a82d": {
+    "arm": "reconstructed",
+    "problem_id": "323"
+  },
+  "16f0ccfba103ed09": {
+    "arm": "missing_sft",
+    "problem_id": "763"
+  },
+  "17a76d2b9f7f195c": {
+    "arm": "missing_sft",
+    "problem_id": "658"
+  },
+  "17b0e681306930ba": {
+    "arm": "missing_sft",
+    "problem_id": "562"
+  },
+  "17d798f47178ef19": {
+    "arm": "missing_sft",
+    "problem_id": "903"
+  },
+  "189395cc3bfa9309": {
+    "arm": "sft_parent",
+    "problem_id": "763"
+  },
+  "19375a8aecda2468": {
+    "arm": "reconstructed",
+    "problem_id": "1051"
+  },
+  "19d30f6c2405c65b": {
+    "arm": "sft_parent",
+    "problem_id": "1080"
+  },
+  "19f4fbc4ff0c7073": {
+    "arm": "reconstructed",
+    "problem_id": "590"
+  },
+  "19fe5d79e7fdfd45": {
+    "arm": "missing_sft",
+    "problem_id": "1069"
+  },
+  "1a2cc0ca7d4b57c9": {
+    "arm": "reconstructed",
+    "problem_id": "763"
+  },
+  "1a521b75848c7f97": {
+    "arm": "missing_sft",
+    "problem_id": "956"
+  },
+  "1a5d61023a1e37cb": {
+    "arm": "sft_parent",
+    "problem_id": "1013"
+  },
+  "1ac5f6c77dbad3d8": {
+    "arm": "missing_sft",
+    "problem_id": "82"
+  },
+  "1aeea5ff4e1d6886": {
+    "arm": "sft_parent",
+    "problem_id": "582"
+  },
+  "1b079679de323690": {
+    "arm": "missing_sft",
+    "problem_id": "1202"
+  },
+  "1b85def3b438fb01": {
+    "arm": "reconstructed",
+    "problem_id": "281"
+  },
+  "1ba2cdeccb54b682": {
+    "arm": "reconstructed",
+    "problem_id": "1289"
+  },
+  "1bd1e93c147d3672": {
+    "arm": "reconstructed",
+    "problem_id": "867"
+  },
+  "1c6d0fcae0820f1a": {
+    "arm": "missing_sft",
+    "problem_id": "883"
+  },
+  "1d179a38d8c54559": {
+    "arm": "reconstructed",
+    "problem_id": "308"
+  },
+  "1dcd12d3556b6522": {
+    "arm": "reconstructed",
+    "problem_id": "769"
+  },
+  "1dd5b8f5b89bb2fd": {
+    "arm": "reconstructed",
+    "problem_id": "331"
+  },
+  "1e413b711d7f0ba1": {
+    "arm": "missing_sft",
+    "problem_id": "163"
+  },
+  "1e4d6b049922ffd8": {
+    "arm": "reconstructed",
+    "problem_id": "893"
+  },
+  "1e50e3c47a57cd42": {
+    "arm": "reconstructed",
+    "problem_id": "434"
+  },
+  "1f8d60a3f6bc6be0": {
+    "arm": "missing_sft",
+    "problem_id": "1221"
+  },
+  "1fef26db908b8ddd": {
+    "arm": "reconstructed",
+    "problem_id": "1153"
+  },
+  "200f8bac1a7f8fc4": {
+    "arm": "missing_sft",
+    "problem_id": "994"
+  },
+  "2051dfd490d8bb5f": {
+    "arm": "reconstructed",
+    "problem_id": "197"
+  },
+  "2066fc7d18965df6": {
+    "arm": "reconstructed",
+    "problem_id": "137"
+  },
+  "20772794541c7a87": {
+    "arm": "reconstructed",
+    "problem_id": "500"
+  },
+  "20ac192c51a7690b": {
+    "arm": "missing_sft",
+    "problem_id": "309"
+  },
+  "20cf4d82f4e0905a": {
+    "arm": "sft_parent",
+    "problem_id": "703"
+  },
+  "20fd797683defb09": {
+    "arm": "missing_sft",
+    "problem_id": "505"
+  },
+  "210a45f08906f654": {
+    "arm": "sft_parent",
+    "problem_id": "1255"
+  },
+  "211828e8e702b16d": {
+    "arm": "reconstructed",
+    "problem_id": "381"
+  },
+  "21f0dc4cd9e5b427": {
+    "arm": "missing_sft",
+    "problem_id": "755"
+  },
+  "2249bbe869b3e59b": {
+    "arm": "missing_sft",
+    "problem_id": "742"
+  },
+  "22b55a24007f5d11": {
+    "arm": "missing_sft",
+    "problem_id": "847"
+  },
+  "22c307b7ae725e7d": {
+    "arm": "sft_parent",
+    "problem_id": "308"
+  },
+  "22e74262577ed469": {
+    "arm": "missing_sft",
+    "problem_id": "359"
+  },
+  "236d3177020e5f09": {
+    "arm": "sft_parent",
+    "problem_id": "577"
+  },
+  "237ba522b6ed6ffb": {
+    "arm": "sft_parent",
+    "problem_id": "1111"
+  },
+  "23e8d5a67807362b": {
+    "arm": "reconstructed",
+    "problem_id": "1257"
+  },
+  "241f08fecdc24b59": {
+    "arm": "reconstructed",
+    "problem_id": "896"
+  },
+  "241fc564246eae38": {
+    "arm": "missing_sft",
+    "problem_id": "331"
+  },
+  "2453506957581ccb": {
+    "arm": "reconstructed",
+    "problem_id": "1226"
+  },
+  "24a2ab144ea4b6c4": {
+    "arm": "sft_parent",
+    "problem_id": "929"
+  },
+  "254f6368de57027c": {
+    "arm": "missing_sft",
+    "problem_id": "787"
+  },
+  "259c7b64aa98534d": {
+    "arm": "sft_parent",
+    "problem_id": "270"
+  },
+  "25dee4c336295570": {
+    "arm": "missing_sft",
+    "problem_id": "929"
+  },
+  "26233ecd5d4afff1": {
+    "arm": "missing_sft",
+    "problem_id": "1077"
+  },
+  "26db3076f72efcd0": {
+    "arm": "missing_sft",
+    "problem_id": "308"
+  },
+  "26eb30726a90506e": {
+    "arm": "reconstructed",
+    "problem_id": "359"
+  },
+  "27335dd095bec055": {
+    "arm": "reconstructed",
+    "problem_id": "736"
+  },
+  "27b6dd97664fa1fa": {
+    "arm": "missing_sft",
+    "problem_id": "967"
+  },
+  "27ee02ba4f3e019b": {
+    "arm": "missing_sft",
+    "problem_id": "1226"
+  },
+  "28134cfd432a813b": {
+    "arm": "reconstructed",
+    "problem_id": "336"
+  },
+  "281b5b35862b81ce": {
+    "arm": "missing_sft",
+    "problem_id": "590"
+  },
+  "2887b2ec42c23dcd": {
+    "arm": "missing_sft",
+    "problem_id": "626"
+  },
+  "295675e92b457009": {
+    "arm": "sft_parent",
+    "problem_id": "491"
+  },
+  "299690741be49eff": {
+    "arm": "reconstructed",
+    "problem_id": "475"
+  },
+  "299d22c1441aead8": {
+    "arm": "sft_parent",
+    "problem_id": "359"
+  },
+  "2a3e475e9ae9f705": {
+    "arm": "reconstructed",
+    "problem_id": "1123"
+  },
+  "2a4e6f8ddf1070ea": {
+    "arm": "missing_sft",
+    "problem_id": "816"
+  },
+  "2a7237fba99d5243": {
+    "arm": "sft_parent",
+    "problem_id": "323"
+  },
+  "2a885423f56e7dc8": {
+    "arm": "sft_parent",
+    "problem_id": "581"
+  },
+  "2aa585eb927b893f": {
+    "arm": "reconstructed",
+    "problem_id": "987"
+  },
+  "2ab200490aa829a3": {
+    "arm": "reconstructed",
+    "problem_id": "762"
+  },
+  "2b60373ecfc5df3c": {
+    "arm": "missing_sft",
+    "problem_id": "680"
+  },
+  "2b6d620f8e6cbf8d": {
+    "arm": "sft_parent",
+    "problem_id": "1147"
+  },
+  "2b944307a89fd587": {
+    "arm": "reconstructed",
+    "problem_id": "1233"
+  },
+  "2c0ed56d3c0a2543": {
+    "arm": "missing_sft",
+    "problem_id": "1061"
+  },
+  "2c2e006256f8d69a": {
+    "arm": "reconstructed",
+    "problem_id": "953"
+  },
+  "2d862e6bcbada6e1": {
+    "arm": "reconstructed",
+    "problem_id": "1117"
+  },
+  "2db41333b99747df": {
+    "arm": "missing_sft",
+    "problem_id": "1151"
+  },
+  "2df32f3bea12a528": {
+    "arm": "missing_sft",
+    "problem_id": "220"
+  },
+  "2e1cf83da5a7a807": {
+    "arm": "sft_parent",
+    "problem_id": "1092"
+  },
+  "2e399c189de1b528": {
+    "arm": "sft_parent",
+    "problem_id": "232"
+  },
+  "2e5925c7140253e0": {
+    "arm": "reconstructed",
+    "problem_id": "1149"
+  },
+  "2e883c859924a0d9": {
+    "arm": "reconstructed",
+    "problem_id": "1154"
+  },
+  "2e8f7b7d38ff0cc3": {
+    "arm": "reconstructed",
+    "problem_id": "1034"
+  },
+  "2f339290d4cdd11a": {
+    "arm": "missing_sft",
+    "problem_id": "405"
+  },
+  "3032b49150ad6f70": {
+    "arm": "reconstructed",
+    "problem_id": "204"
+  },
+  "30f4eb88fcf75bd8": {
+    "arm": "missing_sft",
+    "problem_id": "1242"
+  },
+  "30fded45e8ae8de9": {
+    "arm": "sft_parent",
+    "problem_id": "188"
+  },
+  "310064bda4d2ed66": {
+    "arm": "missing_sft",
+    "problem_id": "1092"
+  },
+  "3174db074a6887f2": {
+    "arm": "missing_sft",
+    "problem_id": "275"
+  },
+  "31ae17be1779e1cb": {
+    "arm": "reconstructed",
+    "problem_id": "680"
+  },
+  "31c69116560a63e8": {
+    "arm": "missing_sft",
+    "problem_id": "1037"
+  },
+  "328e39ed6c29ecd8": {
+    "arm": "sft_parent",
+    "problem_id": "163"
+  },
+  "3299f8264ac37dde": {
+    "arm": "missing_sft",
+    "problem_id": "412"
+  },
+  "32c3025c7386372e": {
+    "arm": "sft_parent",
+    "problem_id": "415"
+  },
+  "3332d5149dfe8883": {
+    "arm": "missing_sft",
+    "problem_id": "204"
+  },
+  "33861bcec5c15b39": {
+    "arm": "reconstructed",
+    "problem_id": "202"
+  },
+  "33f080be728bd29e": {
+    "arm": "reconstructed",
+    "problem_id": "455"
+  },
+  "3433e51fdcfc49a6": {
+    "arm": "sft_parent",
+    "problem_id": "320"
+  },
+  "34aa23346420224f": {
+    "arm": "missing_sft",
+    "problem_id": "935"
+  },
+  "34afcd24a427cd17": {
+    "arm": "reconstructed",
+    "problem_id": "87"
+  },
+  "34fc7268cabdfd68": {
+    "arm": "reconstructed",
+    "problem_id": "182"
+  },
+  "35024ef59d72d533": {
+    "arm": "sft_parent",
+    "problem_id": "523"
+  },
+  "3544fee206a61372": {
+    "arm": "sft_parent",
+    "problem_id": "475"
+  },
+  "3558d389274c1c7d": {
+    "arm": "reconstructed",
+    "problem_id": "918"
+  },
+  "35b137b4c88b527a": {
+    "arm": "sft_parent",
+    "problem_id": "1037"
+  },
+  "35f701192f7d667e": {
+    "arm": "reconstructed",
+    "problem_id": "883"
+  },
+  "3647881e01e1b2dd": {
+    "arm": "reconstructed",
+    "problem_id": "957"
+  },
+  "3693cf8821928388": {
+    "arm": "missing_sft",
+    "problem_id": "217"
+  },
+  "36b681b25926a5b9": {
+    "arm": "missing_sft",
+    "problem_id": "1153"
+  },
+  "373030207827f7cf": {
+    "arm": "reconstructed",
+    "problem_id": "280"
+  },
+  "378caaafa7acee52": {
+    "arm": "missing_sft",
+    "problem_id": "1111"
+  },
+  "379e7546149bf2e5": {
+    "arm": "reconstructed",
+    "problem_id": "441"
+  },
+  "37a8dab1be48c335": {
+    "arm": "missing_sft",
+    "problem_id": "1102"
+  },
+  "37d1a880137a0c87": {
+    "arm": "missing_sft",
+    "problem_id": "488"
+  },
+  "3878b2b9287af356": {
+    "arm": "reconstructed",
+    "problem_id": "509"
+  },
+  "39141b6d7cb852d8": {
+    "arm": "sft_parent",
+    "problem_id": "883"
+  },
+  "392cdc1a22a03a7c": {
+    "arm": "missing_sft",
+    "problem_id": "1204"
+  },
+  "3992094ff8e8e343": {
+    "arm": "sft_parent",
+    "problem_id": "1065"
+  },
+  "39c1b20dd00e70a2": {
+    "arm": "missing_sft",
+    "problem_id": "675"
+  },
+  "39c51eab8e5f5e61": {
+    "arm": "sft_parent",
+    "problem_id": "787"
+  },
+  "39ea81235fdfd9bf": {
+    "arm": "sft_parent",
+    "problem_id": "446"
+  },
+  "39f682fe87ea3b69": {
+    "arm": "sft_parent",
+    "problem_id": "620"
+  },
+  "3a01d6c337241c5c": {
+    "arm": "sft_parent",
+    "problem_id": "430"
+  },
+  "3aac86e97e2163bb": {
+    "arm": "sft_parent",
+    "problem_id": "1071"
+  },
+  "3adaead9493d42b8": {
+    "arm": "sft_parent",
+    "problem_id": "993"
+  },
+  "3af40aa3108c649e": {
+    "arm": "sft_parent",
+    "problem_id": "394"
+  },
+  "3bbd9eec2195a77e": {
+    "arm": "sft_parent",
+    "problem_id": "918"
+  },
+  "3ca0f4366eb0c2fd": {
+    "arm": "sft_parent",
+    "problem_id": "1134"
+  },
+  "3d29fa37cc5c43f2": {
+    "arm": "reconstructed",
+    "problem_id": "581"
+  },
+  "3d47542c2e281ee1": {
+    "arm": "missing_sft",
+    "problem_id": "439"
+  },
+  "3d9f0161e128dce9": {
+    "arm": "reconstructed",
+    "problem_id": "658"
+  },
+  "3ea4570502338738": {
+    "arm": "sft_parent",
+    "problem_id": "406"
+  },
+  "3ed76de96ed3c31b": {
+    "arm": "sft_parent",
+    "problem_id": "1148"
+  },
+  "3ef0c72c0b866ac2": {
+    "arm": "reconstructed",
+    "problem_id": "1151"
+  },
+  "3f3cd4ca01639d6a": {
+    "arm": "reconstructed",
+    "problem_id": "630"
+  },
+  "3f55da0ecfc87ebd": {
+    "arm": "reconstructed",
+    "problem_id": "656"
+  },
+  "3f7d154f3f55296d": {
+    "arm": "sft_parent",
+    "problem_id": "1257"
+  },
+  "3fc7e535b03621bf": {
+    "arm": "reconstructed",
+    "problem_id": "220"
+  },
+  "3fde12c044264ae0": {
+    "arm": "sft_parent",
+    "problem_id": "1236"
+  },
+  "3ff850fade9af9d1": {
+    "arm": "reconstructed",
+    "problem_id": "296"
+  },
+  "4036e7daf30df899": {
+    "arm": "sft_parent",
+    "problem_id": "488"
+  },
+  "4041cbb09a4e188a": {
+    "arm": "sft_parent",
+    "problem_id": "1019"
+  },
+  "40b2e460bf296eff": {
+    "arm": "missing_sft",
+    "problem_id": "347"
+  },
+  "40c1369fbbad047d": {
+    "arm": "sft_parent",
+    "problem_id": "1006"
+  },
+  "41396935693e2f44": {
+    "arm": "missing_sft",
+    "problem_id": "222"
+  },
+  "416d3351209f0939": {
+    "arm": "sft_parent",
+    "problem_id": "348"
+  },
+  "4283041a797ebf02": {
+    "arm": "sft_parent",
+    "problem_id": "1256"
+  },
+  "44158d76f81ef957": {
+    "arm": "sft_parent",
+    "problem_id": "1000"
+  },
+  "441fe8b6b02721e5": {
+    "arm": "sft_parent",
+    "problem_id": "686"
+  },
+  "4458c52a8c795d13": {
+    "arm": "missing_sft",
+    "problem_id": "1315"
+  },
+  "448ffb747d063e82": {
+    "arm": "sft_parent",
+    "problem_id": "225"
+  },
+  "44b36e210a4f118b": {
+    "arm": "sft_parent",
+    "problem_id": "1153"
+  },
+  "459e5c2323b2d8ff": {
+    "arm": "missing_sft",
+    "problem_id": "381"
+  },
+  "45de99c86edf26c0": {
+    "arm": "reconstructed",
+    "problem_id": "976"
+  },
+  "465b1123c2a0b3e1": {
+    "arm": "missing_sft",
+    "problem_id": "242"
+  },
+  "4660f873afc4b9fd": {
+    "arm": "reconstructed",
+    "problem_id": "962"
+  },
+  "46758eccc57e2286": {
+    "arm": "missing_sft",
+    "problem_id": "1308"
+  },
+  "46b392926b66c973": {
+    "arm": "reconstructed",
+    "problem_id": "653"
+  },
+  "4785d13e8397d36a": {
+    "arm": "missing_sft",
+    "problem_id": "174"
+  },
+  "47edf8af148e7d7e": {
+    "arm": "reconstructed",
+    "problem_id": "1147"
+  },
+  "47fe87e99824d15d": {
+    "arm": "reconstructed",
+    "problem_id": "489"
+  },
+  "483bb17d97ab35e7": {
+    "arm": "reconstructed",
+    "problem_id": "968"
+  },
+  "4896cbf353ab4015": {
+    "arm": "reconstructed",
+    "problem_id": "1061"
+  },
+  "497422a5809b396d": {
+    "arm": "sft_parent",
+    "problem_id": "331"
+  },
+  "49a3b5b68f0926ad": {
+    "arm": "missing_sft",
+    "problem_id": "123"
+  },
+  "49b1e4974ed87772": {
+    "arm": "reconstructed",
+    "problem_id": "816"
+  },
+  "4a394fb53494539e": {
+    "arm": "reconstructed",
+    "problem_id": "903"
+  },
+  "4a54d09041522539": {
+    "arm": "missing_sft",
+    "problem_id": "673"
+  },
+  "4be4bc787bbb907e": {
+    "arm": "missing_sft",
+    "problem_id": "829"
+  },
+  "4c2fd259a23c05ba": {
+    "arm": "reconstructed",
+    "problem_id": "956"
+  },
+  "4c81979f91301f86": {
+    "arm": "missing_sft",
+    "problem_id": "1255"
+  },
+  "4cc148bd49a730cf": {
+    "arm": "missing_sft",
+    "problem_id": "479"
+  },
+  "4e4bf2b838ef3236": {
+    "arm": "missing_sft",
+    "problem_id": "1095"
+  },
+  "4f08fb7bec956b1c": {
+    "arm": "reconstructed",
+    "problem_id": "787"
+  },
+  "5038a22e78180f74": {
+    "arm": "reconstructed",
+    "problem_id": "130"
+  },
+  "50efa840c3177e8f": {
+    "arm": "sft_parent",
+    "problem_id": "675"
+  },
+  "5150f6becd59720a": {
+    "arm": "sft_parent",
+    "problem_id": "982"
+  },
+  "5179918f2164b9b8": {
+    "arm": "reconstructed",
+    "problem_id": "258"
+  },
+  "51aa99e034735a82": {
+    "arm": "reconstructed",
+    "problem_id": "405"
+  },
+  "51e37b8ad262159c": {
+    "arm": "sft_parent",
+    "problem_id": "673"
+  },
+  "51f7ebc0fa8ce07e": {
+    "arm": "reconstructed",
+    "problem_id": "989"
+  },
+  "52352c5fab0a0b6c": {
+    "arm": "missing_sft",
+    "problem_id": "653"
+  },
+  "5240f4af4ab55a53": {
+    "arm": "sft_parent",
+    "problem_id": "1039"
+  },
+  "5245ea13e5d60925": {
+    "arm": "sft_parent",
+    "problem_id": "1242"
+  },
+  "53188ba0004d5e5f": {
+    "arm": "reconstructed",
+    "problem_id": "1082"
+  },
+  "53ebe59a346c0945": {
+    "arm": "sft_parent",
+    "problem_id": "790"
+  },
+  "53fd69acf55507e0": {
+    "arm": "missing_sft",
+    "problem_id": "1208"
+  },
+  "540da6b171a14722": {
+    "arm": "reconstructed",
+    "problem_id": "802"
+  },
+  "544300222faaa2d1": {
+    "arm": "sft_parent",
+    "problem_id": "338"
+  },
+  "54957a605dc169b8": {
+    "arm": "sft_parent",
+    "problem_id": "658"
+  },
+  "54b4966836c0dd43": {
+    "arm": "sft_parent",
+    "problem_id": "653"
+  },
+  "54f26bdd41bf478f": {
+    "arm": "missing_sft",
+    "problem_id": "229"
+  },
+  "553281553761f9f7": {
+    "arm": "sft_parent",
+    "problem_id": "83"
+  },
+  "56a70f51f03cfe84": {
+    "arm": "reconstructed",
+    "problem_id": "1173"
+  },
+  "57576779bc118d09": {
+    "arm": "sft_parent",
+    "problem_id": "547"
+  },
+  "57b5f84c0cf87140": {
+    "arm": "sft_parent",
+    "problem_id": "123"
+  },
+  "58025a8d2cad4cfc": {
+    "arm": "sft_parent",
+    "problem_id": "708"
+  },
+  "5883152ffbeefa65": {
+    "arm": "reconstructed",
+    "problem_id": "270"
+  },
+  "58abada748cfef00": {
+    "arm": "sft_parent",
+    "problem_id": "829"
+  },
+  "58c2ad5ab73705b2": {
+    "arm": "sft_parent",
+    "problem_id": "1289"
+  },
+  "58fb7a62ba263744": {
+    "arm": "reconstructed",
+    "problem_id": "123"
+  },
+  "5a19b4295982f4d7": {
+    "arm": "reconstructed",
+    "problem_id": "1214"
+  },
+  "5a7a863d410f8f9b": {
+    "arm": "missing_sft",
+    "problem_id": "855"
+  },
+  "5adc6471b18b0b2b": {
+    "arm": "reconstructed",
+    "problem_id": "662"
+  },
+  "5b24c80b958d1a90": {
+    "arm": "missing_sft",
+    "problem_id": "1083"
+  },
+  "5b32122659185121": {
+    "arm": "reconstructed",
+    "problem_id": "347"
+  },
+  "5b411fc676424fc4": {
+    "arm": "missing_sft",
+    "problem_id": "1231"
+  },
+  "5b7f3dfe41ea8f77": {
+    "arm": "reconstructed",
+    "problem_id": "539"
+  },
+  "5b8a63ea56f453f3": {
+    "arm": "missing_sft",
+    "problem_id": "1026"
+  },
+  "5b8cfa78c99b36d1": {
+    "arm": "missing_sft",
+    "problem_id": "1262"
+  },
+  "5c19cc38f769df28": {
+    "arm": "reconstructed",
+    "problem_id": "993"
+  },
+  "5c3686229200cda6": {
+    "arm": "reconstructed",
+    "problem_id": "84"
+  },
+  "5c502702e0483ee0": {
+    "arm": "reconstructed",
+    "problem_id": "1202"
+  },
+  "5ca15168b02ebb49": {
+    "arm": "missing_sft",
+    "problem_id": "921"
+  },
+  "5cfda38d0dcc1669": {
+    "arm": "reconstructed",
+    "problem_id": "1000"
+  },
+  "5d0073f1899f2f2f": {
+    "arm": "missing_sft",
+    "problem_id": "547"
+  },
+  "5da5a6f9cf88f1be": {
+    "arm": "missing_sft",
+    "problem_id": "277"
+  },
+  "5dfacc0eaa874acf": {
+    "arm": "sft_parent",
+    "problem_id": "606"
+  },
+  "5e73ca8faa9c6814": {
+    "arm": "sft_parent",
+    "problem_id": "441"
+  },
+  "5e8df00f99d19196": {
+    "arm": "missing_sft",
+    "problem_id": "99"
+  },
+  "5ef0c41bd6acebad": {
+    "arm": "reconstructed",
+    "problem_id": "1232"
+  },
+  "5ef7454b761a86a6": {
+    "arm": "missing_sft",
+    "problem_id": "959"
+  },
+  "5f619c3f1479a79e": {
+    "arm": "reconstructed",
+    "problem_id": "1210"
+  },
+  "5f6a10f9de22eb03": {
+    "arm": "missing_sft",
+    "problem_id": "1173"
+  },
+  "5fde77ab92c8a6b5": {
+    "arm": "reconstructed",
+    "problem_id": "1037"
+  },
+  "603cc2e1eea142f9": {
+    "arm": "sft_parent",
+    "problem_id": "300"
+  },
+  "6102d102e0cbd6fd": {
+    "arm": "reconstructed",
+    "problem_id": "32"
+  },
+  "61334dc2351d2dfa": {
+    "arm": "sft_parent",
+    "problem_id": "470"
+  },
+  "6137401c5fb15dd4": {
+    "arm": "reconstructed",
+    "problem_id": "720"
+  },
+  "617399f8ce5da3c2": {
+    "arm": "reconstructed",
+    "problem_id": "562"
+  },
+  "61917a32c0a8bc10": {
+    "arm": "missing_sft",
+    "problem_id": "50"
+  },
+  "61e0a6a91aaffaf4": {
+    "arm": "missing_sft",
+    "problem_id": "1152"
+  },
+  "62d8edd7e8a69981": {
+    "arm": "reconstructed",
+    "problem_id": "1281"
+  },
+  "634f57b142aedaf7": {
+    "arm": "missing_sft",
+    "problem_id": "256"
+  },
+  "64381b55372e5b48": {
+    "arm": "sft_parent",
+    "problem_id": "233"
+  },
+  "648114a46a3369b2": {
+    "arm": "missing_sft",
+    "problem_id": "470"
+  },
+  "64d3887a599a7203": {
+    "arm": "missing_sft",
+    "problem_id": "1090"
+  },
+  "64d6fb0518df3e98": {
+    "arm": "sft_parent",
+    "problem_id": "1204"
+  },
+  "65c803d45fc9ae59": {
+    "arm": "sft_parent",
+    "problem_id": "847"
+  },
+  "65f40142b26fc4cf": {
+    "arm": "reconstructed",
+    "problem_id": "1019"
+  },
+  "65fb9c21ac0f39d2": {
+    "arm": "sft_parent",
+    "problem_id": "336"
+  },
+  "669eff4afe3c62f5": {
+    "arm": "reconstructed",
+    "problem_id": "249"
+  },
+  "66a4de237c740d26": {
+    "arm": "sft_parent",
+    "problem_id": "222"
+  },
+  "66c314a87ee0e456": {
+    "arm": "sft_parent",
+    "problem_id": "1026"
+  },
+  "671b7ad05050328e": {
+    "arm": "reconstructed",
+    "problem_id": "664"
+  },
+  "675ac046b33c26b1": {
+    "arm": "sft_parent",
+    "problem_id": "1199"
+  },
+  "675fdd1eeeb8f75d": {
+    "arm": "missing_sft",
+    "problem_id": "546"
+  },
+  "676e94309d5c3e22": {
+    "arm": "missing_sft",
+    "problem_id": "1123"
+  },
+  "68768f70102f01f9": {
+    "arm": "reconstructed",
+    "problem_id": "830"
+  },
+  "69605bd1d414f3c5": {
+    "arm": "missing_sft",
+    "problem_id": "1006"
+  },
+  "69c70f7da0a8d6d9": {
+    "arm": "missing_sft",
+    "problem_id": "1199"
+  },
+  "69dadbdc924c1963": {
+    "arm": "sft_parent",
+    "problem_id": "1103"
+  },
+  "6a3a00c7e8a382ef": {
+    "arm": "sft_parent",
+    "problem_id": "204"
+  },
+  "6a715f4421dad0f9": {
+    "arm": "missing_sft",
+    "problem_id": "1233"
+  },
+  "6ac600dd79a2247a": {
+    "arm": "missing_sft",
+    "problem_id": "462"
+  },
+  "6b65f9d9038330f6": {
+    "arm": "reconstructed",
+    "problem_id": "360"
+  },
+  "6b6b9b4f55fc2904": {
+    "arm": "sft_parent",
+    "problem_id": "281"
+  },
+  "6b7a54eb27d150af": {
+    "arm": "sft_parent",
+    "problem_id": "381"
+  },
+  "6b935ecc53d49283": {
+    "arm": "reconstructed",
+    "problem_id": "703"
+  },
+  "6ba8a0d536e06ff9": {
+    "arm": "missing_sft",
+    "problem_id": "708"
+  },
+  "6c028f4d76667116": {
+    "arm": "sft_parent",
+    "problem_id": "84"
+  },
+  "6c395382f54b1cf6": {
+    "arm": "missing_sft",
+    "problem_id": "920"
+  },
+  "6c994ffe5e885077": {
+    "arm": "sft_parent",
+    "problem_id": "279"
+  },
+  "6d2a3485d1e0c361": {
+    "arm": "reconstructed",
+    "problem_id": "394"
+  },
+  "6d617002afe68802": {
+    "arm": "missing_sft",
+    "problem_id": "1210"
+  },
+  "6dc62ac0b12b06e1": {
+    "arm": "sft_parent",
+    "problem_id": "1308"
+  },
+  "6dd789d9c7af55c4": {
+    "arm": "missing_sft",
+    "problem_id": "1039"
+  },
+  "6e0740929f95b759": {
+    "arm": "reconstructed",
+    "problem_id": "462"
+  },
+  "6e26789ee2e451cc": {
+    "arm": "missing_sft",
+    "problem_id": "500"
+  },
+  "6e5f8d1c0e335f2a": {
+    "arm": "missing_sft",
+    "problem_id": "911"
+  },
+  "6f4328c646b926cd": {
+    "arm": "sft_parent",
+    "problem_id": "1178"
+  },
+  "6f8bb45bf83813e6": {
+    "arm": "missing_sft",
+    "problem_id": "664"
+  },
+  "6ffa3606287f91a7": {
+    "arm": "sft_parent",
+    "problem_id": "896"
+  },
+  "70081c7c19797f7d": {
+    "arm": "reconstructed",
+    "problem_id": "1090"
+  },
+  "7059140c226d6875": {
+    "arm": "missing_sft",
+    "problem_id": "55"
+  },
+  "705f035c6db0b4f5": {
+    "arm": "missing_sft",
+    "problem_id": "957"
+  },
+  "707a3bae2c60578a": {
+    "arm": "missing_sft",
+    "problem_id": "446"
+  },
+  "708b3b3bdb928656": {
+    "arm": "reconstructed",
+    "problem_id": "348"
+  },
+  "70a382b5fe251bb5": {
+    "arm": "reconstructed",
+    "problem_id": "523"
+  },
+  "70c886930fef0d49": {
+    "arm": "missing_sft",
+    "problem_id": "880"
+  },
+  "715b8a78cc5f5654": {
+    "arm": "missing_sft",
+    "problem_id": "1149"
+  },
+  "72734eff6b348a74": {
+    "arm": "sft_parent",
+    "problem_id": "720"
+  },
+  "7274b686a7314d54": {
+    "arm": "missing_sft",
+    "problem_id": "60"
+  },
+  "727907de5fd208cc": {
+    "arm": "reconstructed",
+    "problem_id": "561"
+  },
+  "72b667c7227b54e5": {
+    "arm": "reconstructed",
+    "problem_id": "1111"
+  },
+  "7327a9f39adbc8ff": {
+    "arm": "reconstructed",
+    "problem_id": "699"
+  },
+  "7382e34de6460685": {
+    "arm": "missing_sft",
+    "problem_id": "441"
+  },
+  "738de55cbaf90da0": {
+    "arm": "reconstructed",
+    "problem_id": "406"
+  },
+  "740b3c6ef2678bf8": {
+    "arm": "missing_sft",
+    "problem_id": "1171"
+  },
+  "741a9fba1f50a636": {
+    "arm": "reconstructed",
+    "problem_id": "42"
+  },
+  "74342a1131d7557e": {
+    "arm": "sft_parent",
+    "problem_id": "539"
+  },
+  "74649f3c57fe6a99": {
+    "arm": "reconstructed",
+    "problem_id": "1187"
+  },
+  "74837e1c9cc5357c": {
+    "arm": "sft_parent",
+    "problem_id": "202"
+  },
+  "74eaf8d24c92fa07": {
+    "arm": "sft_parent",
+    "problem_id": "1233"
+  },
+  "751cb0c519de9169": {
+    "arm": "sft_parent",
+    "problem_id": "1154"
+  },
+  "753f1a84b6ab1e46": {
+    "arm": "reconstructed",
+    "problem_id": "755"
+  },
+  "769d52305a186680": {
+    "arm": "missing_sft",
+    "problem_id": "280"
+  },
+  "76b2d93f2f426c39": {
+    "arm": "sft_parent",
+    "problem_id": "1123"
+  },
+  "772a39e54507e43e": {
+    "arm": "missing_sft",
+    "problem_id": "769"
+  },
+  "7782c443963b5a49": {
+    "arm": "sft_parent",
+    "problem_id": "360"
+  },
+  "779296e1a556eed4": {
+    "arm": "reconstructed",
+    "problem_id": "880"
+  },
+  "77b3b2f34495daec": {
+    "arm": "sft_parent",
+    "problem_id": "952"
+  },
+  "77ecfbac29dd0ac9": {
+    "arm": "missing_sft",
+    "problem_id": "338"
+  },
+  "780c7a76d0ab4ae5": {
+    "arm": "missing_sft",
+    "problem_id": "1170"
+  },
+  "785baf654260e561": {
+    "arm": "reconstructed",
+    "problem_id": "634"
+  },
+  "78f055705174ac24": {
+    "arm": "missing_sft",
+    "problem_id": "1257"
+  },
+  "790b6a8147776e39": {
+    "arm": "reconstructed",
+    "problem_id": "229"
+  },
+  "79113983ac4ba96c": {
+    "arm": "missing_sft",
+    "problem_id": "776"
+  },
+  "79c972956a94b134": {
+    "arm": "missing_sft",
+    "problem_id": "336"
+  },
+  "7b36c7518ef78a8f": {
+    "arm": "reconstructed",
+    "problem_id": "222"
+  },
+  "7b520faedf9314bb": {
+    "arm": "missing_sft",
+    "problem_id": "193"
+  },
+  "7b5c73e2a7d35f28": {
+    "arm": "reconstructed",
+    "problem_id": "582"
+  },
+  "7b821a4c33c3e132": {
+    "arm": "sft_parent",
+    "problem_id": "621"
+  },
+  "7b84412023a09a0e": {
+    "arm": "sft_parent",
+    "problem_id": "99"
+  },
+  "7b8ed22ecdf9e479": {
+    "arm": "sft_parent",
+    "problem_id": "1102"
+  },
+  "7bb90e49c496c7c6": {
+    "arm": "reconstructed",
+    "problem_id": "1174"
+  },
+  "7bc8caa40106065e": {
+    "arm": "sft_parent",
+    "problem_id": "942"
+  },
+  "7c5d4a8f9a2c813e": {
+    "arm": "missing_sft",
+    "problem_id": "736"
+  },
+  "7c6377e6ebef10d3": {
+    "arm": "sft_parent",
+    "problem_id": "680"
+  },
+  "7ce2fd68d8fa3a8c": {
+    "arm": "sft_parent",
+    "problem_id": "455"
+  },
+  "7d8cc143d5678fb8": {
+    "arm": "reconstructed",
+    "problem_id": "1171"
+  },
+  "7df64d314d9b0918": {
+    "arm": "sft_parent",
+    "problem_id": "42"
+  },
+  "7e5c933357313bcb": {
+    "arm": "sft_parent",
+    "problem_id": "755"
+  },
+  "7ea51dd9ef56d22b": {
+    "arm": "sft_parent",
+    "problem_id": "1079"
+  },
+  "7eabe8d2d490b26b": {
+    "arm": "reconstructed",
+    "problem_id": "1315"
+  },
+  "7eb0169dbcbbe433": {
+    "arm": "reconstructed",
+    "problem_id": "546"
+  },
+  "7f0a9c2d821cd2ba": {
+    "arm": "sft_parent",
+    "problem_id": "1281"
+  },
+  "7fca137dbf515bc7": {
+    "arm": "missing_sft",
+    "problem_id": "893"
+  },
+  "7fd2e2bc108ee4c2": {
+    "arm": "sft_parent",
+    "problem_id": "1149"
+  },
+  "7ffa1f97b699a7b5": {
+    "arm": "missing_sft",
+    "problem_id": "703"
+  },
+  "8012023d1611611b": {
+    "arm": "missing_sft",
+    "problem_id": "100"
+  },
+  "801fd9626fe85454": {
+    "arm": "sft_parent",
+    "problem_id": "1226"
+  },
+  "80581bfa4794b6fe": {
+    "arm": "reconstructed",
+    "problem_id": "73"
+  },
+  "80bdc6cbb3b6298a": {
+    "arm": "sft_parent",
+    "problem_id": "1195"
+  },
+  "80dcf89f043f0ff9": {
+    "arm": "reconstructed",
+    "problem_id": "729"
+  },
+  "80ead10812a5661c": {
+    "arm": "reconstructed",
+    "problem_id": "952"
+  },
+  "812305aeb4a681d1": {
+    "arm": "missing_sft",
+    "problem_id": "475"
+  },
+  "820be85afa9f7afa": {
+    "arm": "reconstructed",
+    "problem_id": "875"
+  },
+  "825c75b2fbbfbda3": {
+    "arm": "sft_parent",
+    "problem_id": "1173"
+  },
+  "82ae7c1904b48929": {
+    "arm": "reconstructed",
+    "problem_id": "845"
+  },
+  "83254121baa20040": {
+    "arm": "missing_sft",
+    "problem_id": "182"
+  },
+  "8427c5ee7abff630": {
+    "arm": "reconstructed",
+    "problem_id": "848"
+  },
+  "842915f20ab99f11": {
+    "arm": "reconstructed",
+    "problem_id": "892"
+  },
+  "847b2cfa92173a7b": {
+    "arm": "sft_parent",
+    "problem_id": "627"
+  },
+  "84fecb1201173ccb": {
+    "arm": "missing_sft",
+    "problem_id": "84"
+  },
+  "85495f1458ba3b5d": {
+    "arm": "missing_sft",
+    "problem_id": "415"
+  },
+  "873d15bb6f029247": {
+    "arm": "reconstructed",
+    "problem_id": "621"
+  },
+  "87cf18f954babf79": {
+    "arm": "reconstructed",
+    "problem_id": "1204"
+  },
+  "882991ad03d8912e": {
+    "arm": "reconstructed",
+    "problem_id": "1052"
+  },
+  "883929421998664e": {
+    "arm": "sft_parent",
+    "problem_id": "1152"
+  },
+  "8885b1bd4bf38d23": {
+    "arm": "missing_sft",
+    "problem_id": "896"
+  },
+  "88f4a55eec866631": {
+    "arm": "missing_sft",
+    "problem_id": "1106"
+  },
+  "8909b52b8ba91793": {
+    "arm": "reconstructed",
+    "problem_id": "275"
+  },
+  "89277a7c929834f0": {
+    "arm": "missing_sft",
+    "problem_id": "101"
+  },
+  "89320c4a481f6019": {
+    "arm": "reconstructed",
+    "problem_id": "959"
+  },
+  "89691803d6daa84f": {
+    "arm": "missing_sft",
+    "problem_id": "1298"
+  },
+  "899a3c094d537a2f": {
+    "arm": "sft_parent",
+    "problem_id": "880"
+  },
+  "8a426167d5104978": {
+    "arm": "missing_sft",
+    "problem_id": "849"
+  },
+  "8b00a78913944354": {
+    "arm": "reconstructed",
+    "problem_id": "1133"
+  },
+  "8b8e8add38b9f640": {
+    "arm": "missing_sft",
+    "problem_id": "953"
+  },
+  "8b9186ac5658f5bb": {
+    "arm": "reconstructed",
+    "problem_id": "929"
+  },
+  "8b99d891d79b202d": {
+    "arm": "reconstructed",
+    "problem_id": "935"
+  },
+  "8be678e573da52fd": {
+    "arm": "reconstructed",
+    "problem_id": "1152"
+  },
+  "8c3dcbcf6c16403d": {
+    "arm": "missing_sft",
+    "problem_id": "581"
+  },
+  "8c6db05d2732cea8": {
+    "arm": "sft_parent",
+    "problem_id": "50"
+  },
+  "8c9fcb50cb0288dd": {
+    "arm": "missing_sft",
+    "problem_id": "394"
+  },
+  "8ce84f910e6a6b46": {
+    "arm": "reconstructed",
+    "problem_id": "776"
+  },
+  "8d42a2b7fc180a92": {
+    "arm": "reconstructed",
+    "problem_id": "233"
+  },
+  "8d71b29679aa03bc": {
+    "arm": "sft_parent",
+    "problem_id": "1059"
+  },
+  "8dbf9f57ae1ac157": {
+    "arm": "sft_parent",
+    "problem_id": "101"
+  },
+  "8e4cfe0bde62f179": {
+    "arm": "reconstructed",
+    "problem_id": "217"
+  },
+  "8f0a3698b6a4d7df": {
+    "arm": "missing_sft",
+    "problem_id": "300"
+  },
+  "8f2a3ddcef011c78": {
+    "arm": "missing_sft",
+    "problem_id": "874"
+  },
+  "8fd0e8a0808265c7": {
+    "arm": "sft_parent",
+    "problem_id": "831"
+  },
+  "8feeaef150e39d8b": {
+    "arm": "reconstructed",
+    "problem_id": "1077"
+  },
+  "8ff99c53a40281d8": {
+    "arm": "missing_sft",
+    "problem_id": "1097"
+  },
+  "8ffd1382ecd0248d": {
+    "arm": "missing_sft",
+    "problem_id": "1154"
+  },
+  "900b790f3468233b": {
+    "arm": "reconstructed",
+    "problem_id": "1303"
+  },
+  "910c22149ccacd69": {
+    "arm": "missing_sft",
+    "problem_id": "918"
+  },
+  "913cec5d50f487e8": {
+    "arm": "missing_sft",
+    "problem_id": "296"
+  },
+  "9140cc81ed9a496c": {
+    "arm": "sft_parent",
+    "problem_id": "664"
+  },
+  "9158323705924db7": {
+    "arm": "missing_sft",
+    "problem_id": "1174"
+  },
+  "915abbbdc6d40639": {
+    "arm": "missing_sft",
+    "problem_id": "1304"
+  },
+  "91f2b7bf88272317": {
+    "arm": "sft_parent",
+    "problem_id": "82"
+  },
+  "9215ed7b70efd2b3": {
+    "arm": "sft_parent",
+    "problem_id": "249"
+  },
+  "92e9d8f349c576b4": {
+    "arm": "missing_sft",
+    "problem_id": "892"
+  },
+  "94abb53fbd102ff9": {
+    "arm": "reconstructed",
+    "problem_id": "708"
+  },
+  "94bdbee949cfc947": {
+    "arm": "missing_sft",
+    "problem_id": "360"
+  },
+  "9516a5432e43b6de": {
+    "arm": "reconstructed",
+    "problem_id": "37"
+  },
+  "953f94cc0f8ca094": {
+    "arm": "missing_sft",
+    "problem_id": "1051"
+  },
+  "9576c7140dd31c91": {
+    "arm": "reconstructed",
+    "problem_id": "1298"
+  },
+  "9577445a04735ac0": {
+    "arm": "sft_parent",
+    "problem_id": "1083"
+  },
+  "958826b6fa4ee2de": {
+    "arm": "missing_sft",
+    "problem_id": "353"
+  },
+  "958c1bdead91f673": {
+    "arm": "reconstructed",
+    "problem_id": "1102"
+  },
+  "95cf53680dc4eb0c": {
+    "arm": "reconstructed",
+    "problem_id": "967"
+  },
+  "9667b13b8530486d": {
+    "arm": "sft_parent",
+    "problem_id": "60"
+  },
+  "96bc44b0cb03e98c": {
+    "arm": "missing_sft",
+    "problem_id": "1022"
+  },
+  "96e210e84575f97a": {
+    "arm": "reconstructed",
+    "problem_id": "564"
+  },
+  "970f412d919d5479": {
+    "arm": "reconstructed",
+    "problem_id": "1306"
+  },
+  "9780ab4780e80dce": {
+    "arm": "missing_sft",
+    "problem_id": "1065"
+  },
+  "97aae44a77974b1e": {
+    "arm": "sft_parent",
+    "problem_id": "892"
+  },
+  "9869b624f0f64037": {
+    "arm": "reconstructed",
+    "problem_id": "1026"
+  },
+  "98eea12199eda46a": {
+    "arm": "missing_sft",
+    "problem_id": "1034"
+  },
+  "9901b3d3f743f1c1": {
+    "arm": "missing_sft",
+    "problem_id": "1080"
+  },
+  "99027c33d905db0c": {
+    "arm": "sft_parent",
+    "problem_id": "1090"
+  },
+  "990f4b1be034f20e": {
+    "arm": "missing_sft",
+    "problem_id": "1281"
+  },
+  "992226ea9c0c7003": {
+    "arm": "sft_parent",
+    "problem_id": "874"
+  },
+  "99aa2cde257fd995": {
+    "arm": "sft_parent",
+    "problem_id": "137"
+  },
+  "99f0d23cebeed1ea": {
+    "arm": "missing_sft",
+    "problem_id": "1082"
+  },
+  "9b50291a235eb9f5": {
+    "arm": "missing_sft",
+    "problem_id": "976"
+  },
+  "9b9e833a6b7d4980": {
+    "arm": "sft_parent",
+    "problem_id": "1034"
+  },
+  "9bc1d29885feedfa": {
+    "arm": "reconstructed",
+    "problem_id": "855"
+  },
+  "9c093f27f0d59610": {
+    "arm": "missing_sft",
+    "problem_id": "790"
+  },
+  "9c7ae0565694a4c3": {
+    "arm": "sft_parent",
+    "problem_id": "174"
+  },
+  "9c82705cd78faf05": {
+    "arm": "sft_parent",
+    "problem_id": "1096"
+  },
+  "9cae7184a6a98a2d": {
+    "arm": "reconstructed",
+    "problem_id": "432"
+  },
+  "9cb2f157ab5dd283": {
+    "arm": "sft_parent",
+    "problem_id": "32"
+  },
+  "9cb639f28ceaa82f": {
+    "arm": "reconstructed",
+    "problem_id": "1106"
+  },
+  "9d054afbe3021f20": {
+    "arm": "missing_sft",
+    "problem_id": "971"
+  },
+  "9d6fa2f735a92f3e": {
+    "arm": "reconstructed",
+    "problem_id": "430"
+  },
+  "9dd8fade2335af08": {
+    "arm": "sft_parent",
+    "problem_id": "699"
+  },
+  "9e2de4b6e95ea531": {
+    "arm": "missing_sft",
+    "problem_id": "430"
+  },
+  "9f71d52bf30353fc": {
+    "arm": "missing_sft",
+    "problem_id": "720"
+  },
+  "9fa790b2c0cdf816": {
+    "arm": "sft_parent",
+    "problem_id": "1167"
+  },
+  "9fd8b518b9b7791c": {
+    "arm": "reconstructed",
+    "problem_id": "969"
+  },
+  "a033ee997360f9db": {
+    "arm": "sft_parent",
+    "problem_id": "505"
+  },
+  "a039fac5d4969691": {
+    "arm": "sft_parent",
+    "problem_id": "976"
+  },
+  "a04f479b7b0db8da": {
+    "arm": "missing_sft",
+    "problem_id": "830"
+  },
+  "a0a7cdd22516a0a4": {
+    "arm": "reconstructed",
+    "problem_id": "971"
+  },
+  "a0add3347b6cb8de": {
+    "arm": "missing_sft",
+    "problem_id": "471"
+  },
+  "a0b4ac848fee5a57": {
+    "arm": "sft_parent",
+    "problem_id": "1061"
+  },
+  "a117b750705ae1e1": {
+    "arm": "missing_sft",
+    "problem_id": "634"
+  },
+  "a12554d6f5bc9d41": {
+    "arm": "reconstructed",
+    "problem_id": "439"
+  },
+  "a129aadc21a976e0": {
+    "arm": "missing_sft",
+    "problem_id": "1261"
+  },
+  "a158eaebab808d03": {
+    "arm": "sft_parent",
+    "problem_id": "1051"
+  },
+  "a1ebeae95b7c86a5": {
+    "arm": "reconstructed",
+    "problem_id": "1065"
+  },
+  "a1edc486f467994c": {
+    "arm": "missing_sft",
+    "problem_id": "606"
+  },
+  "a1f9365c6c796328": {
+    "arm": "missing_sft",
+    "problem_id": "1036"
+  },
+  "a310c516a09ed481": {
+    "arm": "missing_sft",
+    "problem_id": "523"
+  },
+  "a3167dfdf85ee85a": {
+    "arm": "reconstructed",
+    "problem_id": "60"
+  },
+  "a395bd0d4152f451": {
+    "arm": "missing_sft",
+    "problem_id": "1256"
+  },
+  "a3bfdef08750363c": {
+    "arm": "missing_sft",
+    "problem_id": "1167"
+  },
+  "a41057de106e23b4": {
+    "arm": "reconstructed",
+    "problem_id": "1170"
+  },
+  "a45612d538f03797": {
+    "arm": "sft_parent",
+    "problem_id": "1151"
+  },
+  "a48f070c207ddae4": {
+    "arm": "sft_parent",
+    "problem_id": "957"
+  },
+  "a4fa805ceddf1a13": {
+    "arm": "reconstructed",
+    "problem_id": "1262"
+  },
+  "a546fc9c63591c02": {
+    "arm": "missing_sft",
+    "problem_id": "686"
+  },
+  "a5616ad2767e42cd": {
+    "arm": "sft_parent",
+    "problem_id": "816"
+  },
+  "a57b6941733746f1": {
+    "arm": "sft_parent",
+    "problem_id": "353"
+  },
+  "a59d593adb616ea8": {
+    "arm": "missing_sft",
+    "problem_id": "233"
+  },
+  "a5fe412afd305241": {
+    "arm": "missing_sft",
+    "problem_id": "952"
+  },
+  "a60a425f92c4b3b4": {
+    "arm": "reconstructed",
+    "problem_id": "1013"
+  },
+  "a61ee989d5e012f9": {
+    "arm": "reconstructed",
+    "problem_id": "742"
+  },
+  "a6527ff2acaa99cf": {
+    "arm": "sft_parent",
+    "problem_id": "776"
+  },
+  "a6bbc3190f0a91e1": {
+    "arm": "reconstructed",
+    "problem_id": "415"
+  },
+  "a6d63ef96d2c12cc": {
+    "arm": "reconstructed",
+    "problem_id": "686"
+  },
+  "a742f5f650d9f4bc": {
+    "arm": "reconstructed",
+    "problem_id": "1236"
+  },
+  "a74c0c30ebcd18eb": {
+    "arm": "reconstructed",
+    "problem_id": "1242"
+  },
+  "a794f4918b6f4f6e": {
+    "arm": "missing_sft",
+    "problem_id": "875"
+  },
+  "a82fda976830d5f7": {
+    "arm": "missing_sft",
+    "problem_id": "970"
+  },
+  "a8ed62d9464893c6": {
+    "arm": "sft_parent",
+    "problem_id": "1170"
+  },
+  "a8fd64a337d88cba": {
+    "arm": "reconstructed",
+    "problem_id": "1208"
+  },
+  "a931001d4335ce85": {
+    "arm": "missing_sft",
+    "problem_id": "1236"
+  },
+  "a93e8e2322e4e8c5": {
+    "arm": "reconstructed",
+    "problem_id": "389"
+  },
+  "a94eeccd9b87d3fb": {
+    "arm": "missing_sft",
+    "problem_id": "1052"
+  },
+  "a9592d7f772e1854": {
+    "arm": "missing_sft",
+    "problem_id": "942"
+  },
+  "a985db0bfcb8dbcf": {
+    "arm": "reconstructed",
+    "problem_id": "942"
+  },
+  "a9af226079e0a9c0": {
+    "arm": "missing_sft",
+    "problem_id": "620"
+  },
+  "a9c87db876e8588d": {
+    "arm": "sft_parent",
+    "problem_id": "564"
+  },
+  "aaacc71d40350328": {
+    "arm": "reconstructed",
+    "problem_id": "479"
+  },
+  "aacdbb59d046dbef": {
+    "arm": "reconstructed",
+    "problem_id": "50"
+  },
+  "ab8ae08169780be5": {
+    "arm": "sft_parent",
+    "problem_id": "875"
+  },
+  "ac1b650a81893c89": {
+    "arm": "missing_sft",
+    "problem_id": "729"
+  },
+  "ac2667d9b64494e1": {
+    "arm": "reconstructed",
+    "problem_id": "1050"
+  },
+  "ad9a71d6b3e7029f": {
+    "arm": "missing_sft",
+    "problem_id": "314"
+  },
+  "adb429de78971aa2": {
+    "arm": "sft_parent",
+    "problem_id": "634"
+  },
+  "adf5bdc8a05fcaee": {
+    "arm": "sft_parent",
+    "problem_id": "1221"
+  },
+  "ae3992a7330c024e": {
+    "arm": "reconstructed",
+    "problem_id": "1069"
+  },
+  "ae924954aa75f50e": {
+    "arm": "sft_parent",
+    "problem_id": "1202"
+  },
+  "af86cd7fef9ef9d9": {
+    "arm": "missing_sft",
+    "problem_id": "132"
+  },
+  "b0398b83c0270d79": {
+    "arm": "reconstructed",
+    "problem_id": "1092"
+  },
+  "b047ae14fe89fe27": {
+    "arm": "reconstructed",
+    "problem_id": "847"
+  },
+  "b07350410ccd2166": {
+    "arm": "sft_parent",
+    "problem_id": "87"
+  },
+  "b0b8cd0409f27d47": {
+    "arm": "sft_parent",
+    "problem_id": "37"
+  },
+  "b106793a6347aeb7": {
+    "arm": "sft_parent",
+    "problem_id": "471"
+  },
+  "b133ff7b57691dfb": {
+    "arm": "reconstructed",
+    "problem_id": "387"
+  },
+  "b17c62c0f3bca8e2": {
+    "arm": "reconstructed",
+    "problem_id": "174"
+  },
+  "b200b6a1760f9793": {
+    "arm": "sft_parent",
+    "problem_id": "546"
+  },
+  "b2e59de2e13aa934": {
+    "arm": "reconstructed",
+    "problem_id": "309"
+  },
+  "b35b0fa3b75bcc0f": {
+    "arm": "sft_parent",
+    "problem_id": "830"
+  },
+  "b45ed5b181903198": {
+    "arm": "reconstructed",
+    "problem_id": "1195"
+  },
+  "b4c061c27ab318d1": {
+    "arm": "reconstructed",
+    "problem_id": "1036"
+  },
+  "b50193774193aac7": {
+    "arm": "reconstructed",
+    "problem_id": "1095"
+  },
+  "b52565cc53489705": {
+    "arm": "sft_parent",
+    "problem_id": "736"
+  },
+  "b55736581812c9c3": {
+    "arm": "sft_parent",
+    "problem_id": "242"
+  },
+  "b5d2a884a48505a0": {
+    "arm": "sft_parent",
+    "problem_id": "967"
+  },
+  "b5e49306da47af9a": {
+    "arm": "sft_parent",
+    "problem_id": "920"
+  },
+  "b647d41d9dacf276": {
+    "arm": "reconstructed",
+    "problem_id": "338"
+  },
+  "b64d9d5ac50b780a": {
+    "arm": "missing_sft",
+    "problem_id": "989"
+  },
+  "b64eae8c366913b1": {
+    "arm": "missing_sft",
+    "problem_id": "982"
+  },
+  "b7d063fcef85e702": {
+    "arm": "sft_parent",
+    "problem_id": "802"
+  },
+  "b81fce5aec71b9d9": {
+    "arm": "sft_parent",
+    "problem_id": "887"
+  },
+  "b822ba94c8a4403b": {
+    "arm": "sft_parent",
+    "problem_id": "752"
+  },
+  "b83a93814386972d": {
+    "arm": "reconstructed",
+    "problem_id": "626"
+  },
+  "b87842bbab598a51": {
+    "arm": "missing_sft",
+    "problem_id": "87"
+  },
+  "b8bbc967ec1fbb87": {
+    "arm": "reconstructed",
+    "problem_id": "1022"
+  },
+  "b8d9c62a17e65c51": {
+    "arm": "missing_sft",
+    "problem_id": "1013"
+  },
+  "ba63496c89cb4a8b": {
+    "arm": "reconstructed",
+    "problem_id": "1087"
+  },
+  "ba7b3ae103bed891": {
+    "arm": "sft_parent",
+    "problem_id": "215"
+  },
+  "bb275a7956276675": {
+    "arm": "missing_sft",
+    "problem_id": "225"
+  },
+  "bb40daaa0ef25ddb": {
+    "arm": "sft_parent",
+    "problem_id": "1077"
+  },
+  "bc40252f7c398282": {
+    "arm": "reconstructed",
+    "problem_id": "790"
+  },
+  "bc5509bd77645741": {
+    "arm": "sft_parent",
+    "problem_id": "277"
+  },
+  "bc91050cd636c582": {
+    "arm": "reconstructed",
+    "problem_id": "606"
+  },
+  "bca2beb7da2f6d35": {
+    "arm": "sft_parent",
+    "problem_id": "182"
+  },
+  "bccc136bba4274c7": {
+    "arm": "reconstructed",
+    "problem_id": "1103"
+  },
+  "bdccf984e62f3fd0": {
+    "arm": "sft_parent",
+    "problem_id": "845"
+  },
+  "bdd6fbd30f526b22": {
+    "arm": "sft_parent",
+    "problem_id": "1022"
+  },
+  "bde36bd381d5f3a5": {
+    "arm": "sft_parent",
+    "problem_id": "1208"
+  },
+  "be347dcbb18de36d": {
+    "arm": "missing_sft",
+    "problem_id": "1306"
+  },
+  "bed6558c74dd950c": {
+    "arm": "sft_parent",
+    "problem_id": "275"
+  },
+  "bf8edfed81c5e0cd": {
+    "arm": "sft_parent",
+    "problem_id": "489"
+  },
+  "bf9301d4fdc4824a": {
+    "arm": "reconstructed",
+    "problem_id": "1039"
+  },
+  "c0487e189526d463": {
+    "arm": "sft_parent",
+    "problem_id": "1182"
+  },
+  "c05bb442e690c31b": {
+    "arm": "missing_sft",
+    "problem_id": "969"
+  },
+  "c0f0877cf2260200": {
+    "arm": "missing_sft",
+    "problem_id": "1232"
+  },
+  "c1319bad0ccdecaa": {
+    "arm": "sft_parent",
+    "problem_id": "432"
+  },
+  "c149cca865bb0cd0": {
+    "arm": "reconstructed",
+    "problem_id": "577"
+  },
+  "c180d432ba9e7590": {
+    "arm": "sft_parent",
+    "problem_id": "769"
+  },
+  "c1967e61304459e8": {
+    "arm": "missing_sft",
+    "problem_id": "1050"
+  },
+  "c28b67b45a4dc6ea": {
+    "arm": "missing_sft",
+    "problem_id": "1096"
+  },
+  "c2aca72646ae5620": {
+    "arm": "reconstructed",
+    "problem_id": "994"
+  },
+  "c2df73a081e3886d": {
+    "arm": "sft_parent",
+    "problem_id": "217"
+  },
+  "c31f5ef12bc8704f": {
+    "arm": "sft_parent",
+    "problem_id": "662"
+  },
+  "c366695f7a3f35bb": {
+    "arm": "sft_parent",
+    "problem_id": "855"
+  },
+  "c375adbe8fb669dc": {
+    "arm": "reconstructed",
+    "problem_id": "412"
+  },
+  "c469b85a5f3256b0": {
+    "arm": "sft_parent",
+    "problem_id": "434"
+  },
+  "c46fef4a4ed86bc5": {
+    "arm": "sft_parent",
+    "problem_id": "971"
+  },
+  "c57b09e0819f64ae": {
+    "arm": "sft_parent",
+    "problem_id": "1262"
+  },
+  "c57c6e9282420046": {
+    "arm": "missing_sft",
+    "problem_id": "1071"
+  },
+  "c6521eafaa395f37": {
+    "arm": "reconstructed",
+    "problem_id": "353"
+  },
+  "c665b4eb675eb2a1": {
+    "arm": "sft_parent",
+    "problem_id": "314"
+  },
+  "c6ef4afbf6ce878d": {
+    "arm": "sft_parent",
+    "problem_id": "389"
+  },
+  "c710348ae131599f": {
+    "arm": "reconstructed",
+    "problem_id": "849"
+  },
+  "c794f9dd50ea53a0": {
+    "arm": "sft_parent",
+    "problem_id": "1087"
+  },
+  "c90e25eb86d62474": {
+    "arm": "reconstructed",
+    "problem_id": "829"
+  },
+  "c944d1bb653a7e36": {
+    "arm": "sft_parent",
+    "problem_id": "124"
+  },
+  "c9759993d9a883e9": {
+    "arm": "sft_parent",
+    "problem_id": "911"
+  },
+  "c9796a94cfee611c": {
+    "arm": "sft_parent",
+    "problem_id": "893"
+  },
+  "c9cb552c21846e0e": {
+    "arm": "sft_parent",
+    "problem_id": "412"
+  },
+  "ca21998f1107e6df": {
+    "arm": "missing_sft",
+    "problem_id": "270"
+  },
+  "cab6cecedffb6719": {
+    "arm": "missing_sft",
+    "problem_id": "1178"
+  },
+  "caf1c719fce6a14c": {
+    "arm": "missing_sft",
+    "problem_id": "987"
+  },
+  "cb58668d4730e0ab": {
+    "arm": "reconstructed",
+    "problem_id": "1096"
+  },
+  "cc552e78d94589f8": {
+    "arm": "sft_parent",
+    "problem_id": "656"
+  },
+  "cc750a1d665e533e": {
+    "arm": "missing_sft",
+    "problem_id": "887"
+  },
+  "cc87c90a35a48406": {
+    "arm": "sft_parent",
+    "problem_id": "968"
+  },
+  "cd037ac179bd361f": {
+    "arm": "missing_sft",
+    "problem_id": "1079"
+  },
+  "cd5e4fbc11bc5029": {
+    "arm": "missing_sft",
+    "problem_id": "1147"
+  },
+  "cdd1414f8cd82bdb": {
+    "arm": "sft_parent",
+    "problem_id": "347"
+  },
+  "ce32f22f854c8f36": {
+    "arm": "sft_parent",
+    "problem_id": "197"
+  },
+  "ce9784b72244b5eb": {
+    "arm": "reconstructed",
+    "problem_id": "1071"
+  },
+  "cea7bac042072993": {
+    "arm": "reconstructed",
+    "problem_id": "982"
+  },
+  "cf27ab1e45b28aa4": {
+    "arm": "missing_sft",
+    "problem_id": "867"
+  },
+  "cfc2c146e40226b7": {
+    "arm": "reconstructed",
+    "problem_id": "673"
+  },
+  "d02379507f3ffe84": {
+    "arm": "sft_parent",
+    "problem_id": "258"
+  },
+  "d07be24362020ca8": {
+    "arm": "missing_sft",
+    "problem_id": "137"
+  },
+  "d0a19706ef0beda4": {
+    "arm": "sft_parent",
+    "problem_id": "921"
+  },
+  "d13b185ddba092a9": {
+    "arm": "missing_sft",
+    "problem_id": "124"
+  },
+  "d1450040ee30eaa6": {
+    "arm": "reconstructed",
+    "problem_id": "82"
+  },
+  "d147917f3ec772db": {
+    "arm": "missing_sft",
+    "problem_id": "258"
+  },
+  "d1686fe305424c5a": {
+    "arm": "missing_sft",
+    "problem_id": "1019"
+  },
+  "d1f5e7f118b2b5cf": {
+    "arm": "reconstructed",
+    "problem_id": "1308"
+  },
+  "d20787b4f131cb8a": {
+    "arm": "reconstructed",
+    "problem_id": "101"
+  },
+  "d37772dd65a854d6": {
+    "arm": "reconstructed",
+    "problem_id": "1221"
+  },
+  "d38604614a00b2ef": {
+    "arm": "sft_parent",
+    "problem_id": "1187"
+  },
+  "d3d8db1dd6ca7631": {
+    "arm": "reconstructed",
+    "problem_id": "277"
+  },
+  "d43bee518b104d77": {
+    "arm": "sft_parent",
+    "problem_id": "1261"
+  },
+  "d44baaf213be55bf": {
+    "arm": "reconstructed",
+    "problem_id": "911"
+  },
+  "d453b8ef581eb4d5": {
+    "arm": "reconstructed",
+    "problem_id": "1167"
+  },
+  "d4910e4a201e0de1": {
+    "arm": "missing_sft",
+    "problem_id": "1133"
+  },
+  "d4a0ba7976901e9e": {
+    "arm": "missing_sft",
+    "problem_id": "802"
+  },
+  "d4c0af92e7870551": {
+    "arm": "reconstructed",
+    "problem_id": "1255"
+  },
+  "d4fa6095fb423b0b": {
+    "arm": "reconstructed",
+    "problem_id": "232"
+  },
+  "d5646c9068cae813": {
+    "arm": "reconstructed",
+    "problem_id": "1079"
+  },
+  "d5ab7879054312d8": {
+    "arm": "sft_parent",
+    "problem_id": "848"
+  },
+  "d5de967332c994e5": {
+    "arm": "reconstructed",
+    "problem_id": "1012"
+  },
+  "d600f951036d32ce": {
+    "arm": "reconstructed",
+    "problem_id": "1080"
+  },
+  "d81d68a19be0be2e": {
+    "arm": "missing_sft",
+    "problem_id": "962"
+  },
+  "d89758d946ec3d8b": {
+    "arm": "sft_parent",
+    "problem_id": "994"
+  },
+  "d8ac66d30d8214a6": {
+    "arm": "missing_sft",
+    "problem_id": "42"
+  },
+  "d90841066e99a5db": {
+    "arm": "missing_sft",
+    "problem_id": "37"
+  },
+  "db38bf9f82739337": {
+    "arm": "sft_parent",
+    "problem_id": "867"
+  },
+  "db45f95f6dbe2439": {
+    "arm": "sft_parent",
+    "problem_id": "73"
+  },
+  "db7837713e6739a9": {
+    "arm": "reconstructed",
+    "problem_id": "920"
+  },
+  "dbcbd0f8f6c419c8": {
+    "arm": "reconstructed",
+    "problem_id": "1182"
+  },
+  "dbcde4e00f215f46": {
+    "arm": "missing_sft",
+    "problem_id": "455"
+  },
+  "dc55f338c2ccd45a": {
+    "arm": "reconstructed",
+    "problem_id": "193"
+  },
+  "dc5f4b71d5ce2616": {
+    "arm": "missing_sft",
+    "problem_id": "627"
+  },
+  "dc8a88d9b562135d": {
+    "arm": "reconstructed",
+    "problem_id": "418"
+  },
+  "dc993defb0cd2dc6": {
+    "arm": "missing_sft",
+    "problem_id": "432"
+  },
+  "dcaa410f2578a781": {
+    "arm": "missing_sft",
+    "problem_id": "1103"
+  },
+  "dcc9e0eef8db9f91": {
+    "arm": "sft_parent",
+    "problem_id": "1210"
+  },
+  "dcdc378902d7bf50": {
+    "arm": "missing_sft",
+    "problem_id": "848"
+  },
+  "dd25fe38ef36d0f9": {
+    "arm": "missing_sft",
+    "problem_id": "1195"
+  },
+  "ddb4dc2092a03238": {
+    "arm": "sft_parent",
+    "problem_id": "744"
+  },
+  "ddd0dbbdbf65b1f4": {
+    "arm": "sft_parent",
+    "problem_id": "132"
+  },
+  "de6993ade0ec9ceb": {
+    "arm": "sft_parent",
+    "problem_id": "989"
+  },
+  "deb7a9c5fcf32cb3": {
+    "arm": "missing_sft",
+    "problem_id": "845"
+  },
+  "df20b625a83aaf01": {
+    "arm": "reconstructed",
+    "problem_id": "471"
+  },
+  "df4f5978f501eec3": {
+    "arm": "sft_parent",
+    "problem_id": "193"
+  },
+  "dfd28e899ad7247d": {
+    "arm": "sft_parent",
+    "problem_id": "229"
+  },
+  "e09abb3f77b04818": {
+    "arm": "missing_sft",
+    "problem_id": "387"
+  },
+  "e202582236b4c6bd": {
+    "arm": "missing_sft",
+    "problem_id": "1289"
+  },
+  "e20f23742b2a4856": {
+    "arm": "sft_parent",
+    "problem_id": "953"
+  },
+  "e237c38f03524216": {
+    "arm": "missing_sft",
+    "problem_id": "83"
+  },
+  "e28c490f07804019": {
+    "arm": "sft_parent",
+    "problem_id": "729"
+  },
+  "e292745c61e1d406": {
+    "arm": "reconstructed",
+    "problem_id": "1304"
+  },
+  "e2e55a69bb935fe7": {
+    "arm": "reconstructed",
+    "problem_id": "1083"
+  },
+  "e3136951644a4a05": {
+    "arm": "missing_sft",
+    "problem_id": "491"
+  },
+  "e3395a65272842e0": {
+    "arm": "missing_sft",
+    "problem_id": "215"
+  },
+  "e3467f03e6e069b7": {
+    "arm": "missing_sft",
+    "problem_id": "662"
+  },
+  "e37b9f63b941bbaa": {
+    "arm": "sft_parent",
+    "problem_id": "987"
+  },
+  "e3ba384c09e67ace": {
+    "arm": "reconstructed",
+    "problem_id": "100"
+  },
+  "e44df2f4d6871ca4": {
+    "arm": "sft_parent",
+    "problem_id": "462"
+  },
+  "e47db23f51e43241": {
+    "arm": "sft_parent",
+    "problem_id": "1298"
+  },
+  "e4d0ee6d08165c45": {
+    "arm": "sft_parent",
+    "problem_id": "55"
+  },
+  "e4f5d55b0d8ec11e": {
+    "arm": "missing_sft",
+    "problem_id": "993"
+  },
+  "e527978ffa36d2ec": {
+    "arm": "sft_parent",
+    "problem_id": "970"
+  },
+  "e67e541c0c5adadd": {
+    "arm": "sft_parent",
+    "problem_id": "387"
+  },
+  "e6e176d923a664aa": {
+    "arm": "reconstructed",
+    "problem_id": "470"
+  },
+  "e7693b78ac3d8efc": {
+    "arm": "missing_sft",
+    "problem_id": "1214"
+  },
+  "e7fee6baa4854bc4": {
+    "arm": "sft_parent",
+    "problem_id": "1082"
+  },
+  "e899fa91e7b03b42": {
+    "arm": "missing_sft",
+    "problem_id": "577"
+  },
+  "e8d956e580f18954": {
+    "arm": "reconstructed",
+    "problem_id": "744"
+  },
+  "e9581c2ece772fe2": {
+    "arm": "reconstructed",
+    "problem_id": "1231"
+  },
+  "e9f8c3418b2601da": {
+    "arm": "missing_sft",
+    "problem_id": "1303"
+  },
+  "ea0d4190c94ed383": {
+    "arm": "sft_parent",
+    "problem_id": "561"
+  },
+  "eb03483230ee6a57": {
+    "arm": "sft_parent",
+    "problem_id": "1232"
+  },
+  "eb2a3e9a96c7a9f6": {
+    "arm": "reconstructed",
+    "problem_id": "1256"
+  },
+  "eb834a1a667356c3": {
+    "arm": "missing_sft",
+    "problem_id": "418"
+  },
+  "ebd305a6867fac1e": {
+    "arm": "reconstructed",
+    "problem_id": "1199"
+  },
+  "ec26912e4bffd226": {
+    "arm": "reconstructed",
+    "problem_id": "1148"
+  },
+  "ec30ef92f37be31c": {
+    "arm": "reconstructed",
+    "problem_id": "547"
+  },
+  "ecaf51339e8cea5b": {
+    "arm": "missing_sft",
+    "problem_id": "279"
+  },
+  "ece3c700fae20ea2": {
+    "arm": "sft_parent",
+    "problem_id": "296"
+  },
+  "ecfceacc32766a47": {
+    "arm": "sft_parent",
+    "problem_id": "1315"
+  },
+  "edb6cf7af16f8a13": {
+    "arm": "reconstructed",
+    "problem_id": "279"
+  },
+  "edc9cf772371d966": {
+    "arm": "missing_sft",
+    "problem_id": "188"
+  },
+  "ede078b1bcbbb2a4": {
+    "arm": "sft_parent",
+    "problem_id": "1171"
+  },
+  "edf5af381302794c": {
+    "arm": "sft_parent",
+    "problem_id": "592"
+  },
+  "ee1353e0829a9066": {
+    "arm": "reconstructed",
+    "problem_id": "620"
+  },
+  "ee1ac92634783b59": {
+    "arm": "missing_sft",
+    "problem_id": "232"
+  },
+  "ee6e39238184fb55": {
+    "arm": "sft_parent",
+    "problem_id": "1304"
+  },
+  "ee7636e7107796ad": {
+    "arm": "sft_parent",
+    "problem_id": "571"
+  },
+  "ee925ce04370f29d": {
+    "arm": "missing_sft",
+    "problem_id": "1117"
+  },
+  "ee92dd90e11f484c": {
+    "arm": "reconstructed",
+    "problem_id": "752"
+  },
+  "eeb41a8ab30b17fc": {
+    "arm": "reconstructed",
+    "problem_id": "1261"
+  },
+  "eebd893966c23242": {
+    "arm": "missing_sft",
+    "problem_id": "389"
+  },
+  "ef7b0c9b351233b5": {
+    "arm": "reconstructed",
+    "problem_id": "1059"
+  },
+  "eff71ad7aa23029a": {
+    "arm": "sft_parent",
+    "problem_id": "130"
+  },
+  "f102ba80e93d028c": {
+    "arm": "missing_sft",
+    "problem_id": "561"
+  },
+  "f15deaf0315a60bd": {
+    "arm": "sft_parent",
+    "problem_id": "590"
+  },
+  "f17314dbfc7d1192": {
+    "arm": "reconstructed",
+    "problem_id": "99"
+  },
+  "f218913df7f26435": {
+    "arm": "missing_sft",
+    "problem_id": "489"
+  },
+  "f23a19e6a8ec9428": {
+    "arm": "missing_sft",
+    "problem_id": "130"
+  },
+  "f2a4cb27d81f243a": {
+    "arm": "reconstructed",
+    "problem_id": "1006"
+  },
+  "f30028b4557361af": {
+    "arm": "sft_parent",
+    "problem_id": "1306"
+  },
+  "f32ed12aa9d5263c": {
+    "arm": "missing_sft",
+    "problem_id": "831"
+  },
+  "f38076b3234ddfa3": {
+    "arm": "reconstructed",
+    "problem_id": "163"
+  },
+  "f38bec90c97813e6": {
+    "arm": "reconstructed",
+    "problem_id": "124"
+  },
+  "f3a88916688b54a4": {
+    "arm": "missing_sft",
+    "problem_id": "434"
+  },
+  "f3aa7c80876f8c40": {
+    "arm": "sft_parent",
+    "problem_id": "220"
+  },
+  "f4b0107c03233306": {
+    "arm": "sft_parent",
+    "problem_id": "509"
+  },
+  "f4f278a3387bcda8": {
+    "arm": "sft_parent",
+    "problem_id": "1174"
+  },
+  "f54842eba482271e": {
+    "arm": "missing_sft",
+    "problem_id": "539"
+  },
+  "f57d0a1829b93f7e": {
+    "arm": "sft_parent",
+    "problem_id": "1133"
+  },
+  "f5d56de909514c20": {
+    "arm": "reconstructed",
+    "problem_id": "242"
+  },
+  "f638d718f5fd358f": {
+    "arm": "reconstructed",
+    "problem_id": "256"
+  },
+  "f6524361333bba27": {
+    "arm": "missing_sft",
+    "problem_id": "582"
+  },
+  "f67a164c73de1ecf": {
+    "arm": "sft_parent",
+    "problem_id": "1303"
+  },
+  "f7553a6e671aa58c": {
+    "arm": "missing_sft",
+    "problem_id": "320"
+  },
+  "f762a52a227ab951": {
+    "arm": "missing_sft",
+    "problem_id": "656"
+  },
+  "f7fef8525cc36244": {
+    "arm": "sft_parent",
+    "problem_id": "309"
+  },
+  "f8833b7ee76c6049": {
+    "arm": "sft_parent",
+    "problem_id": "100"
+  },
+  "f8c446b6c55e6389": {
+    "arm": "sft_parent",
+    "problem_id": "500"
+  },
+  "f8d0eafff1bdccb8": {
+    "arm": "missing_sft",
+    "problem_id": "202"
+  },
+  "f90c88684b419050": {
+    "arm": "reconstructed",
+    "problem_id": "225"
+  },
+  "f9446b72a18c7d82": {
+    "arm": "reconstructed",
+    "problem_id": "55"
+  },
+  "f9b5fe0f2fd11e2a": {
+    "arm": "reconstructed",
+    "problem_id": "627"
+  },
+  "fa208baff0285295": {
+    "arm": "missing_sft",
+    "problem_id": "509"
+  },
+  "fa8a168bb1941a16": {
+    "arm": "sft_parent",
+    "problem_id": "479"
+  },
+  "fae993fe1acb68be": {
+    "arm": "missing_sft",
+    "problem_id": "406"
+  },
+  "fc1cada7a29591fe": {
+    "arm": "reconstructed",
+    "problem_id": "970"
+  },
+  "fcdd8a7041c877f0": {
+    "arm": "sft_parent",
+    "problem_id": "630"
+  },
+  "fd89e5e28b95b57a": {
+    "arm": "sft_parent",
+    "problem_id": "1052"
+  },
+  "fe203d6108116216": {
+    "arm": "missing_sft",
+    "problem_id": "249"
+  },
+  "fe3a147e94f1289d": {
+    "arm": "sft_parent",
+    "problem_id": "959"
+  },
+  "fe937a4132c2a1bc": {
+    "arm": "reconstructed",
+    "problem_id": "320"
+  },
+  "ff03a2428aaa51ea": {
+    "arm": "sft_parent",
+    "problem_id": "742"
+  },
+  "ff17a93942add6c1": {
+    "arm": "reconstructed",
+    "problem_id": "921"
+  },
+  "ff95905f42c91bda": {
+    "arm": "reconstructed",
+    "problem_id": "505"
+  },
+  "ffc8b397edf9d08e": {
+    "arm": "reconstructed",
+    "problem_id": "592"
+  },
+  "ffe677933a4fdeee": {
+    "arm": "missing_sft",
+    "problem_id": "699"
+  }
+}
